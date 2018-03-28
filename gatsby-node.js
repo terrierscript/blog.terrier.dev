@@ -5,7 +5,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
-  const gql = graphql`
+  const gql = `
     {
       allMarkdownRemark(limit: 1000) {
         edges {
@@ -23,7 +23,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
     }
   `
-  gql.then(result => {
+  graphql(gql).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()))
       return Promise.reject(result.errors)
