@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="Today 🐶 Learned" />
     <Navbar />
     <div>{children()}</div>
   </div>
