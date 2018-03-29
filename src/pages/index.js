@@ -4,6 +4,8 @@ import Link from 'gatsby-link'
 
 export default class IndexPage extends React.Component {
   render() {
+    console.log(this.props)
+    
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
@@ -44,15 +46,15 @@ export default class IndexPage extends React.Component {
   }
 }
 
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+// IndexPage.propTypes = {
+//   data: PropTypes.shape({
+//     allMarkdownRemark: PropTypes.shape({
+//       edges: PropTypes.array,
+//     }),
+//   }),
+// }
 
-export const pageQuery = graphql`
+export const query = graphql`
   query IndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
@@ -72,3 +74,23 @@ export const pageQuery = graphql`
     }
   }
 `
+// export const query2 = graphql`
+//   query IndexQuery {
+//     allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
+//       edges {
+//         node {
+//           excerpt(pruneLength: 400)
+//           id
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             title
+//             templateKey
+//             date(formatString: "MMMM DD, YYYY")
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
