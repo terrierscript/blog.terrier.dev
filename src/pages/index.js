@@ -16,7 +16,6 @@ export default class IndexPage extends React.Component {
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
           </div>
           {posts
-            .filter(post => post.node.frontmatter.templateKey === 'blog-post')
             .map(({ node: post }) => (
               <div
                 className="content"
@@ -46,17 +45,13 @@ export default class IndexPage extends React.Component {
   }
 }
 
-// IndexPage.propTypes = {
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       edges: PropTypes.array,
-//     }),
-//   }),
-// }
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }, 
+      filter: { frontmatter: {templateKey: {eq: "blog-post"} }}
+    ) {
       edges {
         node {
           excerpt(pruneLength: 400)
@@ -74,23 +69,3 @@ export const query = graphql`
     }
   }
 `
-// export const query2 = graphql`
-//   query IndexQuery {
-//     allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
-//       edges {
-//         node {
-//           excerpt(pruneLength: 400)
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//             templateKey
-//             date(formatString: "MMMM DD, YYYY")
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

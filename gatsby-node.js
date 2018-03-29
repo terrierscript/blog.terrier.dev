@@ -7,7 +7,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   const gql = `
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(limit: 10000000) {
         edges {
           node {
             id
