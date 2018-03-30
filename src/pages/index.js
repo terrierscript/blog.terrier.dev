@@ -4,17 +4,13 @@ import Link from "gatsby-link";
 
 const Item = ({ post }) => (
   <div>
-    <Link className="has-text-primary" to={post.fields.slug}>
-      {post.frontmatter.title}
-    </Link>
-    <span> &bull; </span>
+    <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
     <small>{post.frontmatter.date}</small>
     {post.excerpt}
-    <Link className="button is-small" to={post.fields.slug}>
-      Keep Reading →
-    </Link>
+    <Link to={post.fields.slug}>Keep Reading →</Link>
   </div>
 );
+
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
