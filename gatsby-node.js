@@ -4,7 +4,7 @@ const gql = require("graphql-tag");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 const getTemplate = name => {
-  return path.resolve(`src/templates/${String(name)}.tsx`);
+  return path.resolve(`src/templates/${String(name)}.js`);
 };
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
