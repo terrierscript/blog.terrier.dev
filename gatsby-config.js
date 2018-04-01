@@ -3,6 +3,7 @@ module.exports = {
     title: "Today 🐶 Learned"
   },
   plugins: [
+    "gatsby-plugin-debug-build",
     "gatsby-plugin-typescript",
     "gatsby-plugin-react-helmet",
     {

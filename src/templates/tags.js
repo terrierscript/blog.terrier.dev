@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
 
-class TagRoute extends React.Component<any, any> {
+class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges;
     const postLinks = posts.map(post => (

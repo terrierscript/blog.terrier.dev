@@ -68,7 +68,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       });
     });
   };
-
+  // execute
   graphql(ql).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()));

@@ -3680,6 +3680,12 @@ gatsby-module-loader@^1.0.10:
     babel-runtime "^6.26.0"
     loader-utils "^0.2.16"
 
+gatsby-plugin-debug-build@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-debug-build/-/gatsby-plugin-debug-build-1.0.0.tgz#404f28d0f4b6f89cfe0235ebcda66f21d1487926"
+  dependencies:
+    webpack "^1.13.3"
+
 gatsby-plugin-netlify-cms@^1.0.9:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-1.0.10.tgz#26105646f8ecd7e1851ead0099c017b9ca28e4de"
