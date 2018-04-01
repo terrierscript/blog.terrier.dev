@@ -1,6 +1,8 @@
 backend:
-  name: github
-  repo: terrierscript/today-inu-learned
+  # name: github
+  # repo: terrierscript/today-inu-learned
+  name: git-gateway
+  branch: master
 media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
@@ -19,7 +21,7 @@ collections:
         name: path
         widget: string
       - label: Heading
-        name: Title (heading)
+        name: heading
         widget: string
       - label: Publish Date
         name: date
