@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import * as React from "react";
 
 const Testimonials = ({ testimonials }) => (
   <div>
@@ -13,15 +12,15 @@ const Testimonials = ({ testimonials }) => (
       </article>
     ))}
   </div>
-)
+);
 
-Testimonials.propTypes = {
-  testimonials: PropTypes.arrayOf(
-    PropTypes.shape({
-      quote: PropTypes.string,
-      author: PropTypes.string,
-    })
-  ),
-}
+// Testimonials.propTypes = {
+//   testimonials: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       quote: PropTypes.string,
+//       author: PropTypes.string
+//     })
+//   )
+// };
 
-export default Testimonials
+export default Testimonials;
