@@ -11,7 +11,8 @@ collections:
     label: Blog
     folder: resources/blog
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    # TODO: use Hsi
+    slug: '{{year}}-{{month}}-{{day}}-000000-{{slug}}'
     fields:
       - label: Template Key
         name: templateKey
