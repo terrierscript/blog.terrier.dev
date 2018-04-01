@@ -9,8 +9,7 @@ const getTemplate = name => {
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
-  const limit =
-    process.env.NODE_ENV === "production" ? 10000 : console.log(limit);
+  const limit = process.env.NODE_ENV === "production" ? 10000 : 10;
   const ql = `
     {
       allMarkdownRemark(limit: ${limit}) {
@@ -30,15 +29,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
   `;
 
-  graphql(ql).then(result => {
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()));
-      // @ts-ignore
-      return Promise.reject(result.errors);
-    }
-
-    const posts = result.data.allMarkdownRemark.edges;
-
+  const buildPages = posts => {
     posts.forEach(edge => {
       const id = edge.node.id;
       createPage({
@@ -51,7 +42,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
       });
     });
-
+  };
+  const buildTagPages = posts => {
     // Tag pages:
     let tags = [];
     // Iterate through each post, putting all found tags into `tags`
@@ -75,6 +67,18 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
       });
     });
+  };
+
+  graphql(ql).then(result => {
+    if (result.errors) {
+      result.errors.forEach(e => console.error(e.toString()));
+      // @ts-ignore
+      return Promise.reject(result.errors);
+    }
+
+    const posts = result.data.allMarkdownRemark.edges;
+    buildPages(posts);
+    // buildTagPages(posts);
   });
 };
 
