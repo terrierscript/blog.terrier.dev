@@ -1,14 +1,16 @@
 const _ = require("lodash");
 const path = require("path");
+const gql = require("graphql-tag");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 const getTemplate = name => {
-  return `src/templates/${String(name)}.tsx`;
+  return path.resolve(`src/templates/${String(name)}.tsx`);
 };
+
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const gql = `
+  const ql = `
     {
       allMarkdownRemark(limit: 1000) {
         edges {
@@ -27,7 +29,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
   `;
 
-  graphql(gql).then(result => {
+  graphql(ql).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()));
       return Promise.reject(result.errors);
@@ -40,7 +42,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
-        component: path.resolve(getTemplate(edge.node.frontmatter.templateKey)),
+        component: getTemplate(edge.node.frontmatter.templateKey),
         // additional data can be passed via context
         context: {
           id
