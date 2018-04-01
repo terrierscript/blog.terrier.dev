@@ -4,7 +4,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-debug-build",
-    // "gatsby-plugin-typescript",
+    "gatsby-plugin-typescript",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",

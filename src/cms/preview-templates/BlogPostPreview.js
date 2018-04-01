@@ -1,9 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { BlogPostTemplate } from "../../templates/blog-post";
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
-  return <div>aa</div>;
-  console.log(entry.toJson());
   return (
     <BlogPostTemplate
       content={widgetFor("body")}
@@ -14,4 +12,4 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
   );
 };
 
-export default BlogPostPreview;
+export default BlogwPostPreview;
