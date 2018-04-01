@@ -3,13 +3,13 @@ backend:
   repo: terrierscript/today-inu-learned
   # name: git-gateway
   # branch: master
-media_folder: resources/img
+media_folder: contents/img
 public_folder: /img
 publish_mode: editorial_workflow
 collections:
   - name: blog
     label: Blog
-    folder: resources/blog
+    folder: contents/blog
     create: true
     # TODO: use Hsi
     slug: '{{year}}-{{month}}-{{day}}-000000-{{slug}}'

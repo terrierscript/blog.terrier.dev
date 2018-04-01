@@ -9,10 +9,11 @@ const getTemplate = name => {
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
-
+  const limit =
+    process.env.NODE_ENV === "production" ? 10000 : console.log(limit);
   const ql = `
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(limit: ${limit}) {
         edges {
           node {
             id
@@ -32,6 +33,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   graphql(ql).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()));
+      // @ts-ignore
       return Promise.reject(result.errors);
     }
 

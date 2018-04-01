@@ -11,13 +11,13 @@ const Item = ({ post }) => (
   </div>
 );
 
-export default class IndexPage extends React.Component {
+export default class IndexPage extends React.Component<any, any> {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <section>
+      <section onMouseOver={e => console.log("mouseover")}>
         {posts.map(({ node: post }) => <Item post={post} key={post.id} />)}
       </section>
     );
