@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter"
+    title: "Today 🐶 Learned"
   },
   plugins: [
     "gatsby-plugin-typescript",
@@ -8,14 +8,14 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/resource/pages`,
         name: "pages"
       }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/img`,
+        path: `${__dirname}/resource/img`,
         name: "images"
       }
     },
