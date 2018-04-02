@@ -8,7 +8,7 @@ class TagRoute extends React.Component {
     const postLinks = posts.map(post => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
+          <h2>{post.node.frontmatter.title}</h2>
         </Link>
       </li>
     ));
@@ -20,16 +20,13 @@ class TagRoute extends React.Component {
     } tagged with “${tag}”`;
 
     return (
-      <section className="section">
+      <section>
         <Helmet title={`${tag} | ${title}`} />
-        <div className="container content">
-          <div className="columns">
-            <div
-              className="column is-10 is-offset-1"
-              style={{ marginBottom: "6rem" }}
-            >
-              <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-              <ul className="taglist">{postLinks}</ul>
+        <div>
+          <div>
+            <div>
+              <h3>{tagHeader}</h3>
+              <ul>{postLinks}</ul>
               <p>
                 <Link to="/tags/">Browse all tags</Link>
               </p>
