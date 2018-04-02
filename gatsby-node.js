@@ -54,7 +54,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     })
     // Eliminate duplicate tags
     tags = _.uniq(tags)
-    console.log(tags)
 
     // Make tag pages
     tags.forEach(tag => {
@@ -79,7 +78,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges
     buildPages(posts)
-    // buildTagPages(posts);
+    buildTagPages(posts)
   })
 }
 
