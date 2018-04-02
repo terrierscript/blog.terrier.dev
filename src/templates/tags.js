@@ -2,16 +2,19 @@ import React from "react";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
 
+const PostLinks = ({posts}) = (
+  posts.map(post => (
+    <li key={post.node.fields.slug}>
+      <Link to={post.node.fields.slug}>
+        <h2>{post.node.frontmatter.title}</h2>
+      </Link>
+    </li>
+  )
+))
+    
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges;
-    const postLinks = posts.map(post => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-          <h2>{post.node.frontmatter.title}</h2>
-        </Link>
-      </li>
-    ));
     const tag = this.props.pathContext.tag;
     const title = this.props.data.site.siteMetadata.title;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
@@ -26,7 +29,7 @@ class TagRoute extends React.Component {
           <div>
             <div>
               <h3>{tagHeader}</h3>
-              <ul>{postLinks}</ul>
+              <ul><PostLinks posts={posts} /></ul>
               <p>
                 <Link to="/tags/">Browse all tags</Link>
               </p>
