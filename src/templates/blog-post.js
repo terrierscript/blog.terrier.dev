@@ -5,6 +5,23 @@ import Helmet from "react-helmet";
 import Link from "gatsby-link";
 import Content, { HTMLContent } from "../components/Content";
 
+
+const TagList = ({ tags }) => {
+  return (!tags || tags.length == 0){
+    return null
+  }
+  return <div>
+    <h4>Tags</h4>
+    <ul>
+      {tags.map(tag => (
+        <li key={tag + `tag`}>
+          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+}
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -22,18 +39,7 @@ export const BlogPostTemplate = ({
         <h1>{title}</h1>
         <p>{description}</p>
         <PostContent content={content} />
-        {tags && tags.length ? (
-          <div style={{ marginTop: `4rem` }}>
-            <h4>Tags</h4>
-            <ul className="taglist">
-              {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+        <TagList tags={tags} />
       </div>
     </section>
   );
