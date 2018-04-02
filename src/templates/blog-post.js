@@ -7,7 +7,7 @@ import Content, { HTMLContent } from "../components/Content";
 
 
 const TagList = ({ tags }) => {
-  return (!tags || tags.length == 0){
+  if (!tags || tags.length == 0) {
     return null
   }
   return <div>
