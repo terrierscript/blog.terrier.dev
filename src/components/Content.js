@@ -1,12 +1,10 @@
 import React, { SFC } from "react";
 
-export const HTMLContent = ({ content, className }) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+export const HTMLContent = ({ content, ...rest }) => (
+  <div {...rest} dangerouslySetInnerHTML={{ __html: content }} />
 );
 
-const Content = ({ content, className }) => (
-  <div className={className}>HTML:{content}</div>
-);
+const Content = ({ content, ...rest }) => <div {...rest}>HTML:{content}</div>;
 
 // HTMLContent.propTypes = Content.propTypes;
 
