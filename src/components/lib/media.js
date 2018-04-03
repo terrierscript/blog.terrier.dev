@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { css } from "styled-components"
 
 const sizes = {
@@ -6,8 +7,11 @@ const sizes = {
   phone: 376
 }
 
-const media = Object.keys(sizes).reduce((acc: any, label: any) => {
-  acc[label] = (...args: any[]) => css`
+/**
+ *  @type {*}
+ */
+const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
     @media (max-width: ${sizes[label] / 16}em) {
       ${css(...args)};
     }
