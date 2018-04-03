@@ -2,6 +2,25 @@ import React, { SFC } from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
 import { Container } from "./Container"
+import Helmet from "react-helmet"
+
+// let logoFont = "Josefin Sans"
+// logoFont = "Indie Flower"
+// logoFont = "Shadows Into Light"
+// logoFont = "Gloria Hallelujah"
+// logoFont = "Amatic SC"
+// logoFont = "Passion One"
+// logoFont = "Permanent Marker"
+// logoFont = "Baloo"
+// logoFont = "Handlee"
+// logoFont = "Press Start 2P"
+// logoFont = "Righteous"
+// logoFont = "Caveat Brush"
+// logoFont = "Patrick Hand"
+// logoFont = "Rock Salt"
+// logoFont = "Coming Soon"
+// logoFont = "Reenie Beanie"
+const logoFont = "Schoolbell"
 
 const Nav = styled.nav`
   height: 64px;
@@ -16,8 +35,8 @@ const Nav = styled.nav`
 const Logo = styled(Link)`
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.15em;
-  font-family: Cabin;
+  font-size: 1.5em;
+  font-family: '${logoFont}';
   color: #000;
 `
 
@@ -45,9 +64,16 @@ const Author = ({ name }) => {
 }
 const Navbar = () => (
   <Nav>
+    <Helmet>
+      <link
+        href={`https://fonts.googleapis.com/css?family=${logoFont}`}
+        rel="stylesheet"
+      />
+    </Helmet>
     <NavContainer>
       <Block>
-        <Logo to="/">🐾 Today 🐶 Learned</Logo>
+        <Logo>🐾Today 🐶 Learned💡</Logo>
+        {/* <Logo to="/">T 🐶 L</Logo> */}
       </Block>
       <Author name="terrierscript" />
     </NavContainer>

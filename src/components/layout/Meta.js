@@ -11,12 +11,5 @@ const baseStyles = () => injectGlobal`
 
 export const Meta = () => {
   baseStyles()
-  return (
-    <Helmet title="Today 🐶 Learned">
-      <link
-        href="https://fonts.googleapis.com/css?family=Cabin"
-        rel="stylesheet"
-      />
-    </Helmet>
-  )
+  return <Helmet title="Today 🐶 Learned" />
 }
