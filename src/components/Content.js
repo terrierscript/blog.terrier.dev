@@ -2,7 +2,8 @@ import React, { SFC } from "react"
 import styled from "styled-components"
 
 const Document = styled.div`
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.5em;
 `
 
 export const HTMLContent = ({ content, ...rest }) => (
