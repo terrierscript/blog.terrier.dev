@@ -27,6 +27,7 @@ const TagList = ({ tags }) => {
 const Blog = styled.div`
   padding-top: 1em;
 `
+
 export const BlogPostTemplate = ({ content, tags, title }) => {
   const PostContent = HTMLContent
 

@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { desktop } from "../lib/media"
 import { Meta } from "./Meta"
 import { Container } from "./Container"
+import { Article } from "../Content"
 
 export const Layout = ({ children }) => {
   return (
@@ -12,7 +13,7 @@ export const Layout = ({ children }) => {
       <Navbar />
 
       <Container>
-        <div>{children()}</div>
+        <Article>{children()}</Article>
       </Container>
     </div>
   )

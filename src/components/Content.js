@@ -1,17 +1,17 @@
 import React, { SFC } from "react"
 import styled from "styled-components"
 
-const Document = styled.div`
+export const Article = styled.div`
   font-size: 18px;
   line-height: 1.5em;
 `
 
 export const HTMLContent = ({ content, ...rest }) => (
-  <Document {...rest} dangerouslySetInnerHTML={{ __html: content }} />
+  <Article {...rest} dangerouslySetInnerHTML={{ __html: content }} />
 )
 
 const Content = ({ content, ...rest }) => (
-  <Document {...rest}>HTML:{content}</Document>
+  <Article {...rest}>HTML:{content}</Article>
 )
 
 // HTMLContent.propTypes = Content.propTypes;
