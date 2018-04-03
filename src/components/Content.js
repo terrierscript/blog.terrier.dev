@@ -1,11 +1,18 @@
-import React, { SFC } from "react";
+import React, { SFC } from "react"
+import styled from "styled-components"
+
+const Document = styled.div`
+  font-size: 16px;
+`
 
 export const HTMLContent = ({ content, ...rest }) => (
-  <div {...rest} dangerouslySetInnerHTML={{ __html: content }} />
-);
+  <Document {...rest} dangerouslySetInnerHTML={{ __html: content }} />
+)
 
-const Content = ({ content, ...rest }) => <div {...rest}>HTML:{content}</div>;
+const Content = ({ content, ...rest }) => (
+  <Document {...rest}>HTML:{content}</Document>
+)
 
 // HTMLContent.propTypes = Content.propTypes;
 
-export default Content;
+export default Content

@@ -8,7 +8,7 @@ const BlogPost = ({ data }) => {
   return (
     <BlogPostTemplate
       content={post.html}
-      description={post.frontmatter.description}
+      // description={post.frontmatter.description}
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
     />

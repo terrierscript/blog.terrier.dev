@@ -4,6 +4,7 @@ import { kebabCase } from "lodash"
 import Link from "gatsby-link"
 
 import Content, { HTMLContent } from "../components/Content"
+import styled from "styled-components"
 
 const TagList = ({ tags }) => {
   if (!tags || tags.length == 0) {
@@ -22,17 +23,21 @@ const TagList = ({ tags }) => {
     </div>
   )
 }
+
+const Blog = styled.div`
+  padding-top: 1em;
+`
 export const BlogPostTemplate = ({ content, tags, title }) => {
   const PostContent = HTMLContent
 
   return (
     <section>
       <Helmet title={`${title} | Today 🐶 Learned`} />
-      <div>
+      <Blog>
         <h1>{title}</h1>
         <PostContent content={content} />
         <TagList tags={tags} />
-      </div>
+      </Blog>
     </section>
   )
 }

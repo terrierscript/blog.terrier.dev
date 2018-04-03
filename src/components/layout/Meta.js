@@ -2,10 +2,10 @@ import React from "react"
 import Helmet from "react-helmet"
 
 import { injectGlobal } from "styled-components"
-import reset from "styled-reset"
+import normalize from "styled-normalize"
 
 const baseStyles = () => injectGlobal`
-  ${reset}
+  ${normalize}
   /* other styles */
 `
 
