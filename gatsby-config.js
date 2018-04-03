@@ -34,6 +34,7 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
-    }
+    },
+    "gatsby-plugin-styled-components"
   ]
 }
