@@ -3,7 +3,7 @@ import Navbar from "./Navbar"
 import styled from "styled-components"
 import { desktop } from "../lib/media"
 import { Meta } from "./Meta"
-import { Container } from "./Grid"
+import { Container } from "./Container"
 
 export const Layout = ({ children }) => {
   return (

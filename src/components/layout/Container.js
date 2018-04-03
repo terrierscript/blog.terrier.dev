@@ -5,8 +5,8 @@ const Row = styled.div`
   display: flex;
 `
 const Col = styled.div`
-  width: 85%;
-  max-width: 960px;
+  max-width: 740px;
+  padding: 0 20px;
   margin: 0 auto;
 `
 

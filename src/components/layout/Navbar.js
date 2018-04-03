@@ -1,7 +1,7 @@
 import React, { SFC } from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
-import { Container } from "./Grid"
+import { Container } from "./Container"
 
 const Nav = styled.nav`
   height: 64px;
@@ -10,19 +10,23 @@ const Nav = styled.nav`
   /* text-align: center; */
 `
 
-const Title = styled(Link)`
+const Logo = styled(Link)`
   text-decoration: none;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.15em;
   font-family: Cabin;
   color: #000;
 `
 
+const NavContainer = styled.div`
+  margin: 0;
+  padding: 0 20px;
+`
 const Navbar = () => (
   <Nav>
-    <Container>
-      <Title to="/">🐾</Title>
-    </Container>
+    <NavContainer>
+      <Logo to="/">🐾 Today 🐶 Learned</Logo>
+    </NavContainer>
   </Nav>
 )
 
