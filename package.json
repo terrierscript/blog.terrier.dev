@@ -9,6 +9,7 @@
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-debug-build": "^1.0.0",
     "gatsby-plugin-netlify-cms": "^1.0.9",
+    "gatsby-plugin-no-sourcemaps": "^1.0.5",
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-plugin-sharp": "^1.6.34",
     "gatsby-plugin-typescript": "^1.4.19",
@@ -16,7 +17,6 @@
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
     "gatsby-transformer-sharp": "^1.6.21",
-    "graphql-tag": "^2.8.0",
     "immutable": "^3.8.2",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
@@ -30,15 +30,16 @@
     "styled-system": "^2.2.1",
     "typescript": "^2.8.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "gatsby develop",
+    "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-debug-build",
+    "gatsby-plugin-no-sourcemap",
     "gatsby-plugin-typescript",
     "gatsby-plugin-react-helmet",
     {
@@ -35,4 +36,4 @@ module.exports = {
       }
     }
   ]
-};
+}

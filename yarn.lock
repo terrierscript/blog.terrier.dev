@@ -3695,6 +3695,10 @@ gatsby-plugin-netlify-cms@^1.0.9:
     netlify-cms "^1.0.1"
     netlify-identity-widget "^1.4.11"
 
+gatsby-plugin-no-sourcemaps@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-1.0.5.tgz#51771dd2ecdb52e96bd49eb8999d4966408de091"
+
 gatsby-plugin-react-helmet@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-2.0.5.tgz#cb63ca1c9b6004a1214190cfbe1d241727b1b7d5"
