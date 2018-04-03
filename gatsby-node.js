@@ -1,6 +1,5 @@
 const _ = require("lodash")
 const path = require("path")
-const gql = require("graphql-tag")
 const { createFilePath } = require("gatsby-source-filesystem")
 
 const getTemplate = name => {

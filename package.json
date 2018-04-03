@@ -4,6 +4,7 @@
   "version": "1.1.1",
   "author": "Austin Green",
   "dependencies": {
+    "@types/react-helmet": "^5.0.5",
     "bulma": "^0.6.0",
     "gatsby": "^1.9.213",
     "gatsby-link": "^1.6.37",
@@ -24,7 +25,6 @@
     "prop-types": "^15.6.0",
     "react": "^16.3.0",
     "react-helmet": "^5.2.0",
-    "rebass": "^1.0.7",
     "slate": "^0.33.3",
     "styled-components": "^3.2.3",
     "styled-system": "^2.2.1",

@@ -1,25 +1,26 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import Helmet from "react-helmet";
-import Link from "gatsby-link";
-import Content, { HTMLContent } from "../components/Content";
-
+import React from "react"
+import PropTypes from "prop-types"
+import { kebabCase } from "lodash"
+import Helmet from "react-helmet"
+import Link from "gatsby-link"
+import Content, { HTMLContent } from "../components/Content"
 
 const TagList = ({ tags }) => {
   if (!tags || tags.length == 0) {
     return null
   }
-  return <div>
-    <h4>Tags</h4>
-    <ul>
-      {tags.map(tag => (
-        <li key={tag + `tag`}>
-          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-        </li>
-      ))}
-    </ul>
-  </div>
+  return (
+    <div>
+      <h4>Tags</h4>
+      <ul>
+        {tags.map(tag => (
+          <li key={tag + `tag`}>
+            <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 export const BlogPostTemplate = ({
@@ -30,8 +31,7 @@ export const BlogPostTemplate = ({
   title,
   helmet
 }) => {
-  const PostContent = contentComponent || Content;
-  // console.log(helmet);
+  const PostContent = contentComponent || Content
   return (
     <section>
       {helmet || ""}
@@ -42,19 +42,19 @@ export const BlogPostTemplate = ({
         <TagList tags={tags} />
       </div>
     </section>
-  );
-};
+  )
+}
 
-BlogPostTemplate.propTypes = {
-  content: PropTypes.string.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.instanceOf(Helmet)
-};
+// BlogPostTemplate.propTypes = {
+//   content: PropTypes.string.isRequired,
+//   contentComponent: PropTypes.func,
+//   description: PropTypes.string,
+//   title: PropTypes.string,
+//   helmet: PropTypes.instanceOf(Helmet)
+// }
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <BlogPostTemplate
@@ -65,16 +65,16 @@ const BlogPost = ({ data }) => {
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
     />
-  );
-};
+  )
+}
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
-};
+// BlogPost.propTypes = {
+//   data: PropTypes.shape({
+//     markdownRemark: PropTypes.object
+//   })
+// }
 
-export default BlogPost;
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -89,4 +89,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

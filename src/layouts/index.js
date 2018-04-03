@@ -1,12 +1,4 @@
 import React from "react"
-import Helmet from "react-helmet"
+import { Layout } from "../components/layout/Layout"
 
-import Navbar from "../components/Navbar"
-
-export default ({ children }) => (
-  <div>
-    <Helmet title="Today 🐶 Learned" />
-    <Navbar />
-    <div>{children()}</div>
-  </div>
-)
+export default props => <Layout {...props} />
