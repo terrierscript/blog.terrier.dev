@@ -13,7 +13,7 @@ administrateで複数のパスを利用したい場合、namspaceによって切
 
 ```sh
 $ rails generate administrate:install --namespace manager
-$　rails generate administrate:dashboard --namespace manager
+$ rails generate administrate:dashboard --namespace manager
 ```
 
 [administrate/pull/956](https://github.com/thoughtbot/administrate/pull/956)
