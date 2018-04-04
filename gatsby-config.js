@@ -21,12 +21,19 @@ module.exports = {
         name: "images"
       }
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-5982830-12",
+        head: true,
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [`gatsby-remark-prismjs`]
+        plugins: [`gatsby-remark-highlights`]
       }
     },
     {
