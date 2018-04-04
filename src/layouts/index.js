@@ -1,5 +1,4 @@
-import React from "react"
-import { Layout } from "../app/layout/Layout"
-import "prismjs/themes/prism-solarizedlight.css"
+import React from "react";
+import { Layout } from "../app/layout/Layout";
 
-export default props => <Layout {...props} />
+export default props => <Layout {...props} />;

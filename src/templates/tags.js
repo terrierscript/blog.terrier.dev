@@ -1,6 +1,6 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
+import React from "react";
+import Helmet from "react-helmet";
+import Link from "gatsby-link";
 
 const PostLinks = ({ posts }) =>
   posts.map(post => (
@@ -9,15 +9,15 @@ const PostLinks = ({ posts }) =>
         <h2>{post.node.frontmatter.title}</h2>
       </Link>
     </li>
-  ))
+  ));
 
 class TagRoute extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    const tag = this.props.pathContext.tag
-    const title = this.props.data.site.siteMetadata.title
-    const totalCount = this.props.data.allMarkdownRemark.totalCount
-    const tagHeader = `${totalCount} tagged with “${tag}”`
+    const posts = this.props.data.allMarkdownRemark.edges;
+    const tag = this.props.pathContext.tag;
+    const title = this.props.data.site.siteMetadata.title;
+    const totalCount = this.props.data.allMarkdownRemark.totalCount;
+    const tagHeader = `${totalCount} tagged with “${tag}”`;
 
     return (
       <section>
@@ -32,11 +32,11 @@ class TagRoute extends React.Component {
           </p>
         </div>
       </section>
-    )
+    );
   }
 }
 
-export default TagRoute
+export default TagRoute;
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
@@ -63,4 +63,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`
+`;

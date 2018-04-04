@@ -1,9 +1,9 @@
-import React from "react"
-import { BlogPostTemplate } from "../app/article/Blog"
-import Content, { HTMLContent } from "../app/Content"
+import React from "react";
+import { BlogPostTemplate } from "../app/article/Blog";
+import Content, { HTMLContent } from "../app/Content";
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
   return (
     <BlogPostTemplate
       content={post.html}
@@ -11,10 +11,10 @@ const BlogPost = ({ data }) => {
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
     />
-  )
-}
+  );
+};
 
-export default BlogPost
+export default BlogPost;
 
 // @ts-ignore
 export const pageQuery = graphql`
@@ -29,4 +29,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
