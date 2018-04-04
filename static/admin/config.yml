@@ -6,7 +6,9 @@ backend:
 media_folder: contents/img
 public_folder: /img
 publish_mode: editorial_workflow
-collections:
+slug:
+  encoding: "ascii"
+  collections:
   - name: blog
     label: Blog
     folder: contents/blog
@@ -37,4 +39,4 @@ collections:
       - label: Path (slug)
         name: path
         widget: string
-      
+        default: null      
