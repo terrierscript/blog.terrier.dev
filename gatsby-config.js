@@ -21,13 +21,6 @@ module.exports = {
         name: "images"
       }
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-5982830-12",
-        head: true,
-      }
-    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -42,6 +35,13 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
-    "gatsby-plugin-styled-components"
+    "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-5982830-12",
+        head: true,
+      }
+    },
   ]
 }
