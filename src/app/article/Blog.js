@@ -31,7 +31,7 @@ const BlogBody = styled.div`
 
 const Title = styled.h1`
   line-height: 1.2em;
-  font-family: ${defaultFont};
+  /* font-family: ${defaultFont}; */
 `;
 
 export const BlogArticle = ({ content, title }) => (
