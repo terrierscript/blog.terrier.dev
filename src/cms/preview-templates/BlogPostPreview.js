@@ -12,4 +12,4 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
   )
 }
 
-export default BlogwPostPreview
+export default BlogPostPreview
