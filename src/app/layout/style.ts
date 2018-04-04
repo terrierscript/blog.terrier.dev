@@ -8,7 +8,4 @@ import { defaultFont } from "./font";
 export const baseStyles = () => injectGlobal`
   ${normalize}
   /* default font */
-  body {
-    font-family: '${defaultFont}'
-  }
 `;

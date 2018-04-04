@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import styled from "styled-components";
 import { Container } from "./Container";
 import Helmet from "react-helmet";
+import { defaultFont } from "./font";
 
 const Nav = styled.nav`
   height: 64px;
@@ -17,7 +18,8 @@ const Nav = styled.nav`
 const Logo = styled(Link)`
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.5em;
+  font-family: ${defaultFont};
+  font-size: 1.7em;
   color: #000;
 `;
 

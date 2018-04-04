@@ -1,14 +1,15 @@
-import React from "react"
-import Helmet from "react-helmet"
-import { kebabCase } from "lodash"
-import Link from "gatsby-link"
+import React from "react";
+import Helmet from "react-helmet";
+import { kebabCase } from "lodash";
+import Link from "gatsby-link";
 
-import Content, { HTMLContent } from "../Content"
-import styled from "styled-components"
+import Content, { HTMLContent } from "../Content";
+import styled from "styled-components";
+import { defaultFont } from "../layout/font";
 
 const TagList = ({ tags }) => {
   if (!tags || tags.length == 0) {
-    return null
+    return null;
   }
   return (
     <div>
@@ -21,22 +22,24 @@ const TagList = ({ tags }) => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 const BlogBody = styled.div`
   padding-top: 1em;
-`
+`;
+
 const Title = styled.h1`
   line-height: 1.2em;
-`
+  font-family: ${defaultFont};
+`;
 
 export const BlogArticle = ({ content, title }) => (
   <React.Fragment>
     <Title>{title}</Title>
     <HTMLContent content={content} />
   </React.Fragment>
-)
+);
 
 export const BlogPostTemplate = ({ content, tags, title }) => {
   return (
@@ -47,5 +50,5 @@ export const BlogPostTemplate = ({ content, tags, title }) => {
         <TagList tags={tags} />
       </BlogBody>
     </section>
-  )
-}
+  );
+};
