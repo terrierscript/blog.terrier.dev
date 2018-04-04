@@ -27,6 +27,9 @@ const TagList = ({ tags }) => {
 const Blog = styled.div`
   padding-top: 1em;
 `
+const Title = styled.h1`
+  line-height: 1.2em;
+`
 
 export const BlogPostTemplate = ({ content, tags, title }) => {
   const PostContent = HTMLContent
@@ -35,7 +38,7 @@ export const BlogPostTemplate = ({ content, tags, title }) => {
     <section>
       <Helmet title={`${title} | Today 🐶 Learned`} />
       <Blog>
-        <h1>{title}</h1>
+        <Title>{title}</Title>
         <PostContent content={content} />
         <TagList tags={tags} />
       </Blog>
