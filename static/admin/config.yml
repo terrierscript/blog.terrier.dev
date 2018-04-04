@@ -11,7 +11,7 @@ slug:
   collections:
   - name: blog
     label: Blog
-    folder: contents/blog
+    folder: contents/pages/blog
     create: true
     # TODO: use Hsi
     slug: '{{year}}{{month}}{{day}}000000-{{slug}}'
