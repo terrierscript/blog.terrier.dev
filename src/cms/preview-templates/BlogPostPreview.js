@@ -1,5 +1,5 @@
 import React from "react"
-import { BlogPostTemplate } from "../../templates/BlogPostTemplate"
+import { BlogPostTemplate } from "../../components/article/Blog"
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
   return (

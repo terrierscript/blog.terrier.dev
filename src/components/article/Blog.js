@@ -3,7 +3,7 @@ import Helmet from "react-helmet"
 import { kebabCase } from "lodash"
 import Link from "gatsby-link"
 
-import Content, { HTMLContent } from "../components/Content"
+import Content, { HTMLContent } from "../Content"
 import styled from "styled-components"
 
 const TagList = ({ tags }) => {
