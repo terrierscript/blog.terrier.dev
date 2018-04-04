@@ -1,6 +1,6 @@
 import React from "react"
 // import PropTypes from "prop-types";
-import { Item } from "../components/list/Item"
+import { BlogItem } from "../components/list/Item"
 
 export default class IndexPage extends React.Component {
   render() {
@@ -9,7 +9,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <section onMouseOver={e => console.log("mouseover")}>
-        {posts.map(({ node: post }) => <Item post={post} key={post.id} />)}
+        {posts.map(({ node: post }) => <BlogItem post={post} key={post.id} />)}
       </section>
     )
   }
@@ -47,23 +47,3 @@ export const query = graphql`
     }
   }
 `
-// export const query2 = graphql`
-//   query IndexQuery {
-//     allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
-//       edges {
-//         node {
-//           excerpt(pruneLength: 400)
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//             templateKey
-//             date(formatString: "MMMM DD, YYYY")
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
