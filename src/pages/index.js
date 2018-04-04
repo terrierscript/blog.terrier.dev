@@ -1,6 +1,6 @@
 import React from "react"
 // import PropTypes from "prop-types";
-import { BlogItem } from "../components/list/Item"
+import { BlogItem } from "../app/list/Item"
 
 export default class IndexPage extends React.Component {
   render() {
@@ -32,11 +32,12 @@ export const query = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          # excerpt(pruneLength: 400)
           id
           fields {
             slug
           }
+          html
           frontmatter {
             title
             templateKey

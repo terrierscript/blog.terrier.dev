@@ -1,10 +1,9 @@
 import React from "react"
-import { BlogPostTemplate } from "../components/article/Blog"
-import Content, { HTMLContent } from "../components/Content"
+import { BlogPostTemplate } from "../app/article/Blog"
+import Content, { HTMLContent } from "../app/Content"
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
   return (
     <BlogPostTemplate
       content={post.html}
@@ -26,7 +25,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "YYYY-MM-DD")
         title
-        # description
         tags
       }
     }
