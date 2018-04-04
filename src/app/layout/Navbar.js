@@ -72,7 +72,7 @@ const Navbar = () => (
     </Helmet>
     <NavContainer>
       <Block>
-        <Logo href="/">🐾Today 🐶 Learned💡</Logo>
+        <Logo to="/">🐾Today 🐶 Learned💡</Logo>
         {/* <Logo to="/">T 🐶 L</Logo> */}
       </Block>
       <Author name="terrierscript" />
