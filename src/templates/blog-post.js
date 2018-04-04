@@ -1,5 +1,5 @@
 import React from "react"
-import { BlogPostTemplate } from "./BlogPostTemplate"
+import { BlogPostTemplate } from "../components/article/Blog"
 import Content, { HTMLContent } from "../components/Content"
 
 const BlogPost = ({ data }) => {
