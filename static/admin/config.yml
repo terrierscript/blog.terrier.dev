@@ -5,7 +5,7 @@ backend:
   # branch: master
 media_folder: contents/img
 public_folder: /img
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 slug:
   encoding: "ascii"
 
