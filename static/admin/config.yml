@@ -8,7 +8,8 @@ public_folder: /img
 publish_mode: editorial_workflow
 slug:
   encoding: "ascii"
-  collections:
+
+collections:
   - name: blog
     label: Blog
     folder: contents/pages/blog
