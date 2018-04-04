@@ -1,26 +1,17 @@
-import React from "react";
+import React from "react"
 // import PropTypes from "prop-types";
-import Link from "gatsby-link";
-
-const Item = ({ post }) => (
-  <div>
-    <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-    <small>{post.frontmatter.date}</small>
-    {post.excerpt}
-    <Link to={post.fields.slug}>Keep Reading →</Link>
-  </div>
-);
+import { Item } from "../components/list/Item"
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <section onMouseOver={e => console.log("mouseover")}>
         {posts.map(({ node: post }) => <Item post={post} key={post.id} />)}
       </section>
-    );
+    )
   }
 }
 
@@ -32,6 +23,7 @@ export default class IndexPage extends React.Component {
 //   }),
 // }
 
+// @ts-ignore
 export const query = graphql`
   query IndexQuery {
     allMarkdownRemark(
@@ -54,7 +46,7 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 // export const query2 = graphql`
 //   query IndexQuery {
 //     allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
