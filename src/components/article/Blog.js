@@ -24,24 +24,28 @@ const TagList = ({ tags }) => {
   )
 }
 
-const Blog = styled.div`
+const BlogBody = styled.div`
   padding-top: 1em;
 `
 const Title = styled.h1`
   line-height: 1.2em;
 `
 
-export const BlogPostTemplate = ({ content, tags, title }) => {
-  const PostContent = HTMLContent
+export const BlogArticle = ({ content, title }) => (
+  <React.Fragment>
+    <Title>{title}</Title>
+    <HTMLContent content={content} />
+  </React.Fragment>
+)
 
+export const BlogPostTemplate = ({ content, tags, title }) => {
   return (
     <section>
       <Helmet title={`${title} | Today 🐶 Learned`} />
-      <Blog>
-        <Title>{title}</Title>
-        <PostContent content={content} />
+      <BlogBody>
+        <BlogArticle title={title} content={content} />
         <TagList tags={tags} />
-      </Blog>
+      </BlogBody>
     </section>
   )
 }
