@@ -36,12 +36,12 @@ module.exports = {
       }
     },
     "gatsby-plugin-styled-components",
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-5982830-12",
-        head: true,
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: "UA-5982830-12",
+    //     head: true,
+    //   }
+    // },
   ]
 }
