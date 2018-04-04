@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [`gatsby-remark-highlights`]
+        plugins: [`gatsby-remark-prismajs`]
       }
     },
     {
@@ -35,7 +35,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
-    "gatsby-plugin-styled-components",
+    "gatsby-plugin-styled-components"
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
