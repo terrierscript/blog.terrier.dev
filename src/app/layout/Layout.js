@@ -9,6 +9,7 @@ import { Article } from "../Content";
 import loadGA from "./ga.js";
 
 export const Layout = ({ children }) => {
+  loadGA();
   return (
     <div>
       <Meta />
