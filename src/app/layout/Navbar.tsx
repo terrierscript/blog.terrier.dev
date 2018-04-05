@@ -49,7 +49,7 @@ const Navbar = () => (
   <Nav>
     <NavContainer>
       <Block>
-        <Logo to="/">Today 🐶 Learned</Logo>
+        <Logo to="/">Snippet 🐶 </Logo>
       </Block>
       <Author name="terrierscript" />
     </NavContainer>

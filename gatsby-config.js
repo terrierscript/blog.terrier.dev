@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Today 🐶 Learned"
+    title: "Snippet🐾"
   },
   plugins: [
     "gatsby-plugin-debug-build",

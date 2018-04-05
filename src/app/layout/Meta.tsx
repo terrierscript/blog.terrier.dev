@@ -5,7 +5,7 @@ import { baseStyles } from "./style";
 export const Meta = () => {
   baseStyles();
   return (
-    <Helmet title="Today 🐶 Learned">
+    <Helmet title="Snippet 🐶 ">
       <link href={generateFontUrl()} rel="stylesheet" />
     </Helmet>
   );

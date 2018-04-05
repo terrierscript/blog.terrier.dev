@@ -44,7 +44,7 @@ export const BlogArticle = ({ content, title }) => (
 export const BlogPostTemplate = ({ content, tags, title }) => {
   return (
     <section>
-      <Helmet title={`${title} | Today 🐶 Learned`} />
+      <Helmet title={`${title} | Snippet 🐶`} />
       <BlogBody>
         <BlogArticle title={title} content={content} />
         <TagList tags={tags} />

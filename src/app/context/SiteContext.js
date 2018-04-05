@@ -1,5 +1,5 @@
-import React from "react"
+import React from "react";
 
 export const SiteContext = React.createContext({
-  title: "Today 🐶 Learned"
-})
+  title: "Snippet 🐶 "
+});
