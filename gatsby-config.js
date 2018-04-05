@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Snippet"
+    title: "Snippet",
+    siteUrl: `https://snippet.terrierscript.com`
   },
   plugins: [
     "gatsby-plugin-debug-build",
@@ -40,13 +41,25 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
-    "gatsby-plugin-styled-components"
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: "UA-5982830-12",
-    //     head: true
-    //   }
-    // }
+    "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+      }`
+    }
   ]
 };

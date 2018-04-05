@@ -49,6 +49,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gatsby-plugin-sitemap": "^1.2.20",
     "prettier": "^1.7.4"
   }
 }
