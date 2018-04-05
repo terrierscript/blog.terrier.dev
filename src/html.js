@@ -4,6 +4,7 @@ import React from "react";
 let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
   try {
+    // @ts-ignore
     inlinedStyles = require("!raw-loader!../public/styles.css");
   } catch (e) {
     console.log(e);
