@@ -3,7 +3,7 @@ import { css } from "styled-components";
 const sizes = {
   desktop: 992,
   // tablet: 768,
-  phone: 376
+  phone: 500
 };
 
 type Types = keyof typeof sizes;
@@ -14,7 +14,7 @@ const media: any = Object.keys(sizes).reduce((acc, label) => {
     // @ts-ignore
     const cssval = css(...args);
     return css`
-      @media (max-width: ${sizes[label]}em) {
+      @media (max-width: ${sizes[label]}px) {
         ${cssval};
       }
     `;

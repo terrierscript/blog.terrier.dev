@@ -21,7 +21,7 @@ const Logo = styled(Link)`
   text-decoration: none;
   font-weight: bold;
   font-family: ${defaultFont};
-  font-size: 1.7em;
+  font-size: 1.5em;
   color: #000;
   ${media.phone`
     font-size: 18px;
