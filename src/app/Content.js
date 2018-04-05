@@ -7,7 +7,6 @@ export const Article = styled.div`
 `;
 
 export const HTMLContent = ({ content, ...rest }) => {
-  console.log(content);
   return <Article {...rest} dangerouslySetInnerHTML={{ __html: content }} />;
 };
 

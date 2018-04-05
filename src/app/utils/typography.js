@@ -15,7 +15,7 @@ const theme = {
     }
   ],
   headerFontFamily: ["Quicksand", "Helvetica"],
-  bodyFontFamily: [],
+  // bodyFontFamily: [],
   includeNormalize: true
 };
 
