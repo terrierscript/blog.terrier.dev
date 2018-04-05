@@ -6,7 +6,7 @@ export const Meta = () => {
   baseStyles();
   return (
     <Helmet title="Snippet 🐶 ">
-      <link href={generateFontUrl()} rel="stylesheet" />
+      {/* <link href={generateFontUrl()} rel="stylesheet" /> */}
     </Helmet>
   );
 };

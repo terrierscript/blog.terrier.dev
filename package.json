@@ -15,6 +15,7 @@
     "gatsby-plugin-sharp": "^1.6.34",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-plugin-typescript": "^1.4.19",
+    "gatsby-plugin-typography": "^1.7.18",
     "gatsby-remark-highlights": "^1.3.4",
     "gatsby-remark-images": "^1.5.50",
     "gatsby-remark-prismjs": "^1.2.23",
@@ -34,7 +35,8 @@
     "styled-normalize": "^4.0.0",
     "styled-reset": "^1.3.2",
     "styled-system": "^2.2.1",
-    "typescript": "^2.8.1"
+    "typescript": "^2.8.1",
+    "typography": "^0.16.6"
   },
   "keywords": [
     "gatsby"
