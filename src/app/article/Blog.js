@@ -35,7 +35,7 @@ const Title = styled.h1`
 `;
 
 const Modify = ({ fileAbsolutePath }) => {
-  const repo = "terrierscript/snippet.terrierscript.com";
+  const repo = "terrierscript/snippet.terriercript.com";
   const directory = "contents/pages/blog";
   const filename = fileAbsolutePath.split("/").pop();
   const url = `https://github.com/${repo}/edit/master/${directory}/${filename}`;

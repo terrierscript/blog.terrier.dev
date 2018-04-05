@@ -8013,6 +8013,10 @@ pretty-error@^2.0.2, pretty-error@^2.1.1:
     renderkid "^2.0.1"
     utila "~0.4"
 
+prism-themes@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.0.0.tgz#58089547ed39df273e5195e1628c69177341bf88"
+
 prismjs@^1.12.2:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.13.0.tgz#edcc14a90bbd72a03e5ffd2bab81a04c79a607a6"
