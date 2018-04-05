@@ -33,6 +33,8 @@ module Admin
 end
 ```
 
+---
+
 ちなみに、下記Pull Requestにて`new_resouce`を参照するものが提案されている
 https://github.com/thoughtbot/administrate/pull/1097/files
 
