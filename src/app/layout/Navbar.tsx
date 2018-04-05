@@ -45,15 +45,22 @@ const Author = ({ name }) => {
     </Block>
   );
 };
-const Navbar = () => (
+
+const NavbarContainer = ({ children }) => (
   <Nav>
     <NavContainer>
-      <Block>
-        <Logo to="/">Snippet 🐶 </Logo>
-      </Block>
+      <Block>{children}</Block>
       <Author name="terrierscript" />
     </NavContainer>
   </Nav>
+);
+
+const Navbar = () => (
+  <div>
+    <NavbarContainer>
+      <Logo to="/">🐶 Snippet 🐾 </Logo>
+    </NavbarContainer>
+  </div>
 );
 
 export default Navbar;
