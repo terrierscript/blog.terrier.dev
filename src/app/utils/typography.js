@@ -1,7 +1,8 @@
 import Typography from "typography";
+// import fairyGatesTheme from "typography-theme-fairy-gates";
 
-const typography = new Typography({
-  baseFontSize: "18px",
+const theme = {
+  baseFontSize: 12,
   googleFonts: [
     {
       name: "Nunito",
@@ -13,7 +14,11 @@ const typography = new Typography({
       styles: [400, 500, 700]
     }
   ],
-  headerFontFamily: ["Quicksand"]
-});
+  headerFontFamily: ["Quicksand", "Helvetica"],
+  bodyFontFamily: [],
+  includeNormalize: true
+};
+
+const typography = new Typography(theme);
 
 export default typography;

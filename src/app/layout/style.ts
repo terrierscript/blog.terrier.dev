@@ -5,7 +5,7 @@ import "prismjs/themes/prism-okaidia.css";
 
 import { defaultFont } from "./font";
 
-export const baseStyles = () => injectGlobal`
-  ${normalize}
-  /* default font */
-`;
+// export const baseStyles = () => injectGlobal`
+// ${normalize}
+/* default font */
+// `;
