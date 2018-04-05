@@ -10,7 +10,7 @@ tags:
 何かlog的なデータで、最新のデータを使いまわして上書きしたい時のパターン
 今のところcontrollerを生やして上書きするしか無さそう
 
-```rb
+```ruby
 module Admin
   class SomeController < Admin::ApplicationController
     def new
