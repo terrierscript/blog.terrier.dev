@@ -58,7 +58,7 @@ const NavbarContainer = ({ children }) => (
 const Navbar = () => (
   <div>
     <NavbarContainer>
-      <Logo to="/">Code Snippet 🐶</Logo>
+      <Logo to="/">(WIP) Code Snippet 🐶</Logo>
     </NavbarContainer>
   </div>
 );
