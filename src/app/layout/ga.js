@@ -7,6 +7,8 @@ export default () => {
     ReactGA.initialize("UA-5982830-12", { debug: true });
     // @ts-ignore
     ReactGA.pageview(window.location.pathname + window.location.search);
-    console.log("GA start");
+    console.debug("GA start");
+  } else {
+    console.debug("window not found");
   }
 };
