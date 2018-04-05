@@ -1,36 +1,52 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: "Today 🐶 Learned"
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-debug-build",
+    "gatsby-plugin-no-sourcemaps",
+    "gatsby-plugin-typescript",
+    "gatsby-plugin-react-helmet",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        path: `${__dirname}/contents/pages`,
+        name: "pages"
+      }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/img`,
-        name: 'images',
-      },
+        path: `${__dirname}/contents/img`,
+        name: "images"
+      }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [],
-      },
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`
+            // inlineCodeMarker: null
+          }
+        ]
+      }
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: "gatsby-plugin-netlify-cms",
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
     },
-  ],
-}
+    "gatsby-plugin-styled-components"
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: "UA-5982830-12",
+    //     head: true,
+    //   }
+    // },
+  ]
+};

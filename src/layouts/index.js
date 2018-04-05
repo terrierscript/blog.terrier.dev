@@ -1,19 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from "react";
+import { Layout } from "../app/layout/Layout";
 
-import Navbar from '../components/Navbar'
-
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet title="Today 🐶 Learned" />
-    <Navbar />
-    <div>{children()}</div>
-  </div>
-)
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
-
-export default TemplateWrapper
+export default props => <Layout {...props} />;
