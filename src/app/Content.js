@@ -6,9 +6,10 @@ export const Article = styled.div`
   line-height: 1.5em;
 `;
 
-export const HTMLContent = ({ content, ...rest }) => (
-  <Article {...rest} dangerouslySetInnerHTML={{ __html: content }} />
-);
+export const HTMLContent = ({ content, ...rest }) => {
+  console.log(content);
+  return <Article {...rest} dangerouslySetInnerHTML={{ __html: content }} />;
+};
 
 const Content = ({ content, ...rest }) => (
   <Article {...rest}>HTML:{content}</Article>
