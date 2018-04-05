@@ -5,6 +5,8 @@ import { Container } from "./Container";
 import Helmet from "react-helmet";
 import { defaultFont } from "./font";
 
+import media from "../lib/media";
+
 const Nav = styled.nav`
   height: 64px;
   line-height: 64px;
@@ -21,6 +23,9 @@ const Logo = styled(Link)`
   font-family: ${defaultFont};
   font-size: 1.7em;
   color: #000;
+  ${media.phone`
+    font-size: 1.2em;
+  `};
 `;
 
 const NavContainer = styled.div`

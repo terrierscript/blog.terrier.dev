@@ -14,7 +14,7 @@ const media: any = Object.keys(sizes).reduce((acc, label) => {
     // @ts-ignore
     const cssval = css(...args);
     return css`
-      @media (max-width: ${sizes[label] / 16}em) {
+      @media (max-width: ${sizes[label]}em) {
         ${cssval};
       }
     `;

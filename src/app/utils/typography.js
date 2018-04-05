@@ -2,7 +2,7 @@ import Typography from "typography";
 import fairyGatesTheme from "typography-theme-fairy-gates";
 
 const theme = {
-  baseFontSize: 12,
+  // baseFontSize: "1px",
   googleFonts: [
     {
       name: "Quicksand",
@@ -24,6 +24,6 @@ const theme = {
   includeNormalize: true
 };
 
-const typography = new Typography(); //theme);
+const typography = new Typography(theme);
 
 export default typography;
