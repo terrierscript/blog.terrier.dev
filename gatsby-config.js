@@ -29,8 +29,8 @@ module.exports = {
       options: {
         plugins: [
           {
-            // resolve: `gatsby-remark-highlights`
-            resolve: `gatsby-remark-prismjs`
+            resolve: `gatsby-remark-highlights`
+            // resolve: `gatsby-remark-prismjs`
             // inlineCodeMarker: null
           }
         ]

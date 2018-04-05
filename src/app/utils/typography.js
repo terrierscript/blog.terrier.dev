@@ -2,7 +2,7 @@ import Typography from "typography";
 import fairyGatesTheme from "typography-theme-fairy-gates";
 
 const theme = {
-  // baseFontSize: "1px",
+  baseFontSize: "18px",
   googleFonts: [
     {
       name: "Quicksand",
@@ -21,6 +21,7 @@ const theme = {
     "Segoe UI Emoji",
     "Segoe UI Symbol"
   ],
+  baseLineHeight: 1.45,
   includeNormalize: true
 };
 

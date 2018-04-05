@@ -30,9 +30,18 @@ const BlogBody = styled.div`
 `;
 
 const Title = styled.h1`
-  line-height: 1.2em;
+  /* line-height: 2em; */
   /* font-family: ${defaultFont}; */
 `;
+
+const Modify = ({ fileAbsolutePath }) => {
+  const repo = "terrierscript/snippet.terrierscript.com";
+  const directory = "contents/pages/blog";
+  const filename = fileAbsolutePath.split("/").pop();
+  const url = `https://github.com/${repo}/edit/master/${directory}/${filename}`;
+
+  return <a href={url}>この記事の修正を提案する</a>;
+};
 
 export const BlogArticle = ({ content, title }) => (
   <React.Fragment>
@@ -41,13 +50,19 @@ export const BlogArticle = ({ content, title }) => (
   </React.Fragment>
 );
 
-export const BlogPostTemplate = ({ content, tags, title }) => {
+export const BlogPostTemplate = ({
+  content,
+  tags,
+  title,
+  fileAbsolutePath
+}) => {
   return (
     <section>
       <Helmet title={`${title} | Snippet 🐶`} />
       <BlogBody>
         <BlogArticle title={title} content={content} />
         <TagList tags={tags} />
+        <Modify fileAbsolutePath={fileAbsolutePath} />
       </BlogBody>
     </section>
   );

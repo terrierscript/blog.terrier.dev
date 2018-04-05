@@ -24,7 +24,7 @@ const Logo = styled(Link)`
   font-size: 1.7em;
   color: #000;
   ${media.phone`
-    font-size: 1.2em;
+    font-size: 18px;
   `};
 `;
 
