@@ -60,12 +60,14 @@ const NavbarContainer = ({ children }) => (
   </Nav>
 );
 
-const Navbar = () => (
-  <div>
-    <NavbarContainer>
-      <Logo to="/">(WIP) Code Snippet 🐶</Logo>
-    </NavbarContainer>
-  </div>
-);
+const Navbar = () => {
+  return (
+    <div>
+      <NavbarContainer>
+        <Logo to="/">Code Snippet 🐶</Logo>
+      </NavbarContainer>
+    </div>
+  );
+};
 
 export default Navbar;
