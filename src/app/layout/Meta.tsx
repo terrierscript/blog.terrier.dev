@@ -4,7 +4,9 @@ import { generateFontUrl } from "./font";
 // import { baseStyles } from "./style";
 // import "highlight.js/styles/dark.css";
 // import "prismjs/themes/prism-okaidia.css";
-import "prism-themes/themes/prism-atom-dark.css";
+// @ts-ignore
+import css from "prism-themes/themes/prism-atom-dark.css";
+console.log(css.toString());
 
 export const Meta = () => {
   // baseStyles();

@@ -38,3 +38,9 @@ collections:
       #   name: path
       #   widget: string
       #   default: null 
+  - name: draft
+    label: draft
+    file: contents/draft
+    fields:
+      - name: title
+        widget: string

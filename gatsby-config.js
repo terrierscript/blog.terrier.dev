@@ -43,6 +43,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-react-css-modules",
     {
       resolve: `gatsby-plugin-sitemap`,
       query: `
