@@ -5,7 +5,10 @@ let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
   try {
     // @ts-ignore
-    inlinedStyles = require("!raw-loader!../public/styles.css");
+    inlinedStyles = [
+      require("!raw-loader!../public/styles.css"),
+      require("!raw-loader!prism-themes/themes/prism-atom-dark.css")
+    ].join("");
   } catch (e) {
     console.log(e);
   }
