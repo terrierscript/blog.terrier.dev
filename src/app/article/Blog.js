@@ -43,11 +43,14 @@ const Modify = ({ fileAbsolutePath }) => {
   return <a href={url}>この記事の修正を提案する</a>;
 };
 
+const BlogArticleWrapper = styled.div`
+  padding-bottom: 3em;
+`;
 export const BlogArticle = ({ content, title }) => (
-  <React.Fragment>
+  <BlogArticleWrapper>
     <Title>{title}</Title>
     <HTMLContent content={content} />
-  </React.Fragment>
+  </BlogArticleWrapper>
 );
 
 export const BlogPostTemplate = ({
