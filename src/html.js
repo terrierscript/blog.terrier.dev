@@ -4,10 +4,27 @@ import React from "react";
 let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
   try {
-    inlinedStyles = require("!raw-loader!../public/styles.css");
+    // @ts-ignore
+    inlinedStyles = [
+      require("!raw-loader!../public/styles.css")
+      // require("!raw-loader!prism-themes/themes/prism-atom-dark.css")
+    ].join("");
+    console.log("inline", inlinedStyles);
   } catch (e) {
-    console.log(e);
+    console.log("inline", e);
   }
+}
+
+const Ga = (props) => {
+  return <React.Fragment>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-5982830-12');
+    </script>
+  </React.Fragment>
 }
 
 export default class HTML extends React.Component {
@@ -24,6 +41,9 @@ export default class HTML extends React.Component {
     return (
       <html lang="en">
         <head>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5982830-12"></script>
+          <Ga />
+          
           <meta charSet="utf-8" />
           <meta
             name="viewport"

@@ -1,21 +1,27 @@
 import Typography from "typography";
-// import fairyGatesTheme from "typography-theme-fairy-gates";
+import fairyGatesTheme from "typography-theme-fairy-gates";
 
 const theme = {
-  baseFontSize: 12,
+  baseFontSize: "18px",
   googleFonts: [
     {
-      name: "Nunito",
-
-      styles: [400, 600, 700, 800]
-    },
-    {
       name: "Quicksand",
-      styles: [400, 500, 700]
+      styles: ["400", "500", "700"]
+      // styles: [400, 500]
     }
   ],
   headerFontFamily: ["Quicksand", "Helvetica"],
-  // bodyFontFamily: [],
+  bodyFontFamily: [
+    "-apple-system,BlinkMacSystemFont",
+    "Segoe UI",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol"
+  ],
+  baseLineHeight: 1.45,
   includeNormalize: true
 };
 

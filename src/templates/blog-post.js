@@ -7,9 +7,11 @@ const BlogPost = ({ data }) => {
   return (
     <BlogPostTemplate
       content={post.html}
-      // description={post.frontmatter.description}
-      tags={post.frontmatter.tags}
+      tags={
+        post.frontmatter.tags // description={post.frontmatter.description}
+      }
       title={post.frontmatter.title}
+      fileAbsolutePath={post.fileAbsolutePath}
     />
   );
 };
@@ -22,6 +24,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fileAbsolutePath
       frontmatter {
         date(formatString: "YYYY-MM-DD")
         title

@@ -1,10 +1,7 @@
 import React, { SFC } from "react";
 import styled from "styled-components";
 
-export const Article = styled.div`
-  font-size: 18px;
-  line-height: 1.5em;
-`;
+export const Article = styled.div``;
 
 export const HTMLContent = ({ content, ...rest }) => {
   return <Article {...rest} dangerouslySetInnerHTML={{ __html: content }} />;
