@@ -3,8 +3,8 @@ import Helmet from "react-helmet";
 import { generateFontUrl } from "./font";
 // import { baseStyles } from "./style";
 // import "highlight.js/styles/dark.css";
-// import "prismjs/themes/prism-okaidia.css";
-// @ts-ignore
+const r = require("prismjs/themes/prism-okaidia.css");
+console.warn(r);
 
 export const Meta = () => {
   // baseStyles();
