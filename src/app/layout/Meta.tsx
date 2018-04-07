@@ -5,7 +5,6 @@ import { generateFontUrl } from "./font";
 // import "highlight.js/styles/dark.css";
 // import "prismjs/themes/prism-okaidia.css";
 // @ts-ignore
-require("prism-themes/themes/prism-atom-dark.css");
 
 export const Meta = () => {
   // baseStyles();
