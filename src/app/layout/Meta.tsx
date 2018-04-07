@@ -10,6 +10,10 @@ export const Meta = () => {
   // baseStyles();
   return (
     <Helmet title="Snippet 🐶 ">
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
+      />
       {/* <link href={generateFontUrl()} rel="stylesheet" /> */}
     </Helmet>
   );
