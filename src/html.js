@@ -1,6 +1,8 @@
 // @ts-nocheckss
 import React from "react";
+import testPkg from "test-pkg";
 
+testPkg();
 let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
   try {
