@@ -9,6 +9,7 @@ if (process.env.NODE_ENV === "production") {
       require("!raw-loader!../public/styles.css"),
       require("!raw-loader!prism-themes/themes/prism-atom-dark.css")
     ].join("");
+    console.log(inlinedStyles);
   } catch (e) {
     console.log(e);
   }
