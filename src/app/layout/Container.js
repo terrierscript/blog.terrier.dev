@@ -10,6 +10,8 @@ const Col = styled.div`
   margin: 0 auto;
   word-break: break-all;
   width: 100%;
+  min-height: 90vh;
+  padding-bottom: 2em;
 `;
 
 export const Container = ({ children }) => (
