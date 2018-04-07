@@ -10,6 +10,7 @@ export const Meta = () => {
   // baseStyles();
   return (
     <Helmet title="Snippet 🐶 ">
+      {/* TODO: use more great highlight */}
       <link
         rel="stylesheet"
         href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
