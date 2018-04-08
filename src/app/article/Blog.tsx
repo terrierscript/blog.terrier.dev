@@ -32,7 +32,7 @@ const Modify = ({ fileAbsolutePath }) => {
   const filename = fileAbsolutePath.split("/").pop();
   const url = `https://github.com/${repo}/edit/master/${directory}/${filename}`;
 
-  return <a href={url}>この記事の修正を提案する</a>;
+  return <a href={url}>この記事の修正をする</a>;
 };
 
 const BlogArticleWrapper = styled.div`
