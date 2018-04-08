@@ -30,7 +30,7 @@ collections:
         widget: datetime
       - label: Body
         name: body
-        widget: markdown
+        widget: text
       - label: Tags
         name: tags
         widget: list
