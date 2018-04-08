@@ -1,3 +1,4 @@
 module.exports = {
-  parser: "typescript"
+  parser: "typescript",
+  semi: false
 }
