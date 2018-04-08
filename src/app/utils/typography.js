@@ -1,6 +1,8 @@
 import Typography from "typography";
 import fairyGatesTheme from "typography-theme-fairy-gates";
 
+export const headerFont = "Quicksand";
+
 const theme = {
   baseFontSize: "18px",
   googleFonts: [
@@ -14,7 +16,7 @@ const theme = {
       // styles: [400, 500]
     }
   ],
-  headerFontFamily: ["Quicksand", "Helvetica"],
+  headerFontFamily: [headerFont, "Helvetica"],
   bodyFontFamily: [
     "-apple-system,BlinkMacSystemFont",
     "Segoe UI",

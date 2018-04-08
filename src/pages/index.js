@@ -24,7 +24,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          # excerpt(pruneLength: 400)
+          excerpt(pruneLength: 400)
           id
           fields {
             slug
@@ -33,7 +33,7 @@ export const query = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY/MM/DD")
           }
         }
       }

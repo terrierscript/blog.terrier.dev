@@ -38,13 +38,20 @@ const Modify = ({ fileAbsolutePath }) => {
 const BlogArticleWrapper = styled.div`
   padding-bottom: 3em;
 `;
+
 export const BlogArticle = ({ content, title, tags }) => (
   <BlogArticleWrapper>
     <Title>{title}</Title>
     <TagListWrapper>
       <TagList tags={tags} />
     </TagListWrapper>
+    <HTMLContent content={content} />
+  </BlogArticleWrapper>
+);
 
+export const BlogArticleCompact = ({ content, title }) => (
+  <BlogArticleWrapper>
+    <Title>{title}</Title>
     <HTMLContent content={content} />
   </BlogArticleWrapper>
 );
