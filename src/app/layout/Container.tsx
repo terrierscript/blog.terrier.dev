@@ -11,7 +11,7 @@ const Col = styled.div`
   word-break: break-all;
   width: 100%;
   min-height: 90vh;
-  padding-bottom: 2em;
+  padding: 2em 0;
 `;
 
 export const Container = ({ children }) => (

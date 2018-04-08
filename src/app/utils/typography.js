@@ -7,6 +7,10 @@ const theme = {
     {
       name: "Quicksand",
       styles: ["400", "500", "700"]
+    },
+    {
+      name: "Nunito",
+      styles: ["400", "600", "700", "800", "900"]
       // styles: [400, 500]
     }
   ],

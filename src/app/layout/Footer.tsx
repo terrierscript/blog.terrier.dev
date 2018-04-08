@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SFC } from "react";
 import styled from "styled-components";
 import FaGithub from "react-icons/lib/fa/github";
 import FaTwitter from "react-icons/lib/fa/twitter";
@@ -19,10 +19,11 @@ const LinkIcon = styled.a`
 const Name = styled.div`
   padding: 0 0.5em;
 `;
-export const Footer = ({ author }) => {
+
+export const Footer: SFC<{ author: string }> = ({ author }) => {
   return (
     <FooterContainer>
-      <Name>@terrierscript</Name>
+      <Name>@{author}</Name>
       <LinkIcon href={`https://github.com/${author}`}>
         <FaGithub />
       </LinkIcon>

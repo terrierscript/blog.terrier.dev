@@ -34,6 +34,7 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
 const Block = styled.div`
   display: inline-block;
 `;
