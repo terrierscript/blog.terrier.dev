@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
+import { BlogItem } from "../app/list/Item";
 
 const PostLinks = ({ posts }) =>
   posts.map(post => (
@@ -13,22 +14,26 @@ const PostLinks = ({ posts }) =>
 
 class TagRoute extends React.Component {
   render() {
+    // console.log(this.props);
     const posts = this.props.data.allMarkdownRemark.edges;
     const tag = this.props.pathContext.tag;
     const title = this.props.data.site.siteMetadata.title;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `${totalCount} tagged with “${tag}”`;
-
+    const tagHeader = `"${tag}”の記事`;
+    // console.log(posts);
     return (
       <section>
         <Helmet title={`${tag} | ${title}`} />
         <div>
           <h3>{tagHeader}</h3>
-          <ul>
+          {/* <ul>
             <PostLinks posts={posts} />
-          </ul>
+          </ul> */}
+          {posts.map(({ node: post }) => (
+            <BlogItem post={post} key={post.id} />
+          ))}
           <p>
-            <Link to="/tags/">Browse all tags</Link>
+            <Link to="/tags/">全てのタグを見る</Link>
           </p>
         </div>
       </section>
@@ -58,6 +63,9 @@ export const tagPageQuery = graphql`
           }
           frontmatter {
             title
+            tags
+            templateKey
+            date(formatString: "YYYY/MM/DD")
           }
         }
       }
