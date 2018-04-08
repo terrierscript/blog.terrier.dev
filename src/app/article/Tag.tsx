@@ -10,6 +10,7 @@ const TagItem = styled.div`
   padding: 0.2em 0.5em;
   margin: 0.2em;
   border-radius: 20px;
+  font-size: 0.8em;
 `;
 
 export const Tag: SFC<{ tag: string }> = ({ tag }) => {
