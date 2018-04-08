@@ -10,7 +10,8 @@ import media from "../lib/media";
 const Nav = styled.nav`
   height: 64px;
   line-height: 64px;
-  border-bottom: 1px solid #d11010;
+  /* border-bottom: 1px solid #d11010; */
+  background: #fafafa;
   /* a {
     color: white;
   } */
@@ -32,7 +33,8 @@ const NavContainer = styled.div`
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Block = styled.div`
@@ -56,7 +58,7 @@ const NavbarContainer = ({ children }) => (
   <Nav>
     <NavContainer>
       <Block>{children}</Block>
-      <Author name="terrierscript" />
+      {/* <Author name="terrierscript" /> */}
     </NavContainer>
   </Nav>
 );
