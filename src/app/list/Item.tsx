@@ -11,7 +11,8 @@ const Title = styled.div`
 `;
 
 const Item = styled.div`
-  margin: 1.2em;
+  padding: 1.2em;
+  border-bottom: 1px solid #e3e3e3;
 `;
 
 export const BlogItem = ({ post }) => {
