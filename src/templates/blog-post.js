@@ -1,9 +1,9 @@
-import React from "react";
-import { BlogPostTemplate } from "../app/article/Blog";
-import Content, { HTMLContent } from "../app/Content";
+import React from "react"
+import { BlogPostTemplate } from "../app/article/Blog"
+import Content, { HTMLContent } from "../app/Content"
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
   return (
     <BlogPostTemplate
       content={post.html}
@@ -12,16 +12,18 @@ const BlogPost = ({ data }) => {
       }
       title={post.frontmatter.title}
       fileAbsolutePath={post.fileAbsolutePath}
+      description={post.excerpt}
     />
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPost
 
 // @ts-ignore
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      excerpt(pruneLength: 400)
       id
       html
       fileAbsolutePath
@@ -32,4 +34,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

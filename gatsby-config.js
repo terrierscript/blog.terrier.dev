@@ -42,6 +42,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
+    "gatsby-plugin-feed",
     "gatsby-plugin-styled-components",
     // "gatsby-plugin-react-css-modules",
     {
@@ -70,4 +71,4 @@ module.exports = {
       }
     }
   ]
-};
+}
