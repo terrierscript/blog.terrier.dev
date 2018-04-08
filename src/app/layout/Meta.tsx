@@ -12,8 +12,8 @@ export const Meta = () => {
     <Helmet title="Snippet 🐶 ">
       {/* TODO: use more great highlight */}
       <link
-        rel="stylesheet"
-        href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
+        rel="stylesheet" //href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
+        href="https://unpkg.com/prism-github@1.1.0/prism-github.css"
       />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@terrierscript" />
