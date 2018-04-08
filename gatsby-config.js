@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Snippet",
-    siteUrl: `https://snippet.terrierscript.com`
+    siteUrl: `https://snippet.terrierscript.com`,
+    description: "短めの記事"
   },
   plugins: [
     "gatsby-plugin-debug-build",
