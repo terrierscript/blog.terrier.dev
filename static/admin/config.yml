@@ -40,7 +40,9 @@ collections:
       #   default: null 
   - name: draft
     label: draft
-    file: contents/draft
-    fields:
-      - name: title
-        widget: string
+    files:
+      name: draft
+      file: contents/draft
+      fields:
+        - name: title
+          widget: string
