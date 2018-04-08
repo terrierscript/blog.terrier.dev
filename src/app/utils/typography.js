@@ -28,6 +28,7 @@ const theme = {
   bodyFontColor: "#787878",
   baseLineHeight: 1.45,
   includeNormalize: true,
+
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => {
     const linkColor = "#555";
     return { a: { color: linkColor } };

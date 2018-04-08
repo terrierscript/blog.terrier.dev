@@ -1,28 +1,16 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { kebabCase } from "lodash";
-import Link from "gatsby-link";
 
 import Content, { HTMLContent } from "../Content";
 import styled from "styled-components";
 import { defaultFont } from "../layout/font";
+import { Tag } from "./Tag";
 
 const TagList = ({ tags }) => {
   if (!tags || tags.length == 0) {
     return null;
   }
-  return (
-    <div>
-      <h4>Tags</h4>
-      <ul>
-        {tags.map(tag => (
-          <li key={tag + `tag`}>
-            <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  return <span>{tags.map(tag => <Tag tag={tag} key={tag + `tag`} />)}</span>;
 };
 
 const BlogBody = styled.div`
@@ -30,8 +18,12 @@ const BlogBody = styled.div`
 `;
 
 const Title = styled.h1`
-  /* line-height: 2em; */
+  line-height: 1.2em;
   /* font-family: ${defaultFont}; */
+`;
+
+const TagListWrapper = styled.div`
+  margin-bottom: 1.2em;
 `;
 
 const Modify = ({ fileAbsolutePath }) => {
@@ -46,9 +38,13 @@ const Modify = ({ fileAbsolutePath }) => {
 const BlogArticleWrapper = styled.div`
   padding-bottom: 3em;
 `;
-export const BlogArticle = ({ content, title }) => (
+export const BlogArticle = ({ content, title, tags }) => (
   <BlogArticleWrapper>
     <Title>{title}</Title>
+    <TagListWrapper>
+      <TagList tags={tags} />
+    </TagListWrapper>
+
     <HTMLContent content={content} />
   </BlogArticleWrapper>
 );
@@ -63,8 +59,7 @@ export const BlogPostTemplate = ({
     <section>
       <Helmet title={`${title} | Snippet 🐶`} />
       <BlogBody>
-        <BlogArticle title={title} content={content} />
-        <TagList tags={tags} />
+        <BlogArticle title={title} content={content} tags={tags} />
         <Modify fileAbsolutePath={fileAbsolutePath} />
       </BlogBody>
     </section>
