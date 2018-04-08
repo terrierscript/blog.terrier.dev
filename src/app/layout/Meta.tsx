@@ -15,6 +15,8 @@ export const Meta = () => {
         rel="stylesheet"
         href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
       />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@terrierscript" />
       {/* <link href={generateFontUrl()} rel="stylesheet" /> */}
     </Helmet>
   );
