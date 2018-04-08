@@ -30,7 +30,7 @@ collections:
         widget: datetime
       - label: Body
         name: body
-        widget: text
+        widget: markdown
       - label: Tags
         name: tags
         widget: list
@@ -38,9 +38,9 @@ collections:
       #   name: path
       #   widget: string
       #   default: null 
-  # - name: draft
-  #   label: draft
-  #   file: contents/draft
-  #   fields:
-  #     - name: title
-  #       widget: string
+  - name: draft
+    label: draft
+    file: contents/draft
+    fields:
+      - name: title
+        widget: string
