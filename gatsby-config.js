@@ -5,7 +5,7 @@ module.exports = {
     description: "短めの記事"
   },
   plugins: [
-    "gatsby-plugin-debug-build",
+    // "gatsby-plugin-debug-build",
     "gatsby-plugin-no-sourcemaps",
     "gatsby-plugin-typescript",
     "gatsby-plugin-react-helmet",
