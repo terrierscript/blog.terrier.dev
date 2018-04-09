@@ -1,4 +1,5 @@
-import React, { SFC } from "react"
+import React, { ReactNode, ReactElement } from "react"
+import { SFC } from "react"
 import Helmet from "react-helmet"
 
 import Content, { HTMLContent } from "../Content"
@@ -6,9 +7,9 @@ import styled from "styled-components"
 import { defaultFont } from "../layout/font"
 import { Tag } from "./Tag"
 
-const TagList = tags => {
+const TagList = ({ tags }) => {
   if (!tags || tags.length == 0) {
-    return <noscript />
+    return null
   }
   return <span>{tags.map(tag => <Tag tag={tag} key={tag + `tag`} />)}</span>
 }
