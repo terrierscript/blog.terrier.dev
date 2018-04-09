@@ -1,17 +1,17 @@
-import React from "react";
+import React from "react"
 // import PropTypes from "prop-types";
-import { BlogItem } from "../app/list/Item";
+import { BlogItem } from "../app/list/Item"
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <section onMouseOver={e => console.log("mouseover")}>
+      <section>
         {posts.map(({ node: post }) => <BlogItem post={post} key={post.id} />)}
       </section>
-    );
+    )
   }
 }
 
@@ -40,4 +40,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
