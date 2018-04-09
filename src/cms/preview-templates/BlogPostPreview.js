@@ -1,15 +1,15 @@
-import React from "react";
-import { BlogPostTemplate } from "../../app/article/Blog";
+import React from "react"
+import { BlogPostTemplate } from "../../app/article/Blog"
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
   return (
     <BlogPostTemplate
       content={widgetFor("body")}
-      // description={entry.getIn(["data", "description"])}
+      description={""}
       tags={entry.getIn(["data", "tags"])}
       title={entry.getIn(["data", "title"])}
     />
-  );
-};
+  )
+}
 
-export default BlogPostPreview;
+export default BlogPostPreview

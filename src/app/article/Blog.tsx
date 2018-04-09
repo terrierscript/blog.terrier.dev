@@ -1,4 +1,4 @@
-import React from "react"
+import React, { SFC } from "react"
 import Helmet from "react-helmet"
 
 import Content, { HTMLContent } from "../Content"
@@ -27,6 +27,9 @@ const TagListWrapper = styled.div`
 `
 
 const Modify = ({ fileAbsolutePath }) => {
+  if (!fileAbsolutePath) {
+    return null
+  }
   const repo = "terrierscript/snippet.terriercript.com"
   const directory = "contents/pages/blog"
   const filename = fileAbsolutePath.split("/").pop()
@@ -58,10 +61,10 @@ export const BlogArticleCompact = ({ content, title }) => (
 
 export const BlogPostTemplate = ({
   content,
-  description,
+  description = "",
   tags,
   title,
-  fileAbsolutePath
+  fileAbsolutePath = null
 }) => {
   return (
     <section>
