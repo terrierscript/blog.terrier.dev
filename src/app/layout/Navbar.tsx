@@ -1,12 +1,12 @@
-import React, { SFC } from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
-import { Container } from "./Container";
-import Helmet from "react-helmet";
-import { defaultFont } from "./font";
-
+import React, { SFC } from "react"
+import Link from "gatsby-link"
+import styled from "styled-components"
+import { Container } from "./Container"
+import Helmet from "react-helmet"
+import { defaultFont } from "./font"
+import { Avater } from "./Avater"
 // import media from "../lib/media";
-import media from "styled-media-query";
+import media from "styled-media-query"
 
 const Nav = styled.nav`
   height: 64px;
@@ -17,7 +17,7 @@ const Nav = styled.nav`
     color: white;
   } */
   /* text-align: center; */
-`;
+`
 
 const Logo = styled(Link)`
   text-decoration: none;
@@ -28,7 +28,7 @@ const Logo = styled(Link)`
   /* ${media.lessThan("small")`
     font-size: 18px;
   `}; */
-`;
+`
 
 const NavContainer = styled.div`
   margin: 0 auto;
@@ -36,33 +36,35 @@ const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const Block = styled.div`
   display: inline-block;
-`;
+`
 
 const Space = styled.span`
   padding-right: 0.2em;
-`;
+`
 
 const Author = ({ name }) => {
   return (
     <Block>
-      <Space>Author</Space>
-      <a href={`https://twitter.com/${name}`}>@{name}</a>
+      {/* <Space>Author</Space> */}
+      <a href={`https://twitter.com/${name}`}>
+        <Avater size={32} />
+      </a>
     </Block>
-  );
-};
+  )
+}
 
 const NavbarContainer = ({ children }) => (
   <Nav>
     <NavContainer>
+      <Author name="terrierscript" />
       <Block>{children}</Block>
-      {/* <Author name="terrierscript" /> */}
     </NavContainer>
   </Nav>
-);
+)
 
 const Navbar = () => {
   return (
@@ -71,7 +73,7 @@ const Navbar = () => {
         <Logo to="/">Code Snippet 🐶</Logo>
       </NavbarContainer>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
