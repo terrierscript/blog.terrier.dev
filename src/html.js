@@ -1,49 +1,52 @@
 // @ts-nocheckss
-import React from "react";
+import React from "react"
 
-let inlinedStyles = "";
+let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
   try {
     // @ts-ignore
     inlinedStyles = [
       require("!raw-loader!../public/styles.css")
       // require("!raw-loader!prism-themes/themes/prism-atom-dark.css")
-    ].join("");
-    console.log("inline", inlinedStyles);
+    ].join("")
+    console.log("inline", inlinedStyles)
   } catch (e) {
-    console.log("inline", e);
+    console.log("inline", e)
   }
 }
 
-const Ga = (props) => {
-  return <React.Fragment>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+// const Ga = (props) => {
+//   return <React.Fragment>
+//     <script>
+//       window.dataLayer = window.dataLayer || [];
+//       function gtag(){dataLayer.push(arguments);}
+//       gtag('js', new Date());
 
-      gtag('config', 'UA-5982830-12');
-    </script>
-  </React.Fragment>
-}
+//       gtag('config', 'UA-5982830-12');
+//     </script>
+//   </React.Fragment>
+// }
 
 export default class HTML extends React.Component {
   render() {
-    let css;
+    let css
     if (process.env.NODE_ENV === "production") {
       css = (
         <style
           id="gatsby-inlined-css"
           dangerouslySetInnerHTML={{ __html: inlinedStyles }}
         />
-      );
+      )
     }
     return (
       <html lang="en">
         <head>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5982830-12"></script>
-          <Ga />
-          
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-5982830-12"
+          />
+          {/* <Ga /> */}
+
           <meta charSet="utf-8" />
           <meta
             name="viewport"
@@ -61,6 +64,6 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    );
+    )
   }
 }
