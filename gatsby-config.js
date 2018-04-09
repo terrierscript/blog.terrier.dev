@@ -70,6 +70,14 @@ module.exports = {
       options: {
         pathToConfigModule: `src/app/utils/typography`
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-5982830-12",
+        // Puts tracking script in the head instead of the body
+        head: true
+      }
     }
   ]
 }
