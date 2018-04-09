@@ -7,8 +7,8 @@ import styled from "styled-components"
 import { defaultFont } from "../layout/font"
 import { Tag } from "./Tag"
 
-const TagList = ({ tags }) => {
-  if (!tags || tags.length == 0) {
+const TagList = ({ tags = [] }) => {
+  if (tags.length === 0) {
     return null
   }
   return <span>{tags.map(tag => <Tag tag={tag} key={tag + `tag`} />)}</span>
