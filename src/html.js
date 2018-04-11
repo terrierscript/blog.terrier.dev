@@ -39,7 +39,7 @@ export default class HTML extends React.Component {
       )
     }
     return (
-      <html lang="en">
+      <html lang="ja">
         <head>
           <script
             async
