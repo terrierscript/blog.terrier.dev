@@ -1,16 +1,18 @@
-import React, { SFC } from "react";
-import styled from "styled-components";
+import React, { SFC } from "react"
+import styled from "styled-components"
 
-export const Article = styled.div``;
+export const Article = styled.div`
+  padding: 0 0.5em;
+`
 
 export const HTMLContent = ({ content, ...rest }) => {
-  return <Article {...rest} dangerouslySetInnerHTML={{ __html: content }} />;
-};
+  return <Article {...rest} dangerouslySetInnerHTML={{ __html: content }} />
+}
 
 const Content = ({ content, ...rest }) => (
   <Article {...rest}>HTML:{content}</Article>
-);
+)
 
 // HTMLContent.propTypes = Content.propTypes;
 
-export default Content;
+export default Content
