@@ -15,18 +15,6 @@ if (process.env.NODE_ENV === "production") {
   }
 }
 
-// const Ga = (props) => {
-//   return <React.Fragment>
-//     <script>
-//       window.dataLayer = window.dataLayer || [];
-//       function gtag(){dataLayer.push(arguments);}
-//       gtag('js', new Date());
-
-//       gtag('config', 'UA-5982830-12');
-//     </script>
-//   </React.Fragment>
-// }
-
 export default class HTML extends React.Component {
   render() {
     let css
@@ -41,12 +29,6 @@ export default class HTML extends React.Component {
     return (
       <html lang="ja">
         <head>
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-5982830-12"
-          />
-          {/* <Ga /> */}
-
           <meta charSet="utf-8" />
           <meta
             name="viewport"
