@@ -9,11 +9,10 @@ type Props = {
 }
 
 export const Comment = ( props: Props) => {
-  const disqusShortname = "example"
+  const disqusShortname = "snippet-terrier"
   const disqusConfig = props
   return (
     <div className="article">
-      <h1>{props.title}</h1>
       <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
         Comments
       </Disqus.CommentCount>
