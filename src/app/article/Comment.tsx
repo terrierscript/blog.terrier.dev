@@ -7,22 +7,20 @@ type Props = {
   identifier: string
   title: string
 }
-export class Comment extends React.Component<Props, {}> {
-  render() {
-    const disqusShortname = "example"
-    const disqusConfig = this.props
-    return (
-      <div className="article">
-        <h1>{this.props.article.title}</h1>
-        <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
-          Comments
-        </Disqus.CommentCount>
-        <p>{this.props.article.body}</p>
-        <Disqus.DiscussionEmbed
-          shortname={disqusShortname}
-          config={disqusConfig}
-        />
-      </div>
-    )
-  }
+
+export const Comment = ( props: Props) => {
+  const disqusShortname = "example"
+  const disqusConfig = props
+  return (
+    <div className="article">
+      <h1>{props.title}</h1>
+      <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
+        Comments
+      </Disqus.CommentCount>
+      <Disqus.DiscussionEmbed
+        shortname={disqusShortname}
+        config={disqusConfig}
+      />
+    </div>
+  )
 }
