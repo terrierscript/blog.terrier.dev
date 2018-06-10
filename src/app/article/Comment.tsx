@@ -3,7 +3,7 @@ import Disqus from "disqus-react"
 // Alternatively, import specific members:
 // import { DiscussionEmbed, CommentCount } from 'disqus-react';
 type Props = {
-  url: string
+  // url: string
   identifier: string
   title: string
 }
@@ -14,7 +14,6 @@ export const Comment = ( props: Props) => {
   return (
     <div className="article">
       <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
-        Comments
       </Disqus.CommentCount>
       <Disqus.DiscussionEmbed
         shortname={disqusShortname}

@@ -79,7 +79,7 @@ export const BlogPostTemplate = ({
       <BlogBody>
         <BlogArticle title={title} content={content} tags={tags} />
         <Modify fileAbsolutePath={fileAbsolutePath} />
-        <Comment identifier={id} title={title} url={""} />
+        <Comment identifier={id} title={title} />
         
       </BlogBody>
     </section>
