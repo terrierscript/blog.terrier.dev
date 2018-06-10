@@ -6,6 +6,9 @@ export const Article = styled.div`
 `
 
 export const HTMLContent = ({ content, ...rest }) => {
+  if (React.isValidElement(content)) {
+    return <Article>{content}</Article>
+  }
   return <Article {...rest} dangerouslySetInnerHTML={{ __html: content }} />
 }
 

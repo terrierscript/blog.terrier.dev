@@ -71,6 +71,8 @@ export const BlogPostTemplate = ({
     <section>
       <Helmet title={`${title} | Snippet 🐶`}>
         <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
       </Helmet>
       <BlogBody>
         <BlogArticle title={title} content={content} tags={tags} />
