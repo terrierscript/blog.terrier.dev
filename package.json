@@ -55,7 +55,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gatsby build"
+
   },
   "devDependencies": {
     "gatsby-plugin-sitemap": "^1.2.20",
