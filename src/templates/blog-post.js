@@ -13,6 +13,7 @@ const BlogPost = ({ data }) => {
       title={post.frontmatter.title}
       fileAbsolutePath={post.fileAbsolutePath}
       description={post.excerpt}
+      id={post.id}
     />
   )
 }

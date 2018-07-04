@@ -6,6 +6,7 @@ import Content, { HTMLContent } from "../Content"
 import styled from "styled-components"
 import { defaultFont } from "../layout/font"
 import { Tag } from "./Tag"
+import { Comment } from "./Comment"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -65,6 +66,7 @@ export const BlogPostTemplate = ({
   description = "",
   tags,
   title,
+  id,
   fileAbsolutePath = null
 }) => {
   return (
@@ -77,6 +79,8 @@ export const BlogPostTemplate = ({
       <BlogBody>
         <BlogArticle title={title} content={content} tags={tags} />
         <Modify fileAbsolutePath={fileAbsolutePath} />
+        <Comment identifier={id} title={title} />
+        
       </BlogBody>
     </section>
   )
