@@ -10,7 +10,7 @@
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-debug-build": "^1.0.0",
     "gatsby-plugin-feed": "^1.3.20",
-    "gatsby-plugin-netlify-cms": "^1.0.9",
+    "gatsby-plugin-netlify-cms": "^2.0.0",
     "gatsby-plugin-no-sourcemaps": "^1.0.5",
     "gatsby-plugin-react-css-modules": "^1.0.15",
     "gatsby-plugin-react-helmet": "^2.0.5",
@@ -20,7 +20,7 @@
     "gatsby-plugin-typography": "^1.7.18",
     "gatsby-remark-highlights": "^1.3.4",
     "gatsby-remark-images": "^1.5.50",
-    "gatsby-remark-prismjs": "^1.2.23",
+    "gatsby-remark-prismjs": "^2.0.0",
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.39",
     "gatsby-transformer-sharp": "^1.6.21",
@@ -59,7 +59,7 @@
     "test": "gatsby build"
   },
   "devDependencies": {
-    "gatsby-plugin-sitemap": "^1.2.20",
+    "gatsby-plugin-sitemap": "1.2.25",
     "prettier": "^1.7.4"
   }
 }
