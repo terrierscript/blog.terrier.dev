@@ -9823,7 +9823,7 @@ slate-react@0.10.11:
     slate-plain-serializer "^0.4.6"
     slate-prop-types "^0.4.6"
 
-slate-schema-violations@^0.1.12:
+slate-schema-violations@^0.1.16:
   version "0.1.16"
   resolved "https://registry.yarnpkg.com/slate-schema-violations/-/slate-schema-violations-0.1.16.tgz#418ed73caa172b8b180959d7a4f4a14934f239a1"
 
@@ -9844,9 +9844,9 @@ slate@^0.30.0:
     slate-dev-logger "^0.1.33"
     type-of "^2.0.1"
 
-slate@^0.33.3:
-  version "0.33.8"
-  resolved "https://registry.yarnpkg.com/slate/-/slate-0.33.8.tgz#c2cd9906c446d010b15e9e28f6d1a01792c7a113"
+slate@^0.34.0:
+  version "0.34.3"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.34.3.tgz#96a3f86da52d063a8166db9ac752cc0e7a6a0d2b"
   dependencies:
     debug "^3.1.0"
     direction "^0.1.5"
@@ -9855,7 +9855,7 @@ slate@^0.33.3:
     is-plain-object "^2.0.4"
     lodash "^4.17.4"
     slate-dev-logger "^0.1.39"
-    slate-schema-violations "^0.1.12"
+    slate-schema-violations "^0.1.16"
     type-of "^2.0.1"
 
 snapdragon-node@^2.0.1:
