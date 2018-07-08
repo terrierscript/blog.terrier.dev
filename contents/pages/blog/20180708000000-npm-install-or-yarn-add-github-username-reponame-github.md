@@ -14,12 +14,21 @@ githubからmaster持ってきたかったり、ちょろっとしたの使い�
 npm install github:username/repo
 ```
 でインストールできる
+
+
 ハッシュとか指定したいなら
 
 ```
 npm instal github:username/repo#hash
 ```
 でOK。
+
+なんとなく罪悪感も感じるが`github:`を省略してもgithubということになるらしい
+
+```
+npm install githubname/repo
+```
+
 
 * [install | npm Documentation](https://docs.npmjs.com/cli/install)
 
