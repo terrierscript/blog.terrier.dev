@@ -41,7 +41,7 @@
     "styled-media-query": "^2.0.2",
     "styled-normalize": "^8.0.0",
     "styled-reset": "^1.3.2",
-    "styled-system": "^2.2.1",
+    "styled-system": "^3.0.0",
     "typescript": "^2.8.1",
     "typography": "^0.16.6",
     "typography-theme-fairy-gates": "^0.15.11"
