@@ -31,6 +31,7 @@
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^2.0.6",
     "netlify-cms-backend-github": "^2.0.2",
+    "netlify-cms-core": "^2.0.4",
     "netlify-cms-lib-auth": "^2.0.2",
     "netlify-cms-lib-util": "^2.0.2",
     "netlify-cms-ui-default": "^2.0.2",
@@ -39,8 +40,10 @@
     "prop-types": "^15.6.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.1",
+    "react-emotion": "^9.2.6",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
+    "react-immutable-proptypes": "^2.1.0",
     "slate": "^0.36.0",
     "styled-components": "^3.2.3",
     "styled-media-query": "^2.0.2",
@@ -49,7 +52,8 @@
     "styled-system": "^3.0.0",
     "typescript": "^2.8.1",
     "typography": "^0.16.6",
-    "typography-theme-fairy-gates": "^0.15.11"
+    "typography-theme-fairy-gates": "^0.15.11",
+    "uuid": "^3.3.2"
   },
   "keywords": [
     "gatsby"
