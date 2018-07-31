@@ -10,7 +10,7 @@
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-debug-build": "^1.0.0",
     "gatsby-plugin-feed": "^1.3.20",
-    "gatsby-plugin-netlify-cms": "^2.0.0",
+    "gatsby-plugin-netlify-cms": "^3.0.0-beta.1",
     "gatsby-plugin-no-sourcemaps": "^1.0.5",
     "gatsby-plugin-react-css-modules": "^1.0.15",
     "gatsby-plugin-react-helmet": "^2.0.5",
