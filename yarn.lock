@@ -10565,9 +10565,9 @@ slate-dev-logger@^0.1.32, slate-dev-logger@^0.1.33, slate-dev-logger@^0.1.36, sl
   version "0.1.41"
   resolved "https://registry.yarnpkg.com/slate-dev-logger/-/slate-dev-logger-0.1.41.tgz#5b865ee2ace6368fd2422b58f9a38bb84f7c74eb"
 
-slate-dev-logger@^0.1.42:
-  version "0.1.42"
-  resolved "https://registry.yarnpkg.com/slate-dev-logger/-/slate-dev-logger-0.1.42.tgz#922c4693469e6d60deaa10adfd22b627c9632fbf"
+slate-dev-logger@^0.1.43:
+  version "0.1.43"
+  resolved "https://registry.yarnpkg.com/slate-dev-logger/-/slate-dev-logger-0.1.43.tgz#77f6ca7207fcbf453a5516f3aa8b19794d1d26dc"
 
 slate-edit-list@^0.10.1:
   version "0.10.3"
@@ -10608,9 +10608,9 @@ slate-react@0.10.11:
     slate-plain-serializer "^0.4.6"
     slate-prop-types "^0.4.6"
 
-slate-schema-violations@^0.1.25:
-  version "0.1.25"
-  resolved "https://registry.yarnpkg.com/slate-schema-violations/-/slate-schema-violations-0.1.25.tgz#2fc6c599395b9120f9c0e21c8d020ff06dd4f02e"
+slate-schema-violations@^0.1.33:
+  version "0.1.33"
+  resolved "https://registry.yarnpkg.com/slate-schema-violations/-/slate-schema-violations-0.1.33.tgz#7af9df9cd9f42959b4092c72be8ffc87e0a9168c"
 
 slate-soft-break@^0.6.0:
   version "0.6.1"
@@ -10629,9 +10629,9 @@ slate@^0.30.0:
     slate-dev-logger "^0.1.33"
     type-of "^2.0.1"
 
-slate@^0.37.0:
-  version "0.37.0"
-  resolved "https://registry.yarnpkg.com/slate/-/slate-0.37.0.tgz#1e804e36fa09f6da8f187b39d9f6fcc38194d4ed"
+slate@^0.38.0:
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.38.0.tgz#e0733a4935a2f50f70b5b18e3c8573d3b302d0b5"
   dependencies:
     debug "^3.1.0"
     direction "^0.1.5"
@@ -10639,8 +10639,8 @@ slate@^0.37.0:
     is-empty "^1.0.0"
     is-plain-object "^2.0.4"
     lodash "^4.17.4"
-    slate-dev-logger "^0.1.42"
-    slate-schema-violations "^0.1.25"
+    slate-dev-logger "^0.1.43"
+    slate-schema-violations "^0.1.33"
     type-of "^2.0.1"
 
 snapdragon-node@^2.0.1:
