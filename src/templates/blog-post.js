@@ -1,19 +1,22 @@
 import React from "react"
 import { BlogPostTemplate } from "../app/article/Blog"
 import { graphql } from "gatsby"
+import { Layout } from "../app/layout/Layout"
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
   return (
-    <BlogPostTemplate
-      content={post.html}
-      tags={
-        post.frontmatter.tags // description={post.frontmatter.description}
-      }
-      title={post.frontmatter.title}
-      fileAbsolutePath={post.fileAbsolutePath}
-      description={post.excerpt}
-      id={post.id}
-    />
+    <Layout>
+      <BlogPostTemplate
+        content={post.html}
+        tags={
+          post.frontmatter.tags // description={post.frontmatter.description}
+        }
+        title={post.frontmatter.title}
+        fileAbsolutePath={post.fileAbsolutePath}
+        description={post.excerpt}
+        id={post.id}
+      />
+    </Layout>
   )
 }
 
