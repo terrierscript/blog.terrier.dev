@@ -1,6 +1,5 @@
 import React, { SFC } from "react"
 import Navbar from "./Navbar"
-import styled from "styled-components"
 // @ts-ignore
 import { desktop } from "../lib/media"
 import { Meta } from "./Meta"
@@ -14,7 +13,7 @@ export const Layout: SFC<{ children: any }> = ({ children }) => {
       <Meta />
       <Navbar />
       <Container>
-        <Article>{children()}</Article>
+        <Article>{children}</Article>
       </Container>
       <Footer author="terrierscript" />
     </div>
