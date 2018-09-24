@@ -30,7 +30,6 @@
     "highlight.js": "^9.12.0",
     "immutable": "^3.8.2",
     "lodash": "^4.17.5",
-    "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^2.0.6",
     "netlify-cms-backend-github": "^2.0.2",
     "netlify-cms-core": "^2.0.4",
