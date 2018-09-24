@@ -70,6 +70,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/app/utils/typography`
       }
-    },
+    }
   ]
 }

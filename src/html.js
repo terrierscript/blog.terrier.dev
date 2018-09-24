@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === "production") {
   try {
     // @ts-ignore
     inlinedStyles = [
-      require("!raw-loader!../public/styles.css")
+      // require("!raw-loader!../public/styles.css")
       // require("!raw-loader!prism-themes/themes/prism-atom-dark.css")
     ].join("")
     console.log("inline", inlinedStyles)

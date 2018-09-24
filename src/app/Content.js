@@ -1,4 +1,4 @@
-import React, { SFC } from "react"
+import React from "react"
 import styled from "styled-components"
 
 export const Article = styled.div`
@@ -13,7 +13,10 @@ export const HTMLContent = ({ content, ...rest }) => {
 }
 
 const Content = ({ content, ...rest }) => (
-  <Article {...rest}>HTML:{content}</Article>
+  <Article {...rest}>
+    HTML:
+    {content}
+  </Article>
 )
 
 // HTMLContent.propTypes = Content.propTypes;
