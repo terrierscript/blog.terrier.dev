@@ -1,7 +1,8 @@
-import React from "react";
-import Helmet from "react-helmet";
-import Link from "gatsby-link";
-import { BlogItem } from "../app/list/Item";
+import React from "react"
+import Helmet from "react-helmet"
+import Link from "gatsby-link"
+import { BlogItem } from "../app/list/Item"
+import { graphql } from "gatsby"
 
 const PostLinks = ({ posts }) =>
   posts.map(post => (
@@ -10,16 +11,16 @@ const PostLinks = ({ posts }) =>
         <h2>{post.node.frontmatter.title}</h2>
       </Link>
     </li>
-  ));
+  ))
 
 class TagRoute extends React.Component {
   render() {
     // console.log(this.props);
-    const posts = this.props.data.allMarkdownRemark.edges;
-    const tag = this.props.pathContext.tag;
-    const title = this.props.data.site.siteMetadata.title;
-    const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `"${tag}”の記事`;
+    const posts = this.props.data.allMarkdownRemark.edges
+    const tag = this.props.pathContext.tag
+    const title = this.props.data.site.siteMetadata.title
+    const totalCount = this.props.data.allMarkdownRemark.totalCount
+    const tagHeader = `"${tag}”の記事`
     // console.log(posts);
     return (
       <section>
@@ -37,11 +38,11 @@ class TagRoute extends React.Component {
           </p>
         </div>
       </section>
-    );
+    )
   }
 }
 
-export default TagRoute;
+export default TagRoute
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
@@ -71,4 +72,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`;
+`

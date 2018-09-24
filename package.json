@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.55",
     "@types/react-helmet": "^5.0.5",
+    "babel-plugin-styled-components": "^1.7.1",
     "bulma": "^0.7.0",
     "disqus-react": "^1.0.5",
     "gatsby": "^2.0.0",
@@ -44,6 +45,7 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-immutable-proptypes": "^2.1.0",
+    "react-typography": "^0.16.13",
     "slate": "^0.40.0",
     "styled-components": "^3.2.3",
     "styled-media-query": "^2.0.2",
