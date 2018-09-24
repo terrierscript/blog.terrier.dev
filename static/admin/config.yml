@@ -41,8 +41,8 @@ collections:
   - name: draft
     label: draft
     files:
-      name: draft
-      file: contents/draft
-      fields:
-        - name: title
-          widget: string
+      - name: draft
+        file: contents/draft
+        fields:
+          - name: title
+            widget: string
