@@ -17,7 +17,7 @@ class TagRoute extends React.Component {
   render() {
     // console.log(this.props);
     const posts = this.props.data.allMarkdownRemark.edges
-    const tag = this.props.pathContext.tag
+    const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `"${tag}”の記事`

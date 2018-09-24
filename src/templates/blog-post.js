@@ -1,6 +1,5 @@
 import React from "react"
 import { BlogPostTemplate } from "../app/article/Blog"
-import Content, { HTMLContent } from "../app/Content"
 import { graphql } from "gatsby"
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
