@@ -2,12 +2,15 @@ import React from "react"
 import { BlogPostTemplate } from "../../app/article/Blog"
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
-  console.log(widgetFor("body"))
+  const bodyWidget = widgetFor("body")
+  console.log(bodyWidget)
+
   return (
     <div>
       <BlogPostTemplate
-        content={widgetFor("body")}
+        content={bodyWidget}
         description={""}
+        id={""}
         tags={entry.getIn(["data", "tags"])}
         title={entry.getIn(["data", "title"])}
       />
