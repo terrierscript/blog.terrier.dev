@@ -1,7 +1,7 @@
-import Typography from "typography";
-import fairyGatesTheme from "typography-theme-fairy-gates";
+import Typography from "typography"
+// import fairyGatesTheme from "typography-theme-fairy-gates";
 
-export const headerFont = "Quicksand";
+export const headerFont = "Quicksand"
 
 const theme = {
   baseFontSize: "18px",
@@ -32,11 +32,11 @@ const theme = {
   includeNormalize: true,
 
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => {
-    const linkColor = "#555";
-    return { a: { color: linkColor } };
+    const linkColor = "#555"
+    return { a: { color: linkColor } }
   }
-};
+}
 
-const typography = new Typography(theme);
+const typography = new Typography(theme)
 
-export default typography;
+export default typography
