@@ -31,7 +31,7 @@
     "immutable": "^3.8.2",
     "lodash": "^4.17.5",
     "moment": "^2.22.2",
-    "netlify": "^1.2.0",
+    "netlify": "^2.0.0",
     "netlify-cms": "^2.1.2",
     "netlify-cms-backend-github": "^2.0.2",
     "netlify-cms-core": "^2.0.4",
