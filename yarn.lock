@@ -11254,10 +11254,6 @@ slate-dev-logger@^0.1.39, slate-dev-logger@^0.1.43:
   version "0.1.43"
   resolved "https://registry.yarnpkg.com/slate-dev-logger/-/slate-dev-logger-0.1.43.tgz#77f6ca7207fcbf453a5516f3aa8b19794d1d26dc"
 
-slate-dev-warning@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/slate-dev-warning/-/slate-dev-warning-0.0.1.tgz#f6c36731babea5e301b5bd504fe64911dd24200a"
-
 slate-edit-list@^0.11.3:
   version "0.11.3"
   resolved "https://registry.yarnpkg.com/slate-edit-list/-/slate-edit-list-0.11.3.tgz#d27ff2ff93a83bef49131a6a44b87a9558c9d44c"
@@ -11325,16 +11321,17 @@ slate@^0.34.0:
     slate-schema-violations "^0.1.20"
     type-of "^2.0.1"
 
-slate@^0.40.0:
-  version "0.40.4"
-  resolved "https://registry.yarnpkg.com/slate/-/slate-0.40.4.tgz#7e04eabf973c2bdb6df18e8d6cb5516756a8d11c"
+slate@^0.42.0:
+  version "0.42.0"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.42.0.tgz#3110c3bc17d35ce3a88a3ffc3e00d71f0967c707"
   dependencies:
     debug "^3.1.0"
     direction "^0.1.5"
     esrever "^0.2.0"
     is-plain-object "^2.0.4"
     lodash "^4.17.4"
-    slate-dev-warning "^0.0.1"
+    tiny-invariant "^1.0.1"
+    tiny-warning "^0.0.3"
     type-of "^2.0.1"
 
 slice-ansi@1.0.0:
@@ -12125,6 +12122,14 @@ timsort@^0.3.0:
 tiny-emitter@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.0.2.tgz#82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c"
+
+tiny-invariant@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.0.1.tgz#54700d039a0384ef2e83afd0e81af84c6d67b140"
+
+tiny-warning@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-0.0.3.tgz#1807eb4c5f81784a6354d58ea1d5024f18c6c81f"
 
 tinycolor2@^1.1.2:
   version "1.4.1"
