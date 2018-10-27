@@ -11332,9 +11332,9 @@ slate@^0.34.0:
     slate-schema-violations "^0.1.20"
     type-of "^2.0.1"
 
-slate@^0.42.0:
-  version "0.42.0"
-  resolved "https://registry.yarnpkg.com/slate/-/slate-0.42.0.tgz#3110c3bc17d35ce3a88a3ffc3e00d71f0967c707"
+slate@^0.43.0:
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.43.0.tgz#f5bf8b94efc0c3f65262d9bbdbfcaba404c861d7"
   dependencies:
     debug "^3.1.0"
     direction "^0.1.5"
