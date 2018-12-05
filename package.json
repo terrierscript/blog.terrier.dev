@@ -56,7 +56,7 @@
     "styled-system": "^3.0.0",
     "typescript": "^2.8.1",
     "typography": "^0.16.6",
-    "typography-theme-fairy-gates": "^0.15.11",
+    "typography-theme-fairy-gates": "^0.16.0",
     "uuid": "^3.3.2"
   },
   "keywords": [
