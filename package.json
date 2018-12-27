@@ -72,7 +72,7 @@
     "test": "gatsby build"
   },
   "devDependencies": {
-    "gatsby-plugin-sitemap": "2.0.3",
+    "gatsby-plugin-sitemap": "2.0.4",
     "prettier": "1.15.3"
   }
 }
