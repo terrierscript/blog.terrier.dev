@@ -1,18 +1,24 @@
-import React, { ReactNode, ReactElement } from "react"
-import { SFC } from "react"
+import React from "react"
 import Helmet from "react-helmet"
 
-import Content, { HTMLContent } from "../Content"
+import { HTMLContent } from "../Content"
 import styled from "styled-components"
 import { defaultFont } from "../layout/font"
 import { Tag } from "./Tag"
 import { Comment } from "./Comment"
+import { ClapButton } from "./ClapButton"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
     return null
   }
-  return <span>{tags.map(tag => <Tag tag={tag} key={tag + `tag`} />)}</span>
+  return (
+    <span>
+      {tags.map(tag => (
+        <Tag tag={tag} key={tag + `tag`} />
+      ))}
+    </span>
+  )
 }
 
 const BlogBody = styled.div`
@@ -77,10 +83,13 @@ export const BlogPostTemplate = ({
         <meta property="og:description" content={description} />
       </Helmet>
       <BlogBody>
+        <ClapButton id={id} title={title}>
+          👏
+        </ClapButton>
+
         <BlogArticle title={title} content={content} tags={tags} />
         <Modify fileAbsolutePath={fileAbsolutePath} />
         <Comment identifier={id} title={title} />
-        
       </BlogBody>
     </section>
   )

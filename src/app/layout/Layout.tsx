@@ -6,16 +6,23 @@ import { Meta } from "./Meta"
 import { Container } from "./Container"
 import { Article } from "../Content"
 import { Footer } from "./Footer"
+import styled from "styled-components"
+
+const Grid = styled.div`
+  display: grid;
+`
 
 export const Layout: SFC<{ children: any }> = ({ children }) => {
   return (
     <div>
-      <Meta />
-      <Navbar />
-      <Container>
-        <Article>{children}</Article>
-      </Container>
-      <Footer author="terrierscript" />
+      <Grid>
+        <Meta />
+        <Navbar />
+        <Container>
+          <Article>{children}</Article>
+        </Container>
+        <Footer author="terrierscript" />
+      </Grid>
     </div>
   )
 }
