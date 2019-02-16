@@ -29,6 +29,7 @@ const url =
 
 const useClapCallback = (title, id) => {
   return useCallback(() => {
+    console.log(url)
     return fetch(url, {
       method: "POST",
       mode: "no-cors",
