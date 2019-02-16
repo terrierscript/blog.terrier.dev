@@ -1,6 +1,6 @@
 const { promisify } = require("util")
 const request = require("request")
-
+// const fetch = require("node-fetch")
 const webhookUrl = process.env["SLACK_WEBHOOK_URL"]
 
 const buildPayload = body => {
@@ -18,7 +18,7 @@ exports.handler = function(event, context, callback) {
   // }
   if (event.httpMethod !== "POST") {
     return callback("invalid method", {
-      statusCode: 400
+      statusCode: 4001
     })
   }
   console.log(event)
