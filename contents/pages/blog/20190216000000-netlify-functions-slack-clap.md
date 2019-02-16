@@ -12,12 +12,15 @@ Gatsbyでこのブログを作ってみたがあまりにも書く気になら�
 多分左下に出ている（何らかの負荷があったら消すかも）
 
 めちゃくちゃ雑な感じで、netlify functionsが押されたらslackに通知されるそれだけみたいな状態
+
 https://github.com/terrierscript/snippet.terrierscript.com/blob/master/functions/clap.js
 
 ボタンのアニメーションはpopmotionを使った。すごく楽。本当はreact-springとかいい感じにしたかったけど諦めた
+
 https://github.com/terrierscript/snippet.terrierscript.com/blob/e1b9167bfaaeb0f90c09189867a0198fa680583b/src/app/article/ClapButton.tsx#L45-L57
 
 あと当然通信まわりはHooks。あんまりhooksの旨味は無いけど。
+
 https://github.com/terrierscript/snippet.terrierscript.com/blob/956f40987bd65e7716f15372195128a6db7ca950/src/app/article/ClapButton.tsx#L30-L42
 
 ### Q. netlify上限行くのでは？
