@@ -75,7 +75,7 @@
   "main": "n/a",
   "scripts": {
     "dev": "gatsby develop",
-    "build:lambda": "netlify-lambda build",
+    "build:lambda": "netlify-lambda build functions",
     "build:app": "gatsby build",
     "build": "yarn build:app; yarn build:lambda;",
     "serve": "gatsby serve",
