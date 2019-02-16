@@ -22,7 +22,10 @@ const Button = styled.div`
   user-select: none;
 `
 
-const url = "http://localhost:9000/clap"
+const url =
+  process.env.NODE_ENV === "production"
+    ? "https://snippet.terrierscript.com/.netlify/functions/clap"
+    : "http://localhost:9000/clap"
 
 const useClapCallback = (title, id) => {
   return useCallback(() => {
