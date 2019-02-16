@@ -10,6 +10,8 @@
     "babel-plugin-styled-components": "^1.7.1",
     "bulma": "^0.7.0",
     "disqus-react": "^1.0.5",
+    "dotenv": "^6.2.0",
+    "dotenv-cli": "^1.4.0",
     "gatsby": "^2.0.0",
     "gatsby-link": "^2.0.0",
     "gatsby-plugin-debug-build": "^1.0.0",
@@ -79,6 +81,7 @@
     "build:app": "gatsby build",
     "build": "yarn build:app; yarn build:lambda;",
     "serve": "gatsby serve",
+    "serve-function": "yarn dotenv netlify-lambda serve functions",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "gatsby build"
   },
