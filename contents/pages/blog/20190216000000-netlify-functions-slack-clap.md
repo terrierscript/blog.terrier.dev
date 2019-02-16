@@ -23,6 +23,8 @@ https://github.com/terrierscript/snippet.terrierscript.com/blob/e1b9167bfaaeb0f9
 
 https://github.com/terrierscript/snippet.terrierscript.com/blob/956f40987bd65e7716f15372195128a6db7ca950/src/app/article/ClapButton.tsx#L30-L42
 
+モバイル対応とか面倒なものは気にしないことにした
+
 ### Q. netlify上限行くのでは？
 上限はあるが、とはいえ12万リクエストで100時間制限なんてまず行かないと見込んでるので心配してない
 
