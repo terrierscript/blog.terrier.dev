@@ -29,7 +29,6 @@ const url =
 
 const useClapCallback = (title, id) => {
   return useCallback(() => {
-    console.log(url)
     return fetch(url, {
       method: "POST",
       mode: "no-cors",
@@ -59,6 +58,7 @@ export const ClapButton = ({ title, id, children }) => {
   const clapCallback = useClapCallback(title, id)
   const onClick = useCallback(() => {
     clapCallback()
+    console.log("clap")
   }, [clapCallback])
 
   return (
