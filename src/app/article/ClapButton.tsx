@@ -90,7 +90,7 @@ export const ClapButton = ({ title, id, children }) => {
       tap(events => {
         const count = events.length
         // console.log(events)
-        // console.log(count)
+        console.log(count)
         clapCallback(count)
         gaEvent(count)
       })
