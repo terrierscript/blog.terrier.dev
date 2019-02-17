@@ -59,6 +59,7 @@
     "react-typography": "^0.16.13",
     "request": "^2.88.0",
     "rxjs": "^6.4.0",
+    "rxjs-hooks": "^0.3.3",
     "slate": "^0.44.0",
     "styled-components": "^4.0.0",
     "styled-media-query": "^2.0.2",

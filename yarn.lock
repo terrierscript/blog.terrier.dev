@@ -12608,6 +12608,13 @@ rx@^4.1.0:
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
   integrity sha1-pfE/957zt0D+MKqAP7CfmIBdR4I=
 
+rxjs-hooks@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/rxjs-hooks/-/rxjs-hooks-0.3.3.tgz#9c846ca25a403e5c0f419d44185c64ea80a651ad"
+  integrity sha512-kG7VJCVFQfID1P9erk8O0CJ7FwtSwrSWYs7OJsmjSAaHA4thfGAOcQNBlxLUrPjGuNiW9BG+7675Oi5GKeG2iQ==
+  dependencies:
+    tslib "^1.9.3"
+
 rxjs@^6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.4.0.tgz#f3bb0fe7bda7fb69deac0c16f17b50b0b8790504"

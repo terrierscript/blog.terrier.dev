@@ -1,6 +1,7 @@
 import React, { useCallback } from "react"
 import styled from "styled-components"
 import posed from "react-pose"
+import { useObservable } from "rxjs-hooks"
 
 const PositionFixed = styled.div`
   position: fixed;
@@ -29,6 +30,13 @@ const url =
 
 const useClapCallback = (title, id) => {
   return useCallback(() => {
+    if (process.env.NODE_ENV !== "production") {
+      return
+    }
+    // @ts-ignore
+    if (typeof ga === "function") {
+      // ga()
+    }
     return fetch(url, {
       method: "POST",
       mode: "no-cors",
@@ -56,8 +64,9 @@ const Item = posed.div({
 })
 export const ClapButton = ({ title, id, children }) => {
   const clapCallback = useClapCallback(title, id)
+  useObservable
   const onClick = useCallback(() => {
-    clapCallback()
+    // clapCallback()
     console.log("clap")
   }, [clapCallback])
 
