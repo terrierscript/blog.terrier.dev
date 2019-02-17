@@ -86,10 +86,11 @@ export const ClapButton = ({ title, id, children }) => {
   const [onClick] = useEventCallback(event$ =>
     event$.pipe(
       bufferTime(3000),
+      filter(events => events.length > 0),
       tap(events => {
         const count = events.length
-        clapCallback(count)
-        gaEvent(count)
+        // clapCallback(count)
+        // gaEvent(count)
       })
     )
   )
