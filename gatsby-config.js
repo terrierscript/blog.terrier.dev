@@ -26,25 +26,21 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-remark-github',
-      options: {
-        marker: 'GITHUB-EMBED',
-        insertEllipsisComments: true,
-        ellipsisPhrase: '...',
-        useCache: true,
-        cacheKey: 'gatsby-remark-github-v1',
-        token: process.env.GITHUB_TOKEN,
-      }
-    },
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            // resolve: `gatsby-remark-highlights`
-            resolve: `gatsby-remark-prismjs`
-            // inlineCodeMarker: null
-          }
+            resolve: 'gatsby-remark-github',
+            options: {
+              marker: 'GITHUB-EMBED',
+              insertEllipsisComments: true,
+              ellipsisPhrase: '...',
+              useCache: true,
+              cacheKey: 'gatsby-remark-github-v1',
+              token: process.env.GITHUB_TOKEN,
+            }
+          },
+          `gatsby-remark-prismjs`
         ]
       }
     },
