@@ -28,15 +28,15 @@ react-springのサンプルコードはrefsを使っていたりchildren as func
 
 AnimationとContextとラップする部分をこんな感じで書く。
 
-GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/Animate typescript L10-L34 GITHUB-EMBED
+GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/Animate.tsx typescript 10-34 GITHUB-EMBED
 
 そして実際のアニメーション部分はこんな具合にする
 
-GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/Animate.tsx typescript L36-L56 GITHUB-EMBED
+GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/Animate.tsx typescript 36-56 GITHUB-EMBED
 
 アニメーションの利用側はこういう具合にする。
 
-GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/ClapButton.tsx typescript L46-L84 GITHUB-EMBED
+GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/ClapButton.tsx typescript 46-84 GITHUB-EMBED
 
 Rxでごちゃごちゃしてしまっているが、もしRxがなければこんな事をやっているだけになる
 
