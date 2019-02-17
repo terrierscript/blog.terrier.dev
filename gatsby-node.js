@@ -8,10 +8,13 @@ const getTemplate = name => {
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const limit = process.env.NODE_ENV === "production" ? 10000 : 10
+  const limit = process.env.NODE_ENV === "production" ? 10000 : 100
   const ql = `
     {
-      allMarkdownRemark(limit: ${limit}) {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: ${limit}
+      ) {
         edges {
           node {
             id
@@ -81,8 +84,8 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
