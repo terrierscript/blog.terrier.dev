@@ -13,6 +13,23 @@ const AnimationContext = createContext({
   completeAnimation: (i) => {}
 })
 
+export const useAnimationContext = () => {
+  return useContext(AnimationContext)
+}
+
+export const useAnimationState = () => {
+  const [animations, setAnimations] = useState([])
+  const addAnimation = useCallback( () => {
+    const key = Math.random().toString() // ホントはuuidとか使うべき
+    setAnimations( (arr) => [...arr, key])
+  },[])
+  const completeAnimation = (complete) => {
+    setAnimations( (arr) => arr.filter( key => key !== complete))
+  }
+
+  return { animations, addAnimation, completeAnimation }
+}
+
 export const FadeAnimation = ({children}) => {
   const { animations, completeAnimation } = useAnimationContext()
   const [_, set] = useState(false)
@@ -32,23 +49,6 @@ export const FadeAnimation = ({children}) => {
   return transitions.map(({ item, key, props }) => {
     return item && <Anim style={props} key={key}>{children}</Anim>
   })
-}
-
-export const useAnimationContext = () => {
-  return useContext(AnimationContext)
-}
-
-export const useAnimationState = () => {
-  const [animations, setAnimations] = useState([])
-  const addAnimation = useCallback( () => {
-    const key = Math.random().toString() // ホントはuuidとか使うべき
-    setAnimations( (arr) => [...arr, key])
-  },[])
-  const completeAnimation = (complete) => {
-    setAnimations( (arr) => arr.filter( key => key !== complete))
-  }
-
-  return { animations, addAnimation, completeAnimation }
 }
 
 export const FadeAnimationProvider = ({children}) => {

@@ -45,8 +45,6 @@ const Animation = posed.div({
 
 export const ClapButtonInternal = ({ title, id, children }) => {
   const onClap = useClapCallback(title, id)
-  // const {faders, addFader, completeFader} = useFadeAnimator()
-  const hooksRef = useRef({})
   const { addAnimation }= useAnimationContext()
   const [onClick] = useEventCallback(event$ =>
     merge(
