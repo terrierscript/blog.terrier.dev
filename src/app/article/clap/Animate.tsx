@@ -17,12 +17,9 @@ export const FadeAnimation = ({children}) => {
   const { animations, completeAnimation } = useAnimationContext()
   const [_, set] = useState(false)
   const transitions = useTransition(animations, i => i, {
-    from: { opacity: 0, transform: "translateY(-50px)"},
-    enter: [
-      { opacity: 1, transform: "translateY(-180px)"},
-      { opacity: 0, transform: "translateY(-180px)"},
-    ],
-    leave:  { opacity: 0, transform: "translateY(-180px)"},
+    from: { opacity: 0, transform: "translateY(-50px) scale(1)"},
+    enter: { opacity: 1, transform: "translateY(-180px) scale(1.2)"},
+    leave:  { opacity: 0, transform: "translateY(-200px) scale(0.5)"},
     onRest: (key) => {
       completeAnimation(key)
       set(false)
