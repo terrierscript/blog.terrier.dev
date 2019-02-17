@@ -1,4 +1,4 @@
-import React, { useCallback } from "react"
+import React, { useCallback, useState, useEffect } from "react"
 import { useTransition, animated} from "react-spring"
 import styled from "styled-components"
 
@@ -9,16 +9,23 @@ const Anim = styled(animated.div)`
 
 
 const Fader = ({onRest}) => {
-  const props = useTransition({
+  const [show, set] = useState(false)
+  const transitions = useTransition(show, null, {
     from: { opacity: 0, transform: "translateY(0px)"},
-    enter: { opacity: 1, transform: "translateY(-10px)"},
-    leave:  { opacity: 0, transform: "translateY(-100px)"},
-    delay: 0,
+    enter: { opacity: 1, transform: "translateY(-150px)"},
+    leave:  { opacity: 0, transform: "translateY(-150px)"},
     onRest: () => {
-      onRest()
+      set(false)
+      // onRest()
     }
   })
-  return <Anim style={props}>👏</Anim>
+  useEffect( () => {
+    console.log("SET")
+    set(true)
+  }, [])
+  return transitions.map(({ item, key, props }) =>
+    item && <Anim style={props} key={key}>👏</Anim>
+  )
 }
 
 export const Faders = ({faderRef, faders, completeFader}) => {
