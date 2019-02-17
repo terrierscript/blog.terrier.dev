@@ -1,7 +1,8 @@
 import React, { useCallback } from "react"
 import styled from "styled-components"
 import posed from "react-pose"
-import { useObservable } from "rxjs-hooks"
+import { useEventCallback } from "rxjs-hooks"
+import { bufferTime, tap } from "rxjs/operators"
 
 const PositionFixed = styled.div`
   position: fixed;
@@ -23,33 +24,7 @@ const Button = styled.div`
   user-select: none;
 `
 
-const url =
-  process.env.NODE_ENV === "production"
-    ? "https://snippet.terrierscript.com/.netlify/functions/clap"
-    : "http://localhost:9000/clap"
-
-const useClapCallback = (title, id) => {
-  return useCallback(() => {
-    if (process.env.NODE_ENV !== "production") {
-      return
-    }
-    // @ts-ignore
-    if (typeof ga === "function") {
-      // ga()
-    }
-    return fetch(url, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ id, title })
-    })
-  }, [title, id])
-}
-
-const Item = posed.div({
+const Animation = posed.div({
   pressable: true,
   hoverable: true,
   init: {
@@ -62,19 +37,68 @@ const Item = posed.div({
     scale: 1.2
   }
 })
+
+const url =
+  process.env.NODE_ENV === "production"
+    ? "https://snippet.terrierscript.com/.netlify/functions/clap"
+    : "http://localhost:9000/clap"
+
+const useGoogleAnalyticsEvent = (title, id) => {
+  // @ts-ignore
+  return useCallback(
+    count => {
+      if (typeof ga === "function") {
+        ga("send", {
+          hitType: "event",
+          eventCategory: "clap",
+          eventAction: title,
+          eventLabel: count
+        })
+      }
+    },
+    [title, id]
+  )
+}
+
+const useClapCallback = (title, id) => {
+  return useCallback(
+    count => {
+      if (process.env.NODE_ENV !== "production") {
+        return
+      }
+      return fetch(url, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ id, title, count })
+      })
+    },
+    [title, id]
+  )
+}
+
 export const ClapButton = ({ title, id, children }) => {
   const clapCallback = useClapCallback(title, id)
-  useObservable
-  const onClick = useCallback(() => {
-    // clapCallback()
-    console.log("clap")
-  }, [clapCallback])
+  const gaEvent = useGoogleAnalyticsEvent(title, id)
+  const [onClick] = useEventCallback(event$ =>
+    event$.pipe(
+      bufferTime(3000),
+      tap(events => {
+        const count = events.length
+        clapCallback(count)
+        gaEvent(count)
+      })
+    )
+  )
 
   return (
     <PositionFixed>
-      <Item>
+      <Animation>
         <Button onClick={onClick}>{children}</Button>
-      </Item>
+      </Animation>
     </PositionFixed>
   )
 }

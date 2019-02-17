@@ -4,10 +4,10 @@ const request = require("request")
 const webhookUrl = process.env["SLACK_WEBHOOK_URL"]
 
 const buildPayload = body => {
-  const { title, id } = JSON.parse(body)
-  console.log(title, id)
+  const { title, id, count } = JSON.parse(body)
+  // console.log(title, id)
   return {
-    text: `${title} がclapされました👏`
+    text: `${title} が ${count} 回clapされました👏`
   }
 }
 exports.handler = function(event, context, callback) {

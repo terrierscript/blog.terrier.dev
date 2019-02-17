@@ -6,6 +6,7 @@
     "@babel/core": "^7.1.0",
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/runtime": "^7.0.0-beta.55",
+    "@types/google.analytics": "^0.0.39",
     "@types/react-helmet": "^5.0.5",
     "babel-plugin-styled-components": "^1.7.1",
     "bulma": "^0.7.0",
