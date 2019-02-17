@@ -50,6 +50,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
+    "gatsby-plugin-twitter",
     "gatsby-plugin-feed",
     "gatsby-plugin-styled-components",
     // "gatsby-plugin-react-css-modules",
