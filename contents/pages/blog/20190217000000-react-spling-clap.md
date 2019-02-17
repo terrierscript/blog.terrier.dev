@@ -41,7 +41,12 @@ GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec
 Rxでごちゃごちゃしてしまっているが、もしRxがなければこんな事をやっているだけになる
 
 ```tsx
-
+export const ClapButtonInternal = ({ title, id, children }) => {
+  const { addAnimation }= useAnimationContext()
+  return (
     <Animation>
-      <Button onClick={onClick}>{children}</Button>
+      <Button onClick={() => addAnimation()}>{children}</Button>
     </Animation>
+  )
+}
+```
