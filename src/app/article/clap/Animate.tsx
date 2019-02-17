@@ -20,10 +20,13 @@ export const useAnimationContext = () => {
 export const useAnimationState = () => {
   const [animations, setAnimations] = useState([])
   const addAnimation = useCallback( () => {
-    const key = Math.random().toString() // ホントはuuidとか使うべき
+    // 重複しないユニークキーを生成する。ホントはuuidとか使うべき
+    const key = Math.random().toString() 
     setAnimations( (arr) => [...arr, key])
   },[])
+  // animation完了時
   const completeAnimation = (complete) => {
+    // completeしたものを削除。filter関数だとパフォーマンスは良くないけど気にしない。
     setAnimations( (arr) => arr.filter( key => key !== complete))
   }
 
