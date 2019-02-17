@@ -9,6 +9,7 @@ tags:
 ---
 [拍手ボタン](https://snippet.terrierscript.com/blog/20190216000000-netlify-functions-slack-clap/)をつけたのでアニメーションをつけてみた。
 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">拍手アニメーション出来た。<a href="https://t.co/UhsvKJnk5F">https://t.co/UhsvKJnk5F</a> <a href="https://t.co/1kgFw0XGUd">pic.twitter.com/1kgFw0XGUd</a></p>&mdash; !important (@terrierscript) <a href="https://twitter.com/terrierscript/status/1097118187441729536?ref_src=twsrc%5Etfw">February 17, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ボタンそのものはPopmotionで行ったが、ちょっとこの動きをさせるのは厳しそうで[react-spring](https://github.com/react-spring/react-spring)を使った
 react-springのサンプルコードはrefsを使っていたりchildren as functionがあったりで色々と複雑でちょっと読み取りづらくこれはこれで苦労したのでメモをまとめておく
