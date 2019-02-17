@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { defaultFont } from "../layout/font"
 import { Tag } from "./Tag"
 import { Comment } from "./Comment"
-import { ClapButton } from "./ClapButton"
+import { ClapButton } from "./clap/ClapButton"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
