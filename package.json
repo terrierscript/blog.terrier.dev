@@ -25,6 +25,7 @@
     "gatsby-plugin-styled-components": "^3.0.0",
     "gatsby-plugin-typescript": "^2.0.0",
     "gatsby-plugin-typography": "^2.0.0",
+    "gatsby-remark-github": "^2.0.0",
     "gatsby-remark-highlights": "^1.3.4",
     "gatsby-remark-images": "^3.0.0",
     "gatsby-remark-prismjs": "^3.0.0",
