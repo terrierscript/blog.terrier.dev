@@ -2,7 +2,7 @@ import React, { useCallback } from "react"
 import styled from "styled-components"
 import posed from "react-pose"
 import { useEventCallback } from "rxjs-hooks"
-import { bufferTime, tap } from "rxjs/operators"
+import { bufferTime, tap, filter } from "rxjs/operators"
 
 const PositionFixed = styled.div`
   position: fixed;
@@ -89,6 +89,7 @@ export const ClapButton = ({ title, id, children }) => {
       filter(events => events.length > 0),
       tap(events => {
         const count = events.length
+        console.log(count)
         // clapCallback(count)
         // gaEvent(count)
       })
