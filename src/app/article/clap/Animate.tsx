@@ -40,6 +40,7 @@ export const FadeAnimation = ({children}) => {
     from: { opacity: 0, transform: "translateY(-50px) scale(1)"},
     enter: { opacity: 1, transform: "translateY(-180px) scale(1.2)"},
     leave:  { opacity: 0, transform: "translateY(-200px) scale(0.5)"},
+    // 完了処理
     onRest: (key) => {
       completeAnimation(key)
       set(false)
