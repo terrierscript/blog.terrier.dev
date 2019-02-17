@@ -38,3 +38,10 @@ GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec
 
 GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/ClapButton.tsx L46-L84 typescript GITHUB-EMBED
 
+Rxでごちゃごちゃしてしまっているが、もしRxがなければこんな事をやっているだけになる
+
+```tsx
+
+    <Animation>
+      <Button onClick={onClick}>{children}</Button>
+    </Animation>
