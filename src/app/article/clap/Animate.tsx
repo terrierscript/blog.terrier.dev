@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react"
+import React, { useCallback, useState, useEffect, createContext, useContext } from "react"
 import { useTransition, animated} from "react-spring"
 import styled from "styled-components"
 
@@ -7,38 +7,56 @@ const Anim = styled(animated.div)`
   opacity: 0;
 `
 
+const AnimationContext = createContext({
+  animations: [],
+  addAnimation: () => {},
+  completeAnimation: (i) => {}
+})
 
-const Fader = ({onRest}) => {
-  const [show, set] = useState(false)
-  const transitions = useTransition(show, null, {
-    from: { opacity: 0, transform: "translateY(0px)"},
-    enter: { opacity: 1, transform: "translateY(-150px)"},
-    leave:  { opacity: 0, transform: "translateY(-150px)"},
-    onRest: () => {
+export const FadeAnimation = ({children}) => {
+  const { animations, completeAnimation } = useAnimationContext()
+  const [_, set] = useState(false)
+  const transitions = useTransition(animations, i => i, {
+    from: { opacity: 0, transform: "translateY(-50px)"},
+    enter: [
+      { opacity: 1, transform: "translateY(-180px)"},
+      { opacity: 0, transform: "translateY(-180px)"},
+    ],
+    leave:  { opacity: 0, transform: "translateY(-180px)"},
+    onRest: (key) => {
+      completeAnimation(key)
       set(false)
-      // onRest()
     }
   })
   useEffect( () => {
     console.log("SET")
     set(true)
   }, [])
-  return transitions.map(({ item, key, props }) =>
-    item && <Anim style={props} key={key}>👏</Anim>
-  )
+  return transitions.map(({ item, key, props }) => {
+    return item && <Anim style={props} key={key}>{children}</Anim>
+  })
 }
 
-export const Faders = ({faderRef, faders, completeFader}) => {
-  console.log(faders)
-  return faders.map( ({finished}, i) => {
-    if(finished){
-      return
-    }
-    return <div key={i}>
-      <Fader key={i} onRest={() => {
-        completeFader(i)
-        // faderRef.current[i] = { finished: true}
-      }} />
-    </div>
-  })
+export const useAnimationContext = () => {
+  return useContext(AnimationContext)
+}
+
+export const useAnimationState = () => {
+  const [animations, setAnimations] = useState([])
+  const addAnimation = useCallback( () => {
+    const key = Math.random().toString() // ホントはuuidとか使うべき
+    setAnimations( (arr) => [...arr, key])
+  },[])
+  const completeAnimation = (complete) => {
+    setAnimations( (arr) => arr.filter( key => key !== complete))
+  }
+
+  return { animations, addAnimation, completeAnimation }
+}
+
+export const FadeAnimationProvider = ({children}) => {
+  const value =  useAnimationState()
+  return <AnimationContext.Provider value={value}>
+    {children}
+  </AnimationContext.Provider>
 }
