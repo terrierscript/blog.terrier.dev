@@ -4,7 +4,7 @@ import posed from "react-pose"
 import { useEventCallback } from "rxjs-hooks"
 import { bufferTime, tap, filter } from "rxjs/operators"
 import { merge } from "rxjs"
-import { useClapCallback } from "./hooks";
+import { useClapCallback } from "./useClapCallback";
 import { FadeAnimationProvider, FadeAnimation, useAnimationContext } from "./Animate";
 
 const PositionFixed = styled.div`
@@ -43,23 +43,6 @@ const Animation = posed.div({
   }
 })
 
-
-// const useFadeAnimator = () => {
-//   const [faders, setFaders] = useState([])
-//   const addFader = useCallback( () => {
-//     setFaders(arr => [...arr, {finished: false}])
-//   }, [setFaders])
-//   const completeFader = useCallback( (i) => {
-//     setFaders( arr => {
-//       const newArr = arr.concat()
-//       newArr[i] = {finished: true}
-//       return newArr
-//     })
-//   }, [setFaders])
-//   return {faders, addFader, completeFader}
-// }
-
-
 export const ClapButtonInternal = ({ title, id, children }) => {
   const onClap = useClapCallback(title, id)
   // const {faders, addFader, completeFader} = useFadeAnimator()
@@ -73,7 +56,7 @@ export const ClapButtonInternal = ({ title, id, children }) => {
         })
       ),
       event$.pipe(
-        bufferTime(3000),
+        bufferTime(5000),
         filter(events => events.length > 0),
         tap(events => {
           const count = events.length
