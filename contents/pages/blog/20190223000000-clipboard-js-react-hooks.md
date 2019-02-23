@@ -6,7 +6,7 @@ tags:
   - React
   - JavaScript
 ---
-[Clipboard.js](https://clipboardjs.com/]、便利だけどこれもまたrefsを利用するので色々厄介だったがHooksでいい感じにできる。
+[Clipboard.js](https://clipboardjs.com/)、便利だけどこれもまたrefsを利用するので色々厄介だったがHooksでいい感じにできる。
 
 [React Clipboard](https://github.com/nihey/react-clipboard.js)などは比較的安定している方ではありつつ、やっぱり自前でやれるならやれたほうが良い。（内部を見ると結構むちゃしているなーという感じはする）
 
