@@ -15,8 +15,8 @@ collections:
     folder: contents/pages/blog
     create: true
     # TODO: use Hsi
-    slug: '{{year}}{{month}}{{day}}000000-{{slug}}'
-    # slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}-{{slug}}'
+    # slug: '{{year}}{{month}}{{day}}000000-{{slug}}'
+    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}-{{slug}}'
     fields:
       - label: Template Key
         name: templateKey
