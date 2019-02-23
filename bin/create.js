@@ -8,7 +8,7 @@ const exec = require("child_process").exec
 const now = DateTime.local()
 
 const convert = ({ title, slug, tags }) => {
-  const timestamp = now.toFormat("yyyyMMdd000000")
+  const timestamp = now.toFormat("yyyyMMddHHmmss")
   const dir = "contents/pages/blog"
   const filename = `${dir}/${timestamp}-${slug}.md`
   const matter = grayMatter.stringify("", {
