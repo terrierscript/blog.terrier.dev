@@ -6,7 +6,7 @@ const getTemplate = name => {
   return path.resolve(`src/templates/${String(name)}.js`)
 }
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const limit = process.env.NODE_ENV === "production" ? 10000 : 100
   const ql = `
