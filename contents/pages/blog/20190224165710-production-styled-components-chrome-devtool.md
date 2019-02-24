@@ -31,7 +31,7 @@ dynamicにinsertされたCSSが編集不可であるというものだ。一方�
 https://bugs.chromium.org/p/chromium/issues/detail?id=387952
 
 
-ちなみにこの値は`SC_DISABLE_SPEEDY`という変数をenvなどで与えることで変更することもできるようなので、productionモードは保ちつつこの挙動を変えたいという場合はこの値をビルド時にわたす手もありそうだ（これは未検証）
+そして、これは `SC_DISABLE_SPEEDY`という変数をenvなどで与えることで変更することもできるようなので、productionモードは保ちつつこの挙動を変えたいという場合はこの値をビルド時にわたす手もありそうだ（これは未検証）
 
 https://github.com/styled-components/styled-components/blob/c3eedbeb79621acd668e15ed2d63107528ed81c3/packages/styled-components/src/constants.js#L12-L14
 
