@@ -1,31 +1,15 @@
 // @ts-nocheckss
 import React from "react"
+import { createGlobalStyle } from "styled-components"
 
-let inlinedStyles = ""
-if (process.env.NODE_ENV === "production") {
-  try {
-    // @ts-ignore
-    inlinedStyles = [
-      // require("!raw-loader!../public/styles.css")
-      // require("!raw-loader!prism-themes/themes/prism-atom-dark.css")
-    ].join("")
-    console.log("inline", inlinedStyles)
-  } catch (e) {
-    console.log("inline", e)
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: red
   }
-}
+`
 
 export default class HTML extends React.Component {
   render() {
-    let css
-    if (process.env.NODE_ENV === "production") {
-      css = (
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: inlinedStyles }}
-        />
-      )
-    }
     return (
       <html lang="ja">
         <head>
@@ -36,9 +20,9 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           <link rel="shortcut icon" />
-          {css}
         </head>
         <body>
+          <GlobalStyle />
           <div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
