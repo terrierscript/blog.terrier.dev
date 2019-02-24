@@ -10,3 +10,4 @@ yarn-error.log
 package-json.lock
 lambda
 .env
+.vscode

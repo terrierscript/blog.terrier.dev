@@ -1,7 +1,8 @@
+const siteUrl = "https://snippet.terrierscript.com"
 module.exports = {
   siteMetadata: {
     title: "Snippet",
-    siteUrl: `https://snippet.terrierscript.com`,
+    siteUrl: siteUrl,
     description: "短めの記事"
   },
   plugins: [
@@ -30,14 +31,14 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-github',
+            resolve: "gatsby-remark-github",
             options: {
-              marker: 'GITHUB-EMBED',
+              marker: "GITHUB-EMBED",
               insertEllipsisComments: true,
-              ellipsisPhrase: '...',
+              ellipsisPhrase: "...",
               useCache: true,
-              cacheKey: 'gatsby-remark-github-v1',
-              token: process.env.GITHUB_TOKEN,
+              cacheKey: "gatsby-remark-github-v1",
+              token: process.env.GITHUB_TOKEN
             }
           },
           `gatsby-remark-prismjs`
@@ -78,6 +79,7 @@ module.exports = {
       options: {
         pathToConfigModule: `src/app/utils/typography`
       }
-    }
+    },
+    `gatsby-plugin-canonical-urls`
   ]
 }

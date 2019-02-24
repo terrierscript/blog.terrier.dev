@@ -5799,6 +5799,13 @@ gatsby-mdx@^0.4.0:
     unist-util-remove "^1.0.1"
     unist-util-visit "^1.4.0"
 
+gatsby-plugin-canonical-urls@^2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.0.10.tgz#74430ea0526d2b7b87649a2fe4295bdd28081456"
+  integrity sha512-XEhGiku4dg8ezsM+QI0ql8Rda4SLRM0m0ntd9+D6ubDZAXLH9CSpnYL8bfACiBdWmyAokPARY+X5mTkGrULypA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-debug-build@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-debug-build/-/gatsby-plugin-debug-build-1.0.0.tgz#404f28d0f4b6f89cfe0235ebcda66f21d1487926"
