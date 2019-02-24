@@ -22,8 +22,10 @@ exports.createPages = async ({ actions, graphql }) => {
               slug
             }
             frontmatter {
+              title
               tags
               templateKey
+              published
             }
           }
         }
@@ -78,7 +80,6 @@ exports.createPages = async ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
     buildPages(posts)
     buildTagPages(posts)
   })
