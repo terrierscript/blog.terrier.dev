@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: productionビルドするとstyled-componentsでChromeのdevtoolから値がいじれない話
+title: productionビルドするとstyled-componentsでChromeのdevtoolから値がいじれない話とその解決
 date: '2019-02-24T07:57:10.697Z'
 tags:
   - styled-components
@@ -11,6 +11,8 @@ published: true
 
 先日発見したのだが、styled-componentsをproductionモードでビルドするとchromeのdevtool上からいじれないらしい。
 
+
+# 結論（解決法）
 devtoolから編集することを求めている場合はdevelopmentモードでビルドするか、`SC_DISABLE_SPEEDY`をつけてビルドしよう。
 
 # 詳細（なぜそうなるのか？）
