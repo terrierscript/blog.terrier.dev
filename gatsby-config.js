@@ -2,7 +2,7 @@ const siteUrl = "https://snippet.terrierscript.com"
 module.exports = {
   siteMetadata: {
     title: "Snippet",
-    siteUrl: siteUrl,
+    siteUrl,
     description: "短めの記事"
   },
   plugins: [
@@ -80,6 +80,11 @@ module.exports = {
         pathToConfigModule: `src/app/utils/typography`
       }
     },
-    `gatsby-plugin-canonical-urls`
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl
+      }
+    }
   ]
 }
