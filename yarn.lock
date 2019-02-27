@@ -12907,10 +12907,10 @@ rx@^4.1.0:
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
   integrity sha1-pfE/957zt0D+MKqAP7CfmIBdR4I=
 
-rxjs-hooks@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/rxjs-hooks/-/rxjs-hooks-0.3.3.tgz#9c846ca25a403e5c0f419d44185c64ea80a651ad"
-  integrity sha512-kG7VJCVFQfID1P9erk8O0CJ7FwtSwrSWYs7OJsmjSAaHA4thfGAOcQNBlxLUrPjGuNiW9BG+7675Oi5GKeG2iQ==
+rxjs-hooks@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/rxjs-hooks/-/rxjs-hooks-0.4.0.tgz#f0b0dbf051482ab6501753224aded5a3ff41e348"
+  integrity sha512-LtW38/K73F+eQPqRWeL7eoKn1eFuCEjsSaGm5/L7GAoW5zdMCERvk06iKwbaeZesFFxKo+NRcPw6eiUVqFq1Gg==
   dependencies:
     tslib "^1.9.3"
 
