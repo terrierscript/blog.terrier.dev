@@ -18,7 +18,7 @@ const TagsPage = ({
   }
 }) => (
   <section>
-    <Helmet title={`Tags | ${title}`} />
+    <Helmet title={`${title} のタグが付いた記事`} />
     <div>
       <ul>
         {group.map(tag => (

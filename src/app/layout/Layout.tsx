@@ -13,14 +13,17 @@ const Grid = styled.div`
 `
 
 export const LayoutInner = ({ children }) => {
-  return <Grid>
-    <Navbar />
-    <Container>
-      <Article>{children}</Article>
-    </Container>
-    <Footer author="terrierscript" />
-  </Grid>
+  return (
+    <Grid>
+      <Navbar />
+      <Container>
+        <Article>{children}</Article>
+      </Container>
+      <Footer author="terrierscript" />
+    </Grid>
+  )
 }
+
 export const Layout: SFC<{ children: any }> = ({ children }) => {
   return (
     <div>
