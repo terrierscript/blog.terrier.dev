@@ -29,7 +29,7 @@ inquirer
     },
     {
       name: "slug",
-      default: ({ title }) => dashify(title, { condense: true })
+      default: ({ title }) => dashify(title.replace(/_/g, "-"), { condense: true })
     },
     {
       name: "tags"
