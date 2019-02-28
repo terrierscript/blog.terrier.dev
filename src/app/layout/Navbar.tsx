@@ -1,10 +1,11 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
-import { defaultFont } from "./font";
-
+import React from "react"
+import Link from "gatsby-link"
+import styled from "styled-components"
+import { defaultFont } from "./font"
+// import { Grid, Box } from "grommet"
 // import media from "../lib/media";
-import media from "styled-media-query";
+import media from "styled-media-query"
+import { Avater } from "./Avater"
 
 const Nav = styled.nav`
   height: 64px;
@@ -15,7 +16,7 @@ const Nav = styled.nav`
     color: white;
   } */
   /* text-align: center; */
-`;
+`
 
 const Logo = styled(Link)`
   text-decoration: none;
@@ -26,7 +27,7 @@ const Logo = styled(Link)`
   /* ${media.lessThan("small")`
     font-size: 18px;
   `}; */
-`;
+`
 
 const NavContainer = styled.div`
   margin: 0 auto;
@@ -34,16 +35,11 @@ const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const Block = styled.div`
   display: inline-block;
-`;
-
-const Space = styled.span`
-  padding-right: 0.2em;
-`;
-
+`
 
 const NavbarContainer = ({ children }) => (
   <Nav>
@@ -52,16 +48,19 @@ const NavbarContainer = ({ children }) => (
       {/* <Author name="terrierscript" /> */}
     </NavContainer>
   </Nav>
-);
+)
 
 const Navbar = () => {
   return (
     <div>
       <NavbarContainer>
-        <Logo to="/">Code Snippet 🐶</Logo>
+        <Logo to="/">
+          <Avater />
+          <span>Code Snippet 🐶</span>
+        </Logo>
       </NavbarContainer>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
