@@ -1,8 +1,6 @@
-import React, { SFC } from "react";
+import React from "react";
 import Link from "gatsby-link";
 import styled from "styled-components";
-import { Container } from "./Container";
-import Helmet from "react-helmet";
 import { defaultFont } from "./font";
 
 // import media from "../lib/media";
@@ -46,14 +44,6 @@ const Space = styled.span`
   padding-right: 0.2em;
 `;
 
-const Author = ({ name }) => {
-  return (
-    <Block>
-      <Space>Author</Space>
-      <a href={`https://twitter.com/${name}`}>@{name}</a>
-    </Block>
-  );
-};
 
 const NavbarContainer = ({ children }) => (
   <Nav>

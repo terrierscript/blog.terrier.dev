@@ -38,8 +38,8 @@ const family: string = Object.entries(logos)
 export type LogoEnum = keyof typeof logos;
 export const defaultFont: LogoEnum = "Quicksand";
 
-export const generateFontUrl = () => {
-  const s = `https://fonts.googleapis.com/css?family=${family}`;
-  console.log(s);
-  return s;
-};
+// export const generateFontUrl = () => {
+//   const s = `https://fonts.googleapis.com/css?family=${family}`;
+//   console.log(s);
+//   return s;
+// };

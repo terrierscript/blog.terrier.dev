@@ -12,17 +12,20 @@ const Grid = styled.div`
   display: grid;
 `
 
+export const LayoutInner = ({ children }) => {
+  return <Grid>
+    <Navbar />
+    <Container>
+      <Article>{children}</Article>
+    </Container>
+    <Footer author="terrierscript" />
+  </Grid>
+}
 export const Layout: SFC<{ children: any }> = ({ children }) => {
   return (
     <div>
-      <Grid>
-        <Meta />
-        <Navbar />
-        <Container>
-          <Article>{children}</Article>
-        </Container>
-        <Footer author="terrierscript" />
-      </Grid>
+      <Meta />
+      <LayoutInner>{children}</LayoutInner>
     </div>
   )
 }
