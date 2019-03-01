@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "serve": "gatsby serve"
-  },
   "dependencies": {
     "dotenv": "^6.2.0",
     "gatsby": "^2.1.19",
