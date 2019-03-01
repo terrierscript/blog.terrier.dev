@@ -15,6 +15,6 @@
     "lerna": "^3.13.1"
   },
   "scripts": {
-    "build": "yarn workspace core build"
+    "build": "yarn workspace builder build"
   }
 }

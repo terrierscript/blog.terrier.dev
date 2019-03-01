@@ -88,11 +88,6 @@
   "main": "n/a",
   "scripts": {
     "dev": "yarn dotenv gatsby develop",
-    "build:lambda": "netlify-lambda build functions",
-    "build:app": "gatsby build",
-    "build": "yarn build:app && yarn build:lambda;",
-    "serve": "gatsby serve",
-    "serve-function": "yarn dotenv netlify-lambda serve functions",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "gatsby build",
     "blog": "node ./bin/create.js",
