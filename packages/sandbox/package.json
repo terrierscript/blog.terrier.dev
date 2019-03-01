@@ -7,7 +7,9 @@
     "start": "parcel sandbox/index.html"
   },
   "dependencies": {
+    "core": "*",
     "parcel": "^1.11.0",
-    "core": "*"
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   }
 }
