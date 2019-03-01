@@ -17,7 +17,7 @@
   "scripts": {
     "build:functions": "netlify-lambda build ./packages/functions",
     "build": "yarn workspace core build && yarn build:functions",
-    "serve-function": "yarn dotenv netlify-lambda serve functions"
-
+    "serve-function": "yarn dotenv netlify-lambda serve functions",
+    "sandbox": "yarn workspace sandbox start"
   }
 }
