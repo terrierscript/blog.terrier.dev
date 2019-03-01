@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/terrierscript/snippets.terriercript.com",
-  "author": "terrierscript <13282103+terrierscript@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
   "workspaces": {
