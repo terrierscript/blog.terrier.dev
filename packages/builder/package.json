@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "dotenv": "^6.2.0",
