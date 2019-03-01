@@ -1,5 +1,5 @@
 [build]
-  publish = "builder/public"
+  publish = "core/public"
   command = "yarn build"
   functions = "lambda"
 [build.environment]
