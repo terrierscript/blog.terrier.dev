@@ -91,7 +91,10 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "gatsby build",
     "blog": "node ./bin/create.js",
-    "sandbox": "parcel sandbox/index.html"
+    "sandbox": "parcel sandbox/index.html",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+
   },
   "devDependencies": {
     "gatsby-plugin-sitemap": "2.0.6",
