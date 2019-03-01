@@ -1,0 +1,13 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel sandbox/index.html"
+  },
+  "dependencies": {
+    "parcel": "^1.11.0",
+    "core": "*"
+  }
+}
