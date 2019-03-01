@@ -12,9 +12,13 @@
     ]
   },
   "dependencies": {
-    "lerna": "^3.13.1"
+    "lerna": "^3.13.1",
+    "netlify-lambda": "^1.4.2"
   },
   "scripts": {
-    "build": "yarn workspace builder build"
+    "build:functions": "netlify-lambda build ./packages/functions",
+    "build": "yarn workspace builder build && yarn build:functions",
+    "serve-function": "yarn dotenv netlify-lambda serve functions"
+
   }
 }

@@ -4,11 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:functions": "netlify-lambda build ../functions",
-    "build:app": "gatsby build",
-    "build": "yarn build:functions && yarn build:app",
+    "build": "gatsby build",
     "serve": "gatsby serve",
-    "serve-function": "yarn dotenv netlify-lambda serve functions"
   },
   "dependencies": {
     "dotenv": "^6.2.0",
