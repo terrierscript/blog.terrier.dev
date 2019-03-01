@@ -4,12 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel sandbox/index.html"
+    "start": "parcel src/index.html"
   },
   "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
     "core": "*",
     "parcel": "^1.11.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4"
   }
 }
