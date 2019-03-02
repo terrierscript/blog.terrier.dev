@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "core": "*",
     "parcel": "^1.11.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"

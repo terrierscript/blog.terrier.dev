@@ -1,10 +1,10 @@
 import "./gatsby-polyfill"
 import React from "react"
 import { render } from "react-dom"
-import { Layout } from "core/src/app/layout/Layout"
-import { BlogItem } from "core/src/app/list/Item"
-import Navbar from "core/src/app/layout/Navbar"
-// import { Fonts } from "./fonts"
+import { Layout } from "../src/app/layout/Layout"
+import { BlogItem } from "../src/app/list/Item"
+import Navbar from "../src/app/layout/Navbar"
+import { Fonts } from "./fonts"
 
 const mockPost = {
   fields: {
@@ -21,7 +21,7 @@ const mockPost = {
 const App = () => {
   return (
     <div>
-      {/* <Fonts /> */}
+      <Fonts />
       <Layout>
         <BlogItem post={mockPost} />
       </Layout>

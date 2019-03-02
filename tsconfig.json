@@ -67,5 +67,10 @@
     "node_modules",
     ".cache",
     "public"
+  ],
+  "references": [
+    { "path": "./pacakges/blog-components" },
+    { "path": "./pacakges/blog-functions" },
+    { "path": "./pacakges/blog-core" },
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "name": "core",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "blog-core",
+  "description": "",
   "version": "1.1.1",
   "dependencies": {
     "@babel/core": "^7.1.0",
@@ -90,8 +90,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "gatsby build",
     "blog": "node ./bin/create.js",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
+    "build": "gatsby build"
   },
   "source": true,
   "devDependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "functions",
+  "name": "blog-functions",
   "version": "0.0.0",
   "dependencies": {
     "dotenv": "^6.2.0",
