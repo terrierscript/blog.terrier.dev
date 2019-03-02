@@ -12,7 +12,7 @@ export const HTMLContent = ({ content, ...rest }) => {
   return <Article {...rest} dangerouslySetInnerHTML={{ __html: content }} />
 }
 
-const Content = ({ content, ...rest }) => (
+export const Content = ({ content, ...rest }) => (
   <Article {...rest}>
     HTML:
     {content}
@@ -20,5 +20,3 @@ const Content = ({ content, ...rest }) => (
 )
 
 // HTMLContent.propTypes = Content.propTypes;
-
-export default Content
