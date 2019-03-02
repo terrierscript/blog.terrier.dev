@@ -77,7 +77,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: `src/app/utils/typography`
+        pathToConfigModule: `../blog-components/utils/typography`
       }
     },
     {
