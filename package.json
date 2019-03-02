@@ -20,6 +20,6 @@
     "build": "yarn workspace blog-core build && yarn build:functions",
     "serve-function": "yarn dotenv netlify-lambda serve functions",
     "serve": "yarn workspace blog-core dev",
-    "sandbox": "yarn workspace blog-components start"
+    "sandbox": "yarn workspace blog-sandbox start"
   }
 }
