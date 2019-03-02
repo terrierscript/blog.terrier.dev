@@ -1,8 +1,8 @@
 import React from "react"
 // import PropTypes from "prop-types";
-import { BlogItem } from "../app/list/Item"
+import { BlogItem } from "../../app/list/Item"
 import { graphql } from "gatsby"
-import { Layout } from "../app/layout/Layout"
+import { Layout } from "../../app/layout/Layout"
 
 export default class IndexPage extends React.Component {
   render() {
