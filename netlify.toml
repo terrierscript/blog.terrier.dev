@@ -8,12 +8,17 @@
   NODE_VERSION = "10.11.0"
 
 [[redirects]]
-  from = "/20180*"
-  to = "/2018/20180:splat"
+  from = "/blog/20180*"
+  to = "/blog/2018/20180:splat"
   status = 302
   force = false
 [[redirects]]
-  from = "/20190*"
-  to = "/2019/20190:splat"
+  from = "/blog/20181*"
+  to = "/blog/2018/20180:splat"
+  status = 302
+  force = false
+[[redirects]]
+  from = "/blog/20190*"
+  to = "/blog/2019/20190:splat"
   status = 302
   force = false
