@@ -22,7 +22,6 @@ blog: &blog
 backend:
   name: github
   repo: terrierscript/snippet.terrierscript.com
-  branch: move-dir
 media_folder: contents/img
 public_folder: /img
 # publish_mode: editorial_workflow
