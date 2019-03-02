@@ -11,11 +11,9 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section>
-          {posts.map(({ node: post }) => (
-            <BlogItem post={post} key={post.id} />
-          ))}
-        </section>
+        {posts.map(({ node: post }) => (
+          <BlogItem post={post} key={post.id} />
+        ))}
       </Layout>
     )
   }

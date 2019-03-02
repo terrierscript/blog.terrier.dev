@@ -17,16 +17,18 @@ const Item = styled.div`
 
 export const BlogItem = ({ post }) => {
   return (
-    <Item>
-      <Title>
-        <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-        <div>
-          {post.frontmatter.tags.map((tag: string) => {
-            return <Tag tag={tag} key={tag} />
-          })}
-        </div>
-      </Title>
-      <small>{post.frontmatter.date}</small>
-    </Item>
+    <section>
+      <Item>
+        <Title>
+          <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+          <div>
+            {post.frontmatter.tags.map((tag: string) => {
+              return <Tag tag={tag} key={tag} />
+            })}
+          </div>
+        </Title>
+        <small>{post.frontmatter.date}</small>
+      </Item>
+    </section>
   )
 }
