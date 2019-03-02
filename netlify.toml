@@ -10,15 +10,15 @@
 [[redirects]]
   from = "/blog/20180*"
   to = "/blog/2018/20180:splat"
-  status = 302
-  force = false
+  status = 301
+  force = true
 [[redirects]]
   from = "/blog/20181*"
   to = "/blog/2018/20180:splat"
-  status = 302
-  force = false
+  status = 301
+  force = true
 [[redirects]]
   from = "/blog/20190*"
   to = "/blog/2019/20190:splat"
-  status = 302
-  force = false
+  status = 301
+  force = true
