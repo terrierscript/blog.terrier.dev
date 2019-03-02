@@ -88,7 +88,7 @@
   "main": "n/a",
   "scripts": {
     "dev": "yarn dotenv gatsby develop",
-    "build:lambda": "netlify-lambda build functions",
+    "build:lambda": "netlify-lambda build functions/src",
     "build:app": "gatsby build",
     "build": "yarn build:app && yarn build:lambda;",
     "serve": "gatsby serve",
