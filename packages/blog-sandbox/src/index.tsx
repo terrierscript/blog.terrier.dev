@@ -1,5 +1,5 @@
 import "./gatsby-polyfill"
-import * as React from "react"
+import React from "react"
 import { render } from "react-dom"
 import { Layout } from "blog-components/layout/Layout"
 import { BlogItem } from "blog-components/list/Item"

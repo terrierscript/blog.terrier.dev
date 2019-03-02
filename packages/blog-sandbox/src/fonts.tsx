@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { TypographyStyle, GoogleFont } from "react-typography"
 import typography from "blog-components/utils/typography.js"
 
