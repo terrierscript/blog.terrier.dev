@@ -1,5 +1,5 @@
-import React from "react";
-import Helmet from "react-helmet";
+import * as React from "react"
+import Helmet from "react-helmet"
 // import { generateFontUrl } from "./font";
 // import { baseStyles } from "./style";
 // import "highlight.js/styles/dark.css";
@@ -19,5 +19,5 @@ export const Meta = () => {
       <meta name="twitter:site" content="@terrierscript" />
       {/* <link href={generateFontUrl()} rel="stylesheet" /> */}
     </Helmet>
-  );
-};
+  )
+}

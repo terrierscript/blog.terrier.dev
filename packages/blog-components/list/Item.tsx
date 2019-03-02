@@ -1,5 +1,5 @@
+import * as React from "react"
 import Link from "gatsby-link"
-import React from "react"
 import styled from "styled-components"
 import { headerFont } from "../utils/typography"
 import { Tag } from "../article/Tag"

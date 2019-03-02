@@ -1,4 +1,5 @@
-import React, { SFC } from "react"
+import * as React from "react"
+import { SFC } from "react"
 import Navbar from "./Navbar"
 // @ts-ignore
 import { desktop } from "../lib/media"
