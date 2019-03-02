@@ -69,7 +69,7 @@
     "public"
   ],
   "references": [
-    // { "path": "./pacakges/blog-components" },
+    // { "path": "./packages/blog-components" },
     // { "path": "./pacakges/blog-functions" },
     // { "path": "./pacakges/blog-core" },
   ]
