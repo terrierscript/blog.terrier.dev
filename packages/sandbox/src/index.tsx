@@ -4,7 +4,7 @@ import { render } from "react-dom"
 import { Layout } from "core/src/app/layout/Layout"
 import { BlogItem } from "core/src/app/list/Item"
 import Navbar from "core/src/app/layout/Navbar"
-import { Fonts } from "./fonts"
+// import { Fonts } from "./fonts"
 
 const mockPost = {
   fields: {
@@ -21,7 +21,7 @@ const mockPost = {
 const App = () => {
   return (
     <div>
-      <Fonts />
+      {/* <Fonts /> */}
       <Layout>
         <BlogItem post={mockPost} />
       </Layout>
