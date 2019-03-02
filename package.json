@@ -11,9 +11,9 @@
     ]
   },
   "dependencies": {
-    "lerna": "^3.13.1",
-    "netlify-lambda": "^1.4.2",
-    "typescript": "^3.3.3333"
+    "lerna": "3.13.1",
+    "netlify-lambda": "1.4.2",
+    "typescript": "3.3.3333"
   },
   "scripts": {
     
