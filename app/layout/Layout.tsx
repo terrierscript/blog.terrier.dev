@@ -1,5 +1,5 @@
 import React, { SFC } from "react"
-import Navbar from "./Navbar"
+import { HeaderBar } from "./Navbar"
 // @ts-ignore
 import { desktop } from "../lib/media"
 import { Meta } from "./Meta"
@@ -15,7 +15,7 @@ const Grid = styled.div`
 export const LayoutInner = ({ children }) => {
   return (
     <Grid>
-      <Navbar />
+      <HeaderBar />
       <Container>
         <Article>{children}</Article>
       </Container>

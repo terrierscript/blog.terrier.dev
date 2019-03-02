@@ -50,7 +50,7 @@ const NavbarContainer = ({ children }) => (
   </Nav>
 )
 
-const Navbar = () => {
+export const HeaderBar = () => {
   return (
     <div>
       <NavbarContainer>
@@ -62,5 +62,3 @@ const Navbar = () => {
     </div>
   )
 }
-
-export default Navbar
