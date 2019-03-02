@@ -2,9 +2,9 @@ import React from "react"
 // import PropTypes from "prop-types";
 import { BlogItem } from "blog-components/list/Item"
 import { graphql } from "gatsby"
-// import { Layout } from "blog-components/layout/Layout"
+import { Layout } from "blog-components/layout/Layout"
 
-export default class IndexPage extends React.Component {
+export default class IndexPage extends React.Component<any> {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
