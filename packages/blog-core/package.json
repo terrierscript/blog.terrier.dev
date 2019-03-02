@@ -1,6 +1,6 @@
 {
-  "name": "core",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "blog-core",
+  "description": "",
   "version": "1.1.1",
   "dependencies": {
     "@babel/core": "^7.1.0",
@@ -92,9 +92,7 @@
     "test": "gatsby build",
     "blog": "node ./bin/create.js",
     "sandbox": "parcel sandbox/index.html",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
-
+    "build": "gatsby build"
   },
   "devDependencies": {
     "gatsby-plugin-sitemap": "2.0.6",

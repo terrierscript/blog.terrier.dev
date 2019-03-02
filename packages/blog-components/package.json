@@ -1,0 +1,11 @@
+{
+  "name": "blog-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.8.6",
+    "react": "^16.8.3"
+
+  }
+}

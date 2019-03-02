@@ -12,12 +12,13 @@
   },
   "dependencies": {
     "lerna": "^3.13.1",
-    "netlify-lambda": "^1.4.2"
+    "netlify-lambda": "^1.4.2",
+    "typescript": "^3.3.3333"
   },
   "scripts": {
-    "build:functions": "netlify-lambda build ./packages/functions",
-    "build": "yarn workspace core build && yarn build:functions",
-    "serve-function": "yarn dotenv netlify-lambda serve functions"
-
+    "build:functions": "netlify-lambda build ./packages/blog-functions",
+    "build": "yarn workspace blog-core build && yarn build:functions",
+    "serve-function": "yarn dotenv netlify-lambda serve functions",
+    "serve": "yarn workspace blog-core dev"
   }
 }
