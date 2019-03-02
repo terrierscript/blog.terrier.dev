@@ -83,9 +83,9 @@ export const BlogPostTemplate = ({
         <meta property="og:description" content={description} />
       </Helmet>
       <BlogBody>
-        <ClapButton id={id} title={title}>
+        {/* <ClapButton id={id} title={title}>
           👍
-        </ClapButton>
+        </ClapButton> */}
 
         <BlogArticle title={title} content={content} tags={tags} />
         <Modify fileAbsolutePath={fileAbsolutePath} />
