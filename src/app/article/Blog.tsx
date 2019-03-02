@@ -1,7 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 
-import { HTMLContent } from "../Content"
+import { HTMLContent } from "./Content"
 import styled from "styled-components"
 import { defaultFont } from "../layout/font"
 import { Tag } from "./Tag"

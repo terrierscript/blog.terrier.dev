@@ -4,7 +4,7 @@ import Navbar from "./Navbar"
 import { desktop } from "../lib/media"
 import { Meta } from "./Meta"
 import { Container } from "./Container"
-import { Article } from "../Content"
+import { Article } from "../article/Content"
 import { Footer } from "./Footer"
 import styled from "styled-components"
 
