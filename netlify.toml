@@ -22,3 +22,25 @@
   to = "/blog/2019/20190:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://snippet.terrierscript.com/*"
+  to = "https://snippet.terrier.dev/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "http://snippet.terrierscript.com/*"
+  to = "https://snippet.terrier.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://snippets.terrierscript.com/*"
+  to = "https://snippet.terrier.dev/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "http://snippets.terrierscript.com/*"
+  to = "https://snippet.terrier.dev/:splat"
+  status = 301
+  force = true
