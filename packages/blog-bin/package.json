@@ -1,0 +1,14 @@
+{
+  "name": "blog-bin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "blog": "node ./blog.js"
+  },
+  "dependencies": {
+    "dashify": "^2.0.0",
+    "gray-matter": "^4.0.2",
+    "inquirer": "^6.2.2",
+    "luxon": "^1.11.3"
+  }
+}
