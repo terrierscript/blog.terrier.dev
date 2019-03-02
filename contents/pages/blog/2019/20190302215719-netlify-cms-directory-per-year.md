@@ -14,14 +14,17 @@ https://github.com/terrierscript/snippet.terrierscript.com/pull/59
 
 肝になるのは`config.yml`と`netlify.toml`だ。
 
+## config.ymlの修正
 https://github.com/terrierscript/snippet.terrierscript.com/pull/59/files#diff-e36160419abb71f07eb8f74e9d3cc8bc
-
-https://github.com/terrierscript/snippet.terrierscript.com/pull/59/files#diff-5db06fd2327543bbb72119cd1e5761cf
 
 config.ymlの方は`blog: &blog`という感じでブログコレクションの情報を共通化して使えるようにした。あとは年単位で利用するところで`<<: *blog`という具合で使う。
 この記法はymlのパーサによっては使えない場合もあるのでいけるかな？と心配だったが大丈夫だった。
 
-そしてそのままだとリンクが切れるのでリダイレクトをする必要がある。そこで`netlify.toml`だ。
+## netlify.tomlの修正
+
+https://github.com/terrierscript/snippet.terrierscript.com/pull/59/files#diff-5db06fd2327543bbb72119cd1e5761cf
+
+そのままだとリンクが切れるのでリダイレクトをする必要がある。そこで`netlify.toml`だ。
 
 https://www.netlify.com/docs/redirects/
 
