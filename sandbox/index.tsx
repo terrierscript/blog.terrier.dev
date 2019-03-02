@@ -1,9 +1,9 @@
 import "./gatsby-polyfill"
 import React from "react"
 import { render } from "react-dom"
-import { Layout } from "../src/app/layout/Layout"
-import { BlogItem } from "../src/app/list/Item"
-import Navbar from "../src/app/layout/Navbar"
+import { Layout } from "../app/layout/Layout"
+import { BlogItem } from "../app/list/Item"
+import Navbar from "../app/layout/Navbar"
 import { Fonts } from "./fonts"
 
 const mockPost = {
