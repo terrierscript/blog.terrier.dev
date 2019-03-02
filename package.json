@@ -17,6 +17,7 @@
     "gatsby-link": "^2.0.0",
     "gatsby-mdx": "^0.4.0",
     "gatsby-plugin-canonical-urls": "^2.0.10",
+    "gatsby-plugin-client-side-redirect": "^0.0.2",
     "gatsby-plugin-debug-build": "^1.0.0",
     "gatsby-plugin-feed": "^2.0.0",
     "gatsby-plugin-netlify-cms": "^3.0.12",
