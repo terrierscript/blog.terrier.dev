@@ -1,4 +1,5 @@
-import React, { useEffect } from "react"
+import React from "react"
+import { useEffect } from "react"
 import { TypographyStyle, GoogleFont } from "react-typography"
 import typography from "core/src/app/utils/typography.js"
 
