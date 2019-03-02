@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: terrierscript/today-inu-learned
+  repo: terrierscript/snippet.terrierscript.com
+
   # name: git-gateway
   # branch: master
 media_folder: contents/img
