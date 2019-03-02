@@ -9,7 +9,8 @@ const now = DateTime.local()
 
 const convert = ({ title, slug, tags }) => {
   const timestamp = now.toFormat("yyyyMMddHHmmss")
-  const dir = "contents/pages/blog"
+  const year = now.toFormat("yyyy")
+  const dir = `contents/pages/blog/${year}`
   const filename = `${dir}/${timestamp}-${slug}.md`
   const matter = grayMatter.stringify("", {
     templateKey: "blog-post",
@@ -29,7 +30,8 @@ inquirer
     },
     {
       name: "slug",
-      default: ({ title }) => dashify(title.replace(/_/g, "-"), { condense: true })
+      default: ({ title }) =>
+        dashify(title.replace(/_/g, "-"), { condense: true })
     },
     {
       name: "tags"
