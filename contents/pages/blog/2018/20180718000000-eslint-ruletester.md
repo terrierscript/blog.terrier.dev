@@ -3,7 +3,8 @@ templateKey: blog-post
 title: ESLintのRuleTester使うときのボイラープレート
 date: '2018-07-18T09:20:17+09:00'
 tags:
-  - ESLint javascript
+  - ESLint 
+  - javascript
 ---
 ESLintのRuleTester使うときのボイラープレートはまったのでメモ
 

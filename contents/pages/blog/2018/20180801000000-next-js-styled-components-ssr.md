@@ -4,7 +4,7 @@ title: next.jsでstyled-componentsをSSRする
 date: '2018-08-01T00:02:02+09:00'
 tags:
   - next.js
-  - styled-component
+  - styled-components
   - javascript
 ---
 ここに答えがあった

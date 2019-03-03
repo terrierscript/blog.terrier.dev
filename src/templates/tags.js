@@ -3,7 +3,7 @@ import Helmet from "react-helmet"
 import Link from "gatsby-link"
 import { BlogItem } from "../../app/list/Item"
 import { graphql } from "gatsby"
-import { Layout } from "../../app/layout/Layout"
+import { BlogLayout } from "../provider/BlogLayout"
 
 // const PostLinks = ({ posts }) =>
 //   posts.map(post => (
@@ -24,7 +24,7 @@ class TagRoute extends React.Component {
     const tagHeader = `"${tag}”の記事`
     // console.log(posts);
     return (
-      <Layout>
+      <BlogLayout>
         <section>
           <Helmet title={`${tag} | ${title}`} />
           <div>
@@ -40,7 +40,7 @@ class TagRoute extends React.Component {
             </p>
           </div>
         </section>
-      </Layout>
+      </BlogLayout>
     )
   }
 }

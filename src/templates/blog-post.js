@@ -1,11 +1,11 @@
 import React from "react"
 import { BlogPostTemplate } from "../../app/article/Blog"
 import { graphql } from "gatsby"
-import { Layout } from "../../app/layout/Layout"
+import { BlogLayout } from "../provider/BlogLayout"
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
   return (
-    <Layout>
+    <BlogLayout>
       <BlogPostTemplate
         content={post.html}
         tags={
@@ -16,7 +16,7 @@ const BlogPost = ({ data }) => {
         description={post.excerpt}
         id={post.id}
       />
-    </Layout>
+    </BlogLayout>
   )
 }
 

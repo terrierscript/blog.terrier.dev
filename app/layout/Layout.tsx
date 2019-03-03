@@ -1,12 +1,12 @@
 import React, { SFC } from "react"
 import { HeaderBar } from "./HeaderBar"
-// import { desktop } from "../lib/media"
 import { Meta } from "./Meta"
 import { Container } from "./Container"
 import { Article } from "../article/Content"
 import { Footer } from "./Footer"
 import styled from "styled-components"
 import { SideProfile } from "./side/Profile"
+import { TagCloud } from "./side/TagCloud"
 const gridTemplate = `
   "header header header"
   "body   body   side"
@@ -34,6 +34,7 @@ export const LayoutInner = ({ children }) => {
       </Area>
       <Area area="side">
         <SideProfile />
+        <TagCloud />
       </Area>
       <Area area="footer">
         <Footer author="terrierscript" />

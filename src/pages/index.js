@@ -1,9 +1,9 @@
 import React from "react"
 // import PropTypes from "prop-types";
 import { BlogItem } from "../../app/list/Item"
-import { Layout } from "../../app/layout/Layout"
 import { graphql } from "gatsby"
 import { generatePostFragment } from "../query/query"
+import { BlogLayout } from "../provider/BlogLayout"
 
 export default class IndexPage extends React.Component {
   render() {
@@ -11,11 +11,11 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <Layout>
+      <BlogLayout>
         {posts.map(({ node: post }) => (
           <BlogItem post={post} key={post.id} />
         ))}
-      </Layout>
+      </BlogLayout>
     )
   }
 }
