@@ -1,22 +1,21 @@
 import React, { SFC } from "react"
 import { HeaderBar } from "./Navbar"
-// @ts-ignore
-import { desktop } from "../lib/media"
+// import { desktop } from "../lib/media"
 import { Meta } from "./Meta"
 import { Container } from "./Container"
 import { Article } from "../article/Content"
 import { Footer } from "./Footer"
-import styled, { css } from "styled-components"
-
+import styled from "styled-components"
+import { SideProfile } from "./side/Profile"
 const gridTemplate = `
-  "header header header",
-  ".      body   .",
+  "header header header"
+  "body   body   side"
   "footer footer footer"
 `
 
 const Grid = styled.div`
   display: grid;
-  grid-template: "${gridTemplate}";
+  grid-template-areas: ${gridTemplate};
 `
 const Area = styled.div<{ area: string }>`
   grid-area: ${props => props.area};
@@ -32,6 +31,9 @@ export const LayoutInner = ({ children }) => {
         <Container>
           <Article>{children}</Article>
         </Container>
+      </Area>
+      <Area area="side">
+        <SideProfile />
       </Area>
       <Area area="footer">
         <Footer author="terrierscript" />

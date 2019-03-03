@@ -2,7 +2,6 @@ import React from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
 import { defaultFont } from "./font"
-// import { Grid, Box } from "grommet"
 // import media from "../lib/media";
 import media from "styled-media-query"
 import { Avater } from "./Avater"
