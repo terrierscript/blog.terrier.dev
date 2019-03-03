@@ -24,7 +24,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-areas: ${gridTemplate};
   grid-gap: 1em;
-  grid-template-columns: 0.1fr 1fr 0.6fr 0.1fr;
+  grid-template-columns: 0.1fr 1fr 0.4fr 0.1fr;
   /* background: #f4ead5; */
   @media screen and (max-width: 65em) {
     grid-template-areas: ${mobileGrid};
