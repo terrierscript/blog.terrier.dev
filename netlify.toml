@@ -7,6 +7,7 @@
   YARN_FLAGS = "--no-ignore-optional"
   NODE_VERSION = "10.11.0"
 
+# old file redirect
 [[redirects]]
   from = "/blog/20180*"
   to = "/blog/2018/20180:splat"
@@ -33,7 +34,6 @@
   to = "https://snippet.terrier.dev/:splat"
   status = 301
   force = true
-
 [[redirects]]
   from = "https://snippets.terrierscript.com/*"
   to = "https://snippet.terrier.dev/:splat"
@@ -42,5 +42,37 @@
 [[redirects]]
   from = "http://snippets.terrierscript.com/*"
   to = "https://snippet.terrier.dev/:splat"
+  status = 301
+  force = true
+
+# RSS 
+[[redirects]]
+  from = "/feed/qiita"
+  to = "https://qiita.com/terrierscript/feed.atom"
+  status = 200
+  force = false
+[[redirects]]
+  from = "/feed/devto"
+  to = "https://dev.to/feed/terrierscript"
+  status = 200
+  force = false
+[[redirects]]
+  from = "/feed/medium"
+  to = "https://medium.com/feed/@terrierscript"
+  status = 200
+  force = false
+[[redirects]]
+  from = "/feed/snippet"
+  to = "https://snippet.terrier.dev/rss.xml"
+  status = 200
+  force = false
+[[redirects]]
+  from = "/feed/scrapbox"
+  to = "https://scrapbox.io/api/feed/terrierscript/"
+  status = 200
+  force = false
+[[redirects]]
+  from = "https://terrier.netlify.com/*"
+  to = "https://terrierscript.com/:splat"
   status = 301
   force = true

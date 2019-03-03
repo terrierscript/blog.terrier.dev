@@ -8,15 +8,12 @@ import Helmet from "react-helmet"
 import { createGlobalStyle, css } from "styled-components"
 
 const globalCss = css`
-  body {
-    color: red;
+  :root {
+    --border: 1px solid #f0f0f0;
   }
 `
 const GlobalStyle = createGlobalStyle`
   ${globalCss}
-  body {
-    color: blue;
-  }
 `
 
 export const Meta = () => {
