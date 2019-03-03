@@ -32,7 +32,7 @@ export const LayoutInner = ({ children }) => {
       </Area>
       <Area area="body">
         <Container>
-          <Article>{children}</Article>
+          {children}
         </Container>
       </Area>
       <Area area="side">
