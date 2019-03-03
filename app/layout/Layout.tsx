@@ -6,20 +6,36 @@ import { Meta } from "./Meta"
 import { Container } from "./Container"
 import { Article } from "../article/Content"
 import { Footer } from "./Footer"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+
+const gridTemplate = `
+  "header header header",
+  ".      body   .",
+  "footer footer footer"
+`
 
 const Grid = styled.div`
   display: grid;
+  grid-template: "${gridTemplate}";
+`
+const Area = styled.div<{ area: string }>`
+  grid-area: ${props => props.area};
 `
 
 export const LayoutInner = ({ children }) => {
   return (
     <Grid>
-      <HeaderBar />
-      <Container>
-        <Article>{children}</Article>
-      </Container>
-      <Footer author="terrierscript" />
+      <Area area="header">
+        <HeaderBar />
+      </Area>
+      <Area area="body">
+        <Container>
+          <Article>{children}</Article>
+        </Container>
+      </Area>
+      <Area area="footer">
+        <Footer author="terrierscript" />
+      </Area>
     </Grid>
   )
 }

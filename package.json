@@ -8,6 +8,7 @@
     "@babel/runtime": "^7.0.0-beta.55",
     "@types/google.analytics": "^0.0.39",
     "@types/react-helmet": "^5.0.5",
+    "@types/styled-components": "^4.1.11",
     "babel-plugin-styled-components": "^1.7.1",
     "dashify": "^2.0.0",
     "disqus-react": "^1.0.5",
