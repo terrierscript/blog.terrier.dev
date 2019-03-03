@@ -23,6 +23,7 @@ const TagList = ({ tags = [] }) => {
 
 const BlogBody = styled.div`
   padding-top: 1em;
+  word-break: break-word;
 `
 
 const Title = styled.h1`
