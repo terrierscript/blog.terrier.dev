@@ -5,7 +5,7 @@ import Link from "gatsby-link"
 
 export const TagItem = styled.div`
   display: inline-block;
-  background: #ccc;
+  background: #e08e79;
   color: #555;
   padding: 0.2em 0.5em 0.3em;
   margin: 0.2em;

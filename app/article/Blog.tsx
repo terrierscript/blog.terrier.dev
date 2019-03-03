@@ -26,8 +26,9 @@ const BlogBody = styled.div`
 `
 const ArticleWrapper = styled.div`
   word-break: break-word;
-  background: #f9f9f9;
-  padding: 1em;
+  background: #fff;
+  padding-top: 1.5em;
+  /* padding: 1em; */
 `
 
 const Title = styled.h1`
@@ -57,11 +58,11 @@ const BlogArticleWrapper = styled.div`
 
 export const BlogArticle = ({ content, title, tags }) => (
   <BlogArticleWrapper>
+    <Title>{title}</Title>
+    <TagListWrapper>
+      <TagList tags={tags} />
+    </TagListWrapper>
     <ArticleWrapper>
-      <Title>{title}</Title>
-      <TagListWrapper>
-        <TagList tags={tags} />
-      </TagListWrapper>
       <HTMLContent content={content} />
     </ArticleWrapper>
   </BlogArticleWrapper>

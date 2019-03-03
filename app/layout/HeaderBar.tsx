@@ -9,7 +9,7 @@ const Nav = styled.nav`
   height: 64px;
   line-height: 64px;
   /* border-bottom: 1px solid #d11010; */
-  background: #fafafa;
+  /* background: #fafafa; */
   /* a {
     color: white;
   } */

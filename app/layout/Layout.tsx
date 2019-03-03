@@ -17,6 +17,7 @@ const Grid = styled.div`
   grid-template-areas: ${gridTemplate};
   grid-gap: 1em;
   grid-template-columns: auto 1fr 1fr 300px;
+  background: #f1d4af;
 `
 const Area = styled.div<{ area: string }>`
   grid-area: ${props => props.area};
