@@ -27,6 +27,7 @@ const BlogBody = styled.div`
   grid-auto-columns: 100%;
   /* padding-top: 1em; */
   word-break: break-word;
+  max-width: 900px; /* TODO:  */
 `
 const ArticleWrapper = styled.div`
   background: #fff;
