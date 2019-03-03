@@ -1,8 +1,9 @@
 import React from "react"
 // import PropTypes from "prop-types";
 import { BlogItem } from "../../app/list/Item"
-import { graphql } from "gatsby"
 import { Layout } from "../../app/layout/Layout"
+import { graphql } from "gatsby"
+import { generatePostFragment } from "../query/query"
 
 export default class IndexPage extends React.Component {
   render() {
@@ -19,7 +20,7 @@ export default class IndexPage extends React.Component {
   }
 }
 
-// @ts-ignore
+export const postFragment = generatePostFragment()
 export const query = graphql`
   query IndexQuery {
     allMarkdownRemark(
@@ -33,18 +34,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          html
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "YYYY/MM/DD")
-            tags
-          }
+          ...Post
         }
       }
     }
