@@ -11,6 +11,12 @@ const globalCss = css`
   :root {
     --border: 1px solid #f0f0f0;
   }
+  /* TODO */
+  body {
+    img {
+      margin-bottom: 0;
+    }
+  }
 `
 const GlobalStyle = createGlobalStyle`
   ${globalCss}

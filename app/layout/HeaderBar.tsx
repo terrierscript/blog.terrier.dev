@@ -5,6 +5,7 @@ import { defaultFont } from "./font"
 import media from "styled-media-query"
 import { Avater } from "./Avater"
 import { Author } from "./side/Profile"
+import { Terrier } from "./header/Terrier"
 
 const Nav = styled.nav`
   height: 64px;
@@ -31,13 +32,13 @@ export const HeaderBar = () => {
     <div>
       <Nav>
         <NavContainer>
-          {" "}
           <Logo to="/">
             <div>
               <Avater />
               <span>terrier.dev</span>
             </div>
           </Logo>
+          <Terrier size={40} />
         </NavContainer>
       </Nav>
     </div>

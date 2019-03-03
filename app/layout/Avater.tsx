@@ -8,7 +8,7 @@ const SizeImg = styled.img`
   width: ${({ size }: Props) => size}px;
   height: ${({ size }: Props) => size}px;
 `
-const RadiusImg = styled(SizeImg)`
+export const RadiusImg = styled(SizeImg)`
   border-radius: ${({ size }: Props) => size}px;
 `
 
