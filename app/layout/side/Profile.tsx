@@ -2,6 +2,7 @@ import React from "react"
 import { Avater } from "../Avater"
 import { SideBox, Title } from "./Basics"
 import styled from "styled-components"
+import { headerFont } from "../../utils/typography"
 
 const Box = styled.div`
   display: flex;
@@ -9,10 +10,16 @@ const Box = styled.div`
   align-items: center;
 `
 
+const Link = styled.a`
+  text-decoration: none;
+  font-weight: bold;
+  font-family: ${headerFont};
+`
+
 export const Author = () => {
   return (
     <div>
-      <a href="https://twitter.com/terrierscript">@terrierscript</a>
+      <Link href="https://twitter.com/terrierscript">terrierscript</Link>
     </div>
   )
 }
