@@ -5,8 +5,9 @@ import { Container } from "./Container"
 import { Article } from "../article/Content"
 import { Footer } from "./Footer"
 import styled from "styled-components"
-import { SideProfile } from "./side/Profile"
+import { SideProfile, SideLinks } from "./side/Profile"
 import { TagCloud } from "./side/TagCloud"
+import { Side } from "./side/Side"
 const gridTemplate = `
   "header header header"
   "body   body   side"
@@ -33,8 +34,7 @@ export const LayoutInner = ({ children }) => {
         </Container>
       </Area>
       <Area area="side">
-        <SideProfile />
-        <TagCloud />
+        <Side />
       </Area>
       <Area area="footer">
         <Footer author="terrierscript" />

@@ -1,14 +1,19 @@
 import React from "react"
 import { Avater } from "../Avater"
-import { Links } from "./Link"
-import { SideBox } from "./SideBox"
+import { SideBox } from "./Basics"
+import { Box } from "grommet"
 
 export const SideProfile = () => {
   return (
     <SideBox>
-      <Avater />
-      <div>Author: @terrierscript</div>
-      <Links />
+      <Box wrap={false} direction="row" align="center">
+        <Box>
+          <Avater />
+        </Box>
+        <Box pad="small">
+          <div>Author: @terrierscript</div>
+        </Box>
+      </Box>
     </SideBox>
   )
 }

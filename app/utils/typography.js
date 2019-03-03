@@ -2,6 +2,7 @@ import Typography from "typography"
 // import fairyGatesTheme from "typography-theme-fairy-gates";
 
 export const headerFont = "Quicksand"
+// export const headerFont = "Hiragino Kaku Gothic"
 
 const theme = {
   baseFontSize: "18px",
@@ -18,6 +19,7 @@ const theme = {
   ],
   headerFontFamily: [headerFont, "Helvetica"],
   bodyFontFamily: [
+    "Hiragino Kaku Gothic",
     "-apple-system,BlinkMacSystemFont",
     "Segoe UI",
     "Helvetica",

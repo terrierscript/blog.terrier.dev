@@ -1,28 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import { SideBox, Li, Ul, Title, Anchor } from "./Basics"
 
-const Link = styled.a`
-  color: #333;
-  text-decoration: none;
-  line-height: 1em;
-  &:hover {
-    text-decoration: underline;
-  }
-`
-
-const ItemLink = styled(Link)`
+const ItemLink = styled(Anchor)`
   font-size: 0.7rem;
   text-decoration: none;
   color: #333;
 `
 
-const Li = styled.li`
-  margin-bottom: 0;
-  line-height: 1em;
-`
-const Ul = styled.ul`
-  margin-bottom: 0;
-`
 const List = ({ href, children }) => (
   <Li>
     <ItemLink key="new" href={href}>
@@ -31,7 +16,7 @@ const List = ({ href, children }) => (
   </Li>
 )
 
-export const Links = () => {
+const Links = () => {
   return (
     <Ul>
       <List href="https://github.com/terrierscript">GitHub</List>
@@ -42,5 +27,14 @@ export const Links = () => {
       <List href="https://dev.to/terrierscript">dev.to</List>
       <List href="https://scrapbox.io/terrierscript/">Scrapbox</List>
     </Ul>
+  )
+}
+
+export const SideLinks = () => {
+  return (
+    <SideBox>
+      <Title>Links</Title>
+      <Links />
+    </SideBox>
   )
 }

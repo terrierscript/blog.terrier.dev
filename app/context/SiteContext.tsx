@@ -14,7 +14,7 @@ type Tag = {
 }
 export const TagsContext = createContext<{
   tags: Tag[]
-  Link: React.ReactNode
+  Link: any // TODO: react item
 }>({
   tags: [],
   Link: DefaultLink

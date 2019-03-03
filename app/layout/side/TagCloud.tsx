@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { TagsContext } from "../../context/SiteContext"
-import { SideBox } from "./SideBox"
+import { SideBox, Ul, Li, Title } from "./Basics"
 import { kebabCase } from "lodash"
 
 export const TagCloud = () => {
@@ -8,18 +8,18 @@ export const TagCloud = () => {
   if (tags.length < 1) {
     return null
   }
-  console.log(tags)
   return (
     <SideBox>
-      <ul>
+      <Title>Tags</Title>
+      <Ul>
         {tags.map(({ fieldValue, totalCount }, i) => (
-          <li key={fieldValue}>
+          <Li key={fieldValue}>
             <Link to={`/tags/${kebabCase(fieldValue)}/`}>
               {fieldValue}({totalCount})
             </Link>
-          </li>
+          </Li>
         ))}
-      </ul>
+      </Ul>
     </SideBox>
   )
 }

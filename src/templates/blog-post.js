@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { BlogLayout } from "../provider/BlogLayout"
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
+  console.log("============--")
   return (
     <BlogLayout>
       <BlogPostTemplate
