@@ -25,23 +25,18 @@
   force = true
 
 [[redirects]]
-  from = "https://snippet.terrierscript.com/*"
-  to = "https://snippet.terrier.dev/:splat"
-  status = 301
-  force = true
-[[redirects]]
   from = "http://snippet.terrierscript.com/*"
-  to = "https://snippet.terrier.dev/:splat"
+  to = "https://terrier.dev/:splat"
   status = 301
   force = true
 [[redirects]]
   from = "https://snippets.terrierscript.com/*"
-  to = "https://snippet.terrier.dev/:splat"
+  to = "https://terrier.dev/:splat"
   status = 301
   force = true
 [[redirects]]
-  from = "http://snippets.terrierscript.com/*"
-  to = "https://snippet.terrier.dev/:splat"
+  from = "https://snippets.terrier.dev/*"
+  to = "https://terrier.dev/:splat"
   status = 301
   force = true
 
