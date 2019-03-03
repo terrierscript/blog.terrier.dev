@@ -7,7 +7,7 @@ import { Footer } from "./Footer"
 import styled from "styled-components"
 import { Side } from "./side/Side"
 const gridTemplate = `
-  "header header header header"
+  ".      header header header"
   ".      body   body   side"
   "footer footer footer footer"
 `
@@ -16,8 +16,8 @@ const Grid = styled.div`
   display: grid;
   grid-template-areas: ${gridTemplate};
   grid-gap: 1em;
-  grid-template-columns: auto 1fr 1fr 300px;
-  background: #f4ead5;
+  grid-template-columns: 10px 1fr 1fr 300px;
+  /* background: #f4ead5; */
 `
 const Area = styled.div<{ area: string }>`
   grid-area: ${props => props.area};

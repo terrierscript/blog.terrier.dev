@@ -22,17 +22,20 @@ const TagList = ({ tags = [] }) => {
 }
 
 const BlogBody = styled.div`
+  display: grid;
+  grid-gap: 1.5em;
+  grid-auto-columns: 100%;
   /* padding-top: 1em; */
+  word-break: break-word;
 `
 const ArticleWrapper = styled.div`
-  word-break: break-word;
   background: #fff;
-  padding-top: 1.5em;
   /* padding: 1em; */
 `
 
 const Title = styled.h1`
   line-height: 1.2em;
+  word-break: break-word;
   /* font-family: ${defaultFont}; */
 `
 
@@ -54,6 +57,7 @@ const Modify = ({ fileAbsolutePath }) => {
 
 const BlogArticleWrapper = styled.div`
   padding-bottom: 3em;
+  word-break: break-all;
 `
 
 export const BlogArticle = ({ content, title, tags }) => (
@@ -84,7 +88,7 @@ export const BlogPostTemplate = ({
   fileAbsolutePath = null
 }) => {
   return (
-    <section>
+    <React.Fragment>
       <Helmet title={`${title} | Snippet 🐶`}>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
@@ -99,6 +103,6 @@ export const BlogPostTemplate = ({
         <Modify fileAbsolutePath={fileAbsolutePath} />
         {/* <Comment identifier={id} title={title} /> */}
       </BlogBody>
-    </section>
+    </React.Fragment>
   )
 }

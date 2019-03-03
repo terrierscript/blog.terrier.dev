@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { TagItem } from "../../article/Tag"
 
 const WhiteBox = styled(SideBox)`
-  background: transparent;
+  /* background: transparent; */
   max-width: 300px;
 `
 export const TagCloud = () => {
@@ -17,7 +17,7 @@ export const TagCloud = () => {
     <WhiteBox>
       <Title>Tags</Title>
       {tags.map(({ fieldValue, totalCount }) => (
-        <Link to={`/tags/${fieldValue}/`}>
+        <Link to={`/tags/${fieldValue}/`} key={fieldValue}>
           <TagItem>
             {fieldValue} ({totalCount})
           </TagItem>

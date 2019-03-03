@@ -32,7 +32,7 @@ const NavContainer = styled.div`
   padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 `
 
 const Block = styled.div`
