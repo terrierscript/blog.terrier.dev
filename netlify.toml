@@ -71,6 +71,6 @@
   force = false
 [[redirects]]
   from = "https://terrier.netlify.com/*"
-  to = "https://terrierscript.com/:splat"
+  to = "https://terrier.dev/:splat"
   status = 301
   force = true
