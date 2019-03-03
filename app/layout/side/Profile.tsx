@@ -8,15 +8,21 @@ const Box = styled.div`
   flex-direction: row;
   align-items: center;
 `
+
+export const Author = () => {
+  return (
+    <div>
+      <a href="https://twitter.com/terrierscript">@terrierscript</a>
+    </div>
+  )
+}
 export const SideProfile = () => {
   return (
     <SideBox>
       <Title>Author</Title>
       <Box>
         <Avater />
-        <div>
-          <a href="https://twitter.com/terrierscript">@terrierscript</a>
-        </div>
+        <Author />
       </Box>
     </SideBox>
   )

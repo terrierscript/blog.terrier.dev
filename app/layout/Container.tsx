@@ -9,5 +9,5 @@ export const Container = styled.div`
   width: 100%;
   min-height: 90vh;
   background: #fff;
-  padding: 2em;
+  padding: 1em;
 `

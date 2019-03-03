@@ -89,7 +89,7 @@ export const BlogPostTemplate = ({
 }) => {
   return (
     <React.Fragment>
-      <Helmet title={`${title} | Snippet 🐶`}>
+      <Helmet title={`${title} | terrier.dev 🐶`}>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

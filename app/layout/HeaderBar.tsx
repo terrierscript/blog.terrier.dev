@@ -4,16 +4,11 @@ import styled from "styled-components"
 import { defaultFont } from "./font"
 import media from "styled-media-query"
 import { Avater } from "./Avater"
+import { Author } from "./side/Profile"
 
 const Nav = styled.nav`
   height: 64px;
   line-height: 64px;
-  /* border-bottom: 1px solid #d11010; */
-  /* background: #fafafa; */
-  /* a {
-    color: white;
-  } */
-  /* text-align: center; */
 `
 
 const Logo = styled(Link)`
@@ -22,9 +17,6 @@ const Logo = styled(Link)`
   font-family: ${defaultFont};
   font-size: 1.5em;
   color: #000;
-  /* ${media.lessThan("small")`
-    font-size: 18px;
-  `}; */
 `
 
 const NavContainer = styled.div`
@@ -32,30 +24,23 @@ const NavContainer = styled.div`
   padding: 0 20px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: space-between;
 `
-
-const Block = styled.div`
-  display: inline-block;
-`
-
-const NavbarContainer = ({ children }) => (
-  <Nav>
-    <NavContainer>
-      <Block>{children}</Block>
-      {/* <Author name="terrierscript" /> */}
-    </NavContainer>
-  </Nav>
-)
 
 export const HeaderBar = () => {
   return (
     <div>
-      <NavbarContainer>
-        <Logo to="/">
-          <div>terrier.dev</div>
-        </Logo>
-      </NavbarContainer>
+      <Nav>
+        <NavContainer>
+          {" "}
+          <Logo to="/">
+            <div>
+              <Avater />
+              <span>terrier.dev</span>
+            </div>
+          </Logo>
+        </NavContainer>
+      </Nav>
     </div>
   )
 }

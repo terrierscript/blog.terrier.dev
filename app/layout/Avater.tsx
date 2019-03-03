@@ -13,7 +13,7 @@ const RadiusImg = styled(SizeImg)`
 `
 
 const Img = styled(RadiusImg)`
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   background: white;
   vertical-align: middle;
   margin-bottom: 4px;

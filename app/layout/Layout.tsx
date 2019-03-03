@@ -6,17 +6,18 @@ import { Article } from "../article/Content"
 import { Footer } from "./Footer"
 import styled from "styled-components"
 import { Side } from "./side/Side"
+
 const gridTemplate = `
-  ".      header header header"
-  ".      body   body   side"
-  "footer footer footer footer"
+  ".  header header header ."
+  ".  body   body   side   ."
+  ".  footer footer footer ."
 `
 
 const Grid = styled.div`
   display: grid;
   grid-template-areas: ${gridTemplate};
   grid-gap: 1em;
-  grid-template-columns: 10px 1fr 1fr 300px;
+  grid-template-columns: 0.5fr 1fr 1fr 300px 0.5fr;
   /* background: #f4ead5; */
 `
 const Area = styled.div<{ area: string }>`
