@@ -64,8 +64,9 @@ export const Feeds = () => {
       setFeeds(feeds)
     })
   }, [])
-  // console.log(this.state.feeds);
-  // return null;
+  if (feeds.length === 0) {
+    return <Items>Loading...</Items>
+  }
   return (
     <Items>
       {feeds.map((item, i) => (
