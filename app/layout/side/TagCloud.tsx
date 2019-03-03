@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { TagsContext } from "../../context/SiteContext"
-import { SideBox, Li, Title } from "./Basics"
+import { SideBox, Title } from "./Basics"
 import styled from "styled-components"
 import { TagItem } from "../../article/Tag"
 

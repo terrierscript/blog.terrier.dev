@@ -1,21 +1,21 @@
 import React from "react"
 import { Avater } from "../Avater"
 import { SideBox, Title } from "./Basics"
-import { Box } from "grommet"
+import styled from "styled-components"
 
+const Box = styled.div`
+  display: flex;
+  flex-direction: "row";
+`
 export const SideProfile = () => {
   return (
     <SideBox>
       <Title>Author</Title>
-      <Box wrap={false} direction="row" align="center">
-        <Box>
-          <Avater />
-        </Box>
-        <Box pad="small">
-          <div>
-            <a href="https://twitter.com/terrierscript">@terrierscript</a>
-          </div>
-        </Box>
+      <Box>
+        <Avater />
+        <div>
+          <a href="https://twitter.com/terrierscript">@terrierscript</a>
+        </div>
       </Box>
     </SideBox>
   )

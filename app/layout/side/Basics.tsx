@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const SideBox = styled.div`
-  background: #f9f9f9;
+  background: #fff;
   margin-right: 0;
   padding: 1em;
 `

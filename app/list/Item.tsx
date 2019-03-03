@@ -11,14 +11,15 @@ const Title = styled.div`
 `
 
 const Item = styled.div`
-  padding: 1.2em;
-  border-bottom: 1px solid #e3e3e3;
+  /* padding: 1.2em; */
+  /* border-bottom: 1px solid #e3e3e3; */
 `
 
 export const BlogItem = ({ post }) => {
   return (
     <section>
       <Item>
+        <small>{post.frontmatter.date}</small>
         <Title>
           <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
           <div>
@@ -27,8 +28,21 @@ export const BlogItem = ({ post }) => {
             })}
           </div>
         </Title>
-        <small>{post.frontmatter.date}</small>
       </Item>
     </section>
+  )
+}
+
+const BlogListGrid = styled.div`
+  display: grid;
+  grid-gap: 2em;
+`
+export const BlogList = ({ posts }) => {
+  return (
+    <BlogListGrid>
+      {posts.map(({ node: post }) => (
+        <BlogItem post={post} key={post.id} />
+      ))}
+    </BlogListGrid>
   )
 }

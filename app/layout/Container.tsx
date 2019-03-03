@@ -8,5 +8,6 @@ export const Container = styled.div`
   word-break: break-all;
   width: 100%;
   min-height: 90vh;
-  /* padding: 2em 0; */
+  background: #fff;
+  padding: 1em;
 `

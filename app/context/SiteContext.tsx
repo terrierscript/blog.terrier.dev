@@ -6,16 +6,26 @@ export const SiteContext = createContext({
   title: "terrier.dev"
 })
 
-const DefaultLink = props => <a {...props} />
+export const DefaultLink = props => <a {...props} />
 
 type Tag = {
   fieldValue: string
   totalCount: number
 }
-export const TagsContext = createContext<{
-  tags: Tag[]
-  Link: any // TODO: react item
-}>({
+
+const defaultTagContext = {
   tags: [],
   Link: DefaultLink
-})
+}
+export const TagsContext = createContext<{
+  tags: Tag[]
+  Link?: any // TODO: react item
+}>(defaultTagContext)
+
+export const TagsProvider = ({ children, ...props }) => {
+  const value = {
+    ...defaultTagContext,
+    ...props
+  }
+  return <TagsContext.Provider value={value}>{children}</TagsContext.Provider>
+}

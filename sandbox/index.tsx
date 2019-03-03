@@ -3,8 +3,14 @@ import React from "react"
 import { render } from "react-dom"
 import { Layout } from "../app/layout/Layout"
 import { BlogItem } from "../app/list/Item"
-import Navbar from "../app/layout/Navbar"
 import { Fonts } from "./fonts"
+import { BlogArticle } from "../app/article/Blog"
+import { HeaderBar } from "../app/layout/HeaderBar"
+import {
+  TagsContext,
+  DefaultLink,
+  TagsProvider
+} from "../app/context/SiteContext"
 
 const mockPost = {
   fields: {
@@ -19,12 +25,33 @@ const mockPost = {
 }
 
 const App = () => {
+  const tagsValue = [
+    {
+      fieldValue: "JavaScript",
+      totalCount: 10
+    },
+    {
+      fieldValue: "React",
+      totalCount: 10
+    },
+    {
+      fieldValue: "JavaScript",
+      totalCount: 10
+    }
+  ]
   return (
     <div>
-      <Fonts />
-      <Layout>
-        <BlogItem post={mockPost} />
-      </Layout>
+      <TagsProvider tags={tagsValue}>
+        <Fonts />
+        <Layout>
+          <BlogItem post={mockPost} />
+          <BlogArticle
+            title={"Blogのタイトル"}
+            content={"aaaaaaaaaaaaaa"}
+            tags={["javascript", "netlify", "parcel", "react"]}
+          />
+        </Layout>
+      </TagsProvider>
     </div>
   )
 }
