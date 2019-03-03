@@ -1,6 +1,5 @@
 import React, { SFC } from "react"
 import styled from "styled-components"
-import { kebabCase } from "lodash"
 import Link from "gatsby-link"
 import { headerFont } from "../utils/typography"
 
@@ -22,7 +21,7 @@ export const TagItem = styled.div`
 
 export const Tag: SFC<{ tag: string }> = ({ tag }) => {
   return (
-    <Link to={`/tags/${kebabCase(tag)}/`}>
+    <Link to={`/tags/${tag}/`}>
       <TagItem>{tag}</TagItem>
     </Link>
   )
