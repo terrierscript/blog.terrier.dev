@@ -6,7 +6,7 @@ title: >-
 date: '2018-06-06T10:58:37+09:00'
 tags:
   - python
-  - keras.js
+  - keras
   - javascript
 ---
 おもむろにkeras.jsにpythonで`model.save`したデータをぶっこんでもこんなエラーが出る

@@ -18,7 +18,7 @@ class TagRoute extends React.Component {
   render() {
     // console.log(this.props);
     const posts = this.props.data.allMarkdownRemark.edges
-    const tag = this.props.pageContext.tag
+    const tag = this.props.pageContext.lower
     const title = this.props.data.site.siteMetadata.title
     // const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `"${tag}”の記事`
@@ -46,7 +46,7 @@ class TagRoute extends React.Component {
 }
 
 export const tagPageQuery = graphql`
-  query TagPage($tag: String) {
+  query TagPage($tags: [String]) {
     site {
       siteMetadata {
         title
@@ -55,9 +55,7 @@ export const tagPageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: { tags: { in: [$tag] }, published: { ne: false } }
-      }
+      filter: { frontmatter: { tags: { in: $tags }, published: { ne: false } } }
     ) {
       totalCount
       edges {

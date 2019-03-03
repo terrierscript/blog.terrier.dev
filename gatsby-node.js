@@ -6,6 +6,21 @@ const getTemplate = name => {
   return path.resolve(`src/templates/${String(name)}.js`)
 }
 
+const normalizedTagGroup = tags => {
+  let obj = {}
+  tags.map(tag => {
+    const lower = tag.toLowerCase()
+    const current = obj[lower]
+    obj[lower] = current ? [...current, tag] : [tag]
+    return obj
+  })
+  return Object.entries(obj).map(([lower, values]) => {
+    return {
+      lower,
+      tags: _.uniq(values)
+    }
+  })
+}
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const limit = process.env.NODE_ENV === "production" ? 10000 : 100
@@ -56,18 +71,18 @@ exports.createPages = async ({ actions, graphql }) => {
         tags = tags.concat(edge.node.frontmatter.tags)
       }
     })
-    // Eliminate duplicate tags
-    tags = _.uniq(tags)
+    const tagGroups = normalizedTagGroup(tags)
 
     // Make tag pages
-    tags.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
+    tagGroups.forEach(({ lower, tags }) => {
+      const tagPath = `/tags/${lower}/`
 
       createPage({
         path: tagPath,
         component: getTemplate("tags"),
         context: {
-          tag
+          tags,
+          lower
         }
       })
     })
