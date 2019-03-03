@@ -24,6 +24,7 @@
   status = 301
   force = true
 
+# old redirect
 [[redirects]]
   from = "http://snippet.terrierscript.com/*"
   to = "https://terrier.dev/:splat"
