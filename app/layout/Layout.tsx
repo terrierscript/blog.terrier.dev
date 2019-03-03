@@ -5,18 +5,18 @@ import { Container } from "./Container"
 import { Article } from "../article/Content"
 import { Footer } from "./Footer"
 import styled from "styled-components"
-import { SideProfile, SideLinks } from "./side/Profile"
-import { TagCloud } from "./side/TagCloud"
 import { Side } from "./side/Side"
 const gridTemplate = `
-  "header header header"
-  "body   body   side"
-  "footer footer footer"
+  "header header header header"
+  ".      body   body   side"
+  "footer footer footer footer"
 `
 
 const Grid = styled.div`
   display: grid;
   grid-template-areas: ${gridTemplate};
+  grid-gap: 1em;
+  grid-template-columns: auto 1fr 1fr 300px;
 `
 const Area = styled.div<{ area: string }>`
   grid-area: ${props => props.area};

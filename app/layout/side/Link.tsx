@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { SideBox, Li, Ul, Title, Anchor } from "./Basics"
 
 const List = ({ href, children }) => (
