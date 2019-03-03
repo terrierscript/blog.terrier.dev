@@ -16,7 +16,7 @@ const convert = ({ title, slug, tags }) => {
     templateKey: "blog-post",
     title,
     date: now.toUTC().toISO(),
-    tags: tags.split(" ")
+    tags: tags.split(" ").map(i => i.toLowerCase())
   })
   return {
     filename,
