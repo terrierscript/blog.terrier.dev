@@ -2,17 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { SideBox, Li, Ul, Title, Anchor } from "./Basics"
 
-const ItemLink = styled(Anchor)`
-  font-size: 0.7rem;
-  text-decoration: none;
-  color: #333;
-`
-
 const List = ({ href, children }) => (
   <Li>
-    <ItemLink key="new" href={href}>
+    <Anchor key="new" href={href}>
       {children}
-    </ItemLink>
+    </Anchor>
   </Li>
 )
 

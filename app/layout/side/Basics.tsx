@@ -15,7 +15,9 @@ export const Ul = styled.ul`
   margin-bottom: 0;
 `
 
-export const Title = styled.h3``
+export const Title = styled.h3`
+  margin-bottom: 0.5em;
+`
 
 export const anchorStyle = component => {
   return styled(component)`
