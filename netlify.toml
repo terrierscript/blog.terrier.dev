@@ -34,6 +34,11 @@
   to = "https://terrier.dev/:splat"
   status = 301
   force = true
+[[redirects]]
+  from = "https://snippet.terrier.dev/*"
+  to = "https://terrier.dev/:splat"
+  status = 301
+  force = true
 
 # old file redirect
 [[redirects]]
