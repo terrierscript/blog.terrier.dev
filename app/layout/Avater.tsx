@@ -19,15 +19,16 @@ const Img = styled(RadiusImg)`
   margin-bottom: 4px;
 `
 
-const AvaterContainer = styled.div`
+const AvaterContainer = styled.div<any>`
   display: inline-block;
   margin-right: 0.2em;
+  width: ${({ size }) => size}px;
 `
 const avater =
   "https://ja.gravatar.com/userimage/90616865/3f0dd48afcf32bb6927654c79cf1c245.png"
 
-export const Avater = () => (
-  <AvaterContainer>
-    <Img src={avater} size={40} />
+export const Avater = ({ size = 40 }) => (
+  <AvaterContainer size={size}>
+    <Img src={avater} size={size} />
   </AvaterContainer>
 )
