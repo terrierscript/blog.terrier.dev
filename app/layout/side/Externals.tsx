@@ -6,6 +6,9 @@ import styled from "styled-components"
 const Scroll = styled.div`
   max-height: 10em;
   overflow: scroll;
+  @media screen and (max-width: 65em) {
+    overflow: hidden;
+  }
 `
 export const Externals = () => {
   return (

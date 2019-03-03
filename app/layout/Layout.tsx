@@ -8,17 +8,28 @@ import styled from "styled-components"
 import { Side } from "./side/Side"
 
 const gridTemplate = `
-  ".  header header header ."
-  ".  body   body   side   ."
-  ".  footer footer footer ."
+  ". header  header ."
+  ". body      side   ."
+  ". footer  footer ."
+`
+
+const mobileGrid = `
+  "header"
+  "body"
+  "side"
+  "footer"
 `
 
 const Grid = styled.div`
   display: grid;
   grid-template-areas: ${gridTemplate};
   grid-gap: 1em;
-  grid-template-columns: 0.5fr 1fr 1fr 300px 0.5fr;
+  grid-template-columns: 0.1fr 2fr 0.6fr 0.1fr;
   /* background: #f4ead5; */
+  @media screen and (max-width: 65em) {
+    grid-template-areas: ${mobileGrid};
+    grid-template-columns: 100%;
+  }
 `
 const Area = styled.div<{ area: string }>`
   grid-area: ${props => props.area};
@@ -31,9 +42,7 @@ export const LayoutInner = ({ children }) => {
         <HeaderBar />
       </Area>
       <Area area="body">
-        <Container>
-          {children}
-        </Container>
+        <Container>{children}</Container>
       </Area>
       <Area area="side">
         <Side />

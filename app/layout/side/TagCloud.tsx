@@ -7,6 +7,10 @@ import { TagItem } from "../../article/Tag"
 const WhiteBox = styled(SideBox)`
   /* background: transparent; */
   max-width: 300px;
+  @media screen and (max-width: 65em) {
+    max-height: 10em;
+    overflow: hidden;
+  }
 `
 export const TagCloud = () => {
   const { tags, Link } = useContext(TagsContext)

@@ -8,6 +8,15 @@ import styled from "styled-components"
 const SideGrid = styled.div`
   display: grid;
   grid-gap: 1em;
+  @media screen and (max-width: 65em) {
+    width: 100%;
+  }
+`
+
+const HideIfMobile = styled.div`
+  @media screen and (max-width: 65em) {
+    display: none;
+  }
 `
 
 export const Side = () => {
@@ -15,8 +24,10 @@ export const Side = () => {
     <SideGrid>
       <SideProfile />
       <SideLinks />
-      <Externals />
-      <TagCloud />
+      <HideIfMobile>
+        <Externals />
+        <TagCloud />
+      </HideIfMobile>
     </SideGrid>
   )
 }

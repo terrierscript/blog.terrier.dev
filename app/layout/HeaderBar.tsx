@@ -2,9 +2,6 @@ import React from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
 import { defaultFont } from "./font"
-import media from "styled-media-query"
-import { Avater } from "./Avater"
-import { Author } from "./side/Profile"
 import { Terrier } from "./header/Terrier"
 
 const Nav = styled.nav`
@@ -27,17 +24,22 @@ const NavContainer = styled.div`
   padding: 1em;
 `
 
+const Grid = styled.div`
+  display: grid;
+  grid-gap: 0.5em;
+  grid-auto-flow: column;
+`
 export const HeaderBar = () => {
   return (
     <div>
       <Nav>
         <NavContainer>
           <Logo to="/">
-            <div>
+            <Grid>
               <Terrier size={40} />
               {/* <Avater /> */}
               <span>terrier.dev</span>
-            </div>
+            </Grid>
           </Logo>
         </NavContainer>
       </Nav>
