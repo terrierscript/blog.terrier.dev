@@ -9,23 +9,25 @@ const NoMarkLi = styled(Li)`
   list-style: none;
   text-transform: lowercase;
 `
+const WhiteBox = styled(SideBox)`
+  background: transparent;
+  max-width: 300px;
+`
 export const TagCloud = () => {
   const { tags, Link } = useContext(TagsContext)
   if (tags.length < 1) {
     return null
   }
   return (
-    <SideBox>
+    <WhiteBox>
       <Title>Tags</Title>
-      <Ul>
-        {tags.map(({ fieldValue, totalCount }, i) => (
-          <Li>
-            <Link to={`/tags/${fieldValue}/`}>
-              {fieldValue} ({totalCount})
-            </Link>
-          </Li>
-        ))}
-      </Ul>
-    </SideBox>
+      {tags.map(({ fieldValue, totalCount }, i) => (
+        <Link to={`/tags/${fieldValue}/`}>
+          <TagItem>
+            {fieldValue} ({totalCount})
+          </TagItem>
+        </Link>
+      ))}
+    </WhiteBox>
   )
 }
