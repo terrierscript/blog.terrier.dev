@@ -44,7 +44,7 @@ const getUrl = config => {
 }
 
 const fromDummy = config => {
-  return from(Array(1).fill(mock)).pipe(
+  return from(Array(10).fill(mock)).pipe(
     map(item => ({
       ...item,
       ...config
@@ -61,14 +61,13 @@ const createRssStream = rssConfig =>
     return fromDummy(config)
   })
 
-export default () => {
+export const load = () => {
   return merge(...createRssStream(rssConfig)).pipe(
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
       const result = [...acc, ...v].sort(
         (a, b) => b.date.getTime() - a.date.getTime()
       )
-      // console.log(acc, v, result);
       return result
     })
   )

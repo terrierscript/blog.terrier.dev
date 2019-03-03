@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import load from "./loader"
+import { load } from "./loader"
 import styled from "styled-components"
 
 const FeedItem = styled.div`
