@@ -1,6 +1,6 @@
 {
-  "name": "til",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "terrier.dev",
+  "description": "terrier.dev",
   "version": "1.1.1",
   "dependencies": {
     "@babel/core": "^7.1.0",

@@ -54,8 +54,7 @@ export const HeaderBar = () => {
     <div>
       <NavbarContainer>
         <Logo to="/">
-          <Avater />
-          <span>Code Snippet 🐶</span>
+          <div>terrier.dev</div>
         </Logo>
       </NavbarContainer>
     </div>

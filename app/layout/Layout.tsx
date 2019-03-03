@@ -1,5 +1,5 @@
 import React, { SFC } from "react"
-import { HeaderBar } from "./Navbar"
+import { HeaderBar } from "./HeaderBar"
 // import { desktop } from "../lib/media"
 import { Meta } from "./Meta"
 import { Container } from "./Container"

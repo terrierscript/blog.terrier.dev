@@ -1,9 +1,9 @@
-const siteUrl = "https://snippet.terrierscript.com"
+const siteUrl = "https://terrier.dev"
 module.exports = {
   siteMetadata: {
-    title: "Snippet",
+    title: "terrier.dev",
     siteUrl,
-    description: "短めの記事"
+    description: "Author: terrierscript"
   },
   plugins: [
     // "gatsby-plugin-debug-build",
