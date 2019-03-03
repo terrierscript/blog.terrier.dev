@@ -15,14 +15,24 @@ const rotate360 = keyframes`
 `
 
 const Img = styled(RadiusImg)`
-  animation: ${rotate360} 8s linear infinite;
+  vertical-align: middle;
+  animation: ${rotate360} 6s linear infinite;
+  animation-play-state: paused;
   :hover {
-    animation-duration: 0.1s;
+    animation-play-state: running;
   }
 `
 
 const Dog = ({ size }) => <Img src={pretty} size={size} />
 
+const Container = styled.div`
+  display: inline-block;
+  margin-right: 0.2em;
+`
 export const Terrier = props => {
-  return <Dog {...props} />
+  return (
+    <Container>
+      <Dog {...props} />
+    </Container>
+  )
 }
