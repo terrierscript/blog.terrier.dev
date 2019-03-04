@@ -8,14 +8,14 @@ const renderAst = new rehypeReact({
 }).Compiler
 
 const nr2br = htmlAst => {
-  const n = map(htmlAst, (node, i, parent) => {
+  return map(htmlAst, (node, i, parent) => {
     if (node.type !== "text") return node
     if (parent.tagName !== "p") return node
     const value = node.value.trim()
     if (value.indexOf("\n") < 0) {
       return node
     }
-    const m = value
+    const children = value
       .split("\n")
       .map((v, i) => {
         return i == 0
@@ -23,15 +23,12 @@ const nr2br = htmlAst => {
           : [{ type: "element", tagName: "br" }, { type: "text", value: v }]
       })
       .reduce((a, b) => a.concat(b), []) // TODO: flatten
-    // console.log(parent)
-    // TODO: inject
     return {
       type: "element",
       tagName: "span",
-      children: m
+      children
     }
   })
-  return n
 }
 
 export const renderHtmlAST = htmlAst => {
