@@ -38,21 +38,21 @@ const GridBase = styled.div`
 
 const Grid = styled(GridBase)`
   grid-template-areas: ${gridTemplate};
-  grid-template-columns: 0.1fr minmax(900px, 1fr) 0.4fr 0.1fr;
+  grid-template-columns: 0.1fr minmax(700px, 1fr) 0.4fr 0.1fr;
   width: 100%;
 `
-const GridOneColumn = styled(GridBase)`
-  grid-template-areas: ${gridTemplate2};
-  grid-template-columns: 1fr minmax(600px, 3fr) 1fr;
-  width: 100%;
-`
+// const GridOneColumn = styled(GridBase)`
+//   grid-template-areas: ${gridTemplate2};
+//   grid-template-columns: 1fr minmax(600px, 3fr) 1fr;
+//   width: 100%;
+// `
 const Area = styled.div<{ area: string }>`
   grid-area: ${props => props.area};
 `
 
 export const LayoutInner = ({ children }) => {
   return (
-    <GridOneColumn>
+    <Grid>
       <Area area="header">
         <HeaderBar />
       </Area>
@@ -65,7 +65,7 @@ export const LayoutInner = ({ children }) => {
       <Area area="footer">
         <Footer author="terrierscript" />
       </Area>
-    </GridOneColumn>
+    </Grid>
   )
 }
 
