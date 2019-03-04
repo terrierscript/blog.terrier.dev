@@ -42,7 +42,7 @@ module.exports = {
               token: process.env.GITHUB_TOKEN
             }
           },
-          `gatsby-remark-prismjs`
+          // `gatsby-remark-prismjs`
         ]
       }
     },

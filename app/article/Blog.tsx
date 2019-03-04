@@ -7,7 +7,7 @@ import { defaultFont } from "../layout/font"
 import { Tag } from "./Tag"
 import { Comment } from "./Comment"
 import { ClapButton } from "./clap/ClapButton"
-import { renderHtmlAST } from "./HtmlAst";
+import { renderHtmlAST } from "./toHtmlAst";
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {

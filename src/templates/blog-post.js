@@ -2,13 +2,12 @@ import React, { useMemo } from "react"
 import { BlogPostTemplate } from "../../app/article/Blog"
 import { graphql } from "gatsby"
 import { BlogLayout } from "../provider/BlogLayout"
-import { renderHtmlAST } from "../../app/article/HtmlAst";
+import { renderHtmlAST } from "../../app/article/toHtmlAst";
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
   const content =renderHtmlAST(post.htmlAst)
   
-  console.log(content)
   return (
     <BlogLayout>
       <BlogPostTemplate
