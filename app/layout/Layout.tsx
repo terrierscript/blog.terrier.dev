@@ -12,6 +12,12 @@ const gridTemplate = `
   ". body      side   ."
   ". footer  footer ."
 `
+const gridTemplate2 = `
+  ". header  ."
+  ". body    ."
+  ". footer  ."
+  ". side ."
+`
 
 const mobileGrid = `
   "header"
@@ -20,17 +26,25 @@ const mobileGrid = `
   "footer"
 `
 
-const Grid = styled.div`
+const GridBase = styled.div`
   display: grid;
-  grid-template-areas: ${gridTemplate};
   grid-gap: 1em;
-  width: 100%;
-  grid-template-columns: 0.1fr minmax(900px, 1fr) 0.4fr 0.1fr;
   /* background: #f4ead5; */
   @media screen and (max-width: 65em) {
     grid-template-areas: ${mobileGrid};
     grid-template-columns: 100%;
   }
+`
+
+const Grid = styled(GridBase)`
+  grid-template-areas: ${gridTemplate};
+  grid-template-columns: 0.1fr minmax(900px, 1fr) 0.4fr 0.1fr;
+  width: 100%;
+`
+const GridOneColumn = styled(GridBase)`
+  grid-template-areas: ${gridTemplate2};
+  grid-template-columns: 1fr minmax(600px, 3fr) 1fr;
+  width: 100%;
 `
 const Area = styled.div<{ area: string }>`
   grid-area: ${props => props.area};
@@ -38,7 +52,7 @@ const Area = styled.div<{ area: string }>`
 
 export const LayoutInner = ({ children }) => {
   return (
-    <Grid>
+    <GridOneColumn>
       <Area area="header">
         <HeaderBar />
       </Area>
@@ -51,7 +65,7 @@ export const LayoutInner = ({ children }) => {
       <Area area="footer">
         <Footer author="terrierscript" />
       </Area>
-    </Grid>
+    </GridOneColumn>
   )
 }
 
