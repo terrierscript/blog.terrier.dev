@@ -1,13 +1,18 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { BlogPostTemplate } from "../../app/article/Blog"
 import { graphql } from "gatsby"
 import { BlogLayout } from "../provider/BlogLayout"
+import { renderHtmlAST } from "../../app/article/HtmlAst";
+
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
+  const content =renderHtmlAST(post.htmlAst)
+  
+  console.log(content)
   return (
     <BlogLayout>
       <BlogPostTemplate
-        content={post.html}
+        content={content}
         tags={
           post.frontmatter.tags // description={post.frontmatter.description}
         }
@@ -29,6 +34,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 400)
       id
       html
+      htmlAst
       fileAbsolutePath
       frontmatter {
         date(formatString: "YYYY-MM-DD")

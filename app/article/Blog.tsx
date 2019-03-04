@@ -7,6 +7,7 @@ import { defaultFont } from "../layout/font"
 import { Tag } from "./Tag"
 import { Comment } from "./Comment"
 import { ClapButton } from "./clap/ClapButton"
+import { renderHtmlAST } from "./HtmlAst";
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -47,10 +48,12 @@ const Modify = ({ fileAbsolutePath }) => {
   if (!fileAbsolutePath) {
     return null
   }
-  const repo = "terrierscript/snippet.terriercript.com"
-  const directory = "contents/pages/blog"
+  const repo = "terrierscript/terrier.dev"
+
+  const directory = "contents/pages/blog/"
   const filename = fileAbsolutePath.split("/").pop()
-  const url = `https://github.com/${repo}/edit/master/${directory}/${filename}`
+  const year = filename.substr(0, 4) // TODO: ちょっと無理やりになってる
+  const url = `https://github.com/${repo}/edit/master/${directory}/${year}/${filename}`
 
   return <a href={url}>この記事の修正をする</a>
 }
@@ -87,6 +90,7 @@ export const BlogPostTemplate = ({
   id,
   fileAbsolutePath = null
 }) => {
+  console.log(fileAbsolutePath)
   return (
     <React.Fragment>
       <Helmet title={`${title} | terrier.dev 🐶`}>

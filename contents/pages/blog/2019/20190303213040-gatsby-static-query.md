@@ -8,7 +8,7 @@ tags:
   - graphql
 ---
 
-Gatsbyの[`<StaticQuery>`や`useStaticQuery](https://www.gatsbyjs.org/docs/static-query/)はクエリを分離出来てGatsbyのGraphQL利用が不透明な部分を解消してくれる良いものだ。
+Gatsbyの [`<StaticQuery>`や`useStaticQuery`](https://www.gatsbyjs.org/docs/static-query/) はクエリを分離出来てGatsbyのGraphQL利用が不透明な部分を解消してくれる良いものだ。
 
 （ホントは全部これで置き換えたいのだが、Staticというだけあって変数を受け取ることが出来ないらしい。。。悲しい・・・）
 
