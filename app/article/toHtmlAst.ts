@@ -7,8 +7,6 @@ const renderAst = new rehypeReact({
   createElement: React.createElement
 }).Compiler
 
-const generateBrNode = () => ({})
-
 const nr2br = htmlAst => {
   const n = map(htmlAst, (node, i, parent) => {
     if (node.type !== "text") return node
@@ -33,7 +31,6 @@ const nr2br = htmlAst => {
       children: m
     }
   })
-  console.log(htmlAst, n)
   return n
 }
 
