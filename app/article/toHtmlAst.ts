@@ -23,6 +23,8 @@ const nr2br = htmlAst => {
           : [{ type: "element", tagName: "br" }, { type: "text", value: v }]
       })
       .reduce((a, b) => a.concat(b), []) // TODO: flatten
+
+    // TODO: inject to parent
     return {
       type: "element",
       tagName: "span",
