@@ -10,6 +10,7 @@ import {
   DefaultLink,
   TagsProvider
 } from "../app/context/SiteContext"
+import { Fonts } from "../app/meta/Fonts"
 
 const mockPost = {
   fields: {
