@@ -29,6 +29,7 @@ const nl2br = () => {
       ]
       parent.children = newChildren
     })
+    return tree
   }
   return transformer
 }
