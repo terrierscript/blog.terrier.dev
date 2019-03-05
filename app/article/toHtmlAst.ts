@@ -42,7 +42,7 @@ export const renderHtmlAST = htmlAst => {
   // const a = processor.processSync(htmlAst)
   // console.log(a)
   const tree = unified()
-    .use(highlight)
+    .use(highlight, { ignoreMissing: true })
     .use(nl2br)
     .runSync(htmlAst)
   // console.log(tree)
