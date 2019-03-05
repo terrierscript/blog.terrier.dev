@@ -6,7 +6,7 @@ import Helmet from "react-helmet"
 // const r = require("prismjs/themes/prism-okaidia.css");
 // console.warn(r);
 import { createGlobalStyle, css } from "styled-components"
-import { Fonts } from "./fonts"
+import { Fonts } from "./Fonts"
 
 const globalCss = css`
   :root {
