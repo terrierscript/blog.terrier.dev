@@ -20,7 +20,8 @@ const nr2br = htmlAst => {
           ? [{ type: "text", value: v }]
           : [{ type: "element", tagName: "br" }, { type: "text", value: v }]
       })
-      .reduce((a, b) => [...a, ...b], []) // TODO: Array.prototype.flat
+      .flat()
+    // .reduce((a, b) => [...a, ...b], []) // TODO: Array.prototype.flat
 
     const newChildren = [
       ...parent.children.slice(0, index),
