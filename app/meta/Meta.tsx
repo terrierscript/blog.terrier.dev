@@ -6,6 +6,7 @@ import Helmet from "react-helmet"
 // const r = require("prismjs/themes/prism-okaidia.css");
 // console.warn(r);
 import { createGlobalStyle, css } from "styled-components"
+import { Fonts } from "./fonts"
 
 const globalCss = css`
   :root {
@@ -28,6 +29,7 @@ export const Meta = () => {
     <React.Fragment>
       <GlobalStyle />
       <Helmet title="terrier.dev 🐶 " />
+      <Fonts />
     </React.Fragment>
   )
 }

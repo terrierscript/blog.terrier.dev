@@ -3,7 +3,6 @@ import React from "react"
 import { render } from "react-dom"
 import { Layout } from "../app/layout/Layout"
 import { BlogItem } from "../app/list/Item"
-import { Fonts } from "./fonts"
 import { BlogArticle } from "../app/article/Blog"
 import { HeaderBar } from "../app/layout/HeaderBar"
 import {

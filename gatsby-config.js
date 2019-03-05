@@ -75,12 +75,12 @@ module.exports = {
           }
       }`
     },
-    {
-      resolve: "gatsby-plugin-typography",
-      options: {
-        pathToConfigModule: `app/utils/typography`
-      }
-    },
+    // {
+    //   resolve: "gatsby-plugin-typography",
+    //   options: {
+    //     pathToConfigModule: `app/utils/typography`
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
