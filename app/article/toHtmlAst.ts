@@ -1,7 +1,6 @@
 import rehypeReact from "rehype-react"
 import React from "react"
 import visit from "unist-util-visit"
-import map from "unist-util-map"
 
 const renderAst = new rehypeReact({
   createElement: React.createElement

@@ -5,9 +5,6 @@ import { HTMLContent } from "./Content"
 import styled from "styled-components"
 import { defaultFont } from "../layout/font"
 import { Tag } from "./Tag"
-import { Comment } from "./Comment"
-import { ClapButton } from "./clap/ClapButton"
-import { renderHtmlAST } from "./toHtmlAst";
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -87,10 +84,8 @@ export const BlogPostTemplate = ({
   description = "",
   tags,
   title,
-  id,
   fileAbsolutePath = null
 }) => {
-  console.log(fileAbsolutePath)
   return (
     <React.Fragment>
       <Helmet title={`${title} | terrier.dev 🐶`}>

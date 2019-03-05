@@ -16,7 +16,11 @@ const convert = ({ title, slug, tags }) => {
     templateKey: "blog-post",
     title,
     date: now.toUTC().toISO(),
-    tags: tags.split(" ").map(i => i.toLowerCase())
+    tags: tags
+      .split(" ")
+      .map(i => i.toLowerCase())
+      .filter(i => !!i),
+    published: false
   })
   return {
     filename,

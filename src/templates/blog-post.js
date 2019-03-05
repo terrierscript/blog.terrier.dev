@@ -1,13 +1,13 @@
-import React, { useMemo } from "react"
+import React from "react"
 import { BlogPostTemplate } from "../../app/article/Blog"
 import { graphql } from "gatsby"
 import { BlogLayout } from "../provider/BlogLayout"
-import { renderHtmlAST } from "../../app/article/toHtmlAst";
+import { renderHtmlAST } from "../../app/article/toHtmlAst"
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-  const content =renderHtmlAST(post.htmlAst)
-  
+  const content = renderHtmlAST(post.htmlAst)
+
   return (
     <BlogLayout>
       <BlogPostTemplate
@@ -18,7 +18,7 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         fileAbsolutePath={post.fileAbsolutePath}
         description={post.excerpt}
-        id={post.id}
+        // id={post.id}
       />
     </BlogLayout>
   )
