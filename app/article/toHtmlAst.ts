@@ -1,10 +1,7 @@
 import rehypeReact from "rehype-react"
 import React from "react"
 import visit from "unist-util-visit"
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement
-}).Compiler
+import unified from "unified"
 
 const nr2br = htmlAst => {
   visit(htmlAst, (node, index, parent) => {
@@ -33,6 +30,14 @@ const nr2br = htmlAst => {
   return htmlAst
 }
 
+const renderAst = new rehypeReact({
+  createElement: React.createElement
+}).Compiler
+
+const processor = unified().use(nr2br)
 export const renderHtmlAST = htmlAst => {
+  // const a = processor.processSync(htmlAst)
+  // console.log(a)
+  console.log(JSON.stringify(htmlAst, null, 2))
   return renderAst(nr2br(htmlAst))
 }
