@@ -28,6 +28,21 @@ export const MetaHeader = props => {
   return (
     <head>
       <meta charSet="utf-8" />
+      <link
+        rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.6/build/styles/atom-one-dark.min.css"
+      />
+      {/* <link
+        rel="stylesheet" //href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
+        href="https://unpkg.com/prism-github@1.1.0/prism-github.css"
+      /> */}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@terrierscript" />
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {props.headComponents}
       <link rel="shortcut icon" />

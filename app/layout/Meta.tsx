@@ -27,16 +27,7 @@ export const Meta = () => {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Helmet title="terrier.dev 🐶 ">
-        {/* TODO: use more great highlight */}
-        <link
-          rel="stylesheet" //href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
-          href="https://unpkg.com/prism-github@1.1.0/prism-github.css"
-        />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@terrierscript" />
-        {/* <link href={generateFontUrl()} rel="stylesheet" /> */}
-      </Helmet>
+      <Helmet title="terrier.dev 🐶 " />
     </React.Fragment>
   )
 }
