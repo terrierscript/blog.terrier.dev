@@ -16,6 +16,7 @@
     "dotenv": "^6.2.0",
     "dotenv-cli": "^1.4.0",
     "gatsby": "^2.1.17",
+    "gatsby-awesome-pagination": "^0.3.3",
     "gatsby-link": "^2.0.0",
     "gatsby-mdx": "^0.4.0",
     "gatsby-plugin-canonical-urls": "^2.0.10",
