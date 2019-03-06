@@ -1,6 +1,7 @@
 const _ = require("lodash")
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
+const { paginate } = require("gatsby-awesome-pagination")
 
 const getTemplate = name => {
   return path.resolve(`src/templates/${String(name)}.js`)
@@ -87,6 +88,17 @@ exports.createPages = async ({ actions, graphql }) => {
       })
     })
   }
+
+  const buildPaginate = posts => {
+    paginate({
+      createPage,
+      items: posts,
+      itemsPerPage: 10,
+      pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? "/" : "/page"),
+      component: getTemplate("index")
+    })
+  }
+
   // execute
   graphql(ql).then(result => {
     if (result.errors) {
@@ -98,6 +110,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges
     buildPages(posts)
     buildTagPages(posts)
+    buildPaginate(posts)
   })
 }
 
