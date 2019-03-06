@@ -20,8 +20,8 @@ const PaginateContainer = styled.div`
 const Paginate = ({ previousPagePath, nextPagePath }) => {
   return (
     <PaginateContainer>
-      <Link to={previousPagePath}>≪Prev</Link>
-      <Link to={nextPagePath}>Next≫</Link>
+      {previousPagePath && <Link to={previousPagePath}>≪Prev</Link>}
+      {nextPagePath && <Link to={nextPagePath}>Next≫</Link>}
     </PaginateContainer>
   )
 }
