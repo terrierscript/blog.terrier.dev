@@ -33,7 +33,7 @@ export default class IndexPage extends React.Component {
     return (
       <BlogLayout>
         <BlogList posts={posts} />
-        <Paginate {...this.props.pathContext} />
+        <Paginate {...this.props.pageContext} />
       </BlogLayout>
     )
   }

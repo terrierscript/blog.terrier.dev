@@ -50,9 +50,9 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `
   const result = await graphql(ql)
-  // const feeds = await loadFeedForSSR()
+  const feeds = await loadFeedForSSR()
   const globals = {
-    feeds: []
+    feeds
   }
 
   const buildPages = posts => {
@@ -64,8 +64,8 @@ exports.createPages = async ({ actions, graphql }) => {
         component: getTemplate(edge.node.frontmatter.templateKey),
         // additional data can be passed via context
         context: {
-          id
-          // globals
+          id,
+          globals
         }
       })
     })
@@ -102,7 +102,10 @@ exports.createPages = async ({ actions, graphql }) => {
       items: posts,
       itemsPerPage: 10,
       pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? "/" : "/page"),
-      component: getTemplate("index")
+      component: getTemplate("index"),
+      context: {
+        globals
+      }
     })
   }
 
