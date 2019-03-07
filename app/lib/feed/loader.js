@@ -1,4 +1,4 @@
-const { merge, from, of } = require("rxjs")
+const { merge, from, of, forkJoin } = require("rxjs")
 const { map, mergeMap, scan, catchError } = require("rxjs/operators")
 const rssConfig = require("./rssConfig")
 const Parser = require("rss-parser")
@@ -35,9 +35,9 @@ const mock = {
   date: new Date()
 }
 
-const getUrl = config => {
+const getUrl = (config, useOrigin) => {
   const { dev, production, origin } = config
-  if (process.env.gatsby_executing_command === "build") {
+  if (useOrigin) {
     return origin
   }
   // if (process.env.)
@@ -53,17 +53,17 @@ const fromDummy = config => {
   )
 }
 
-const createRssStream = rssConfig =>
+const createRssStream = (rssConfig, useOrigin) =>
   rssConfig.map(config => {
-    const url = getUrl(config)
+    const url = getUrl(config, useOrigin)
     if (url !== null) {
       return fromRss(url, config)
     }
     return fromDummy(config)
   })
 
-module.exports.loadFeed = () => {
-  return merge(...createRssStream(rssConfig)).pipe(
+const load = ({ useOrigin }) => {
+  return merge(...createRssStream(rssConfig, useOrigin)).pipe(
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
       const result = [...acc, ...v].sort(
@@ -72,4 +72,16 @@ module.exports.loadFeed = () => {
       return result
     })
   )
+}
+module.exports.loadFeed = () => load({ useOrigin: false })
+
+module.exports.loadFeedForSSR = () => {
+  return new Promise((resolve, reject) => {
+    forkJoin(load({ useOrigin: true })).subscribe(
+      result => {
+        resolve(result[0])
+      },
+      err => reject(err)
+    )
+  })
 }
