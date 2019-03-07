@@ -46,7 +46,7 @@ const getUrl = (config, useOrigin) => {
 
 const fromDummy = config => {
   return from(Array(10).fill(null)).pipe(
-    map(item => ({
+    map(_ => ({
       ...generateMock(),
       ...config
     }))

@@ -1,11 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  useMemo,
-  useRef
-} from "react"
+import React, { createContext, useContext, useState, useEffect } from "react"
 import { loadFeed } from "./loader"
 
 const ExternalFeedContext = createContext([])

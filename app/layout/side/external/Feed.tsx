@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useExternalFeeds } from "../../../lib/feed/feedContext"
+import { DateTime } from "luxon"
 
 const FeedItem = styled.div`
   /* width: 100%; */
@@ -41,7 +42,7 @@ const Feed = ({ title, link, date, media, bgColor, color }) => {
   return (
     <FeedItem>
       <div>
-        <Time>{date.toLocaleString()}</Time>
+        <Time>{DateTime.fromISO(date.toLocaleString()).toISODate()}</Time>
       </div>
       <Link href={link}>
         <Mark backgroundColor={bgColor} color={color}>
