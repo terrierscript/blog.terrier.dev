@@ -13,14 +13,24 @@ export const ExternalFeedProvider = ({ feeds, children }) => {
 
 export const useExternalFeeds = () => {
   const defaultFeed = useContext(ExternalFeedContext)
-  const [feeds, setFeeds] = useState(defaultFeed)
+
+  const [feeds, setFeeds] = useState(() => {
+    const seed = defaultFeed.map(feed => [feed.link, feed])
+    // @ts-ignore
+    return new Map(seed)
+  })
 
   useEffect(() => {
     loadFeed().subscribe(feeds => {
-      console.log(feeds)
-      //     setFeeds(baseFeeds => {
-      //     })
+      setFeeds(baseMap => {
+        feeds.map(feed => {
+          if (baseMap.has(feed.link)) return
+          baseMap.set(feed.link, feed)
+        })
+        console.log(baseMap.length)
+        return baseMap
+      })
     })
   })
-  return feeds
+  return Array.from(feeds.values())
 }

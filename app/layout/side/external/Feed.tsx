@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useExternalFeeds } from "../../../lib/feed/feedContext"
+import { useExternalFeeds } from "../../../lib/feed/useExternalFeeds"
 import { DateTime } from "luxon"
 
 const FeedItem = styled.div`
