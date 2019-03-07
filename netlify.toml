@@ -80,7 +80,7 @@
   status = 200
   force = false
 [[redirects]]
-  from = "/feed/snippet"
-  to = "https://snippet.terrier.dev/rss.xml"
+  from = "/feed/scrapbox"
+  to = "https://scrapbox.io/api/feed/terrierscript/"
   status = 200
   force = false

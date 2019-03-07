@@ -24,7 +24,7 @@ module.exports = [
   {
     media: "Scrapbox",
     production: "/feed/scrapbox",
-    origin: "https://snippet.terrier.dev/rss.xml",
+    origin: "https://scrapbox.io/api/feed/terrierscript/",
     dev: null,
     bgColor: "#29a972",
     color: "#fff"
