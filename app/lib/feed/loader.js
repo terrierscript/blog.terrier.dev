@@ -79,6 +79,7 @@ module.exports.loadFeedForSSR = () => {
   return new Promise((resolve, reject) => {
     forkJoin(load({ useOrigin: true })).subscribe(
       result => {
+        console.log(result)
         resolve(result[0])
       },
       err => reject(err)
