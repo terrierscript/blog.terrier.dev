@@ -80,6 +80,12 @@ module.exports = {
       options: {
         siteUrl
       }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "terrier.dev"
+      }
     }
   ]
 }
