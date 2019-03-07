@@ -3,9 +3,9 @@ import React from "react"
 import { Layout } from "../../app/layout/Layout"
 import { ExternalFeedProvider } from "../../app/lib/feed/feedContext"
 
-export const BlogLayout = ({ children }) => {
+export const BlogLayout = ({ children, feeds = [] }) => {
   return (
-    <ExternalFeedProvider feeds={[]}>
+    <ExternalFeedProvider feeds={feeds}>
       <TagProvider>
         <Layout>{children}</Layout>
       </TagProvider>
