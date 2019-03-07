@@ -27,7 +27,7 @@ export const useExternalFeeds = () => {
           if (baseMap.has(feed.link)) return
           baseMap.set(feed.link, feed)
         })
-        console.log(baseMap.length)
+        console.log(baseMap.size)
         return baseMap
       })
     })
