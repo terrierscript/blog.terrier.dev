@@ -4,6 +4,7 @@ import Link from "gatsby-link"
 import { BlogItem } from "../../app/list/Item"
 import { graphql } from "gatsby"
 import { BlogLayout } from "../provider/BlogLayout"
+import { generatePostFragment } from "../query/query"
 
 // const PostLinks = ({ posts }) =>
 //   posts.map(post => (
@@ -45,6 +46,7 @@ class TagRoute extends React.Component {
   }
 }
 
+export const postFragment = generatePostFragment()
 export const tagPageQuery = graphql`
   query TagPage($tags: [String]) {
     site {
@@ -60,15 +62,7 @@ export const tagPageQuery = graphql`
       totalCount
       edges {
         node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            tags
-            templateKey
-            date(formatString: "YYYY/MM/DD")
-          }
+          ...Post
         }
       }
     }
