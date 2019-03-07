@@ -49,8 +49,11 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `
+  const result = await graphql(ql)
   // const feeds = await loadFeedForSSR()
-  // console.log(feeds.length)
+  const globals = {
+    feeds: []
+  }
 
   const buildPages = posts => {
     posts.forEach(edge => {
@@ -102,8 +105,6 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   }
 
-  // execute
-  const result = await graphql(ql)
   if (result.errors) {
     result.errors.forEach(e => console.error(e.toString()))
     // @ts-ignore
