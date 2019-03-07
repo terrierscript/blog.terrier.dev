@@ -5,12 +5,12 @@ import { BlogLayout } from "../provider/BlogLayout"
 import { renderHtmlAST } from "../../app/article/toHtmlAst"
 import { generatePostFragment } from "../query/query"
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
   const content = renderHtmlAST(post.htmlAst)
 
   return (
-    <BlogLayout>
+    <BlogLayout pageContext={pageContext}>
       <BlogPostTemplate
         content={content}
         tags={

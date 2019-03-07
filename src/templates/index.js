@@ -31,7 +31,7 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     const { pageContext } = this.props
     return (
-      <BlogLayout feeds={pageContext.globals.feeds}>
+      <BlogLayout pageContext={pageContext}>
         <BlogList posts={posts} />
         <Paginate {...pageContext} />
       </BlogLayout>

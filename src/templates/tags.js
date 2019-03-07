@@ -25,7 +25,7 @@ class TagRoute extends React.Component {
     const tagHeader = `"${tag}”の記事`
     // console.log(posts);
     return (
-      <BlogLayout>
+      <BlogLayout pageContext={this.props.pageContext}>
         <section>
           <Helmet title={`${tag} | ${title}`} />
           <div>
