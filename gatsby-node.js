@@ -65,6 +65,7 @@ exports.createPages = async ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id
+          // globals
         }
       })
     })
