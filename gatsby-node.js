@@ -2,6 +2,7 @@ const _ = require("lodash")
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 const { paginate } = require("gatsby-awesome-pagination")
+const { loadFeed } = require("./app/lib/feed/loader")
 
 const getTemplate = name => {
   return path.resolve(`src/templates/${String(name)}.js`)
@@ -48,6 +49,23 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `
+  const feeds = await new Promise(res => {
+    return loadFeed().subscribe({
+      next: f => {
+        console.log(f.length)
+        console.log("====")
+        res()
+      }
+      // error: e => {
+      //   console.log("err", e)
+      // },
+      // complete: f => {
+      //   console.log(f)
+      //   res()
+      // }
+    })
+  })
+  console.log(feeds)
 
   const buildPages = posts => {
     posts.forEach(edge => {

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react"
-import { load } from "./loader"
+import React from "react"
 import styled from "styled-components"
+import { useExternalFeeds } from "../../../lib/feed/feedContext"
 
 const FeedItem = styled.div`
   /* width: 100%; */
@@ -57,13 +57,10 @@ const Items = styled.div`
   display: grid;
   grid-gap: 0.5em;
 `
+
 export const Feeds = () => {
-  const [feeds, setFeeds] = useState([])
-  useEffect(() => {
-    load().subscribe(feeds => {
-      setFeeds(feeds)
-    })
-  }, [])
+  const feeds = useExternalFeeds()
+
   if (feeds.length === 0) {
     return <Items>Loading...</Items>
   }
