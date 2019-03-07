@@ -22,11 +22,12 @@ export const useExternalFeeds = () => {
   const defaultFeed = useContext(ExternalFeedContext)
   const [feeds, setFeeds] = useState(defaultFeed)
 
-  // useEffect(() => {
-  //   loadFeed().subscribe(feeds => {
-  //     setFeeds(baseFeeds => {
-  //     })
-  //   })
-  // })
+  useEffect(() => {
+    loadFeed().subscribe(feeds => {
+      console.log(feeds)
+      //     setFeeds(baseFeeds => {
+      //     })
+    })
+  })
   return feeds
 }
