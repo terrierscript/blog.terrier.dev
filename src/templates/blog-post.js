@@ -3,6 +3,7 @@ import { BlogPostTemplate } from "../../app/article/Blog"
 import { graphql } from "gatsby"
 import { BlogLayout } from "../provider/BlogLayout"
 import { renderHtmlAST } from "../../app/article/toHtmlAst"
+import { generatePostFragment } from "../query/query"
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
@@ -26,20 +27,13 @@ const BlogPost = ({ data }) => {
 
 export default BlogPost
 
+export const postFragment = generatePostFragment()
+
 // @ts-ignore
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      excerpt(pruneLength: 400)
-      id
-      html
-      htmlAst
-      fileAbsolutePath
-      frontmatter {
-        date(formatString: "YYYY-MM-DD")
-        title
-        tags
-      }
+      ...Post
     }
   }
 `
