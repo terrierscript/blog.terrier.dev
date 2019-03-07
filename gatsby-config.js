@@ -56,25 +56,7 @@ module.exports = {
     "gatsby-plugin-feed",
     "gatsby-plugin-styled-components",
     // "gatsby-plugin-react-css-modules",
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-
-          allSitePage {
-            edges {
-              node {
-                path
-              }
-            }
-          }
-      }`
-    },
+    "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
