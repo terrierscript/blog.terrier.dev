@@ -1,10 +1,7 @@
-import { merge, from, of } from "rxjs"
-import { map, mergeMap, scan, catchError } from "rxjs/operators"
-import rssConfig from "./rssConfig"
-
-// TODO: move rss-parser to another lib
-// https://github.com/bobby-brennan/rss-parser/issues/53
-import Parser from "rss-parser"
+const { merge, from, of } = require("rxjs")
+const { map, mergeMap, scan, catchError } = require("rxjs/operators")
+const rssConfig = require("./rssConfig")
+const Parser = require("rss-parser")
 const parser = new Parser()
 /* global RSSParser */
 // if (window) {
@@ -39,7 +36,11 @@ const mock = {
 }
 
 const getUrl = config => {
-  const { dev, production } = config
+  const { dev, production, origin } = config
+  if (process.env.gatsby_executing_command === "build") {
+    return origin
+  }
+  // if (process.env.)
   return process.env.NODE_ENV === "production" ? production : dev
 }
 
@@ -61,7 +62,7 @@ const createRssStream = rssConfig =>
     return fromDummy(config)
   })
 
-export const load = () => {
+module.exports.loadFeed = () => {
   return merge(...createRssStream(rssConfig)).pipe(
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
