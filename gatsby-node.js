@@ -100,18 +100,17 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   // execute
-  graphql(ql).then(result => {
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      // @ts-ignore
-      return Promise.reject(result.errors)
-    }
+  const result = await graphql(ql)
+  if (result.errors) {
+    result.errors.forEach(e => console.error(e.toString()))
+    // @ts-ignore
+    return Promise.reject(result.errors)
+  }
 
-    const posts = result.data.allMarkdownRemark.edges
-    buildPages(posts)
-    buildTagPages(posts)
-    buildPaginate(posts)
-  })
+  const posts = result.data.allMarkdownRemark.edges
+  buildPages(posts)
+  buildTagPages(posts)
+  buildPaginate(posts)
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
