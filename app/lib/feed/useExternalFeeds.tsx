@@ -16,21 +16,25 @@ export const useExternalFeeds = () => {
 
   const [feeds, setFeeds] = useState(() => {
     const seed = defaultFeed.map(feed => [feed.link, feed])
-    // @ts-ignore
-    return new Map(seed)
+    return {
+      // @ts-ignore
+      map: new Map(seed)
+    }
   })
 
   useEffect(() => {
     loadFeed().subscribe(feeds => {
-      setFeeds(baseMap => {
+      setFeeds(state => {
+        const baseMap = state.map
         feeds.map(feed => {
           if (baseMap.has(feed.link)) return
           baseMap.set(feed.link, feed)
         })
-        console.log(baseMap.size)
-        return new Map(Array.from(baseMap.entries()))
+        return {
+          map: baseMap
+        }
       })
     })
   })
-  return Array.from(feeds.values())
+  return Array.from(feeds.map.values())
 }
