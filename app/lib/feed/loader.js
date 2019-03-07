@@ -29,11 +29,11 @@ const fromRss = (url, config) =>
     })
   )
 
-const mock = {
+const generateMock = () => ({
   title: "Mock",
-  link: "mock",
+  link: `mock${Math.random()}`,
   date: new Date()
-}
+})
 
 const getUrl = (config, useOrigin) => {
   const { dev, production, origin } = config
@@ -45,9 +45,9 @@ const getUrl = (config, useOrigin) => {
 }
 
 const fromDummy = config => {
-  return from(Array(10).fill(mock)).pipe(
+  return from(Array(10).fill(null)).pipe(
     map(item => ({
-      ...item,
+      ...generateMock(),
       ...config
     }))
   )
