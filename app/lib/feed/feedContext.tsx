@@ -14,6 +14,7 @@ export const ExternalFeedProvider = ({ feeds, children }) => {
 export const useExternalFeeds = () => {
   const defaultFeed = useContext(ExternalFeedContext)
   const [feeds, setFeeds] = useState(defaultFeed)
+  console.log(feeds)
   useEffect(() => {
     loadFeed().subscribe(feeds => {
       setFeeds(feeds)
