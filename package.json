@@ -13,6 +13,7 @@
     "@types/react-helmet": "^5.0.5",
     "@types/styled-components": "^4.1.11",
     "babel-plugin-styled-components": "^1.7.1",
+    "babel-preset-gatsby": "^0.1.8",
     "dashify": "^2.0.0",
     "disqus-react": "^1.0.5",
     "dotenv": "^6.2.0",
