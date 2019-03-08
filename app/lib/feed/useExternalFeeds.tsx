@@ -10,7 +10,6 @@ export const ExternalFeedProvider = ({ feeds, children }) => {
     </ExternalFeedContext.Provider>
   )
 }
-
 export const useExternalFeeds = () => {
   const defaultFeed = useContext(ExternalFeedContext)
 
@@ -26,7 +25,9 @@ export const useExternalFeeds = () => {
     loadFeed().subscribe(feeds => {
       setFeeds(({ map: baseMap }) => {
         feeds.map(feed => {
-          if (baseMap.has(feed.link)) return
+          if (baseMap.has(feed.link)) {
+            return
+          }
           baseMap.set(feed.link, feed)
         })
         return {
@@ -35,5 +36,8 @@ export const useExternalFeeds = () => {
       })
     })
   }, [])
-  return Array.from(feeds.map.values())
+  return Array.from(feeds.map.values()).sort(
+    // @ts-ignore
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
 }

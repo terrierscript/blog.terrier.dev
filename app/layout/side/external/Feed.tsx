@@ -67,7 +67,7 @@ export const Feeds = () => {
   }
   return (
     <Items>
-      {feeds.map(item => (
+      {feeds.map((item: any) => (
         <Feed key={item.link} {...item} />
       ))}
     </Items>

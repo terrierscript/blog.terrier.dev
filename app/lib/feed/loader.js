@@ -3,12 +3,6 @@ const { map, mergeMap, scan, catchError } = require("rxjs/operators")
 const rssConfig = require("./rssConfig")
 const Parser = require("rss-parser")
 const parser = new Parser()
-/* global RSSParser */
-// if (window) {
-//   require("rss-parser/dist/rss-parser.min.js")
-// }
-// @ts-ignore
-// const parser = new RSSParser()
 
 const parseRssItem = item => {
   const { title, link, pubDate } = item
@@ -45,7 +39,7 @@ const getUrl = (config, useOrigin) => {
 }
 
 const fromDummy = config => {
-  return from(Array(10).fill(null)).pipe(
+  return from(Array(2).fill(null)).pipe(
     map(_ => ({
       ...generateMock(),
       ...config
