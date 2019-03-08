@@ -24,8 +24,7 @@ export const useExternalFeeds = () => {
 
   useEffect(() => {
     loadFeed().subscribe(feeds => {
-      setFeeds(state => {
-        const baseMap = state.map
+      setFeeds(({ map: baseMap }) => {
         feeds.map(feed => {
           if (baseMap.has(feed.link)) return
           baseMap.set(feed.link, feed)
