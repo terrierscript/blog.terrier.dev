@@ -35,6 +35,6 @@ export const useExternalFeeds = () => {
         }
       })
     })
-  })
+  }, [])
   return Array.from(feeds.map.values())
 }
