@@ -70,7 +70,7 @@ exports.createPages = async ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
-          globals
+          ...globals
         }
       })
     })
@@ -96,7 +96,7 @@ exports.createPages = async ({ actions, graphql }) => {
         context: {
           tags,
           lower,
-          globals
+          ...globals
         }
       })
     })
@@ -110,7 +110,7 @@ exports.createPages = async ({ actions, graphql }) => {
       pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? "/" : "/page"),
       component: getTemplate("index"),
       context: {
-        globals
+        ...globals
       }
     })
   }

@@ -2,24 +2,26 @@ import { TagProvider } from "./TagProvider"
 import React from "react"
 import { Layout } from "../../app/layout/Layout"
 import { ExternalFeedProvider } from "../../app/lib/feed/useExternalFeeds"
+import {
+  GatsbyPageContextProvider,
+  usePageContext
+} from "./GatsbyGlobalContext"
 
-const getFeeds = pageContext => {
-  try {
-    return pageContext.globals.feeds
-  } catch (e) {
-    console.warn("Feed not found")
-    return []
-  }
-}
-export const BlogLayout = ({ children, pageContext = {} }) => {
-  // @ts-ignore
-
-  const feeds = getFeeds(pageContext)
+const FeedProvider = ({ children }) => {
+  const { feeds } = usePageContext()
   return (
-    <ExternalFeedProvider feeds={feeds}>
-      <TagProvider>
-        <Layout>{children}</Layout>
-      </TagProvider>
-    </ExternalFeedProvider>
+    <ExternalFeedProvider initialFeeds={feeds}>{children}</ExternalFeedProvider>
+  )
+}
+
+export const BlogLayout = ({ children, pageContext = {} }) => {
+  return (
+    <GatsbyPageContextProvider pageContext={pageContext}>
+      <FeedProvider>
+        <TagProvider>
+          <Layout>{children}</Layout>
+        </TagProvider>
+      </FeedProvider>
+    </GatsbyPageContextProvider>
   )
 }

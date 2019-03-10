@@ -3,9 +3,9 @@ import { loadFeed } from "./loader"
 
 const ExternalFeedContext = createContext([])
 
-export const ExternalFeedProvider = ({ feeds, children }) => {
+export const ExternalFeedProvider = ({ initialFeeds, children }) => {
   return (
-    <ExternalFeedContext.Provider value={feeds}>
+    <ExternalFeedContext.Provider value={initialFeeds}>
       {children}
     </ExternalFeedContext.Provider>
   )
