@@ -90,7 +90,8 @@ exports.createPages = async ({ actions, graphql }) => {
         component: getTemplate("tags"),
         context: {
           tags,
-          lower
+          lower,
+          globals
         }
       })
     })
