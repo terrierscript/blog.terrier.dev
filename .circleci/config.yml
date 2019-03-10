@@ -11,14 +11,12 @@ jobs:
       - run:
           name: Build
           command: curl -X POST -d {} $BUILD_URL
-# workflows:
-#   version: 2
-#   nightly_build:
-#     triggers:
-#       - schedule:
-#           cron: "0 1 * * *" #           filters:
-#             branches:
-#               only:
-#                 - master
-#     jobs:
-#       - build
+workflows:
+  version: 2
+  nightly_build:
+    triggers:
+      - schedule:
+          cron: "0 7 * * *" 
+            branches:
+              only:
+                - master
