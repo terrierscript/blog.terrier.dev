@@ -7,7 +7,18 @@ jobs:
     steps:
       - checkout
       - run: apt-get update
-      - run: apt-get install curl
+      - run: apt-get install curl -y
       - run:
           name: Build
           command: curl -X POST -d {} $BUILD_URL
+# workflows:
+#   version: 2
+#   nightly_build:
+#     triggers:
+#       - schedule:
+#           cron: "0 1 * * *" #           filters:
+#             branches:
+#               only:
+#                 - master
+#     jobs:
+#       - build
