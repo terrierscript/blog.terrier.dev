@@ -10,6 +10,7 @@ export const ExternalFeedProvider = ({ feeds, children }) => {
     </ExternalFeedContext.Provider>
   )
 }
+
 export const useExternalFeeds = () => {
   const defaultFeed = useContext(ExternalFeedContext)
 
