@@ -36,7 +36,7 @@ const GridBase = styled.div`
   }
 `
 
-const Grid = styled(GridBase)`
+const GridTwoCol = styled(GridBase)`
   grid-template-areas: ${gridTemplate};
   grid-template-columns: 0.1fr minmax(700px, 1fr) 0.4fr 0.1fr;
   width: 100%;
@@ -52,20 +52,20 @@ const Area = styled.div<{ area: string }>`
 
 export const LayoutInner = ({ children }) => {
   return (
-    <Grid>
+    <GridTwoCol>
       <Area area="header">
         <HeaderBar />
-      </Area>
-      <Area area="body">
-        <Container>{children}</Container>
       </Area>
       <Area area="side">
         <Side />
       </Area>
+      <Area area="body">
+        <Container>{children}</Container>
+      </Area>
       <Area area="footer">
         <Footer author="terrierscript" />
       </Area>
-    </Grid>
+    </GridTwoCol>
   )
 }
 
