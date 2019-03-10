@@ -6,6 +6,7 @@ jobs:
 
     steps:
       - checkout
+      - run: apt-get install curl
       - run:
           name: Build
           command: curl -X POST -d {} $BUILD_URL
