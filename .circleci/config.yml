@@ -16,7 +16,8 @@ workflows:
   nightly_build:
     triggers:
       - schedule:
-          cron: "0 7 * * *" 
+          cron: "0 7 * * *"
+          filter:
             branches:
               only:
                 - master
