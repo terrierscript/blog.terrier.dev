@@ -1,7 +1,7 @@
 import React, { SFC } from "react"
 import styled from "styled-components"
 import Link from "gatsby-link"
-import { headerFont } from "../utils/typography"
+import { headerFont } from "../../utils/typography"
 
 export const TagItem = styled.div`
   display: inline-block;

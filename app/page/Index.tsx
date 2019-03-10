@@ -4,6 +4,7 @@ import { BlogList } from "../list/Item"
 import styled from "styled-components"
 import { headerFont } from "../utils/typography"
 import { Link } from "gatsby"
+import { Layout } from "../layout/Layout"
 
 const PaginateContainer = styled.div`
   padding: 1em;
@@ -27,9 +28,9 @@ const Paginate = ({ previousPagePath, nextPagePath }) => {
 export const Index = ({ posts }) => {
   const pageContext = usePageContext()
   return (
-    <React.Fragment>
+    <Layout>
       <BlogList posts={posts} />
       <Paginate {...pageContext} />
-    </React.Fragment>
+    </Layout>
   )
 }

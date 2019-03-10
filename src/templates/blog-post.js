@@ -1,8 +1,8 @@
 import React from "react"
-import { BlogPostTemplate } from "../../app/article/Blog"
+import { BlogPostTemplate } from "../../app/page/article/Blog"
 import { graphql } from "gatsby"
 import { BlogLayout } from "../provider/BlogLayout"
-import { renderHtmlAST } from "../../app/article/toHtmlAst"
+import { renderHtmlAST } from "../../app/page/article/toHtmlAst"
 import { generatePostFragment } from "../query/query"
 
 const BlogPost = ({ data, pageContext }) => {

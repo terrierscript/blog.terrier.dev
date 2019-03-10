@@ -3,8 +3,9 @@ import Helmet from "react-helmet"
 
 import { HTMLContent } from "./Content"
 import styled from "styled-components"
-import { defaultFont } from "../layout/font"
+import { defaultFont } from "../../layout/font"
 import { Tag } from "./Tag"
+import { Layout } from "../../layout/Layout"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -87,7 +88,7 @@ export const BlogPostTemplate = ({
   fileAbsolutePath = null
 }) => {
   return (
-    <React.Fragment>
+    <Layout>
       <Helmet title={`${title} | terrier.dev 🐶`}>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
@@ -102,6 +103,6 @@ export const BlogPostTemplate = ({
         <Modify fileAbsolutePath={fileAbsolutePath} />
         {/* <Comment identifier={id} title={title} /> */}
       </BlogBody>
-    </React.Fragment>
+    </Layout>
   )
 }

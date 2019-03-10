@@ -18,9 +18,7 @@ export const BlogLayout = ({ children, pageContext = {} }) => {
   return (
     <GatsbyPageContextProvider pageContext={pageContext}>
       <FeedProvider>
-        <TagProvider>
-          <Layout>{children}</Layout>
-        </TagProvider>
+        <TagProvider>{children}</TagProvider>
       </FeedProvider>
     </GatsbyPageContextProvider>
   )
