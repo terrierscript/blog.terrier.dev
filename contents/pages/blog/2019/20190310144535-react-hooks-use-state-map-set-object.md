@@ -1,24 +1,19 @@
 ---
 templateKey: blog-post
-title: React HooksのuseStateでMap/Setを使うときはobjectで囲まないと更新されない
+title: React HooksのuseStateでMap/Setを使うとき
 date: '2019-03-10T05:45:35.540Z'
 tags:
   - javascript
   - react
   - hooks
+published: false
 ---
-
+（あとでちゃんと検証する）
 `useState`でMapを扱おうとした時に詰まったのでメモ
 
-主にこの辺を見た
-https://stackoverflow.com/questions/49532382/correct-modification-of-es6-map-through-setstate
-
-Mapをそのままstateに突っ込むとmutableになってしまうので`{map: MapObject}`のような形で突っ込むようにすると良さそう。
-
-結果としてはこんなコードになる
+結果としてはこんなコード
 
 ```js
-
 export const useMapItem = someArray => {
   const [state, setMap] = useState(() => {
 
