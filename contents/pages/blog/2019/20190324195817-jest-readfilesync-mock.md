@@ -6,9 +6,11 @@ tags:
   - jest
 ---
 
-雑にワンライナーでやる場合のを見つけたのでメモ。
+雑に最短でやる場合のを見つけたのでメモ。
 
 ```js
+jest.mock("fs") // これは必要
+
 const content = "some text"
 jest.spyOn(require("fs"), "readFileSync").mockReturnValue(content)
 ```
