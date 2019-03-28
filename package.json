@@ -107,7 +107,7 @@
     "sandbox": "parcel sandbox/index.html"
   },
   "devDependencies": {
-    "gatsby-plugin-sitemap": "2.0.6",
+    "gatsby-plugin-sitemap": "2.0.11",
     "prettier": "1.16.4"
   },
   "jest": {
