@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import { BlogArticleCompact } from "../article/Blog"
 import { headerFont } from "../utils/typography"
-import { Tag } from "../article/Tag"
+import { Tag } from "../page/article/Tag"
 
 const Title = styled.div`
   font-weight: bold;
