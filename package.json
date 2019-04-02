@@ -74,7 +74,7 @@
     "rss-parser": "^3.6.3",
     "rxjs": "^6.4.0",
     "rxjs-hooks": "^0.4.0",
-    "slate": "^0.44.0",
+    "slate": "^0.45.0",
     "styled-components": "^4.0.0",
     "styled-media-query": "^2.0.2",
     "styled-normalize": "^8.0.0",
