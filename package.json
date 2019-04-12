@@ -108,7 +108,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-sitemap": "2.0.12",
-    "prettier": "1.16.4"
+    "prettier": "1.17.0"
   },
   "jest": {
     "testPathIgnorePatterns": [
