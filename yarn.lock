@@ -14498,10 +14498,10 @@ slash@^2.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
   integrity sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==
 
-slate@^0.45.0:
-  version "0.45.0"
-  resolved "https://registry.yarnpkg.com/slate/-/slate-0.45.0.tgz#2fec8151c2d311ff475cb1ff655c76827b2bf0e0"
-  integrity sha512-1bkfI0Ir5uPTCfHxYTPT/bwA9pkWPmeBk3P6xCB0bukjSnjBf5PryuCee5tDUeachOR8bdicc0DPWN7RPORvhg==
+slate@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.46.0.tgz#3ee08868bd2ec903a058a440a9fb81e72a802387"
+  integrity sha512-hV7YKZS/0yNCotoDSczH+gwEDdk0UT7tJni0iGyn+KhLUwAZM2meU9fCi0V4dhLnzfR3cpWnN3APKqAOueFnBQ==
   dependencies:
     debug "^3.1.0"
     direction "^0.1.5"
