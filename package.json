@@ -16,12 +16,12 @@
     "babel-preset-gatsby": "^0.1.8",
     "dashify": "^2.0.0",
     "disqus-react": "^1.0.5",
-    "dotenv": "^6.2.0",
-    "dotenv-cli": "^1.4.0",
+    "dotenv": "^7.0.0",
+    "dotenv-cli": "^2.0.0",
     "gatsby": "^2.1.17",
     "gatsby-awesome-pagination": "^0.3.3",
     "gatsby-link": "^2.0.0",
-    "gatsby-mdx": "^0.4.0",
+    "gatsby-mdx": "^0.6.0",
     "gatsby-plugin-canonical-urls": "^2.0.10",
     "gatsby-plugin-client-side-redirect": "^0.0.2",
     "gatsby-plugin-debug-build": "^1.0.0",
@@ -75,7 +75,7 @@
     "rss-parser": "^3.6.3",
     "rxjs": "^6.4.0",
     "rxjs-hooks": "^0.4.0",
-    "slate": "^0.44.0",
+    "slate": "^0.45.0",
     "styled-components": "^4.0.0",
     "styled-media-query": "^2.0.2",
     "styled-normalize": "^8.0.0",
@@ -109,8 +109,8 @@
     "sandbox": "parcel sandbox/index.html"
   },
   "devDependencies": {
-    "gatsby-plugin-sitemap": "2.0.6",
-    "prettier": "1.16.4"
+    "gatsby-plugin-sitemap": "2.0.12",
+    "prettier": "1.17.0"
   },
   "jest": {
     "testPathIgnorePatterns": [
