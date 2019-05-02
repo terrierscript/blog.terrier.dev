@@ -51,6 +51,7 @@
     "lodash.debounce": "^4.0.8",
     "luxon": "^1.11.3",
     "netlify": "^2.0.0",
+    "netlify-cli": "^2.11.15",
     "netlify-lambda": "^1.4.2",
     "node-fetch": "^2.3.0",
     "parcel": "^1.11.0",
@@ -95,6 +96,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "start": "netlify dev --live",
     "dev": "yarn dotenv gatsby develop",
     "build:lambda": "netlify-lambda build functions/src",
     "build:app": "gatsby build",
