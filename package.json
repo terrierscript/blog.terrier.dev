@@ -16,7 +16,7 @@
     "babel-preset-gatsby": "^0.1.8",
     "dashify": "^2.0.0",
     "disqus-react": "^1.0.5",
-    "dotenv": "^7.0.0",
+    "dotenv": "^8.0.0",
     "dotenv-cli": "^2.0.0",
     "gatsby": "^2.1.17",
     "gatsby-awesome-pagination": "^0.3.3",
