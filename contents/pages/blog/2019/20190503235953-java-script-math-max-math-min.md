@@ -55,6 +55,12 @@ Math.max()
 
 minやmaxのような関数に何も入れなかった場合の挙動は各言語で変わるだろうが、JavaScriptはこうなるらしい。
 
+なぜこうなるかは下記に有益な記事があったのでそちらに任せたい。
+
+* https://qiita.com/KtheS/items/9811b88d6e7edbf32f36
+* https://charlieharvey.org.uk/page/why_math_max_is_less_than_math_min
+
+（reduce関数の初期値としてそれぞれ利用されていると捉えると個人的には腑に落ちた）
 
 # どういう時に気をつけるのか？
 
