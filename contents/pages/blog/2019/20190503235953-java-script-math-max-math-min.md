@@ -8,8 +8,8 @@ published: true
 ---
 
 Math.min / Math.maxを使っていたら思ったよりハマりそうな挙動があったのでまとめておきたい。
-今回書いてる事はMDNにも記載されている
-。
+今回書いてる事はMDNにも記載されている。
+
 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 # Math.min / Math.maxは数値に変換出来ないものが一つでもあるとNaNを返す
