@@ -35,6 +35,7 @@ const ArticleWrapper = styled.div`
 const Title = styled.h1`
   line-height: 1.2em;
   word-break: break-word;
+  font-size: 2.5rem;
   /* font-family: ${defaultFont}; */
 `
 
