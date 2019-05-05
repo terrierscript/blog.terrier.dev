@@ -8,6 +8,7 @@ import styled from "styled-components"
 const SideGrid = styled.div`
   display: grid;
   grid-gap: 1em;
+  border-left: 1px solid #efefef;
   @media screen and (max-width: 65em) {
     width: 100%;
   }
