@@ -4,7 +4,6 @@ title: lodashのflattenDeepをArray.prototype.flatで代用する
 date: '2019-05-05T13:14:05.608Z'
 tags:
   - javascript
-published: false
 ---
 
 ES2019で追加された関数に`Array.prototype.flat`がある。
