@@ -7,6 +7,7 @@ tags:
 ---
 
 JavaScriptの`Number.prototype.toString`は引数にradixを持っており、n進数変換がサクッとできる
+
 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
 
 ```js
@@ -27,6 +28,7 @@ num.toString(4)
 # ASTにかけてみる
 
 AST Explorerで見てみる。
+
 https://astexplorer.net/#/gist/2c4b10278940ebe6717e57845083e5b4/5b00a08e79475b0c67d7bd7c8293efff97f3b70a
 
 するとこの部分に注目することができそうだ。
