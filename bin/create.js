@@ -27,37 +27,43 @@ const convert = ({ title, slug, tags }) => {
     matter
   }
 }
-inquirer
-  .prompt([
-    {
-      name: "title"
-    },
-    {
-      name: "slug",
-      default: ({ title }) =>
-        dashify(title.replace(/_/g, "-"), { condense: true })
-    },
-    {
-      name: "tags"
-    },
-    {
-      type: "confirm",
-      name: "confirm",
-      default: "Y",
-      message: answer => {
-        const { filename, matter } = convert(answer)
-        return [
-          "",
-          `Filename: ${filename}`,
-          "Matter:",
-          `${matter}`,
-          "OK?"
-        ].join("\n")
+
+const main = () => {
+  const defaultTitle = process.argv[2]
+  inquirer
+    .prompt([
+      {
+        name: "title",
+        default: defaultTitle
+      },
+      {
+        name: "slug",
+        default: ({ title }) =>
+          dashify(title.replace(/_/g, "-"), { condense: true })
+      },
+      {
+        name: "tags"
+      },
+      {
+        type: "confirm",
+        name: "confirm",
+        default: "Y",
+        message: answer => {
+          const { filename, matter } = convert(answer)
+          return [
+            "",
+            `Filename: ${filename}`,
+            "Matter:",
+            `${matter}`,
+            "OK?"
+          ].join("\n")
+        }
       }
-    }
-  ])
-  .then(answer => {
-    const { filename, matter } = convert(answer)
-    fs.writeFileSync(filename, matter)
-    exec(`code ${filename}`)
-  })
+    ])
+    .then(answer => {
+      const { filename, matter } = convert(answer)
+      fs.writeFileSync(filename, matter)
+      exec(`code ${filename}`)
+    })
+}
+main()
