@@ -62,8 +62,13 @@ const BlogArticleWrapper = styled.div`
   word-break: break-all;
 `
 
-export const BlogArticle = ({ content, title, tags }) => (
+const Date = styled.small`
+  color: gray;
+  font-size: 12px;
+`
+export const BlogArticle = ({ content, title, tags, date }) => (
   <BlogArticleWrapper>
+    <Date>posted: {date}</Date>
     <Title>{title}</Title>
     <TagListWrapper>
       <TagList tags={tags} />
@@ -86,6 +91,7 @@ export const BlogPostTemplate = ({
   description = "",
   tags,
   title,
+  date,
   fileAbsolutePath = null
 }) => {
   return (
@@ -100,7 +106,7 @@ export const BlogPostTemplate = ({
           👍
         </ClapButton> */}
 
-        <BlogArticle title={title} content={content} tags={tags} />
+        <BlogArticle title={title} content={content} tags={tags} date={date} />
         <Modify fileAbsolutePath={fileAbsolutePath} />
         {/* <Comment identifier={id} title={title} /> */}
       </BlogBody>

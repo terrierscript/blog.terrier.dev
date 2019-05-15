@@ -16,6 +16,7 @@ const BlogPost = ({ data, pageContext }) => {
         tags={
           post.frontmatter.tags // description={post.frontmatter.description}
         }
+        date={post.frontmatter.date}
         title={post.frontmatter.title}
         fileAbsolutePath={post.fileAbsolutePath}
         description={post.excerpt}
