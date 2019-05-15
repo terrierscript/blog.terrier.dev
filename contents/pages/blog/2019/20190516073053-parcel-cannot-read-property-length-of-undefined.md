@@ -4,7 +4,7 @@ title: parcelでCannot read property 'length' of undefinedが出たら`.cache`�
 date: '2019-05-15T22:30:53.403Z'
 tags:
   - parcel
-published: false
+published: true
 ---
 
 parcelをいじくっていた所、下記のようなエラーが出た
