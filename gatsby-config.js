@@ -60,7 +60,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "terrier.dev"
+        name: "terrier.dev",
+        start_url: "/",
+        icon: "src/icon/icon.png"
       }
     }
   ]
