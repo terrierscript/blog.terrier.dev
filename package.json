@@ -82,7 +82,7 @@
     "styled-normalize": "^8.0.0",
     "styled-reset": "^2.0.0",
     "styled-system": "^4.0.0",
-    "to-vfile": "^5.0.2",
+    "to-vfile": "^6.0.0",
     "typescript": "^2.8.1",
     "typography": "^0.16.6",
     "typography-theme-fairy-gates": "^0.16.0",
