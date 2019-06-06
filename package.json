@@ -110,7 +110,7 @@
     "sandbox": "parcel sandbox/index.html"
   },
   "devDependencies": {
-    "prettier": "1.17.1"
+    "prettier": "1.18.0"
   },
   "jest": {
     "testPathIgnorePatterns": [
