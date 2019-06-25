@@ -86,7 +86,7 @@
     "typescript": "^2.8.1",
     "typography": "^0.16.6",
     "typography-theme-fairy-gates": "^0.16.0",
-    "unified": "^7.1.0",
+    "unified": "^8.0.0",
     "unist-util-map": "^1.0.4",
     "unist-util-visit": "^1.4.0",
     "uuid": "^3.3.2"
