@@ -76,6 +76,8 @@ describe("function", () => {
 })
 ```
 
+## Requestをどう組み立てるか？
+
 ちなみに、気づきづらいが、右サイドで入力テストが出来る。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">このTry it now入力できたのか！分かりづらい！ <a href="https://t.co/BaRlsuYO74">pic.twitter.com/BaRlsuYO74</a></p>&mdash; @terrierscript <a href="https://twitter.com/terrierscript/status/1143808200359084033?ref_src=twsrc%5Etfw">June 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
