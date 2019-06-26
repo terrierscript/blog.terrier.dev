@@ -82,4 +82,5 @@ describe("function", () => {
 
 そして「DIAGNOSTIC INFO」をクリックし、「FULLFILMENT REQUEST」のタブを開くと、RequestとしてAPIに入ってくるjsonが取得出来るので、これを元にデータをつくると良い
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">しかし結果がすげえわかりやすい・・・ <a href="https://t.co/hTxYPZJueY">pic.twitter.com/hTxYPZJueY</a></p>&mdash; @terrierscript <a href="https://twitter.com/terrierscript/status/1143809073227264000?ref_src=twsrc%5Etfw">June 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"><p lang="ja" dir="ltr">しかし結果がすげえわかりやすい・・・ <a href="https://t.co/hTxYPZJueY">pic.twitter.com/hTxYPZJueY</a></p>&mdash; (@terrierscript) <a href="https://twitter.com/terrierscript/status/1143809073227264000?ref_src=twsrc%5Etfw">2019年6月26日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
