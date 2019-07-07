@@ -25,7 +25,7 @@ const AvaterContainer = styled.div<any>`
   width: ${({ size }) => size}px;
 `
 const avater =
-  "https://ja.gravatar.com/userimage/90616865/3f0dd48afcf32bb6927654c79cf1c245.png"
+  "https://ja.gravatar.com/userimage/90616865/8a8d3f96f2d0be4c04607273030e1e17.png"
 
 export const Avater = ({ size = 40 }) => (
   <AvaterContainer size={size}>
