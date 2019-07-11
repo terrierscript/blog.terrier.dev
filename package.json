@@ -80,7 +80,7 @@
     "styled-components": "^4.0.0",
     "styled-media-query": "^2.0.2",
     "styled-normalize": "^8.0.0",
-    "styled-reset": "^2.0.0",
+    "styled-reset": "^3.0.0",
     "styled-system": "^5.0.0",
     "to-vfile": "^6.0.0",
     "typescript": "^2.8.1",
