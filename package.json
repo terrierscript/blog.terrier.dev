@@ -88,7 +88,7 @@
     "typography-theme-fairy-gates": "^0.16.0",
     "unified": "^8.0.0",
     "unist-util-map": "^1.0.4",
-    "unist-util-visit": "^1.4.0",
+    "unist-util-visit": "^2.0.0",
     "uuid": "^3.3.2"
   },
   "keywords": [
