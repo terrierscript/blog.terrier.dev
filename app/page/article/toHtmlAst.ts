@@ -45,6 +45,5 @@ export const renderHtmlAST = htmlAst => {
     .use(highlight, { ignoreMissing: true })
     .use(nl2br)
     .runSync(htmlAst)
-  // console.log(tree)
   return renderAst(tree)
 }
