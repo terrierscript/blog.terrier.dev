@@ -29,4 +29,5 @@ yarn add some-package --ignore-engines
 ```.yarnrc
 # .yarnrc
 --install.ignore-engines true
+--add.ignore-engines true
 ```
