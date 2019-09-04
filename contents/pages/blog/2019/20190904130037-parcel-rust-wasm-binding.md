@@ -96,3 +96,6 @@ const start = async () => {
 }
 ```
 
+## 参考2
+* 手元では下記のようなdiffになった
+  * https://github.com/terrierscript/example-grid-radius/commit/b6093e4e9a0d77fe8ff24d4bb8257074ee67b967
