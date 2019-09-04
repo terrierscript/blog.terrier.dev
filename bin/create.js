@@ -18,6 +18,7 @@ const convert = ({ title, slug, tags }) => {
     date: now.toUTC().toISO(),
     tags: tags
       .split(" ")
+      .split(",")
       .map(i => i.toLowerCase())
       .filter(i => !!i),
     published: false
