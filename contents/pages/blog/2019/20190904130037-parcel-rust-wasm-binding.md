@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: parcel + rustでwasm_bindingを使うとき （TypeError\: WebAssembly.instantiate()\: Imports argument must be present and must be an objectの解決
+title: "parcel + rustでwasm_bindingを使うとき （TypeError: WebAssembly.instantiate(): Imports argument must be present and must be an objectの解決"
 date: '2019-09-04T04:00:37.432Z'
 tags:
   - parcel
