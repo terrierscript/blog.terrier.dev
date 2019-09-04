@@ -9,9 +9,8 @@ tags:
 published: false
 ---
 
-parcel + rustで基礎的な部分は[公式ドキュメント](https://parceljs.org/rust.html)でも十分だったがwasm-bindgenなどを噛ませようとすると色々と工夫が必要だった。
+parcel + rustで基礎的な部分は[公式ドキュメント](https://parceljs.org/rust.html)でも十分だったがwasm-bindgenなどを噛ませようとすると、色々と工夫が必要だと下記よりわかった。
 
-参考
 * https://github.com/rustwasm/wasm-bindgen/issues/182
 * https://github.com/rustwasm/rust-parcel-template
 
@@ -79,12 +78,16 @@ Uncaught (in promise) TypeError: WebAssembly.instantiate(): Imports argument mus
 ## 解決策
 ### parcel-plugin-wasm.rsのインストール
 
+現状parcel本体側ではどうもwasm-bindgenとうまく噛み合わないようなので、pluginを入れる
+* see: https://github.com/parcel-bundler/parcel/issues/1325
+
+parcelの場合はpluginをインストールすれば読み込まれるので、あとは不要。
 
 ```
 npm install parcel-plugin-wasm.rs
 ```
 
-そしてこれは深く読んでないが、呼び出し元を`Cargo.toml`にする必要があった。
+そしてこれは深く読んでないので原因は不明だが、呼び出し元を`Cargo.toml`にする必要があった。
 
 ```js
 const start = async () => {
@@ -95,6 +98,8 @@ const start = async () => {
   // console.log(add(1, 2))
 }
 ```
+
+これで解決した
 
 ## 参考2
 * 手元では下記のようなdiffになった
