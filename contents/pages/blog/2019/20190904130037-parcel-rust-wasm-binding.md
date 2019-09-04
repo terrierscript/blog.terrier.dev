@@ -6,7 +6,7 @@ tags:
   - parcel
   - rust
   - wasm
-published: false
+published: true
 ---
 
 parcel + rustで基礎的な部分は[公式ドキュメント](https://parceljs.org/rust.html)でも十分だったがwasm-bindgenなどを噛ませようとすると、色々と工夫が必要だと下記よりわかった。
