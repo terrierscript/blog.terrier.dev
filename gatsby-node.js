@@ -55,12 +55,14 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `
   const result = await graphql(ql)
+  // console.log(result)
   const feeds = await loadFeedForSSR()
   const globals = {
     feeds
   }
 
   const buildPages = posts => {
+    console.log(posts)
     posts.forEach(edge => {
       const id = edge.node.id
       createPage({
