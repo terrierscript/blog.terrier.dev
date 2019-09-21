@@ -31,6 +31,7 @@ For more information try --help
 
 # 解決策
 今の所issueがオープンしているが、`-x`ではなく`-s`で指定すればとりあえず回避出来る
+
 https://github.com/passcod/cargo-watch/issues/97
 
 ```
