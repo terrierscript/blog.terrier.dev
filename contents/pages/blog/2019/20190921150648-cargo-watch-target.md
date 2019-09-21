@@ -35,4 +35,4 @@ https://github.com/passcod/cargo-watch/issues/97
 
 ```
 $ cargo watch -s "cargo check --target arm-unknown-linux-musleabihf"
-``
+```
