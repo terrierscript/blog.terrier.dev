@@ -5,7 +5,7 @@ import { Externals } from "./Externals"
 import { SideLinks } from "./Link"
 import styled from "styled-components"
 
-const SideGrid = styled.div`
+const SideGrid = styled.aside`
   display: grid;
   grid-gap: 1em;
   border-left: 1px solid #efefef;
