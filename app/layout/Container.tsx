@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
+export const Container = styled.article`
   /* max-width: 900px; */
   /* width: 100%; */
   /* padding: 0 20px; */
