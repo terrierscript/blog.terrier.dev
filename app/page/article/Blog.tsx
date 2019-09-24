@@ -26,6 +26,9 @@ const BlogBody = styled.section`
   grid-auto-columns: 100%;
   /* padding-top: 1em; */
   word-break: break-word;
+  img {
+    border: 1px solid gray;
+  }
 `
 const ArticleWrapper = styled.div`
   background: #fff;
