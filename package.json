@@ -48,7 +48,7 @@
     "grommet": "^2.5.5",
     "highlight.js": "^9.12.0",
     "immutable": "^3.8.2",
-    "inquirer": "^6.2.2",
+    "inquirer": "^7.0.0",
     "jest": "^24.1.0",
     "lodash": "^4.17.5",
     "lodash.debounce": "^4.0.8",
