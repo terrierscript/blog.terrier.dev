@@ -28,7 +28,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const limit = process.env.NODE_ENV === "production" ? 10000 : 100
   const ql = `
     {
-      allMarkdownRemark(
+      allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
         limit: ${limit}
         filter: {
