@@ -5,6 +5,7 @@ date: '2019-09-18T12:12:54.461Z'
 tags:
   - css
   - javascript
+  - styled-components
 published: true
 ---
 
@@ -131,7 +132,7 @@ export const QrSample = () => <Code code={[
 
 <img width="48" alt="4" src="https://user-images.githubusercontent.com/13282103/65520734-0c04c780-df23-11e9-8bd7-e0d4361dc042.png">
 
-## 感性
+## できあがり
 
 あとはドットなら何でも描画出来る。
 今回は手頃なところでQRコードを今回は使った。
