@@ -26,7 +26,8 @@ export const Dotted1 = styled.div`
 `
 ```
 
-![図1](/img/2019/linear-gradient/1.png)
+<img width="490" alt="1" src="https://user-images.githubusercontent.com/13282103/65520738-0c9d5e00-df23-11e9-8e9f-e69839bf078e.png">
+
 
 例えばこれを90degにすれば横並びになる
 
@@ -36,7 +37,8 @@ export const Dotted = styled.div`
   height: 2em;
 `
 ```
-![図2](/img/2019/linear-gradient/2.png)
+
+<img width="490" alt="2" src="https://user-images.githubusercontent.com/13282103/65520736-0c9d5e00-df23-11e9-8bbd-b4d6f3c34ee0.png">
 
 ### 白黒を横に並べる
 
@@ -77,7 +79,7 @@ export const Stripe = styled.div.attrs(({ data }) => {
 export const StripeSample = () => <Stripe data={[0,1,0,1,1,0,0,1,1,1,0,0,0,1,1,1,1,0,1,1,0,1]}/>
 ```
 
-![図3](/img/2019/linear-gradient/3.png)
+<img width="222" alt="3" src="https://user-images.githubusercontent.com/13282103/65520735-0c04c780-df23-11e9-883b-cd7327784d2c.png">
 
 ### 更に縦にも並べる。
 
@@ -127,7 +129,7 @@ export const QrSample = () => <Code code={[
 ]}/>
 ```
 
-![図4](/img/2019/linear-gradient/4.png)
+<img width="48" alt="4" src="https://user-images.githubusercontent.com/13282103/65520734-0c04c780-df23-11e9-8bd7-e0d4361dc042.png">
 
 ## 感性
 
