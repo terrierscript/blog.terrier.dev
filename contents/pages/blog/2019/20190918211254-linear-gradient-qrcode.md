@@ -30,7 +30,7 @@ export const Dotted1 = styled.div`
 <img width="490" alt="1" src="https://user-images.githubusercontent.com/13282103/65520738-0c9d5e00-df23-11e9-8e9f-e69839bf078e.png">
 
 
-例えばこれを90degにすれば横並びになる
+例えばこれを90degにすれば
 
 ```jsx
 export const Dotted = styled.div`
@@ -40,6 +40,8 @@ export const Dotted = styled.div`
 ```
 
 <img width="490" alt="2" src="https://user-images.githubusercontent.com/13282103/65520736-0c9d5e00-df23-11e9-8bbd-b4d6f3c34ee0.png">
+
+横並びになる
 
 ### 白黒を横に並べる
 
@@ -74,13 +76,16 @@ export const Stripe = styled.div.attrs(({ data }) => {
 
 ```
 
-これでこんな感じに描画出来る
+これで
 
 ```jsx
 export const StripeSample = () => <Stripe data={[0,1,0,1,1,0,0,1,1,1,0,0,0,1,1,1,1,0,1,1,0,1]}/>
 ```
 
 <img width="222" alt="3" src="https://user-images.githubusercontent.com/13282103/65520735-0c04c780-df23-11e9-883b-cd7327784d2c.png">
+
+こんな感じに描画出来る
+
 
 ### 更に縦にも並べる。
 
@@ -131,6 +136,8 @@ export const QrSample = () => <Code code={[
 ```
 
 <img width="48" alt="4" src="https://user-images.githubusercontent.com/13282103/65520734-0c04c780-df23-11e9-8bd7-e0d4361dc042.png">
+
+するとこんな感じでドット絵になる
 
 ## できあがり
 
