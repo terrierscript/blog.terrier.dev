@@ -20,7 +20,7 @@ const TagList = ({ tags = [] }) => {
   )
 }
 
-const BlogBody = styled.div`
+const BlogBody = styled.section`
   display: grid;
   grid-gap: 1.5em;
   grid-auto-columns: 100%;
