@@ -2,7 +2,7 @@ import React from "react"
 // @ts-ignore
 import pretty from "./pretty.jpg"
 import styled, { keyframes } from "styled-components"
-import { RadiusImg } from "../Avater"
+import { RadiusImg } from "../../component/Avater"
 
 const rotate360 = keyframes`
   from {

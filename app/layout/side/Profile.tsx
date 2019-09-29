@@ -1,5 +1,5 @@
 import React from "react"
-import { Avater } from "../Avater"
+import { Avater } from "../../component/Avater"
 import { SideBox, Title } from "./Basics"
 import styled from "styled-components"
 import { headerFont } from "../../utils/typography"
