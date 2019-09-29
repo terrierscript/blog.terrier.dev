@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState, useRef } from "react"
+import styled, { css } from "styled-components"
 
 const Container = styled.div`
   display: flex;
@@ -11,32 +11,26 @@ const Item = styled.div`
   font-size: 1em;
 `
 
-const TwitterFollowButton = () => (
-  <a
-    href="https://twitter.com/terrierscript?ref_src=twsrc%5Etfw"
-    className="twitter-follow-button"
-    data-show-count="false"
-  >
-    Follow @terrierscript
-  </a>
-)
-
 const TweetButtons = () => (
   <a
     className="twitter-share-button"
     href={location.origin + location.pathname}
   >
-    Tweet
+    {/* Tweet */}
   </a>
 )
 
-const TwitterWidgetScript = () => {
+export const TwitterWidgetScript = children => {
+  // const [loaded, setLoaded] = useState() // TODO
   return (
-    <script
-      async
-      src="https://platform.twitter.com/widgets.js"
-      charSet="utf-8"
-    ></script>
+    <>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charSet="utf-8"
+      ></script>
+      {/* {loaded && children} */}
+    </>
   )
 }
 
@@ -66,9 +60,9 @@ export const ArticleFooter = ({ fileAbsolutePath }) => {
         <Item>
           <TweetButtons />
         </Item>
-        <Item>
+        {/* <Item>
           <TwitterFollowButton />
-        </Item>
+        </Item> */}
       </Container>
     </>
   )

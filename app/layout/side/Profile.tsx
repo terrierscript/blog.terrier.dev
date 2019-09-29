@@ -3,6 +3,7 @@ import { Avater } from "../../component/Avater"
 import { SideBox, Title } from "./Basics"
 import styled from "styled-components"
 import { headerFont } from "../../utils/typography"
+import { TwitterWidgetScript } from "../../page/article/ArticleFooter"
 
 const Box = styled.div`
   display: flex;
@@ -18,11 +19,39 @@ const Link = styled.a`
 
 export const Author = () => {
   return (
-    <div>
-      <Link href="https://twitter.com/terrierscript">terrierscript</Link>
-    </div>
+    <>
+      <div>
+        <Link href="https://twitter.com/terrierscript">terrierscript</Link>
+      </div>
+    </>
   )
 }
+
+const TwiContainer = styled.div`
+  padding-top: 0.5em;
+  height: 2em;
+  overflow: hidden;
+`
+
+const TwitterFollowButton = () => (
+  <a
+    href="https://twitter.com/terrierscript?ref_src=twsrc%5Etfw"
+    className="twitter-follow-button"
+    data-show-count="false"
+  >
+    {/* Follow @terrierscript */}
+  </a>
+)
+
+const TwitterFollowBox = () => {
+  return (
+    <TwiContainer>
+      <TwitterWidgetScript />
+      <TwitterFollowButton />
+    </TwiContainer>
+  )
+}
+
 export const SideProfile = () => {
   return (
     <SideBox>
@@ -31,6 +60,7 @@ export const SideProfile = () => {
         <Avater />
         <Author />
       </Box>
+      <TwitterFollowBox />
     </SideBox>
   )
 }
