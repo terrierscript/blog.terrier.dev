@@ -111,13 +111,13 @@ export const BlogPostTemplate = ({
         </ClapButton> */}
 
         <BlogArticle title={title} content={content} tags={tags} date={date} />
+        <Modify fileAbsolutePath={fileAbsolutePath} />
         <AdSense.Google
           layout="in-article"
           format="fluid"
           client="ca-pub-9836926490768601"
           slot="2319260593"
         />
-        <Modify fileAbsolutePath={fileAbsolutePath} />
         {/* <Comment identifier={id} title={title} /> */}
       </BlogBody>
     </Layout>
