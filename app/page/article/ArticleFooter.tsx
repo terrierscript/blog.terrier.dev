@@ -11,14 +11,15 @@ const Item = styled.div`
   font-size: 1em;
 `
 
-const TweetButtons = () => (
-  <a
-    className="twitter-share-button"
-    href={location.origin + location.pathname}
-  >
-    {/* Tweet */}
-  </a>
-)
+// TODO: SSR
+// const TweetButtons = () => (
+//   <a
+//     className="twitter-share-button"
+//     href={location.origin + location.pathname}
+//   >
+//     {/* Tweet */}
+//   </a>
+// )
 
 export const TwitterWidgetScript = children => {
   // const [loaded, setLoaded] = useState() // TODO
@@ -57,9 +58,9 @@ export const ArticleFooter = ({ fileAbsolutePath }) => {
           <Modify fileAbsolutePath={fileAbsolutePath} />
         </Item>
         <Item>|</Item>
-        <Item>
+        {/* <Item>
           <TweetButtons />
-        </Item>
+        </Item> */}
         {/* <Item>
           <TwitterFollowButton />
         </Item> */}
