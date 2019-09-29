@@ -7,6 +7,7 @@ import { defaultFont } from "../../layout/font"
 import { Tag } from "../../component/Tag"
 import { Layout } from "../../layout/Layout"
 import AdSense from "react-adsense"
+import { ArticleFooter } from "./ArticleFooter"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -46,20 +47,6 @@ const Title = styled.h1`
 const TagListWrapper = styled.div`
   margin-bottom: 1.2em;
 `
-
-const Modify = ({ fileAbsolutePath }) => {
-  if (!fileAbsolutePath) {
-    return null
-  }
-  const repo = "terrierscript/terrier.dev"
-
-  const directory = "contents/pages/blog/"
-  const filename = fileAbsolutePath.split("/").pop()
-  const year = filename.substr(0, 4) // TODO: ちょっと無理やりになってる
-  const url = `https://github.com/${repo}/edit/master/${directory}/${year}/${filename}`
-
-  return <a href={url}>この記事の修正をする</a>
-}
 
 const BlogArticleWrapper = styled.div`
   padding-bottom: 3em;
@@ -111,7 +98,8 @@ export const BlogPostTemplate = ({
         </ClapButton> */}
 
         <BlogArticle title={title} content={content} tags={tags} date={date} />
-        <Modify fileAbsolutePath={fileAbsolutePath} />
+        {/* TODO fileAbsolutePathなんとかしたい */}
+        <ArticleFooter fileAbsolutePath={fileAbsolutePath}></ArticleFooter>
         <AdSense.Google
           layout="in-article"
           format="fluid"
