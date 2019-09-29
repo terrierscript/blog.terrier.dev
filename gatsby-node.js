@@ -62,7 +62,7 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   const buildPages = posts => {
-    console.log(posts)
+    // console.log(posts)
     posts.forEach(edge => {
       const id = edge.node.id
       createPage({

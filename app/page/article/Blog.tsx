@@ -6,6 +6,7 @@ import styled from "styled-components"
 import { defaultFont } from "../../layout/font"
 import { Tag } from "./Tag"
 import { Layout } from "../../layout/Layout"
+import AdSense from "react-adsense"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -110,26 +111,15 @@ export const BlogPostTemplate = ({
         </ClapButton> */}
 
         <BlogArticle title={title} content={content} tags={tags} date={date} />
+        <AdSense.Google
+          layout="in-article"
+          format="fluid"
+          client="ca-pub-9836926490768601"
+          slot="2319260593"
+        />
         <Modify fileAbsolutePath={fileAbsolutePath} />
         {/* <Comment identifier={id} title={title} /> */}
-        <Adsense/>
       </BlogBody>
     </Layout>
   )
 }
-
-
-const Adsense = () => (
-  <>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-9836926490768601"
-     data-ad-slot="2319260593"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</>
-)
