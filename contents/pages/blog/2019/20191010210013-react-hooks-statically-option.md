@@ -108,7 +108,7 @@ export const useCounterWithStaticSetting = (staticValue) => {
 これで例えば先程の`<App>`から値を変えるとエラーになるようになる。
 
 
-```js
+```jsx
 
 const InvalidApp = () => {
   const [val, setVal] = useState(10)
