@@ -21,7 +21,7 @@ export const TagItem = styled.div`
 
 export const Tag: SFC<{ tag: string }> = ({ tag }) => {
   return (
-    <Link to={`/tags/${tag}/`}>
+    <Link to={`/tags/${tag.toLowerCase()}/`}>
       <TagItem>{tag}</TagItem>
     </Link>
   )
