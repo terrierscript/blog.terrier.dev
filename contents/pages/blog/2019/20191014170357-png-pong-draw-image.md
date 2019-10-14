@@ -9,7 +9,7 @@ tags:
 published: true
 ---
 
-[png-pong](https://github.com/gdnmobilelab/png-pong)でReact Hooksを通して画像を描画出来た。
+[png-pong](https://github.com/gdnmobilelab/png-pong)でReact Hooksを通して画像を描画出来たメモ。
 
 デモ：
 
@@ -18,6 +18,16 @@ published: true
 こんな感じでeffectを利用しているが、正直別にreactの機能そんなに使ってない。
 
 ```jsx
+const Img = styled.div<{
+  size: number
+  bg: string
+}>(({ size, bg }) => ({
+  width: `${size}px`,
+  height: `${size}px`,
+  backgroundImage: `url(${bg})`,
+  filter: "blur(0.2px)"
+}))
+
 const NoiseImage = () => {
   const [bgurl, setBgurl] = useState<string>("")
   const width = 100
@@ -32,6 +42,7 @@ const NoiseImage = () => {
 ```
 
 生成したビットマップを下記のように`createFromRGBAArray`で渡してる。
+その結果をbase64のURLとして保持し、あとはそのまま`background-image`としてstyled-componentsに流し込んでる
 このへんは完全にpng-pongのおかげだ。
 
 ```ts
