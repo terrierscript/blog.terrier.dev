@@ -24,7 +24,6 @@ module.exports = {
         name: "images"
       }
     },
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
