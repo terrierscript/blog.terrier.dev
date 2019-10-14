@@ -65,6 +65,5 @@ const bitsToStr = (bits: number[][][]) => {
 <stackblitz-iframe src="https://stackblitz.com/edit/react-ts-egg6dg?embed=1&file=index.tsx&hideExplorer=1&view=preview">
 </stackblitz-iframe>
 
-<!-- <iframe width="100%" height="400px" src="https://stackblitz.com/edit/react-ts-egg6dg?embed=1&file=index.tsx&hideExplorer=1&view=preview"></iframe> -->
 
 今の所Canvasに勝る利点はなさそうではあるが、bitmap部分が複雑でWASMを利用するなどでCanvasよりも素早く描画出来るなどの可能性がありそう
