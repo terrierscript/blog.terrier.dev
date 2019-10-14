@@ -13,8 +13,8 @@ published: true
 
 デモ：
 
-<stackblitz-iframe src="https://stackblitz.com/edit/react-ts-yaiy4a?embed=1&hideExplorer=1">
-</stackblitz-iframe>
+<sb-iframe>https://stackblitz.com/edit/react-ts-yaiy4a?embed=1&hideExplorer=1
+</sb-iframe>
 
 <!-- <iframe width="100%" height="300px" src="https://stackblitz.com/edit/react-ts-yaiy4a?embed=1&hideExplorer=1"></iframe> -->
 
@@ -62,8 +62,8 @@ const bitsToStr = (bits: number[][][]) => {
 
 これだけだと正直Canvasの方が良いが、pngが使えることで`background-clip: text`の背景に使うことなども出来る。
 
-<stackblitz-iframe src="https://stackblitz.com/edit/react-ts-egg6dg?embed=1&file=index.tsx&hideExplorer=1&view=preview">
-</stackblitz-iframe>
+<sb-iframe>https://stackblitz.com/edit/react-ts-egg6dg?embed=1&file=index.tsx&hideExplorer=1&view=preview
+</sb-iframe>
 
 
 今の所Canvasに勝る利点はなさそうではあるが、bitmap部分が複雑でWASMを利用するなどでCanvasよりも素早く描画出来るなどの可能性がありそう
