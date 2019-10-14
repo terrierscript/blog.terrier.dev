@@ -1,7 +1,7 @@
-import { StackbritzIframe } from "./Stackblitz"
-import { SampleTimer } from "./SampleTimer"
+if (typeof window !== `undefined`) {
+  const { StackbritzIframe } = require("./Stackblitz")
+  const { SampleTimer } = require("./SampleTimer")
 
-export const defineComponents = () => {
   customElements.define("stackblitz-iframe", StackbritzIframe)
   customElements.define("sample-timer", SampleTimer)
 }
