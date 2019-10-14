@@ -43,16 +43,19 @@ export class SampleTimer extends HTMLElement {
 }
 ```
 
-あとはdefineすれば使える。ただgatsbyの場合SSRのタイミングで壊れるので`window`のアリナシで判定して`require`を使う必要がある（dynamic importでも良いかもしれない）
+あとはdefineすれば使える。ただgatsbyの場合SSRのタイミングで壊れるので`window`のアリナシで判定してdynamic importかrequireで解決する必要がある
 
 ```js
-if (typeof window !== `undefined`) {
-  const { StackbritzIframe } = require("./Stackblitz")
-  const { SampleTimer } = require("./SampleTimer")
+export async function loadWebComponent() {
+  if (typeof window !== `undefined`) {
+    const { StackbritzIframe } = await import("./Stackblitz")
+    const { SampleTimer } = await import("./SampleTimer")
 
-  customElements.define("stackblitz-iframe", StackbritzIframe)
-  customElements.define("sample-timer", SampleTimer)
+    customElements.define("stackblitz-iframe", StackbritzIframe)
+    customElements.define("sample-timer", SampleTimer)
+  }
 }
+
 ```
 
 Markdown側にこんなふうに書けばOKだ
