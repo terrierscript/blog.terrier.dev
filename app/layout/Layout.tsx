@@ -6,9 +6,6 @@ import { Article } from "../article/Content"
 import { Footer } from "./Footer"
 import styled from "styled-components"
 import { Side } from "./side/Side"
-import { loadWebComponent } from "../web-component"
-
-loadWebComponent() // defineComponents()
 
 const gridTemplate = `
   ". header  header ."

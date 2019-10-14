@@ -1,4 +1,7 @@
 import React from "react"
+import { loadWebComponent } from "../web-component"
+
+loadWebComponent() // defineComponents()
 
 let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
