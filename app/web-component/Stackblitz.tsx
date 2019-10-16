@@ -1,3 +1,12 @@
+import { html } from "lit-html"
+
+const Iframe = ({ src, height }) => html`
+  <iframe src=${src} width="100%" height="${height}" frameborder="no"
+    >Loading
+    <a href=${src}>${src}</a>
+  </iframe>
+`
+
 export class StackbritzIframe extends HTMLElement {
   constructor() {
     super()
@@ -20,10 +29,9 @@ export class StackbritzIframe extends HTMLElement {
   }
   template() {
     const src = this.getSrc()
-    return `
-       <iframe src=${src} width="100%" height="${this.getHeight()}" frameborder="no">Loading
-       <a href=${src}>${src}</a>
-       </iframe>
-     `
+    const height = this.getHeight()
+    const tmpl = Iframe({ src, height }).getHTML()
+    console.log(tmpl.toString())
+    return tmpl
   }
 }

@@ -46,6 +46,7 @@
     "immutable": "^3.8.2",
     "inquirer": "^6.2.2",
     "jest": "^24.1.0",
+    "lit-html": "^1.1.2",
     "lodash": "^4.17.5",
     "lodash.debounce": "^4.0.8",
     "luxon": "^1.11.3",
