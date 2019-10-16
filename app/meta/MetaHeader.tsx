@@ -42,6 +42,10 @@ export const MetaHeader = props => {
       /> */}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@terrierscript" />
+      <meta
+        name="og:image"
+        content="https://ja.gravatar.com/userimage/90616865/8a8d3f96f2d0be4c04607273030e1e17.png"
+      />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {props.headComponents}

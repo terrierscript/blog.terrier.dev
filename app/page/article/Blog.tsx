@@ -91,6 +91,10 @@ export const BlogPostTemplate = ({
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta
+          name="og:image"
+          content="https://ja.gravatar.com/userimage/90616865/8a8d3f96f2d0be4c04607273030e1e17.png"
+        />
       </Helmet>
       <BlogBody>
         {/* <ClapButton id={id} title={title}>
