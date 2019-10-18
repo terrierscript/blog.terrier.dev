@@ -28,14 +28,14 @@ export const MetaHeader = props => {
   return (
     <head>
       <meta charSet="utf-8" />
-      <link
+      {/* <link
         rel="stylesheet"
         href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"
       />
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.6/build/styles/atom-one-dark.min.css"
-      />
+      /> */}
 
       {/* <link
         rel="stylesheet"
@@ -43,7 +43,10 @@ export const MetaHeader = props => {
       /> */}
       <link
         rel="stylesheet"
-        href="https://unpkg.com/prismjs@1.17.1/themes/prism-tomorrow.css"
+        // href="https://unpkg.com/prismjs@1.17.1/themes/prism-tomorrow.css"
+        href="https://unpkg.com/prismjs@1.17.1/themes/prism.css"
+        // href="https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-shades-of-purple.css"
+        // href="https://unpkg.com/prism-themes@1.2.0/themes/prism-duotone-dark.css"
       />
 
       {/* <link

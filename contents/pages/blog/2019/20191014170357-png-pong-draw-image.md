@@ -21,7 +21,7 @@ published: true
 
 こんな感じでeffectを利用しているが、正直別にreactの機能そんなに使ってない。
 
-```jsx
+```tsx
 const Img = styled.div<{
   size: number
   bg: string
