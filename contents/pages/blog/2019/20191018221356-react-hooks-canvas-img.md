@@ -20,7 +20,7 @@ published: true
 肝になってるのはこのへん。canvasは隠しつつ、imageとして吐き出している。
 ただ当然canvasの上限サイズを越えてたりするとimgの変換から切れるので注意が必要
 
-```tsx
+```jsx
 const CloakCanvas = styled.canvas`
   display: none;
 `
