@@ -18,6 +18,14 @@ const globalCss = css`
       margin-bottom: 0;
     }
   }
+  article {
+    p :not(pre) code {
+      border: 1px solid #ccc;
+      background: #eee;
+      border-radius: 4px;
+      padding: 0 0.2em;
+    }
+  }
 `
 const GlobalStyle = createGlobalStyle`
   ${globalCss}
