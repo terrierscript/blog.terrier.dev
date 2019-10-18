@@ -10,10 +10,10 @@ tags:
 published: true
 ---
 
-先日[png-pong](https://terrier.dev/blog/2019/20191014170357-png-pong-draw-image/)を使って背景画像を生成したが、よく考えたらcanvasで良かった。
+先日[png-pongを使って背景画像](https://terrier.dev/blog/2019/20191014170357-png-pong-draw-image/)を生成したが、よく考えたらcanvasで良かった。
 
 <sb-iframe height="500px">
-  https://stackblitz.com/edit/react-ts-x3yyna?embed=1&file=index.tsx
+  https://stackblitz.com/edit/react-ts-x3yyna?ctl=1&embed=1&file=index.tsx
 </sb-iframe>
 
 
