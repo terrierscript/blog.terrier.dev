@@ -5,11 +5,14 @@ export class StackbritzIframe extends HTMLElement {
   getHeight() {
     return this.getAttribute("height") || "300px"
   }
-  getSrc() {
+  _getSrc() {
     if (this.getAttribute("src")) {
       return this.getAttribute("src")
     }
-    return this.children[0]
+    return this.textContent
+  }
+  getSrc() {
+    return this._getSrc().trim()
   }
   loadingTemplate() {
     return `<div heigth=${this.getHeight()}>Loading...</div>`
