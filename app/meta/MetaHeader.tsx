@@ -37,6 +37,10 @@ export const MetaHeader = props => {
         href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.6/build/styles/atom-one-dark.min.css"
       />
 
+      {/* <link
+        rel="stylesheet"
+        href="https://unpkg.com/prism-themes@1.2.0/themes/prism-hopscotch.css"
+      /> */}
       <link
         rel="stylesheet"
         href="https://unpkg.com/prismjs@1.17.1/themes/prism-tomorrow.css"

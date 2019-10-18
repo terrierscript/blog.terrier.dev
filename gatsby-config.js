@@ -42,7 +42,12 @@ module.exports = {
               token: process.env.GITHUB_TOKEN
             }
           },
-          `gatsby-remark-prismjs`
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              noInlineHighlight: true
+            }
+          }
         ]
       }
     },
