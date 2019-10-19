@@ -17,6 +17,7 @@
     "skipDefaultLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "noEmit": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
