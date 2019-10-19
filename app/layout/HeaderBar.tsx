@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "gatsby-link"
+import Link from "next/link"
 import styled from "styled-components"
 import { defaultFont } from "./font"
 import { Terrier } from "./header/Terrier"
@@ -34,7 +34,7 @@ export const HeaderBar = () => {
     <div>
       <Nav>
         <NavContainer>
-          <Logo to="/">
+          <Logo href="/">
             <Grid>
               <Terrier size={40} />
               {/* <Avater /> */}
