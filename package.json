@@ -107,7 +107,7 @@
     "serve": "gatsby serve",
     "serve-function": "yarn dotenv netlify-lambda serve functions",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "gatsby build",
+    "test": "next build",
     "blog": "node ./bin/create.js",
     "sandbox": "parcel sandbox/index.html"
   },
