@@ -47,6 +47,7 @@ export const FadeAnimation = ({ children }) => {
     enter: { opacity: 1, transform: "translateY(-180px) scale(1.2)" },
     leave: { opacity: 0, transform: "translateY(-200px) scale(0.5)" },
     // 完了処理
+    // @ts-ignore
     onRest: key => {
       completeAnimation(key)
       set(false)

@@ -85,7 +85,7 @@
     "styled-reset": "^3.0.0",
     "styled-system": "^5.0.0",
     "to-vfile": "^6.0.0",
-    "typescript": "^2.8.1",
+    "typescript": "^3",
     "typography": "^0.16.6",
     "typography-theme-fairy-gates": "^0.16.0",
     "unified": "^8.4.1",

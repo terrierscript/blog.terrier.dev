@@ -27,7 +27,7 @@
     "src/**/*",
     "app/**/*",
     "pages/**/*",
-    "sandbox/**/*",
+    // "sandbox/**/*",
     "*.js"
   ],
   "exclude": [
