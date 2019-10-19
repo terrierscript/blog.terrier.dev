@@ -9,6 +9,7 @@ export const isomophic = async (apiName, exec) => {
     console.log("fetch mode")
     return await fetch(apiName)
   } else {
+    console.log("exec mode")
     return exec()
     // return async (req, res) => {
     //   const result = await exec(req, res)
@@ -22,6 +23,14 @@ export const isomophic = async (apiName, exec) => {
 export const getBlogList = params => {
   return isomophic(`./api/blogs?${qs.stringify(params)}`, () => {
     console.log("exxx")
+    try {
+      const fs = require("fs")
+      console.log("fss", fs)
+      return getPagenateList(params.page, params.limit)
+      return {}
+    } catch (e) {
+      console.log(e)
+    }
     return {} //getPagenateList(params.page, params.limit)
   })
 }

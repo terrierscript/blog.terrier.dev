@@ -31,6 +31,6 @@ export const getMatter = async path => {
 }
 export const getPagenateList = (page = 1, limit = 10) => {
   console.log("getPagenateList")
-  const items = exports.getMarkdownFiles()
-  return items.slice((page - 1) * limit, limit)
+  // const items = exports.getMarkdownFiles()
+  // return items.slice((page - 1) * limit, limit)
 }
