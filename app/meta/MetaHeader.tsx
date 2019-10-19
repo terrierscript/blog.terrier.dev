@@ -26,7 +26,7 @@ export const MetaHeader = props => {
     )
   }
   return (
-    <head>
+    <>
       <meta charSet="utf-8" />
       <link
         rel="stylesheet"
@@ -61,6 +61,14 @@ export const MetaHeader = props => {
       {props.headComponents}
       <link rel="shortcut icon" />
       {css}
+    </>
+  )
+}
+
+export const MetaHeaderGatsby = props => {
+  return (
+    <head>
+      <MetaHeaderInner {...props}></MetaHeaderInner>
     </head>
   )
 }

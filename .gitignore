@@ -12,3 +12,4 @@ lambda
 .env
 .vscode
 dist/
+.next

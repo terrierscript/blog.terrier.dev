@@ -1,12 +1,12 @@
 // @ts-nocheckss
 import React from "react"
-import { MetaHeader } from "../app/meta/MetaHeader"
+import { MetaHeaderGatsby } from "../app/meta/MetaHeader"
 
 export default class HTML extends React.Component {
   render() {
     return (
       <html lang="ja">
-        <MetaHeader {...this.props} />
+        <MetaHeaderGatsby {...this.props} />
         <body>
           <div
             id="___gatsby"
