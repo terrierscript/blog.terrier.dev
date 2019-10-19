@@ -1,16 +1,19 @@
 import React from "react"
 import App from "next/app"
 import { MainLayout } from "../src/provider/MainLayout"
+import { Layout } from "../app/layout/Layout"
 
-class MyApp extends App {
+class MaimApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
       <MainLayout>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </MainLayout>
     )
   }
 }
 
-export default MyApp
+export default MaimApp

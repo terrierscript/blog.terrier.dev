@@ -1,8 +1,9 @@
+// @ts-nocheck
 const fs = require("fs")
 const path = require("path")
 
 const klawSync = require("klaw-sync")
-
+const withImages = require("next-images")
 const getMarkdowns = () => {
   const pagesPath = path.resolve("contents/pages")
   const markdowns = klawSync(pagesPath)
@@ -19,7 +20,7 @@ const getMarkdowns = () => {
     })
 }
 
-module.exports = {
+module.exports = withImages({
   webpack: config => {
     config.plugins = config.plugins.filter(plugin => {
       if (plugin.constructor.name === "ForkTsCheckerWebpackPlugin") return false
@@ -27,4 +28,4 @@ module.exports = {
     })
     return config
   }
-}
+})
