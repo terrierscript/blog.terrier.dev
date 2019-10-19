@@ -54,6 +54,7 @@
     "netlify": "^2.0.0",
     "netlify-cli": "^2.11.15",
     "netlify-lambda": "^1.4.2",
+    "next": "^9.1.1",
     "node-fetch": "^2.3.0",
     "parcel": "^1.11.0",
     "popmotion": "^8.6.2",
