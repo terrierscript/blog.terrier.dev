@@ -19,15 +19,14 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "skipDefaultLibCheck": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node"
   },
   "include": [
     "src/**/*",
     "app/**/*",
     "pages/**/*",
-    // "sandbox/**/*",
     "*.js"
   ],
   "exclude": [
