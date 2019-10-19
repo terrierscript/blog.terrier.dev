@@ -9,7 +9,7 @@ const Nav = styled.nav`
   line-height: 64px;
 `
 
-const Logo = styled(Link)`
+const Logo = styled.span`
   text-decoration: none;
   font-weight: bold;
   font-family: ${defaultFont};
@@ -34,13 +34,15 @@ export const HeaderBar = () => {
     <div>
       <Nav>
         <NavContainer>
-          <Logo href="/">
-            <Grid>
-              <Terrier size={40} />
-              {/* <Avater /> */}
-              <span>terrier.dev</span>
-            </Grid>
-          </Logo>
+          <Link href="/">
+            <Logo>
+              <Grid>
+                <Terrier size={40} />
+                {/* <Avater /> */}
+                <span>terrier.dev</span>
+              </Grid>
+            </Logo>
+          </Link>
         </NavContainer>
       </Nav>
     </div>
