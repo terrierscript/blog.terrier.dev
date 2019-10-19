@@ -20,6 +20,7 @@
     "disqus-react": "^1.0.5",
     "dotenv": "^8.0.0",
     "dotenv-cli": "^2.0.0",
+    "graceful-fs": "^4.2.2",
     "gray-matter": "^4.0.2",
     "grommet": "^2.5.5",
     "highlight.js": "^9.12.0",

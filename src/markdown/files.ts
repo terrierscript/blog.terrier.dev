@@ -1,3 +1,5 @@
+console.log("files")
+
 const { promisify } = require("util")
 const fs = require("fs")
 const path = require("path")
@@ -5,7 +7,8 @@ const path = require("path")
 const klawSync = require("klaw-sync")
 const grayMatter = require("gray-matter")
 
-exports.getMarkdownFiles = () => {
+export const getMarkdownFiles = () => {
+  console.log("getMarkdownFiles")
   const pagesPath = path.resolve("contents/pages")
   const markdowns = klawSync(pagesPath)
     .filter(p => {
@@ -21,11 +24,13 @@ exports.getMarkdownFiles = () => {
     })
   return markdowns
 }
-exports.getMatter = async path => {
+export const getMatter = async path => {
+  // @ts-ignore
   const content = await promisify(fs.readFile(path, { encoding: "UTF-8" }))
   console.log(content)
 }
-exports.getPagenateList = (page = 1, limit = 10) => {
+export const getPagenateList = (page = 1, limit = 10) => {
+  console.log("getPagenateList")
   const items = exports.getMarkdownFiles()
   return items.slice((page - 1) * limit, limit)
 }
