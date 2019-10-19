@@ -5,7 +5,7 @@ const path = require("path")
 const klawSync = require("klaw-sync")
 const grayMatter = require("gray-matter")
 
-export const getMarkdownFiles = () => {
+exports.getMarkdownFiles = () => {
   const pagesPath = path.resolve("contents/pages")
   const markdowns = klawSync(pagesPath)
     .filter(p => {
@@ -15,17 +15,17 @@ export const getMarkdownFiles = () => {
     .map(item => {
       const name = item.path.replace(pagesPath, "")
       return {
-        ...item,
+        path: item.path,
         name
       }
     })
   return markdowns
 }
-export const getMatter = async path => {
+exports.getMatter = async path => {
   const content = await promisify(fs.readFile(path, { encoding: "UTF-8" }))
   console.log(content)
 }
-export const getPagenateList = (page = 1, limit = 10) => {
-  const items = getMarkdownFiles()
+exports.getPagenateList = (page = 1, limit = 10) => {
+  const items = exports.getMarkdownFiles()
   return items.slice((page - 1) * limit, limit)
 }
