@@ -4,8 +4,12 @@ import posed from "react-pose"
 import { useEventCallback } from "rxjs-hooks"
 import { bufferTime, tap, filter } from "rxjs/operators"
 import { merge } from "rxjs"
-import { useClapCallback } from "./useClapCallback";
-import { FadeAnimationProvider, FadeAnimation, useAnimationContext } from "./Animate";
+import { useClapCallback } from "./useClapCallback"
+import {
+  FadeAnimationProvider,
+  FadeAnimation,
+  useAnimationContext
+} from "./Animate"
 
 const PositionFixed = styled.div`
   position: fixed;
@@ -45,11 +49,11 @@ const Animation = posed.div({
 
 export const ClapButtonInternal = ({ title, id, children }) => {
   const onClap = useClapCallback(title, id)
-  const { addAnimation }= useAnimationContext()
-  const [onClick] = useEventCallback(event$ =>
+  const { addAnimation } = useAnimationContext()
+  const [onClick] = useEventCallback<any>(event$ =>
     merge(
       event$.pipe(
-        tap( () => {
+        tap(() => {
           addAnimation()
         })
       ),
@@ -63,7 +67,7 @@ export const ClapButtonInternal = ({ title, id, children }) => {
         })
       )
     )
-  )  
+  )
   return (
     <PositionFixed>
       <Animation>
@@ -76,9 +80,10 @@ export const ClapButtonInternal = ({ title, id, children }) => {
   )
 }
 
-export const ClapButton = (props) => {
-  return <FadeAnimationProvider>
-    <ClapButtonInternal {...props} />
-  </FadeAnimationProvider>
-  
+export const ClapButton = props => {
+  return (
+    <FadeAnimationProvider>
+      <ClapButtonInternal {...props} />
+    </FadeAnimationProvider>
+  )
 }

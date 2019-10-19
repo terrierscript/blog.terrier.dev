@@ -5,7 +5,7 @@ import unified from "unified"
 
 const nl2br = () => {
   const transformer = tree => {
-    visit(tree, (node, index, parent) => {
+    visit(tree, (node: any, index, parent: any) => {
       if (node.type !== "text") return node
       if (parent.tagName !== "p") return node
       const values = node.value.trim().split("\n")

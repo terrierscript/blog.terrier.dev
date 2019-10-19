@@ -11,13 +11,13 @@
     "skipLibCheck": true,
     "noEmit": true,
     "noImplicitAny": false,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "esModuleInterop": true
   },
   "include": [
     "src/**/*",
     "app/**/*",
-    "sandbox/**/*",
+    // "sandbox/**/*",
     "*.js"
   ],
   "exclude": [
