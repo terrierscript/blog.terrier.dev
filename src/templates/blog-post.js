@@ -1,7 +1,7 @@
 import React from "react"
 import { BlogPostTemplate } from "../../app/page/article/Blog"
 import { graphql } from "gatsby"
-import { BlogLayout } from "../provider/BlogLayout"
+import { MainLayoutWithGatsby } from "../provider/MainLayout"
 import { renderHtmlAST } from "../../app/page/article/toHtmlAst"
 import { generatePostFragment } from "../query/query"
 
@@ -9,7 +9,7 @@ const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
   const content = renderHtmlAST(post.htmlAst)
   return (
-    <BlogLayout pageContext={pageContext}>
+    <MainLayoutWithGatsby pageContext={pageContext}>
       <BlogPostTemplate
         content={content}
         tags={
@@ -21,7 +21,7 @@ const BlogPost = ({ data, pageContext }) => {
         description={post.excerpt}
         // id={post.id}
       />
-    </BlogLayout>
+    </MainLayoutWithGatsby>
   )
 }
 

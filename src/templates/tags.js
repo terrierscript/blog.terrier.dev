@@ -3,7 +3,7 @@ import Helmet from "react-helmet"
 import Link from "gatsby-link"
 import { BlogItem } from "../../app/list/Item"
 import { graphql } from "gatsby"
-import { BlogLayout } from "../provider/BlogLayout"
+import { MainLayoutWithGatsby } from "../provider/MainLayout"
 import { generatePostFragment } from "../query/query"
 
 // const PostLinks = ({ posts }) =>
@@ -25,7 +25,7 @@ class TagRoute extends React.Component {
     const tagHeader = `"${tag}”の記事`
     // console.log(posts);
     return (
-      <BlogLayout pageContext={this.props.pageContext}>
+      <MainLayoutWithGatsby pageContext={this.props.pageContext}>
         <section>
           <Helmet title={`${tag} | ${title}`} />
           <div>
@@ -41,7 +41,7 @@ class TagRoute extends React.Component {
             </p>
           </div>
         </section>
-      </BlogLayout>
+      </MainLayoutWithGatsby>
     )
   }
 }

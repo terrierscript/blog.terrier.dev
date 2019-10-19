@@ -13,12 +13,19 @@ const FeedProvider = ({ children }) => {
   )
 }
 
-export const BlogLayout = ({ children, pageContext = {} }) => {
+export const MainLayout = ({ children }) => {
+  return (
+    <FeedProvider>
+      {/* <TagProvider> */}
+      {children}
+      {/* </TagProvider> */}
+    </FeedProvider>
+  )
+}
+export const MainLayoutWithGatsby = ({ children, pageContext = {} }) => {
   return (
     <GatsbyPageContextProvider pageContext={pageContext}>
-      <FeedProvider>
-        <TagProvider>{children}</TagProvider>
-      </FeedProvider>
+      <MainLayout>{children}</MainLayout>
     </GatsbyPageContextProvider>
   )
 }

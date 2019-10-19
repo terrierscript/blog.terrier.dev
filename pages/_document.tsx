@@ -11,6 +11,7 @@ const DocumentInner = () => {
       </Head>
       <body>
         <Main />
+        <NextScript />
       </body>
     </Html>
   )
@@ -22,7 +23,6 @@ class AppDocument extends Document {
     return { ...initialProps }
   }
   render() {
-    console.log("doc")
     return <DocumentInner />
   }
 }
