@@ -11,7 +11,7 @@
     "checkJs": true,
     "sourceMap": true,
     "noImplicitAny": false,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": false,
