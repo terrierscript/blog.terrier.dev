@@ -82,7 +82,7 @@
     "start": "netlify dev --live",
     "dev": "next",
     "build:lambda": "netlify-lambda build functions/src",
-    "build:app": "next build",
+    "build:app": "next build && next export",
     "build": "yarn build:app && yarn build:lambda;",
     "serve-function": "yarn dotenv netlify-lambda serve functions",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
