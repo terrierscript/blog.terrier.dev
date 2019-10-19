@@ -39,7 +39,7 @@ module.exports = {
               ellipsisPhrase: "...",
               useCache: true,
               cacheKey: "gatsby-remark-github-v1",
-              token: process.env.GITHUB_TOKEN
+              token: process.env.GITHUB_EMBED_TOKEN
             }
           },
           {
