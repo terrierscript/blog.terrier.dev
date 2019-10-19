@@ -30,6 +30,7 @@
     "lodash": "^4.17.5",
     "lodash.debounce": "^4.0.8",
     "luxon": "^1.11.3",
+    "markdown-it": "^10.0.0",
     "netlify": "^2.0.0",
     "netlify-cli": "^2.11.15",
     "netlify-lambda": "^1.4.2",
