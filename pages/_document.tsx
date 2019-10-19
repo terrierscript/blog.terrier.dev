@@ -22,6 +22,7 @@ class AppDocument extends Document {
     return { ...initialProps }
   }
   render() {
+    console.log("doc")
     return <DocumentInner />
   }
 }
