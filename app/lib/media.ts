@@ -22,7 +22,7 @@
 //   return acc;
 // }, {});
 
-// export default {
-//   // desktop: media.desktop,
-//   phone: media.phone
-// };
+export default {
+  //   // desktop: media.desktop,
+  //   phone: media.phone
+}

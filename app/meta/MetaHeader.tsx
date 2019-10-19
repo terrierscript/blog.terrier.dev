@@ -68,7 +68,7 @@ export const MetaHeader = props => {
 export const MetaHeaderGatsby = props => {
   return (
     <head>
-      <MetaHeaderInner {...props}></MetaHeaderInner>
+      <MetaHeader {...props}></MetaHeader>
     </head>
   )
 }
