@@ -13,3 +13,4 @@ lambda
 .vscode
 dist/
 .next
+out/
