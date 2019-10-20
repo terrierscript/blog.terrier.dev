@@ -6,6 +6,7 @@ import remarkParse from "remark-parse"
 import remark2react from "remark-react"
 import rehypeParse from "rehype-parse"
 import remarkRehype from "remark-rehype"
+import rehypeRemark from "rehype-remark"
 import rehypePrism from "@mapbox/rehype-prism"
 
 const nl2br = () => {
@@ -38,6 +39,19 @@ const nl2br = () => {
   return transformer
 }
 
+const highlightLang = () => {
+  return tree => {
+    visit(tree, "element", visitor)
+  }
+
+  function visitor(node, index, parent) {
+    if (!parent || parent.tagName !== "pre" || node.tagName !== "code") {
+      return
+    }
+    console.log(node)
+  }
+}
+
 const renderAst = new rehypeReact({
   createElement: React.createElement
 }).Compiler
@@ -56,12 +70,14 @@ export const renderMarkdown = (markdownString: string) => {
   console.log("renderRem")
   const tree = unified()
     .use(remarkParse)
-    // .use(remarkRehype)
+    .use(nl2br)
     // .use(rehypeParse)
-    // .use(rehypePrism, { ignoreMissing: true })
-    // .use(nl2br)
+    .use(remarkRehype)
+    .use(highlightLang)
+    .use(rehypePrism, { ignoreMissing: true })
+    .use(rehypeRemark)
     .use(remark2react)
     .processSync(markdownString)
-  console.log(tree)
+  console.log("t", tree)
   return tree.contents // renderAst(tree)
 }
