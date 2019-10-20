@@ -16,6 +16,7 @@ module.exports = withImages({
       test: /\.md$/,
       use: "raw-loader"
     })
+    config.node = { fs: "empty" }
     return config
   }
   // exportPathMap: async defaultPathMap => {

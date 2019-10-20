@@ -4,7 +4,7 @@ import { getBlogList } from "../src/markdown/module"
 class Index extends Component {
   static async getInitialProps(ctx) {
     const res = await getBlogList({ page: 1, limit: 10 })
-    console.log(res)
+    console.log("xx", res)
     return {}
   }
   render() {

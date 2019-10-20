@@ -1,15 +1,13 @@
 // import fetch from "isomorphic-unfetch"
 import { getPagenateList } from "./files"
 import qs from "querystring"
+const isClient = () => {
+  return typeof fetch === "function"
+}
 export const isomophic = async (apiName, exec) => {
-  // @ts-ignore
-  // console.log(process.browser)
-  // @ts-ignore
-  if (typeof fetch === "function") {
-    console.log("fetch mode")
+  if (isClient()) {
     return await fetch(apiName)
   } else {
-    console.log("exec mode")
     return exec()
     // return async (req, res) => {
     //   const result = await exec(req, res)
@@ -22,15 +20,6 @@ export const isomophic = async (apiName, exec) => {
 
 export const getBlogList = params => {
   return isomophic(`./api/blogs?${qs.stringify(params)}`, () => {
-    console.log("exxx")
-    try {
-      const fs = require("fs")
-      console.log("fss", fs)
-      return getPagenateList(params.page, params.limit)
-      return {}
-    } catch (e) {
-      console.log(e)
-    }
-    return {} //getPagenateList(params.page, params.limit)
+    return getPagenateList(params.page, params.limit)
   })
 }

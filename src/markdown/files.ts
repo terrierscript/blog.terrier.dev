@@ -1,5 +1,3 @@
-console.log("files")
-
 const { promisify } = require("util")
 const fs = require("fs")
 const path = require("path")
@@ -25,12 +23,10 @@ export const getMarkdownFiles = () => {
   return markdowns
 }
 export const getMatter = async path => {
-  // @ts-ignore
-  const content = await promisify(fs.readFile(path, { encoding: "UTF-8" }))
+  const content = await promisify(fs.readFile)(path, { encoding: "UTF-8" })
   console.log(content)
 }
 export const getPagenateList = (page = 1, limit = 10) => {
-  console.log("getPagenateList")
-  // const items = exports.getMarkdownFiles()
-  // return items.slice((page - 1) * limit, limit)
+  const items = getMarkdownFiles().reverse()
+  return items.slice((page - 1) * limit, limit)
 }
