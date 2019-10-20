@@ -8,7 +8,9 @@ import rehypeParse from "rehype-parse"
 import remarkRehype from "remark-rehype"
 import rehypeRemark from "rehype-remark"
 import rehypePrism from "@mapbox/rehype-prism"
-
+import md from "markdown-it"
+import mdPrism from "markdown-it-prism"
+import hljs from "highlight.js"
 const nl2br = () => {
   const transformer = tree => {
     visit(tree, (node: any, index, parent: any) => {
@@ -39,7 +41,7 @@ const nl2br = () => {
   return transformer
 }
 
-const highlightLang = () => {
+export const remarkHighlightLangClass = () => {
   console.log("hhll")
   return tree => {
     console.log(tree)
@@ -47,6 +49,12 @@ const highlightLang = () => {
   }
 
   function visitor(node, index, parent) {
+    console.log(node)
+    node.data = {
+      hProperties: {
+        className: [`language-${node.lang}`]
+      }
+    }
     console.log(node)
     // if (!parent || parent.tagName !== "pre" || node.tagName !== "code") {
     //   return
@@ -68,11 +76,30 @@ export const renderHtmlAST = htmlAst => {
   return renderAst(tree)
 }
 
+// export const renderMarkdown = (markdownString: string) => {
+//   const converter = md({
+//     html: true,
+//     linkify: true,
+//     typographer: true,
+//     highlight: function(str, lang) {
+//       if (lang && hljs.getLanguage(lang)) {
+//         try {
+//           return hljs.highlight(lang, str).value
+//         } catch (__) {}
+//       }
+
+//       return "" // use external default escaping
+//     }
+//   })
+//   // .use(mdPrism, { defaultLanguage: "js" })
+//   return converter.render(markdownString)
+// }
+
 export const renderMarkdown = (markdownString: string) => {
   console.log("renderRem")
   const tree = unified()
     .use(remarkParse)
-    .use(highlightLang)
+    .use(remarkHighlightLangClass)
     .use(remarkRehype)
     .use(nl2br)
     .use(rehypePrism, { ignoreMissing: true })

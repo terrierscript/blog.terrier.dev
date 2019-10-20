@@ -1,4 +1,4 @@
-var vfile = require("to-vfile")
+// const vfile = require("to-vfile")
 const remark = require("remark")
 const rehype = require("rehype")
 const unified = require("unified")
