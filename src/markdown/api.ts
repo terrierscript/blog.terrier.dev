@@ -22,7 +22,17 @@ export const getPagenateList = async ({ page = 1, limit = 10 }) => {
   )
   return converted
 }
-export const getItem = async ({ slug }) => {
+
+export type BlogItem = {
+  content: string
+  data: {
+    data: string
+    published: boolean
+    tags: string[]
+    title: string
+  }
+}
+export const getItem = async ({ slug }): Promise<BlogItem> => {
   const filepath = path.resolve(contentPagePath, slug)
   return getMatter(filepath)
 }

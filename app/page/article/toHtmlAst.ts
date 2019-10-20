@@ -2,6 +2,11 @@ import rehypeReact from "rehype-react"
 import React from "react"
 import visit from "unist-util-visit"
 import unified from "unified"
+import remarkParse from "remark-parse"
+import remark2react from "remark-react"
+import rehypeParse from "rehype-parse"
+import remarkRehype from "remark-rehype"
+import rehypePrism from "@mapbox/rehype-prism"
 
 const nl2br = () => {
   const transformer = tree => {
@@ -41,7 +46,22 @@ export const renderHtmlAST = htmlAst => {
   // const a = processor.processSync(htmlAst)
   // console.log(a)
   const tree = unified()
+    .use(remarkParse)
     .use(nl2br)
     .runSync(htmlAst)
   return renderAst(tree)
+}
+
+export const renderMarkdown = (markdownString: string) => {
+  console.log("renderRem")
+  const tree = unified()
+    .use(remarkParse)
+    // .use(remarkRehype)
+    // .use(rehypeParse)
+    // .use(rehypePrism, { ignoreMissing: true })
+    // .use(nl2br)
+    .use(remark2react)
+    .processSync(markdownString)
+  console.log(tree)
+  return tree.contents // renderAst(tree)
 }
