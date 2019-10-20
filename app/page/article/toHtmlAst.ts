@@ -40,15 +40,18 @@ const nl2br = () => {
 }
 
 const highlightLang = () => {
+  console.log("hhll")
   return tree => {
-    visit(tree, "element", visitor)
+    console.log(tree)
+    visit(tree, "code", visitor)
   }
 
   function visitor(node, index, parent) {
-    if (!parent || parent.tagName !== "pre" || node.tagName !== "code") {
-      return
-    }
     console.log(node)
+    // if (!parent || parent.tagName !== "pre" || node.tagName !== "code") {
+    //   return
+    // }
+    // console.log(node)
   }
 }
 
@@ -60,7 +63,6 @@ export const renderHtmlAST = htmlAst => {
   // const a = processor.processSync(htmlAst)
   // console.log(a)
   const tree = unified()
-    .use(remarkParse)
     .use(nl2br)
     .runSync(htmlAst)
   return renderAst(tree)
@@ -70,10 +72,9 @@ export const renderMarkdown = (markdownString: string) => {
   console.log("renderRem")
   const tree = unified()
     .use(remarkParse)
-    .use(nl2br)
-    // .use(rehypeParse)
-    .use(remarkRehype)
     .use(highlightLang)
+    .use(remarkRehype)
+    .use(nl2br)
     .use(rehypePrism, { ignoreMissing: true })
     .use(rehypeRemark)
     .use(remark2react)
