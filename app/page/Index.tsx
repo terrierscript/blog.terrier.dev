@@ -25,7 +25,13 @@ const Paginate = ({ previousPagePath, nextPagePath }) => {
   )
 }
 
-export const Index: FC<{ posts: PostWrap[] }> = ({ posts }) => {
+export type PagenatePath = {
+  next: string
+  prev: string
+}
+export const Index: FC<{ posts: PostWrap[]; pagePaths?: PagenatePath }> = ({
+  posts
+}) => {
   const pageContext = usePageContext() // TODO
   return (
     <>
