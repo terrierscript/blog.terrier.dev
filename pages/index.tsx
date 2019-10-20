@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { getBlogList } from "../src/markdown/module"
+import { getBlogList } from "../src/markdown/isomophic"
 import { Index } from "../app/page/Index"
 import { PostWrap } from "../app/list/Item"
 

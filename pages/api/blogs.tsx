@@ -1,15 +1,6 @@
-// import { getBlogList } from "../../src/markdown/module"
-import { NextApiRequest, NextApiResponse } from "next"
-import { getPagenateList } from "../../src/markdown/files"
+import { response } from "../../src/markdown/isomophic"
+import { getPagenateList } from "../../src/markdown/api"
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
-  const result = getPagenateList(
-    Number(req.query.page),
-    Number(req.query.limit)
-  )
-  // getBlogList(req.query).then(result => {
-  res.setHeader("Content-Type", "application/json")
-  res.statusCode = 200
-  res.end(JSON.stringify(result))
-  // })
+export default (req, res) => {
+  response(req, res, getPagenateList)
 }
