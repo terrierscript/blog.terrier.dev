@@ -5,7 +5,6 @@ const path = require("path")
 const klawSync = require("klaw-sync")
 const grayMatter = require("gray-matter")
 
-const readFile = promisify(fs.readFile)
 type File = {
   path: string
   name: string
@@ -31,6 +30,8 @@ export const getMarkdownFiles = () => {
 }
 
 export const getMatter = async (filepath: string) => {
+  const readFile = promisify(fs.readFile)
+
   const content = await readFile(filepath, { encoding: "UTF-8" })
   return grayMatter(content)
 }
