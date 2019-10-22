@@ -3,10 +3,10 @@ const withImages = require("next-images")
 const { getMarkdownFiles } = require("./src/markdown/files")
 
 module.exports = withImages({
-  publicRuntimeConfig: {
-    conf: "ping"
-    // files: getMarkdownFiles()
-  },
+  // publicRuntimeConfig: {
+  //   conf: "ping"
+  //   // files: getMarkdownFiles()
+  // },
   webpack: config => {
     config.plugins = config.plugins.filter(plugin => {
       if (plugin.constructor.name === "ForkTsCheckerWebpackPlugin") return false
