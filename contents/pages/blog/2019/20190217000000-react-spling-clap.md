@@ -30,15 +30,108 @@ react-springのサンプルコードはrefsを使っていたりchildren as func
 
 AnimationとContextとラップする部分をこんな感じで書く。
 
-GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/Animate.tsx typescript 10-34 GITHUB-EMBED
+https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/Animate.tsx#L10-L34 
 
+```tsx
+const AnimationContext = createContext({
+  animations: [],
+  addAnimation: () => {},
+  completeAnimation: (i) => {}
+})
+
+export const useAnimationContext = () => {
+  return useContext(AnimationContext)
+}
+
+export const useAnimationState = () => {
+  const [animations, setAnimations] = useState([])
+  const addAnimation = useCallback( () => {
+    // 重複しないユニークキーを生成する。ホントはuuidとか使うべき
+    const key = Math.random().toString() 
+    setAnimations( (arr) => [...arr, key])
+  },[])
+  // animation完了時
+  const completeAnimation = (complete) => {
+    // completeしたものを削除。filter関数だとパフォーマンスは良くないけど気にしない。
+    setAnimations( (arr) => arr.filter( key => key !== complete))
+  }
+
+  return { animations, addAnimation, completeAnimation }
+}
+```
 そして実際のアニメーション部分はこんな具合にする
 
-GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/Animate.tsx typescript 36-56 GITHUB-EMBED
+https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/Animate.tsx#L36-L56 
+
+```tsx
+export const FadeAnimation = ({children}) => {
+  const { animations, completeAnimation } = useAnimationContext()
+  const [_, set] = useState(false)
+  const transitions = useTransition(animations, i => i, {
+    from: { opacity: 0, transform: "translateY(-50px) scale(1)"},
+    enter: { opacity: 1, transform: "translateY(-180px) scale(1.2)"},
+    leave:  { opacity: 0, transform: "translateY(-200px) scale(0.5)"},
+    // 完了処理
+    onRest: (key) => {
+      completeAnimation(key)
+      set(false)
+    }
+  })
+  useEffect( () => {
+    console.log("SET")
+    set(true)
+  }, [])
+  return transitions.map(({ item, key, props }) => {
+    return item && <Anim style={props} key={key}>{children}</Anim>
+  })
+}
+```
 
 アニメーションの利用側はこういう具合にする。
 
-GITHUB-EMBED https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/ClapButton.tsx typescript 46-84 GITHUB-EMBED
+https://github.com/terrierscript/snippet.terrierscript.com/blob/8ec039bf2a0dda2e81b4dc15e39954de90fadbd8/src/app/article/clap/ClapButton.tsx#L46-L84 
+
+```tsx
+export const ClapButtonInternal = ({ title, id, children }) => {
+  const onClap = useClapCallback(title, id)
+  const { addAnimation }= useAnimationContext()
+  const [onClick] = useEventCallback(event$ =>
+    merge(
+      event$.pipe(
+        tap( () => {
+          addAnimation()
+        })
+      ),
+      event$.pipe(
+        bufferTime(5000),
+        filter(events => events.length > 0),
+        tap(events => {
+          const count = events.length
+          console.log(count)
+          onClap(count)
+        })
+      )
+    )
+  )  
+  return (
+    <PositionFixed>
+      <Animation>
+        <Button onClick={onClick}>{children}</Button>
+      </Animation>
+      <FadeAnimation>
+        <Clap>{children}</Clap>
+      </FadeAnimation>
+    </PositionFixed>
+  )
+}
+
+export const ClapButton = (props) => {
+  return <FadeAnimationProvider>
+    <ClapButtonInternal {...props} />
+  </FadeAnimationProvider>
+  
+}
+```
 
 Rxでごちゃごちゃしてしまっているが、もしRxがなければこんな事をやっているだけになる
 
