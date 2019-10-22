@@ -41,7 +41,6 @@ module.exports = {
       }
     },
     "gatsby-plugin-twitter",
-    "gatsby-plugin-feed",
     "gatsby-plugin-styled-components",
     // "gatsby-plugin-react-css-modules",
     "gatsby-plugin-sitemap",
