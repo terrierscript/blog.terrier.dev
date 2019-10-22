@@ -27,29 +27,29 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          "gatsby-remark-component",
-          {
-            resolve: "gatsby-remark-github",
-            options: {
-              marker: "GITHUB-EMBED",
-              insertEllipsisComments: true,
-              ellipsisPhrase: "...",
-              useCache: true,
-              cacheKey: "gatsby-remark-github-v1",
-              token: process.env.GITHUB_EMBED_TOKEN
-            }
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              noInlineHighlight: true
-            }
-          }
-        ]
-      }
+      resolve: "gatsby-transformer-remark"
+      // options: {
+      //   plugins: [
+      //     "gatsby-remark-component",
+      //     {
+      //       resolve: "gatsby-remark-github",
+      //       options: {
+      //         marker: "GITHUB-EMBED",
+      //         insertEllipsisComments: true,
+      //         ellipsisPhrase: "...",
+      //         useCache: true,
+      //         cacheKey: "gatsby-remark-github-v1",
+      //         token: process.env.GITHUB_EMBED_TOKEN
+      //       }
+      //     },
+      //     {
+      //       resolve: `gatsby-remark-prismjs`,
+      //       options: {
+      //         noInlineHighlight: true
+      //       }
+      //     }
+      //   ]
+      // }
     },
     "gatsby-plugin-twitter",
     "gatsby-plugin-feed",

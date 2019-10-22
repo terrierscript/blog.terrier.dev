@@ -9,8 +9,8 @@ export const generatePostFragment = () => {
       fields {
         slug
       }
-      html
-      htmlAst
+      # html
+      # htmlAst
       fileAbsolutePath
       frontmatter {
         title
