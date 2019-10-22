@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from "react"
 import { BlogPostTemplate } from "../../app/page/article/Blog"
 import { graphql } from "gatsby"

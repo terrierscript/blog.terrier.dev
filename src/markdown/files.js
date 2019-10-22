@@ -3,17 +3,18 @@ const fs = require("fs")
 const path = require("path")
 
 const klawSync = require("klaw-sync")
-const grayMatter = require("gray-matter")
+const { contentPagePath } = require("./contentConfig")
+// type File = {
+//   path: string
+//   name: string
+// }
 
-type File = {
-  path: string
-  name: string
-}
-export const contentPagePath = path.resolve("contents/pages/blog")
-
+/**
+ * @returns { {path: string, name: string}[]}
+ */
 export const getMarkdownFiles = () => {
   console.log("getMarkdownFiles")
-  const files: File[] = klawSync(contentPagePath)
+  const files = klawSync(contentPagePath)
   const markdowns = files
     .filter(p => {
       const ext = path.extname(p.path)
@@ -29,9 +30,7 @@ export const getMarkdownFiles = () => {
   return markdowns
 }
 
-export const getMatter = async (filepath: string) => {
-  const readFile = promisify(fs.readFile)
-
-  const content = await readFile(filepath, { encoding: "UTF-8" })
-  return grayMatter(content)
+export const getFile = async filepath => {
+  const rf = promisify(fs.readFile)
+  return await rf(filepath, { encoding: "UTF-8" })
 }

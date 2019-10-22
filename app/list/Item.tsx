@@ -19,9 +19,9 @@ const Item = styled.div`
 export type PostListItem = {
   id: string
   frontmatter: {
-    date: string
-    title: string
-    tags: string[]
+    date?: string
+    title?: string
+    tags?: string[]
   }
   fields: {
     slug: string
