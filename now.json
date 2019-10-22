@@ -3,7 +3,8 @@
     {
       "src": "/feed/qiita",
       "dest": "https://qiita.com/terrierscript/feed.atom",
-      "status": 200
+      "status": 200,
+      "continue": true
     },
     {
       "src": "/feed/devto",
@@ -20,5 +21,8 @@
       "dest": "https://scrapbox.io/api/feed/terrierscript/",
       "status": 200
     }
+  ],
+  "regions": [
+    "hnd1"
   ]
 }
