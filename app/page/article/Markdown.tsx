@@ -12,7 +12,6 @@ const CodeBlock = ({ value, language }) => {
 }
 
 export const RawMarkdown: FC<{ markdown: string }> = ({ markdown }) => {
-  console.log(markdown)
   return (
     <ReactMarkdown
       source={markdown}
