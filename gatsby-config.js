@@ -28,17 +28,6 @@ module.exports = {
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark"
-      // options: {
-      //   plugins: [
-      //     "gatsby-remark-component",
-      //     {
-      //       resolve: `gatsby-remark-prismjs`,
-      //       options: {
-      //         noInlineHighlight: true
-      //       }
-      //     }
-      //   ]
-      // }
     },
     "gatsby-plugin-twitter",
     "gatsby-plugin-feed",
