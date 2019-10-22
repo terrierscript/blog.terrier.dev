@@ -1,7 +1,6 @@
 const { promisify } = require("util")
 const fs = require("fs")
 const path = require("path")
-
 const klawSync = require("klaw-sync")
 const { contentPagePath } = require("./contentConfig")
 // type File = {
@@ -12,7 +11,7 @@ const { contentPagePath } = require("./contentConfig")
 /**
  * @returns { {path: string, name: string}[]}
  */
-export const getMarkdownFiles = () => {
+module.exports.getMarkdownFiles = () => {
   console.log("getMarkdownFiles")
   const files = klawSync(contentPagePath)
   const markdowns = files
@@ -30,7 +29,7 @@ export const getMarkdownFiles = () => {
   return markdowns
 }
 
-export const getFile = async filepath => {
+module.exports.getFile = async filepath => {
   const rf = promisify(fs.readFile)
   return await rf(filepath, { encoding: "UTF-8" })
 }

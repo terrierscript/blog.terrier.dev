@@ -1,6 +1,6 @@
 // @ts-nocheck
 const withImages = require("next-images")
-const { getMarkdownFiles } = require("./src/markdown/files")
+const { getMarkdownFiles } = require("./src/markdown/files.js")
 
 module.exports = withImages({
   publicRuntimeConfig: {
