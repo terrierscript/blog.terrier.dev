@@ -8,6 +8,7 @@ import { Tag } from "../../component/Tag"
 import { Layout } from "../../layout/Layout"
 import AdSense from "react-adsense"
 import { ArticleFooter } from "./ArticleFooter"
+import { RawMarkdown } from "./Markdown"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -57,7 +58,7 @@ const Date = styled.small`
   color: gray;
   font-size: 12px;
 `
-export const BlogArticle = ({ content, title, tags, date }) => (
+export const BlogArticle = ({ content, title, tags, date, markdown }) => (
   <BlogArticleWrapper>
     <Date>posted: {date}</Date>
     <Title>{title}</Title>
@@ -66,6 +67,7 @@ export const BlogArticle = ({ content, title, tags, date }) => (
     </TagListWrapper>
     <ArticleWrapper>
       <HTMLContent content={content} />
+      <RawMarkdown markdown={markdown} />
     </ArticleWrapper>
   </BlogArticleWrapper>
 )
@@ -83,6 +85,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   date,
+  rawMarkdown = null,
   fileAbsolutePath = null
 }) => {
   return (
@@ -101,7 +104,13 @@ export const BlogPostTemplate = ({
           👍
         </ClapButton> */}
 
-        <BlogArticle title={title} content={content} tags={tags} date={date} />
+        <BlogArticle
+          title={title}
+          content={content}
+          tags={tags}
+          date={date}
+          markdown={rawMarkdown}
+        />
         {/* TODO fileAbsolutePathなんとかしたい */}
         <ArticleFooter fileAbsolutePath={fileAbsolutePath}></ArticleFooter>
         <AdSense.Google

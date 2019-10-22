@@ -5,6 +5,7 @@ export const generatePostFragment = () => {
     fragment Post on MarkdownRemark {
       excerpt(pruneLength: 400)
       id
+      rawMarkdownBody
       fields {
         slug
       }
