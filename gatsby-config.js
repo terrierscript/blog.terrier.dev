@@ -30,7 +30,6 @@ module.exports = {
       resolve: "gatsby-transformer-remark"
     },
     "gatsby-plugin-twitter",
-    "gatsby-plugin-feed",
     "gatsby-plugin-styled-components",
     // "gatsby-plugin-react-css-modules",
     "gatsby-plugin-sitemap",
