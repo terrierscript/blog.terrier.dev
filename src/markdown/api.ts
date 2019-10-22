@@ -1,6 +1,6 @@
 import path from "path"
 import { PostWrap } from "../../app/list/Item"
-import { getMarkdownFiles, getFile } from "./files.mjs/index.js"
+import { getMarkdownFiles, getFile } from "./files"
 import { contentPagePath } from "./contentConfig"
 import grayMatter from "gray-matter"
 
