@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "src": "/feed/qiita",
+      "dest": "https://qiita.com/terrierscript/feed.atom",
+      "status": 200
+    },
+    {
+      "src": "/feed/devto",
+      "dest": "https://dev.to/feed/terrierscript",
+      "status": 200
+    },
+    {
+      "src": "/feed/medium",
+      "dest": "https://medium.com/feed/@terrierscript",
+      "status": 200
+    },
+    {
+      "src": "/feed/scrapbox",
+      "dest": "https://scrapbox.io/api/feed/terrierscript/",
+      "status": 200
+    }
+  ]
+}
