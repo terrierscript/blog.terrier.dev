@@ -13,7 +13,7 @@ export const getPagenateList = async ({ page = 1, limit = 10 }) => {
           id: item.name,
           frontmatter: matter.data,
           fields: {
-            slug: item.name
+            slug: `blog${item.name}`
           }
         }
       }

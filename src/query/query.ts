@@ -5,11 +5,12 @@ export const generatePostFragment = () => {
     fragment Post on MarkdownRemark {
       excerpt(pruneLength: 400)
       id
+      rawMarkdownBody
       fields {
         slug
       }
-      html
-      htmlAst
+      # html
+      # htmlAst
       fileAbsolutePath
       frontmatter {
         title

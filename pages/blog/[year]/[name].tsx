@@ -30,15 +30,16 @@ const Post = params => {
   const { blogPost } = params
   const { content, data } = blogPost
   // const ast = remark().parse(content)
-  const cnt = renderMarkdown(content)
+  // const cnt = renderMarkdown(content)
 
-  console.log("p", cnt)
+  // console.log("p", cnt)
   return (
     <BlogPostTemplate
-      content={cnt}
+      // content={cnt}
       title={data.title}
       date={data.date}
       tags={data.tags}
+      rawMarkdown={content}
       description={""}
     />
   )
