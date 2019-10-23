@@ -10,6 +10,7 @@ const buildPayload = body => {
     text: `${title} が ${count} 回clapされました👏`
   }
 }
+// TODO: to now.sh api
 exports.handler = function(event, context, callback) {
   console.log(event)
   // if (event.httpMethod === "OPTIONS") {

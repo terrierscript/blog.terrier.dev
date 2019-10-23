@@ -29,6 +29,6 @@ const avater =
 
 export const Avater = ({ size = 40 }) => (
   <AvaterContainer size={size}>
-    <Img src={avater} size={size} />
+    <Img src={avater} size={size} alt="icon" />
   </AvaterContainer>
 )
