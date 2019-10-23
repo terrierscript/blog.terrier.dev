@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/blog/(?<year>201[89])(?<splat>.*)",
-      "to": "/blog/$year/$year$splat",
+      "dest": "/blog/$year/$year$splat",
       "status": 301
     },
     {
