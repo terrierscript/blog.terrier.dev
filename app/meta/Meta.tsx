@@ -1,10 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
-// import { generateFontUrl } from "./font";
-// import { baseStyles } from "./style";
-// import "highlight.js/styles/dark.css";
-// const r = require("prismjs/themes/prism-okaidia.css");
-// console.warn(r);
+
 import { createGlobalStyle, css } from "styled-components"
 import { Fonts } from "./Fonts"
 

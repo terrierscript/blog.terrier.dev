@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { getVersion, logVersion } from "../../src/version"
 
 let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
@@ -16,6 +17,10 @@ if (process.env.NODE_ENV === "production") {
 
 export const MetaHeader = props => {
   let css
+  useEffect(() => {
+    logVersion()
+  }, [])
+  const version = getVersion()
 
   if (process.env.NODE_ENV === "production") {
     css = (
@@ -58,6 +63,9 @@ export const MetaHeader = props => {
       />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {Object.entries(version).map(([k, v]) => (
+        <meta name={`x-site-${k}`} content={v} />
+      ))}
       {props.headComponents}
       <link rel="shortcut icon" />
       {css}

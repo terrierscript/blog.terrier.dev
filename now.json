@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/blog/(?<year>201[89])?(?<splat>[01].+)",
+      "headers": {
+        "Location": "/blog/$year/$year$splat"
+      },
+      "status": 301
+    },
+    {
+      "src": "/feed/qiita_org",
+      "dest": "https://qiita.com/terrierscript/feed.atom",
+      "status": 200,
+      "headers": {
+        "Referer": ""
+      },
+      "continue": false
+    },
+    {
+      "src": "/feed/qiita",
+      "dest": "/api/feed/qiita",
+      "status": 200
+    },
+    {
+      "src": "/feed/devto",
+      "dest": "https://dev.to/feed/terrierscript",
+      "status": 200
+    },
+    {
+      "src": "/feed/medium",
+      "dest": "https://medium.com/feed/@terrierscript",
+      "status": 200
+    },
+    {
+      "src": "/feed/scrapbox",
+      "dest": "https://scrapbox.io/api/feed/terrierscript/",
+      "status": 200
+    },
+    {
+      "src": "/feed/note",
+      "dest": "https://note.mu/terrierscript/rss",
+      "status": 200
+    }
+  ],
+  "regions": [
+    "hnd1"
+  ],
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+}
