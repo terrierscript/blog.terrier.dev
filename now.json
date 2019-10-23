@@ -1,10 +1,10 @@
 {
   "version": 2,
   "alias": [
-    "now.terrier.dev",
+    "terrier.now.sh",
     "www.terrier.dev",
-    "terrier.dev",
-    "terrier.now.sh"
+    "now.terrier.dev",
+    "terrier.dev"
   ],
   "routes": [
     {
