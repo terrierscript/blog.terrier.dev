@@ -33,6 +33,11 @@
       "src": "/feed/scrapbox",
       "dest": "https://scrapbox.io/api/feed/terrierscript/",
       "status": 200
+    },
+    {
+      "src": "/feed/note",
+      "dest": "https://note.mu/terrierscript/rss",
+      "status": 200
     }
   ],
   "regions": [
