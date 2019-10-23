@@ -1,5 +1,6 @@
-import Link from "gatsby-link"
-import React from "react"
+import Link from "next/link"
+
+import React, { FC } from "react"
 import styled from "styled-components"
 // import { BlogArticleCompact } from "../article/Blog"
 import { headerFont } from "../utils/typography"
@@ -15,13 +16,25 @@ const Item = styled.div`
   /* border-bottom: 1px solid #e3e3e3; */
 `
 
-export const BlogItem = ({ post }) => {
+export type PostListItem = {
+  id: string
+  frontmatter: {
+    date?: string
+    title?: string
+    tags?: string[]
+  }
+  fields: {
+    slug: string
+  }
+}
+
+export const BlogItem: FC<{ post: PostListItem }> = ({ post }) => {
   return (
     <section>
       <Item>
         <small>{post.frontmatter.date}</small>
         <Title>
-          <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+          <Link href={post.fields.slug}>{post.frontmatter.title}</Link>
           <div>
             {post.frontmatter.tags.map((tag: string) => {
               return <Tag tag={tag} key={tag} />
@@ -37,7 +50,11 @@ const BlogListGrid = styled.div`
   display: grid;
   grid-gap: 2em;
 `
-export const BlogList = ({ posts }) => {
+
+export type PostWrap = {
+  node: PostListItem
+}
+export const BlogList: FC<{ posts: PostWrap[] }> = ({ posts }) => {
   return (
     <BlogListGrid>
       {posts.map(({ node: post }) => (

@@ -8,7 +8,7 @@ export const SiteContext = createContext({
 
 export const DefaultLink = props => <a {...props} />
 
-type Tag = {
+export type Tag = {
   fieldValue: string
   totalCount: number
 }

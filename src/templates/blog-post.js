@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from "react"
 import { BlogPostTemplate } from "../../app/page/article/Blog"
 import { graphql } from "gatsby"
@@ -7,14 +9,15 @@ import { generatePostFragment } from "../query/query"
 
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
-  const content = renderHtmlAST(post.htmlAst)
+  // const content = renderHtmlAST(post.htmlAst)
   return (
     <MainLayoutWithGatsby pageContext={pageContext}>
       <BlogPostTemplate
-        content={content}
+        // content={content}
         tags={
           post.frontmatter.tags // description={post.frontmatter.description}
         }
+        rawMarkdown={post.rawMarkdownBody}
         date={post.frontmatter.date}
         title={post.frontmatter.title}
         fileAbsolutePath={post.fileAbsolutePath}

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react"
 import { graphql } from "gatsby"
 import { generatePostFragment } from "../query/query"

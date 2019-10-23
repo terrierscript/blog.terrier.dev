@@ -9,9 +9,9 @@ if (process.env.NODE_ENV === "production") {
       // require("!raw-loader!../public/styles.css")
       // require("!raw-loader!prism-themes/themes/prism-atom-dark.css")
     ].join("")
-    console.log("inline", inlinedStyles)
+    // console.log("inline", inlinedStyles)
   } catch (e) {
-    console.log("inline", e)
+    // console.log("inline", e)
   }
 }
 
@@ -51,7 +51,7 @@ export const MetaHeader = props => {
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {Object.entries(version).map(([k, v]) => (
-        <meta name={`x-site-${k}`} content={v} />
+        <meta key={k} name={`x-site-${k}`} content={v} />
       ))}
       {/* <link
         rel="stylesheet" //href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
