@@ -1,7 +1,9 @@
 // @ts-nocheckss
 import React from "react"
 import { MetaHeader } from "../app/meta/MetaHeader"
+import { logVersion } from "./version"
 
+logVersion()
 export default class HTML extends React.Component {
   render() {
     return (

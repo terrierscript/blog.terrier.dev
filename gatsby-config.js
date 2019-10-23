@@ -46,6 +46,17 @@ module.exports = {
         start_url: "/",
         icon: "src/icon/icon.png"
       }
+    },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: [
+          "NOW_GITHUB_COMMIT_SHA",
+          "COMMIT_REF",
+          "NOW_BUILDER",
+          "NETLIFY"
+        ]
+      }
     }
   ]
 }
