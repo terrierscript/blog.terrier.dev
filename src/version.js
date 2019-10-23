@@ -1,4 +1,5 @@
 const getType = () => {
+  console.log(process.env)
   if (process.env.NOW_REGION) {
     return "now.sh"
   }
