@@ -16,9 +16,8 @@
     },
     {
       "src": "/feed/qiita2",
-      "dest": "https://qiita.com/terrierscript",
-      "status": 200,
-      "continue": false
+      "dest": "https://qiita.com/",
+      "status": 200
     },
     {
       "src": "/feed/devto",
