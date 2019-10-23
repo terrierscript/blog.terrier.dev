@@ -7,6 +7,7 @@ const getType = () => {
   }
   return "unknown"
 }
+
 export const getVersion = () => {
   return {
     env: process.env.NODE_ENV,
