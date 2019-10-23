@@ -1,10 +1,11 @@
 {
+  "version": 2,
   "routes": [
     {
       "src": "/feed/qiita",
       "dest": "https://qiita.com/terrierscript/feed.atom",
       "status": 200,
-      "continue": true
+      "continue": false
     },
     {
       "src": "/feed/devto",
