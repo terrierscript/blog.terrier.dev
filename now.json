@@ -45,5 +45,10 @@
   ],
   "regions": [
     "hnd1"
-  ]
+  ],
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
 }
