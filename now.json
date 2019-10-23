@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "alias": [
-    "now.terrier.dev",
-    "www.terrier.dev",
-    "terrier.now.sh"
-  ],
   "routes": [
     {
       "src": "/blog/(?<year>201[89])?(?<splat>[01].+)",
