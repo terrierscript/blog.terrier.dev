@@ -3,8 +3,7 @@
   "alias": [
     "now.terrier.dev",
     "www.terrier.dev",
-    "terrier.now.sh",
-    "terrier.dev"
+    "terrier.now.sh"
   ],
   "routes": [
     {
