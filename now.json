@@ -9,14 +9,14 @@
       "status": 301
     },
     {
-      "src": "/feed/qiita",
+      "src": "/feed/qiita_org",
       "dest": "https://qiita.com/terrierscript/feed.atom",
       "status": 200,
       "continue": false
     },
     {
-      "src": "/feed/qiita2",
-      "dest": "https://qiita.com/",
+      "src": "/feed/qiita",
+      "dest": "https://terrier.dev/feed/qiita",
       "status": 200
     },
     {
