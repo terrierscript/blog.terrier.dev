@@ -63,7 +63,7 @@ export const MetaHeader = props => {
       />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {version.map(([k, v]) => (
+      {Object.entries(version).map(([k, v]) => (
         <meta name={`x-site-${k}`} content={v} />
       ))}
       {props.headComponents}
