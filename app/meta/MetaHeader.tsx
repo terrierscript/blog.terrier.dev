@@ -1,5 +1,5 @@
-import React from "react"
-import { getVersion } from "../../src/version"
+import React, { useEffect } from "react"
+import { getVersion, logVersion } from "../../src/version"
 
 let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
@@ -17,6 +17,9 @@ if (process.env.NODE_ENV === "production") {
 
 export const MetaHeader = props => {
   let css
+  useEffect(() => {
+    logVersion()
+  }, [])
   const version = getVersion()
 
   if (process.env.NODE_ENV === "production") {
