@@ -18,8 +18,8 @@ module.exports = [
     production: "/feed/medium",
     origin: "https://medium.com/feed/@terrierscript",
     dev: null,
-    bgColor: "#fff",
-    color: "#000"
+    color: "#fff",
+    bgColor: "#000"
   },
   {
     media: "Scrapbox",
@@ -33,7 +33,8 @@ module.exports = [
     media: "note",
     production: "/feed/note",
     origin: "https://note.mu/terrierscript/rss",
-    dev: null,
+    dev: "https://note.mu/terrierscript/rss",
+    // dev: null,
     bgColor: "#2cb696",
     color: "#fff"
   }
