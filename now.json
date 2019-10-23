@@ -3,7 +3,9 @@
   "routes": [
     {
       "src": "/blog/(?<year>201[89])(?<splat>.*)",
-      "dest": "/blog/$year/$year$splat",
+      "headers": {
+        "Location": "/blog/$year/$year$splat"
+      },
       "status": 301
     },
     {
@@ -29,6 +31,6 @@
     }
   ],
   "regions": [
-    "arn1"
+    "hnd1"
   ]
 }
