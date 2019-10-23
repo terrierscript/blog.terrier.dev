@@ -1,6 +1,6 @@
 const getType = () => {
   console.log(process.env)
-  if (process.env.NOW_REGION) {
+  if (process.env.NOW_BUILDER) {
     return "now.sh"
   }
   if (process.env.NETLIFY) {
