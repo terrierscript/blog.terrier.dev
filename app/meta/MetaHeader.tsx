@@ -63,7 +63,9 @@ export const MetaHeader = props => {
       />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="x-version" content={version} />
+      {version.map(([k, v]) => (
+        <meta name={`x-site-${k}`} content={v} />
+      ))}
       {props.headComponents}
       <link rel="shortcut icon" />
       {css}
