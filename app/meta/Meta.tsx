@@ -1,10 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
-// import { generateFontUrl } from "./font";
-// import { baseStyles } from "./style";
-// import "highlight.js/styles/dark.css";
-// const r = require("prismjs/themes/prism-okaidia.css");
-// console.warn(r);
+
 import { createGlobalStyle, css } from "styled-components"
 import { Fonts } from "./Fonts"
 
@@ -33,10 +29,19 @@ const GlobalStyle = createGlobalStyle`
 
 export const Meta = () => {
   // baseStyles();
+
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Helmet title="terrier.dev 🐶 " />
+      <Helmet title="terrier.dev 🐶 ">
+        <meta name="description" content={"Author: terrierscript"} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@terrierscript" />
+        <meta
+          name="og:image"
+          content="https://ja.gravatar.com/userimage/90616865/8a8d3f96f2d0be4c04607273030e1e17.png"
+        />
+      </Helmet>
       <Fonts />
     </React.Fragment>
   )

@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { getVersion, logVersion } from "../../src/version"
 
 let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
@@ -15,7 +16,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 export const MetaHeader = props => {
+  const version = getVersion()
   let css
+  useEffect(() => {
+    logVersion()
+  }, [])
 
   if (process.env.NODE_ENV === "production") {
     css = (
@@ -36,7 +41,6 @@ export const MetaHeader = props => {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.6/build/styles/atom-one-dark.min.css"
       />
-
       {/* <link
         rel="stylesheet"
         href="https://unpkg.com/prism-themes@1.2.0/themes/prism-hopscotch.css"
@@ -45,19 +49,14 @@ export const MetaHeader = props => {
         rel="stylesheet"
         href="https://unpkg.com/prismjs@1.17.1/themes/prism-tomorrow.css"
       />
-
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {Object.entries(version).map(([k, v]) => (
+        <meta name={`x-site-${k}`} content={v} />
+      ))}
       {/* <link
         rel="stylesheet" //href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
         href="https://unpkg.com/prism-github@1.1.0/prism-github.css"
       /> */}
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@terrierscript" />
-      <meta
-        name="og:image"
-        content="https://ja.gravatar.com/userimage/90616865/8a8d3f96f2d0be4c04607273030e1e17.png"
-      />
-
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {props.headComponents}
       <link rel="shortcut icon" />
       {css}
