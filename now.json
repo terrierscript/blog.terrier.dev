@@ -2,7 +2,7 @@
   "version": 2,
   "routes": [
     {
-      "src": "/blog/(?<year>201[89])(?<splat>[01].+)",
+      "src": "/blog/(?<year>201[89])?(?<splat>[01].+)?",
       "headers": {
         "Location": "/blog/$year/$year$splat"
       },
