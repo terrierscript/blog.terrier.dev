@@ -53,6 +53,7 @@
     "netlify-cli": "^2.11.15",
     "netlify-lambda": "^1.4.2",
     "node-fetch": "^2.3.0",
+    "now": "^16.4.0",
     "parcel": "^1.11.0",
     "popmotion": "^8.6.2",
     "prism-themes": "^1.0.0",
@@ -96,8 +97,8 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "netlify dev --live",
-    "dev": "yarn dotenv gatsby develop",
+    "start": "dotenv now dev",
+    "dev": "gatsby develop -p $PORT",
     "build:lambda": "netlify-lambda build functions/src",
     "build:app": "gatsby build",
     "build": "yarn build:app && yarn build:lambda;",
