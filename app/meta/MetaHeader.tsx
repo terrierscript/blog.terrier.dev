@@ -51,7 +51,7 @@ export const MetaHeader = props => {
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {Object.entries(version).map(([k, v]) => (
-        <meta name={`x-site-${k}`} content={v} />
+        <meta key={k} name={`x-site-${k}`} content={v} />
       ))}
       {/* <link
         rel="stylesheet" //href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
