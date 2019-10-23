@@ -15126,11 +15126,6 @@ typography-breakpoint-constants@^0.16.19:
   resolved "https://registry.yarnpkg.com/typography-breakpoint-constants/-/typography-breakpoint-constants-0.16.19.tgz#e0e89147749562cbb46ce76c47ff0f73372765e7"
   integrity sha512-vXjfV9hwAXIOf5+U5GN137ahBkK+sj1TJu/5ksmP+8XB/D80lmGb/m0nKviWaQ3t7HLrK848VGrFS+6E2vcmVg==
 
-typography-inject-fonts@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/typography-inject-fonts/-/typography-inject-fonts-0.0.0.tgz#a59d70546965faf916dd422ebf29c298dbfd58ec"
-  integrity sha512-LSQae0l1HXvlrZ4392qUP/69mbSzq10CE2R0bAKWX8Pw43/zhLmZrmFQ4BxtLTkSEVQ+s0+Wup+7mAowknd/OA==
-
 typography-normalize@^0.16.19:
   version "0.16.19"
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.16.19.tgz#58e0cf12466870c5b27006daa051fe7307780660"
