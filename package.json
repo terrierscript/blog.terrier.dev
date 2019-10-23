@@ -98,7 +98,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "dotenv now dev",
+    "start": "now dev",
     "dev": "gatsby develop -p $PORT",
     "build:lambda": "netlify-lambda build functions/src",
     "build:app": "dotenv gatsby build",
