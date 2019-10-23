@@ -2,6 +2,21 @@
   "version": 2,
   "routes": [
     {
+      "src": "/blog/20180*",
+      "to": "/blog/2018/20180:splat",
+      "status": 301
+    },
+    {
+      "src": "/blog/20181*",
+      "to": "/blog/2018/20180:splat",
+      "status": 301
+    },
+    {
+      "src": "/blog/20190*",
+      "to": "/blog/2019/20190:splat",
+      "status": 301
+    },
+    {
       "src": "/feed/qiita",
       "dest": "https://qiita.com/terrierscript/feed.atom",
       "status": 200,
