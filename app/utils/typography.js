@@ -1,5 +1,6 @@
 import Typography from "typography"
 // import fairyGatesTheme from "typography-theme-fairy-gates";
+import injectFonts from "typography-inject-fonts"
 
 export const headerFont = "Quicksand"
 // export const headerFont = "Hiragino Kaku Gothic"
@@ -40,5 +41,8 @@ const theme = {
 }
 
 const typography = new Typography(theme)
+
+typography.injectStyles()
+injectFonts(typography)
 
 export default typography

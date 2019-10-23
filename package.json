@@ -83,6 +83,7 @@
     "to-vfile": "^6.0.0",
     "typescript": "^3",
     "typography": "^0.16.6",
+    "typography-inject-fonts": "^0.0.0",
     "typography-theme-fairy-gates": "^0.16.0",
     "unified": "^8.0.0",
     "unist-util-map": "^1.0.4",
