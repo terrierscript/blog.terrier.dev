@@ -5,9 +5,6 @@
     "www.terrier.dev",
     "terrier.now.sh"
   ],
-  "github": {
-    "autoAlias": true
-  },
   "routes": [
     {
       "src": "/blog/(?<year>201[89])?(?<splat>[01].+)",

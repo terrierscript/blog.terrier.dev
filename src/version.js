@@ -1,5 +1,4 @@
 const getType = () => {
-  console.log(process.env)
   if (process.env.NOW_BUILDER) {
     return "now.sh"
   }
