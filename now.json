@@ -12,6 +12,7 @@
       "src": "/feed/qiita_org",
       "dest": "https://qiita.com/terrierscript/feed.atom",
       "status": 200,
+      "headers": {},
       "continue": false
     },
     {
