@@ -10,6 +10,7 @@ const getType = () => {
 }
 export const getVersion = () => {
   return JSON.stringify({
+    env: process.env.NODE_ENV,
     sha1: process.env.NOW_GITHUB_COMMIT_SHA || process.env.COMMIT_REF || "",
     type: getType()
   })
