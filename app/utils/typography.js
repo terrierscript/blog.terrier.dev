@@ -1,6 +1,5 @@
 import Typography from "typography"
 // import fairyGatesTheme from "typography-theme-fairy-gates";
-import injectFonts from "typography-inject-fonts"
 
 export const headerFont = "Quicksand"
 // export const headerFont = "Hiragino Kaku Gothic"
@@ -16,6 +15,10 @@ const theme = {
       name: "Nunito",
       styles: ["400", "600", "700", "800", "900"]
       // styles: [400, 500]
+    },
+    {
+      name: "Roboto Condensed",
+      styles: ["700&display=swap"]
     }
   ],
   headerFontFamily: [headerFont, "Helvetica"],
@@ -41,8 +44,5 @@ const theme = {
 }
 
 const typography = new Typography(theme)
-
-typography.injectStyles()
-injectFonts(typography)
 
 export default typography
