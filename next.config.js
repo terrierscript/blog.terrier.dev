@@ -18,16 +18,16 @@ module.exports = withImages({
     // })
     config.node = { fs: "empty" }
     return config
-  },
-  exportPathMap: async defaultPathMap => {
-    console.log(defaultPathMap)
-    const files = getMarkdownFiles()
-    const blog = files.map(f => {
-      console.log(f)`/blog/`
-    })
-    return {
-      // ...defaultPathMap
-      "/": { page: "/" }
-    }
   }
+  // exportPathMap: async defaultPathMap => {
+  //   // console.log(defaultPathMap)
+  //   const files = getMarkdownFiles()
+  //   // const blog = files.map(f => {
+  //   //   console.log(f)`/blog/`
+  //   // })
+  //   return {
+  //     // ...defaultPathMap
+  //     // "/": { page: "/" }
+  //   }
+  // }
 })
