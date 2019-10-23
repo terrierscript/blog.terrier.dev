@@ -15,6 +15,11 @@ const theme = {
       name: "Nunito",
       styles: ["400", "600", "700", "800", "900"]
       // styles: [400, 500]
+    },
+    {
+      // https://github.com/KyleAMathews/typography.js/issues/211#issuecomment-494001270
+      name: "Roboto Condensed",
+      styles: ["700&display=swap"]
     }
   ],
   headerFontFamily: [headerFont, "Helvetica"],
