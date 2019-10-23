@@ -23,7 +23,9 @@ const Img = styled(RadiusImg)`
   }
 `
 
-const Dog = ({ size }) => <Img src={pretty} size={size} />
+const Dog = ({ size }) => (
+  <Img src={pretty} size={size} alt="rotate pretty my dog" />
+)
 
 const Container = styled.div`
   display: inline-block;
