@@ -1,5 +1,5 @@
 const axios = require("axios")
-const { getUrlByMedia } = require("../../app/lib/feed/loader")
+const { getUrlByMedia } = require("../../../app/lib/feed/loader")
 module.exports = (req, res) => {
   const {
     query: { media }
