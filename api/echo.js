@@ -1,3 +1,4 @@
+// api testing
 module.exports = (req, res) => {
   const {
     query: { name }
