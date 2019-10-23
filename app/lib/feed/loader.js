@@ -38,6 +38,20 @@ const getUrl = (config, useOrigin) => {
   return process.env.NODE_ENV === "production" ? production : dev
 }
 
+const getConfigByMedia = media => {
+  return rssConfig.find(r => {
+    return r.media === media || r.id === media
+  })
+}
+module.exports.getUrlByMedia = (media, useOrigin) => {
+  const config = getConfigByMedia(media)
+  if (!config) {
+    console.warn(`Invalid name: ${media}`)
+    return null
+  }
+  return getUrl(config, useOrigin)
+}
+
 const fromDummy = config => {
   return from(Array(2).fill(null)).pipe(
     map(_ => ({
@@ -47,7 +61,7 @@ const fromDummy = config => {
   )
 }
 
-const createRssStream = (rssConfig, useOrigin) =>
+const createRssStreams = (rssConfig, useOrigin) =>
   rssConfig.map(config => {
     const url = getUrl(config, useOrigin)
     if (url !== null) {
@@ -57,7 +71,7 @@ const createRssStream = (rssConfig, useOrigin) =>
   })
 
 const load = ({ useOrigin }) => {
-  return merge(...createRssStream(rssConfig, useOrigin)).pipe(
+  return merge(...createRssStreams(rssConfig, useOrigin)).pipe(
     map(item => (Array.isArray(item) ? item : [item])),
     scan((acc, v) => {
       const result = [...acc, ...v].sort(

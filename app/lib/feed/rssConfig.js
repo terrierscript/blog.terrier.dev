@@ -1,5 +1,6 @@
 module.exports = [
   {
+    id: "qiita",
     media: "Qiita",
     production: "/feed/qiita",
     origin: "https://qiita.com/terrierscript/feed.atom",
@@ -7,6 +8,7 @@ module.exports = [
     bgColor: "#55c500"
   },
   {
+    id: "devto",
     media: "dev.to",
     production: "/feed/devto",
     dev: "https://dev.to/feed/terrierscript",
@@ -14,6 +16,7 @@ module.exports = [
     bgColor: "#000"
   },
   {
+    id: "media",
     media: "Medium",
     production: "/feed/medium",
     origin: "https://medium.com/feed/@terrierscript",
@@ -22,6 +25,7 @@ module.exports = [
     bgColor: "#000"
   },
   {
+    id: "scrapbox",
     media: "Scrapbox",
     production: "/feed/scrapbox",
     origin: "https://scrapbox.io/api/feed/terrierscript/",
@@ -30,6 +34,7 @@ module.exports = [
     color: "#fff"
   },
   {
+    id: "note",
     media: "note",
     production: "/feed/note",
     origin: "https://note.mu/terrierscript/rss",

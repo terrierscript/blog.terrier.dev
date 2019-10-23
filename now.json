@@ -19,7 +19,7 @@
     },
     {
       "src": "/feed/qiita",
-      "dest": "https://terrier.dev/feed/qiita",
+      "dest": "/api/feed/qiita",
       "status": 200
     },
     {
