@@ -1,4 +1,5 @@
 import React from "react"
+import { getVersion } from "../../src/version"
 
 let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
@@ -16,6 +17,7 @@ if (process.env.NODE_ENV === "production") {
 
 export const MetaHeader = props => {
   let css
+  const version = getVersion()
 
   if (process.env.NODE_ENV === "production") {
     css = (
@@ -58,6 +60,7 @@ export const MetaHeader = props => {
       />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="x-version" content={version} />
       {props.headComponents}
       <link rel="shortcut icon" />
       {css}

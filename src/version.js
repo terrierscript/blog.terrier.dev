@@ -1,4 +1,6 @@
+export const getVersion = () => {
+  return process.env.NOW_GITHUB_COMMIT_SHA || ""
+}
 export const logVersion = () => {
-  const ver = process.env.NOW_GITHUB_COMMIT_SHA || ""
-  console.log(`Version: ${ver}`)
+  console.log(`Version: ${getVersion()}`)
 }
