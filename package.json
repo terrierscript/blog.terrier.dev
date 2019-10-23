@@ -100,7 +100,7 @@
     "start": "dotenv now dev",
     "dev": "gatsby develop -p $PORT",
     "build:lambda": "netlify-lambda build functions/src",
-    "build:app": "dotenv gatsby build",
+    "build:app": "yarn env; dotenv gatsby build",
     "build": "yarn build:app && yarn build:lambda;",
     "serve": "gatsby serve",
     "serve-function": "yarn dotenv netlify-lambda serve functions",
