@@ -1,9 +1,11 @@
-const siteUrl = "https://terrier.dev"
+const siteUrl = "https://www.terrier.dev"
 module.exports = {
   siteMetadata: {
     title: "terrier.dev",
+    url: siteUrl,
     siteUrl,
-    description: "Author: terrierscript"
+    description: "Author: terrierscript",
+    twitterUsername: "@terrierscript"
   },
   plugins: [
     // "gatsby-plugin-debug-build",
@@ -53,7 +55,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "terrier.dev",
+        name: "www.terrier.dev",
         start_url: "/",
         icon: "src/icon/icon.png"
       }
