@@ -23,19 +23,21 @@ export const useExternalFeeds = () => {
   })
 
   useEffect(() => {
-    loadFeed().subscribe(feeds => {
-      setFeeds(({ map: baseMap }) => {
-        feeds.map(feed => {
-          if (baseMap.has(feed.link)) {
-            return
+    setTimeout(() => {
+      loadFeed().subscribe(feeds => {
+        setFeeds(({ map: baseMap }) => {
+          feeds.map(feed => {
+            if (baseMap.has(feed.link)) {
+              return
+            }
+            baseMap.set(feed.link, feed)
+          })
+          return {
+            map: baseMap
           }
-          baseMap.set(feed.link, feed)
         })
-        return {
-          map: baseMap
-        }
       })
-    })
+    }, 1000)
   }, [])
   return Array.from(feeds.map.values()).sort(
     // @ts-ignore
