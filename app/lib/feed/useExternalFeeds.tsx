@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react"
 import { loadFeed } from "./loader"
-import "requestidlecallback-polyfill"
 
 const ExternalFeedContext = createContext([])
 
@@ -23,30 +22,28 @@ export const useExternalFeeds = () => {
     }
   })
 
-  useEffect(() => {
-    if (typeof window !== `undefined`) {
-      return
-    }
+  const updateFeeds = () => {
     // @ts-ignore
-    const raf = window.requestIdleCallback || requestAnimationFrame
-    raf(() => {
-      loadFeed().subscribe(feeds => {
-        setFeeds(({ map: baseMap }) => {
-          feeds.map(feed => {
-            if (baseMap.has(feed.link)) {
-              return
-            }
-            baseMap.set(feed.link, feed)
-          })
-          return {
-            map: baseMap
+    loadFeed().subscribe(feeds => {
+      setFeeds(({ map: baseMap }) => {
+        feeds.map(feed => {
+          if (baseMap.has(feed.link)) {
+            return
           }
+          baseMap.set(feed.link, feed)
         })
+        return {
+          map: baseMap
+        }
       })
     })
-  }, [])
-  return Array.from(feeds.map.values()).sort(
+  }
+  const sortedFeed = Array.from(feeds.map.values()).sort(
     // @ts-ignore
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   )
+  return {
+    feeds: sortedFeed,
+    updateFeeds
+  }
 }

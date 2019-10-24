@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { useExternalFeeds } from "../../../lib/feed/useExternalFeeds"
 import { DateTime } from "luxon"
@@ -60,8 +60,18 @@ const Items = styled.div`
 `
 
 export const Feeds = () => {
-  const feeds = useExternalFeeds()
-
+  const { updateFeeds, feeds } = useExternalFeeds()
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return
+    }
+    const polyfill = cb => setTimeout(cb, 1000)
+    // @ts-ignore
+    const raf = window.requestIdleCallback || polyfill
+    raf(() => {
+      updateFeeds()
+    })
+  }, [])
   if (feeds.length === 0) {
     return <Items>Loading...</Items>
   }
