@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react"
 import { loadFeed } from "./loader"
+import "requestidlecallback-polyfill"
 
 const ExternalFeedContext = createContext([])
 
@@ -39,7 +40,7 @@ export const useExternalFeeds = () => {
           }
         })
       })
-    }, 1000)
+    })
   }, [])
   return Array.from(feeds.map.values()).sort(
     // @ts-ignore
