@@ -23,7 +23,9 @@ export const useExternalFeeds = () => {
   })
 
   useEffect(() => {
-    setTimeout(() => {
+    // @ts-ignore
+    const raf = window.requestIdleCallback || requestAnimationFrame
+    raf(() => {
       loadFeed().subscribe(feeds => {
         setFeeds(({ map: baseMap }) => {
           feeds.map(feed => {
