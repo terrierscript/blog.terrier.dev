@@ -62,16 +62,16 @@ const Items = styled.div`
 export const Feeds = () => {
   const { updateFeeds, feeds } = useExternalFeeds()
   useEffect(() => {
-    // if (typeof window === "undefined") {
-    //   return
-    // }
-    // const polyfill = cb => setTimeout(cb, 5000)
-    // // @ts-ignore
-    // const raf = window.requestIdleCallback || polyfill
-    // // const raf = polyfill
-    // raf(() => {
-    //   updateFeeds()
-    // })
+    if (typeof window === "undefined") {
+      return
+    }
+    const polyfill = cb => setTimeout(cb, 5000)
+    // @ts-ignore
+    const raf = window.requestIdleCallback || polyfill
+    // const raf = polyfill
+    raf(() => {
+      updateFeeds()
+    })
   }, [])
   if (feeds.length === 0) {
     return <Items>Loading...</Items>

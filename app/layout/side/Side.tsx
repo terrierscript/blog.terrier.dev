@@ -1,5 +1,5 @@
 import React from "react"
-import { SideProfile } from "./Profile"
+import { SideProfile } from "./profile/Profile"
 import { TagCloud } from "./TagCloud"
 import { Externals } from "./Externals"
 import { SideLinks } from "./Link"
