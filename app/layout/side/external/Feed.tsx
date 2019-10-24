@@ -67,8 +67,8 @@ export const Feeds = () => {
     }
     const polyfill = cb => setTimeout(cb, 5000)
     // @ts-ignore
-    // const raf = window.requestIdleCallback || polyfill
-    const raf = polyfill
+    const raf = window.requestIdleCallback || polyfill
+    // const raf = polyfill
     raf(() => {
       updateFeeds()
     })
