@@ -24,6 +24,9 @@ export const useExternalFeeds = () => {
   })
 
   useEffect(() => {
+    if (!window) {
+      return
+    }
     // @ts-ignore
     const raf = window.requestIdleCallback || requestAnimationFrame
     raf(() => {
