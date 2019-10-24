@@ -20,7 +20,7 @@ const theme = {
       // hack for SSR:
       // https://github.com/KyleAMathews/typography.js/issues/211#issuecomment-494001270
       name: "Roboto Condensed",
-      styles: ["700&display=swap"]
+      styles: ["700&display=optional"]
     }
   ],
   headerFontFamily: [headerFont, "Helvetica"],
