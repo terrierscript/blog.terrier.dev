@@ -23,7 +23,7 @@ const HideIfMobile = styled.div`
 export const Side = () => {
   return (
     <SideGrid>
-      {/* <SideProfile /> */}
+      <SideProfile />
       <SideLinks />
       <HideIfMobile>
         {/* <Externals /> */}
