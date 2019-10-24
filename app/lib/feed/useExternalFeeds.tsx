@@ -24,7 +24,7 @@ export const useExternalFeeds = () => {
   })
 
   useEffect(() => {
-    if (!window) {
+    if (typeof window !== `undefined`) {
       return
     }
     // @ts-ignore
