@@ -1,7 +1,8 @@
 import React from "react"
 // @ts-ignore
 import pretty from "./pretty.jpg"
-import styled, { keyframes } from "styled-components"
+import { keyframes } from "@emotion/core"
+import styled from "@emotion/styled"
 import { RadiusImg } from "../../component/Avater"
 
 const rotate360 = keyframes`
