@@ -4,7 +4,8 @@ import Link from "gatsby-link"
 import { headerFont } from "../utils/typography"
 
 export const TagItem = styled.div`
-  display: inline-block;
+  /* display: inline-block; */
+  display: none;
   background: #e08e79;
   color: #000;
   font-family: ${headerFont};
