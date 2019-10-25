@@ -24,11 +24,11 @@ export const Side = () => {
   return (
     <SideGrid>
       <SideLinks />
-      {/* <SideProfile />
+      {/* <SideProfile />*/}
       <HideIfMobile>
-        <Externals />
+        {/* <Externals /> */}
         <TagCloud />
-      </HideIfMobile> */}
+      </HideIfMobile>
     </SideGrid>
   )
 }
