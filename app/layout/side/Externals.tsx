@@ -14,9 +14,9 @@ export const Externals = () => {
   return (
     <SideBox>
       <Title>External Post</Title>
-      {/* <Scroll> */}
-      <Feeds />
-      {/* </Scroll> */}
+      <Scroll>
+        <Feeds />
+      </Scroll>
     </SideBox>
   )
 }
