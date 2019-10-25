@@ -1,11 +1,10 @@
 import React, { SFC } from "react"
 import styled from "styled-components"
-import Link from "gatsby-link"
+import { Link } from "gatsby"
 import { headerFont } from "../utils/typography"
 
 export const TagItem = styled.div`
-  /* display: inline-block; */
-  display: none;
+  display: inline-block;
   background: #e08e79;
   color: #000;
   font-family: ${headerFont};
