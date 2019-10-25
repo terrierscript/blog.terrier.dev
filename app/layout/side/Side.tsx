@@ -26,8 +26,8 @@ export const Side = () => {
       <SideLinks />
       {/* <SideProfile />*/}
       <HideIfMobile>
-        {/* <Externals /> */}
-        <TagCloud />
+        <Externals />
+        {/* <TagCloud /> */}
       </HideIfMobile>
     </SideGrid>
   )
