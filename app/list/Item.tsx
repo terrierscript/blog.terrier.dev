@@ -1,5 +1,5 @@
-import Link from "gatsby-link"
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 // import { BlogArticleCompact } from "../article/Blog"
 import { headerFont } from "../utils/typography"
