@@ -5,7 +5,7 @@ import { headerFont } from "../utils/typography"
 
 export const TagItem = styled.div`
   display: inline-block;
-  background: #e08e79;
+  /* background: #e08e79;
   color: #000;
   font-family: ${headerFont};
   font-weight: bold;
@@ -13,7 +13,7 @@ export const TagItem = styled.div`
   margin: 0.2em;
   border-radius: 20px;
   font-size: 0.8em;
-  text-transform: lowercase;
+  text-transform: lowercase; */
   ::before {
     content: "# ";
   }
