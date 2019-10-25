@@ -43,7 +43,8 @@ module.exports = {
       }
     },
     "gatsby-plugin-twitter",
-    "gatsby-plugin-styled-components",
+    "gatsby-plugin-emotion",
+    // "gatsby-plugin-styled-components",
     // "gatsby-plugin-react-css-modules",
     "gatsby-plugin-sitemap",
     {
