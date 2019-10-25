@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 // import { BlogArticleCompact } from "../article/Blog"
 import { headerFont } from "../utils/typography"
 import { Tag } from "../component/Tag"

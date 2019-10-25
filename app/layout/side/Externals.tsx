@@ -1,7 +1,7 @@
 import React from "react"
 import { Feeds } from "./external/Feed"
 import { SideBox, Title } from "./Basics"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const Scroll = styled.div`
   max-height: 10em;
