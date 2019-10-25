@@ -33,18 +33,10 @@ export const MetaHeader = props => {
   return (
     <head>
       <meta charSet="utf-8" />
-      {/* <link
-        rel="stylesheet"
-        href="https://unpkg.com/prism-themes@1.2.0/themes/prism-hopscotch.css"
-      /> */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {Object.entries(version).map(([k, v]) => (
         <meta key={k} name={`x-site-${k}`} content={v} />
       ))}
-      {/* <link
-        rel="stylesheet" //href="https://unpkg.com/prismjs@1.13.0/themes/prism-okaidia.css"
-        href="https://unpkg.com/prism-github@1.1.0/prism-github.css"
-      /> */}
       {props.headComponents}
       <link rel="shortcut icon" />
       {css}
