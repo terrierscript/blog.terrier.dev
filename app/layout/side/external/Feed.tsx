@@ -70,7 +70,7 @@ export const Feeds = () => {
     const raf = window.requestIdleCallback || polyfill
     // const raf = polyfill
     raf(() => {
-      updateFeeds()
+      // updateFeeds()
     })
   }, [])
   if (feeds.length === 0) {
