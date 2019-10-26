@@ -1,7 +1,7 @@
 import React, { SFC } from "react"
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
 import { headerFont } from "../utils/typography"
+import { NavLink } from "./NavLink"
 
 export const TagItem = styled.div`
   display: inline-block;
@@ -21,8 +21,8 @@ export const TagItem = styled.div`
 
 export const Tag: SFC<{ tag: string }> = ({ tag }) => {
   return (
-    <Link to={`/tags/${tag.toLowerCase()}/`}>
+    <NavLink to={`/tags/${tag.toLowerCase()}/`}>
       <TagItem>{tag}</TagItem>
-    </Link>
+    </NavLink>
   )
 }

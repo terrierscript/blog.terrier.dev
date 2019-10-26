@@ -3,8 +3,8 @@ import { usePageContext } from "../../src/provider/GatsbyGlobalContext"
 import { BlogList } from "../list/Item"
 import styled from "@emotion/styled"
 import { headerFont } from "../utils/typography"
-import { Link } from "gatsby"
 import { Layout } from "../layout/Layout"
+import { NavLink } from "../component/NavLink"
 
 const PaginateContainer = styled.div`
   padding: 1em;
@@ -19,8 +19,8 @@ const PaginateContainer = styled.div`
 const Paginate = ({ previousPagePath, nextPagePath }) => {
   return (
     <PaginateContainer>
-      {previousPagePath && <Link to={previousPagePath}>≪Prev</Link>}
-      {nextPagePath && <Link to={nextPagePath}>Next≫</Link>}
+      {previousPagePath && <NavLink to={previousPagePath}>≪Prev</NavLink>}
+      {nextPagePath && <NavLink to={nextPagePath}>Next≫</NavLink>}
     </PaginateContainer>
   )
 }

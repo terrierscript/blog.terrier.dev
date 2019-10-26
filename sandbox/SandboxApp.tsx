@@ -52,12 +52,13 @@ export const SandboxApp = () => {
       <TagsProvider tags={tagsValue}>
         <Fonts />
 
+        <BlogItem post={mockPost} />
         <div>
           <Tag tag="React" />
           <Tag tag="React Hooks" />
         </div>
         {/* <LayoutInner> */}
-        {/* <BlogItem post={mockPost} />
+        {/* 
         <BlogArticle
           date="2019/10/10 10:10:10"
           title={"Blogのタイトル"}
