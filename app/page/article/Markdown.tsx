@@ -2,27 +2,7 @@ import React, { FC } from "react"
 import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/tomorrow"
-import htmlParser from "react-markdown/plugins/html-parser"
 import { nl2brRemark } from "./unified/nl2brRemark"
-
-const parseHtml = htmlParser({
-  isValidNode: () => {
-    console.log("iVn")
-    return true
-  },
-  processingInstructions: [
-    {
-      shouldProcessNode: function(node) {
-        console.log(node)
-        return node.parent && node.parent.name && node.parent.name === "p"
-      },
-      processNode: function(node, children) {
-        console.log(node)
-        return node
-      }
-    }
-  ]
-})
 
 export const CodeBlock = ({ value, language }) => {
   return (
