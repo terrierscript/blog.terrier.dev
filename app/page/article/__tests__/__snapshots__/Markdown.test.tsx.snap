@@ -90,3 +90,27 @@ c
   </pre>,
 ]
 `;
+
+exports[`web-component 1`] = `
+<p>
+  aaa
+
+  <span
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<x-some-item>",
+      }
+    }
+  />
+  foo
+  <span
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "</x-some-item>",
+      }
+    }
+  />
+  
+ccc
+</p>
+`;

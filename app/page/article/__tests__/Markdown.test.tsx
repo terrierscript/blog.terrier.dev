@@ -39,3 +39,14 @@ test("nl2br", () => {
     .toJSON()
   expect(tree).toMatchSnapshot()
 })
+test("web-component", () => {
+  const sampleMarkdown = removeIndent(`
+  aaa
+  <x-some-item>foo</x-some-item>
+  ccc
+  `)
+  const tree = renderer
+    .create(<RawMarkdown markdown={sampleMarkdown} />)
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})
