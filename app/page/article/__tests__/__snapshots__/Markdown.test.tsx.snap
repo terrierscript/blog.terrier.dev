@@ -37,8 +37,12 @@ Array [
     <br />
     ccc
   </p>,
-  <div
-    className="css-1diq458"
+  .emotion-0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="emotion-0"
   >
     <pre
       style={

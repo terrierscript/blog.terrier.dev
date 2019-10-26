@@ -1,8 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sandbox 1`] = `
+.emotion-15 {
+  word-break: break-all;
+  min-height: 90vh;
+  background: #fff;
+  padding: 1em;
+}
+
+.emotion-0 {
+  font-weight: bold;
+  font-family: Quicksand;
+}
+
+.emotion-1 {
+  display: inline-block;
+  background: #e08e79;
+  color: #000;
+  -webkit-text-decoration-line: solid #000 1px;
+  text-decoration-line: solid #000 1px;
+  padding: 0.2em 1em;
+  padding-left: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.emotion-1::before {
+  content: "#";
+}
+
+.emotion-14 {
+  padding-bottom: 3em;
+  word-break: break-all;
+}
+
+.emotion-6 {
+  color: gray;
+  font-size: 12px;
+}
+
+.emotion-7 {
+  line-height: 1.2em;
+  word-break: break-word;
+  font-size: 2.5rem;
+}
+
+.emotion-12 {
+  margin-bottom: 1.2em;
+}
+
+.emotion-13 {
+  background: #fff;
+}
+
 <article
-  className="css-5iaya0"
+  className="emotion-15"
 >
   <div>
     a
@@ -22,13 +74,13 @@ exports[`sandbox 1`] = `
   />
   <section>
     <div
-      className="css-1ixwzgl"
+      className="emotion-3"
     >
       <small>
         2019-02-24T07:57:10.697Z
       </small>
       <div
-        className="css-zu4z4k"
+        className="emotion-0"
       >
         <a
           href="/foo-baz"
@@ -45,7 +97,7 @@ exports[`sandbox 1`] = `
           onMouseEnter={[Function]}
         >
           <div
-            className="css-ntdppl"
+            className="emotion-1"
           >
             JavaScript
           </div>
@@ -56,7 +108,7 @@ exports[`sandbox 1`] = `
           onMouseEnter={[Function]}
         >
           <div
-            className="css-ntdppl"
+            className="emotion-1"
           >
             React
           </div>
@@ -71,7 +123,7 @@ exports[`sandbox 1`] = `
       onMouseEnter={[Function]}
     >
       <div
-        className="css-ntdppl"
+        className="emotion-1"
       >
         React
       </div>
@@ -82,7 +134,7 @@ exports[`sandbox 1`] = `
       onMouseEnter={[Function]}
     >
       <div
-        className="css-ntdppl"
+        className="emotion-1"
       >
         React Hooks
       </div>
@@ -90,21 +142,21 @@ exports[`sandbox 1`] = `
   </div>
   <div>
     <div
-      className="css-33wgpk"
+      className="emotion-14"
     >
       <small
-        className="css-648gsp"
+        className="emotion-6"
       >
         posted: 
         2019/10/10 10:10:10
       </small>
       <h1
-        className="css-1vm4d2o"
+        className="emotion-7"
       >
         Blogのタイトル
       </h1>
       <div
-        className="css-8il8ga"
+        className="emotion-12"
       >
         <span>
           <a
@@ -113,7 +165,7 @@ exports[`sandbox 1`] = `
             onMouseEnter={[Function]}
           >
             <div
-              className="css-ntdppl"
+              className="emotion-1"
             >
               javascript
             </div>
@@ -124,7 +176,7 @@ exports[`sandbox 1`] = `
             onMouseEnter={[Function]}
           >
             <div
-              className="css-ntdppl"
+              className="emotion-1"
             >
               netlify
             </div>
@@ -135,7 +187,7 @@ exports[`sandbox 1`] = `
             onMouseEnter={[Function]}
           >
             <div
-              className="css-ntdppl"
+              className="emotion-1"
             >
               parcel
             </div>
@@ -146,7 +198,7 @@ exports[`sandbox 1`] = `
             onMouseEnter={[Function]}
           >
             <div
-              className="css-ntdppl"
+              className="emotion-1"
             >
               react
             </div>
@@ -154,7 +206,7 @@ exports[`sandbox 1`] = `
         </span>
       </div>
       <div
-        className="css-1p0swtd"
+        className="emotion-13"
       >
         <h1>
           foo
