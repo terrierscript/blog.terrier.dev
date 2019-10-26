@@ -41,9 +41,7 @@ const Link = styled.a`
 const Feed = ({ title, link, date, media, bgColor, color }) => {
   return (
     <FeedItem>
-      <div>
-        <Time>{DateTime.fromISO(date.toLocaleString()).toISODate()}</Time>
-      </div>
+      <Time>{DateTime.fromISO(date.toLocaleString()).toISODate()}</Time>
       <Link href={link}>
         <Mark backgroundColor={bgColor} color={color}>
           {media}
@@ -70,7 +68,7 @@ export const Feeds = () => {
     const raf = window.requestIdleCallback || polyfill
     // const raf = polyfill
     raf(() => {
-      // updateFeeds()
+      updateFeeds()
     })
   }, [])
   if (feeds.length === 0) {
