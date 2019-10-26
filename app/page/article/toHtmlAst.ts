@@ -1,7 +1,7 @@
 import rehypeReact from "rehype-react"
 import React from "react"
 import unified from "unified"
-import { nl2brRehype } from "./unified/nl2br"
+import { nl2brRehype } from "./unified/nl2brRehype"
 
 const renderAst = new rehypeReact({
   createElement: React.createElement
