@@ -1,0 +1,8 @@
+[build]	
+  publish = "public"	
+  command = "yarn build"	
+  functions = "functions/dist"	
+[build.environment]	
+  YARN_VERSION = "1.10.1"	
+  YARN_FLAGS = "--no-ignore-optional"	
+  NODE_VERSION = "10"	
