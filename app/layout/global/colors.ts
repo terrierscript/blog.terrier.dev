@@ -1,0 +1,6 @@
+export const MAIN_COLOR = "#555"
+export const MAIN_BOLD_COLOR = "#111"
+export const FEED_LINK_COLOR = "#333"
+export const TAG_COLOR = "#918b89"
+export const BG_COLOR = "white"
+export const DATE_COLOR = "gray"

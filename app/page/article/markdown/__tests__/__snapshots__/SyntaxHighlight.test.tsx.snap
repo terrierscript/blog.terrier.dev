@@ -874,6 +874,18 @@ c
 ]
 `;
 
+exports[`nl2br-link 1`] = `
+<p>
+  <a
+    href="http://example.com"
+  >
+    http://example.com
+  </a>
+  
+bbb
+</p>
+`;
+
 exports[`web-component 1`] = `
 <p>
   aaa

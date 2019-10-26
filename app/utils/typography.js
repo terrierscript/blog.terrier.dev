@@ -37,13 +37,7 @@ const theme = {
   ],
   bodyFontColor: "#787878",
   baseLineHeight: 1.45,
-  includeNormalize: true,
-
-  overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => {
-    const linkColor = "#555"
-    const hover = "#000"
-    return { a: { color: linkColor, hover } }
-  }
+  includeNormalize: true
 }
 
 const typography = new Typography(theme)

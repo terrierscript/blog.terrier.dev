@@ -2,11 +2,12 @@ import React, { SFC } from "react"
 import styled from "@emotion/styled"
 import { headerFont } from "../utils/typography"
 import { NavLink } from "./NavLink"
+import { MAIN_COLOR, TAG_COLOR } from "../layout/global/colors"
 
 export const TagItem = styled(NavLink)`
   display: inline-block;
   /* background: #e08e79; */
-  color: #b5b0ae;
+  color: ${TAG_COLOR};
   /* font-family: ${headerFont}; */
   /* font-weight: bold; */
   text-decoration: underline;
@@ -16,7 +17,7 @@ export const TagItem = styled(NavLink)`
   font-size: 0.9rem;
   text-transform: lowercase;
   &:hover{
-    color: #555;
+    color: ${MAIN_COLOR};
   }
   ::before {
     content: "#";

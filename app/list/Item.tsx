@@ -4,9 +4,12 @@ import styled from "@emotion/styled"
 import { headerFont } from "../utils/typography"
 import { Tag } from "../component/Tag"
 import { NavLink } from "../component/NavLink"
-
-const Title = styled.div`
+import { Date } from "../component/Date"
+const Title = styled(NavLink)`
   font-weight: bold;
+  font-size: 1.2em;
+  display: block;
+  line-height: 1.5em;
   font-family: ${headerFont};
 `
 
@@ -19,10 +22,8 @@ export const BlogItem = ({ post }) => {
   return (
     <section>
       <Item>
-        <small>{post.frontmatter.date}</small>
-        <Title>
-          <NavLink to={post.fields.slug}>{post.frontmatter.title}</NavLink>
-        </Title>
+        <Date>{post.frontmatter.date}</Date>
+        <Title to={post.fields.slug}>{post.frontmatter.title}</Title>
         <div>
           {post.frontmatter.tags.map((tag: string) => {
             return <Tag tag={tag} key={tag} />

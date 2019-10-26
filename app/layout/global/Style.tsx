@@ -1,22 +1,24 @@
 import { Global, css } from "@emotion/core"
 import React from "react"
+import { MAIN_COLOR, MAIN_BOLD_COLOR } from "./colors"
 
 export const GlobalStyle = () => {
   return (
     <Global
       styles={css`
-        :root {
-        }
-        /* body {
-          background: red;
-        } */
-        a {
-          color: #555;
-          transition: all 0.5s ease;
+        a,
+        a:active,
+        a:visited {
+          color: ${MAIN_COLOR};
+          transition: 0.5s;
+          text-decoration-color: transparent;
+          line-height: 1em;
+          font-size: 0.8rem;
         }
         a:hover {
-          color: #111;
-          transition: all 0.5s ease;
+          color: ${MAIN_BOLD_COLOR};
+          text-decoration-color: ${MAIN_BOLD_COLOR};
+          /* text-decoration: underline; */
         }
       `}
     />

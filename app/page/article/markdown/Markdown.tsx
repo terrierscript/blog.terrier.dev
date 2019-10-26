@@ -19,7 +19,7 @@ export const RawMarkdown: FC<{ markdown: string }> = ({ markdown }) => {
     <ReactMarkdown
       source={markdown}
       escapeHtml={false} // for web components
-      renderers={{ code: PrismCodeBlock }}
+      renderers={{ code: CodeBlock }}
       plugins={[nl2brRemark]}
     />
   )

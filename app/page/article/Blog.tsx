@@ -9,6 +9,8 @@ import { Layout } from "../../layout/Layout"
 import AdSense from "react-adsense"
 import { ArticleFooter } from "./ArticleFooter"
 import { RawMarkdown } from "./markdown/Markdown"
+import { BG_COLOR } from "../../layout/global/colors"
+import { Date } from "../../component/Date"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -34,14 +36,15 @@ const BlogBody = styled.section`
   }
 `
 const ArticleWrapper = styled.div`
-  background: #fff;
+  background: ${BG_COLOR};
   /* padding: 1em; */
 `
 
-const Title = styled.h1`
+const ArticleTitle = styled.h1`
   line-height: 1.2em;
   word-break: break-word;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
   /* font-family: ${defaultFont}; */
 `
 
@@ -54,10 +57,6 @@ const BlogArticleWrapper = styled.div`
   word-break: break-all;
 `
 
-const Date = styled.small`
-  color: gray;
-  font-size: 12px;
-`
 export const BlogArticle = ({
   // content,
   title,
@@ -67,7 +66,7 @@ export const BlogArticle = ({
 }) => (
   <BlogArticleWrapper>
     <Date>posted: {date}</Date>
-    <Title>{title}</Title>
+    <ArticleTitle>{title}</ArticleTitle>
     <TagListWrapper>
       <TagList tags={tags} />
     </TagListWrapper>
@@ -80,7 +79,7 @@ export const BlogArticle = ({
 
 export const BlogArticleCompact = ({ content, title }) => (
   <BlogArticleWrapper>
-    <Title>{title}</Title>
+    <ArticleTitle>{title}</ArticleTitle>
     <HTMLContent content={content} />
   </BlogArticleWrapper>
 )

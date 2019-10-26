@@ -1,11 +1,11 @@
 import React from "react"
-import { SideBox, Li, Ul, Title, Anchor } from "./Basics"
+import { SideBox, Li, Ul, Title } from "./Basics"
 
 const List = ({ href, children }) => (
   <Li>
-    <Anchor key="new" href={href}>
+    <a key="new" href={href}>
       {children}
-    </Anchor>
+    </a>
   </Li>
 )
 

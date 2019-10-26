@@ -40,6 +40,17 @@ test("nl2br", () => {
   expect(tree).toMatchSnapshot()
 })
 
+test("nl2br-link", () => {
+  const sampleMarkdown = removeIndent(`
+  http://example.com
+  bbb
+  `)
+  const tree = renderer
+    .create(<RawMarkdown markdown={sampleMarkdown} />)
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
 test("web-component", () => {
   const sampleMarkdown = removeIndent(`
   aaa
