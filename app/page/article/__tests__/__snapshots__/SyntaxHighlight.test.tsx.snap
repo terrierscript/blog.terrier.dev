@@ -29,8 +29,12 @@ Array [
 `;
 
 exports[`Syntax Highlight as CodeBlock 1`] = `
+.emotion-0 {
+  margin-bottom: 2rem;
+}
+
 <div
-  className="css-1diq458"
+  className="emotion-0"
 >
   <pre
     style={
@@ -413,8 +417,12 @@ Array [
   <p>
     This is code
   </p>,
-  <div
-    className="css-1diq458"
+  .emotion-0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="emotion-0"
   >
     <pre
       style={
@@ -826,8 +834,12 @@ Array [
     <br />
     ccc
   </p>,
-  <div
-    className="css-1diq458"
+  .emotion-0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="emotion-0"
   >
     <pre
       style={
