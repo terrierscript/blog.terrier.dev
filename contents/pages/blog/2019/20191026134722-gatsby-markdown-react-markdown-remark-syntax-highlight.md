@@ -8,7 +8,7 @@ tags:
   - react-sytnax-highlight
   - remark
   - markdown
-published: false
+published: true
 ---
 
 Gatsbyでmarkdownを利用するなら`gatsby-transformer-remark`を利用するのが一般的だが、ちょっと下記のような問題が出てきた
