@@ -106,13 +106,8 @@ export const BlogPostTemplate = ({
         />
       </Helmet>
       <BlogBody>
-        {/* <ClapButton id={id} title={title}>
-          👍
-        </ClapButton> */}
-
         <BlogArticle
           title={title}
-          // content={content}
           tags={tags}
           date={date}
           markdown={rawMarkdown}
