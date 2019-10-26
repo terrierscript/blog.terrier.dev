@@ -63,6 +63,7 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-test-renderer": "^16.11.0",
     "react-typography": "^0.16.18",
+    "refractor": "^2.10.0",
     "request": "^2.88.0",
     "rss-parser": "^3.6.3",
     "rxjs": "^6.4.0",
