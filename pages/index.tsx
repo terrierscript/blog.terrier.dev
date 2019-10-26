@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { getBlogList } from "../src/markdown/isomophic"
-import { Index } from "../app/page/Index"
 import { PostWrap } from "../app/list/Item"
+import { Index } from "../app/page/list/ListPage"
 
 class IndexPage extends Component<{ items: PostWrap[] }> {
   static async getInitialProps(ctx) {

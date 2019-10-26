@@ -35,14 +35,12 @@ export const HeaderBar = () => {
     <div>
       <Nav>
         <NavContainer>
-          <Link href="/">
-            <Logo>
-              <Grid>
-                <Terrier size={40} />
-                <span>terrier.dev</span>
-              </Grid>
-            </Logo>
-          </Link>
+          <Logo to="/">
+            <Grid>
+              <Terrier size={40} />
+              <span>terrier.dev</span>
+            </Grid>
+          </Logo>
         </NavContainer>
       </Nav>
     </div>
