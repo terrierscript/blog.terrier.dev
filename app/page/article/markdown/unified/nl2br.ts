@@ -40,7 +40,7 @@ const nl2brTransformer = (
     if (!isParent(parent)) return
     if (typeof node.value !== "string") return
     const lines = node.value.split("\n")
-    if (lines.length < 1) {
+    if (lines.length < 2) {
       return
     }
     const children = lineTravarse(lines)

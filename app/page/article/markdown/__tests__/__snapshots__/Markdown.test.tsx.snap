@@ -82,10 +82,76 @@ c
 `;
 
 exports[`nl2br-link 1`] = `
+.emotion-1 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0 {
+  font-size: 0.9em;
+}
+
 <p>
   <a
+    className="emotion-1"
     href="http://example.com"
-  />
+  >
+    <p
+      className="emotion-0"
+      value="http://example.com"
+    >
+      http://example.com
+    </p>
+  </a>
+  <br />
+  <p
+    className="emotion-0"
+    value="bbb"
+  >
+    bbb
+  </p>
+</p>
+`;
+
+exports[`nl2br-link-not-break 1`] = `
+.emotion-1 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0 {
+  font-size: 0.9em;
+}
+
+<p>
+  <p
+    className="emotion-0"
+    value="今回は"
+  >
+    今回は
+  </p>
+  <a
+    className="emotion-1"
+    href="https://github.com/rexxars/react-markdown#parsing-html"
+  >
+    <code>
+      react-markdown
+    </code>
+  </a>
+  <p
+    className="emotion-0"
+    value="と"
+  >
+    と
+  </p>
+  <a
+    className="emotion-1"
+    href="https://github.com/conorhastings/react-syntax-highlighter"
+  >
+    <code>
+      react-sytnax-highlight
+    </code>
+  </a>
 </p>
 `;
 
