@@ -46,6 +46,7 @@ const ListItem = styled.li`
 `
 const Paragraph = styled.p`
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 `
 
 const InlineCode = styled.span`
