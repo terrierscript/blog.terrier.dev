@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { TwitterWidgetScript } from "../../../page/article/ArticleFooter"
 
 export const TwiContainer = styled.div`

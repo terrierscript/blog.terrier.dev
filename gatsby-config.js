@@ -30,9 +30,13 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
     "gatsby-plugin-twitter",
-    "gatsby-plugin-emotion",
-    // "gatsby-plugin-styled-components",
-    // "gatsby-plugin-react-css-modules",
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        autoLabel: true,
+        labelFormat: "[local]"
+      }
+    },
     "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-canonical-urls`,
