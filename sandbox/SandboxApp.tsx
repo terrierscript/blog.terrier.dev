@@ -5,6 +5,7 @@ import { Tag } from "../app/component/Tag"
 // import { Layout, LayoutInner } from "../app/layout/Layout"
 import { BlogItem } from "../app/list/Item"
 import { BlogArticle } from "../app/page/article/Blog"
+import { Container } from "../app/layout/Container"
 const mockPost = {
   fields: {
     slug: "foo-baz"
@@ -47,7 +48,7 @@ export const SandboxApp = () => {
     }
   ]
   return (
-    <div>
+    <Container>
       <div>a</div>
       <TagsProvider tags={tagsValue}>
         <Fonts />
@@ -57,16 +58,15 @@ export const SandboxApp = () => {
           <Tag tag="React" />
           <Tag tag="React Hooks" />
         </div>
-        {/* <LayoutInner> */}
-        {/* 
-        <BlogArticle
-          date="2019/10/10 10:10:10"
-          title={"Blogのタイトル"}
-          markdown={testMarkdown}
-          tags={["javascript", "netlify", "parcel", "react"]}
-        /> */}
-        {/* </LayoutInner> */}
+        <div>
+          <BlogArticle
+            date="2019/10/10 10:10:10"
+            title={"Blogのタイトル"}
+            markdown={testMarkdown}
+            tags={["javascript", "netlify", "parcel", "react"]}
+          />
+        </div>
       </TagsProvider>
-    </div>
+    </Container>
   )
 }

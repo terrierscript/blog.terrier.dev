@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sandbox 1`] = `
-<div>
+<article
+  className="css-5iaya0"
+>
   <div>
     a
   </div>
@@ -18,6 +20,50 @@ exports[`sandbox 1`] = `
     rel="stylesheet"
     type="text/css"
   />
+  <section>
+    <div
+      className="css-1ixwzgl"
+    >
+      <small>
+        2019-02-24T07:57:10.697Z
+      </small>
+      <div
+        className="css-zu4z4k"
+      >
+        <a
+          href="/foo-baz"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Type 'Element' is not assignable to type 'StatelessComponent&lt;Props&gt;'. が出た時のメモ
+        </a>
+      </div>
+      <div>
+        <a
+          href="/tags/javascript/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="css-ntdppl"
+          >
+            JavaScript
+          </div>
+        </a>
+        <a
+          href="/tags/react/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="css-ntdppl"
+          >
+            React
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
   <div>
     <a
       href="/tags/react/"
@@ -42,5 +88,104 @@ exports[`sandbox 1`] = `
       </div>
     </a>
   </div>
-</div>
+  <div>
+    <div
+      className="css-33wgpk"
+    >
+      <small
+        className="css-648gsp"
+      >
+        posted: 
+        2019/10/10 10:10:10
+      </small>
+      <h1
+        className="css-1vm4d2o"
+      >
+        Blogのタイトル
+      </h1>
+      <div
+        className="css-8il8ga"
+      >
+        <span>
+          <a
+            href="/tags/javascript/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            <div
+              className="css-ntdppl"
+            >
+              javascript
+            </div>
+          </a>
+          <a
+            href="/tags/netlify/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            <div
+              className="css-ntdppl"
+            >
+              netlify
+            </div>
+          </a>
+          <a
+            href="/tags/parcel/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            <div
+              className="css-ntdppl"
+            >
+              parcel
+            </div>
+          </a>
+          <a
+            href="/tags/react/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            <div
+              className="css-ntdppl"
+            >
+              react
+            </div>
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-1p0swtd"
+      >
+        <h1>
+          foo
+        </h1>
+        <h2>
+          baz
+        </h2>
+        <h3>
+          bar
+        </h3>
+        <p>
+          Loreim ipsum
+          <br />
+          foobaz bar
+        </p>
+        <p>
+          zoo
+        </p>
+        <ul>
+          <li>
+            a
+          </li>
+          <li>
+            b
+          </li>
+          <li>
+            c
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
 `;
