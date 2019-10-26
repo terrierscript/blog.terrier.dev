@@ -45,6 +45,4 @@ const theme = {
   }
 }
 
-const typography = new Typography(theme)
-
-export default typography
+export const typography = new Typography(theme)

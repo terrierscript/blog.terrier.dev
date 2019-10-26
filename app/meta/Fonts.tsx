@@ -1,12 +1,16 @@
-import React from "react"
-import { TypographyStyle, GoogleFont } from "react-typography"
-import typography from "../utils/typography.js"
+import React, { lazy, Suspense } from "react"
+import { TypographyStyle } from "react-typography"
+import { typography } from "../utils/typography"
+
+const Goog = lazy(() => import("./typo/GoogleFont"))
 
 export const Fonts = () => {
   return (
     <React.Fragment>
       <TypographyStyle typography={typography} />
-      <GoogleFont typography={typography} />
+      <Suspense fallback={null}>
+        <Goog />
+      </Suspense>
     </React.Fragment>
   )
 }
