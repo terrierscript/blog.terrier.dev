@@ -85,7 +85,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "gatsby build",
     "blog": "node ./bin/create.js",
-    "sandbox": "parcel sandbox/index.html"
+    "sandbox": "NODE_ENV=test parcel sandbox/index.html"
   },
   "devDependencies": {
     "prettier": "1.18.2"
