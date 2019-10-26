@@ -160,3 +160,5 @@ test("Sample block", () => {
   expect(tree).toMatchSnapshot()
 })
 ```
+
+上記のnl2brやweb-componentもテストしてsnapshotを見れるので嬉しい
