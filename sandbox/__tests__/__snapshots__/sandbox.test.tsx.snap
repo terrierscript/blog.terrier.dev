@@ -45,7 +45,7 @@ exports[`sandbox 1`] = `
           onMouseEnter={[Function]}
         >
           <div
-            className="css-ntdppl"
+            className="css-1bc1l1u"
           >
             JavaScript
           </div>
@@ -56,7 +56,7 @@ exports[`sandbox 1`] = `
           onMouseEnter={[Function]}
         >
           <div
-            className="css-ntdppl"
+            className="css-1bc1l1u"
           >
             React
           </div>
@@ -71,7 +71,7 @@ exports[`sandbox 1`] = `
       onMouseEnter={[Function]}
     >
       <div
-        className="css-ntdppl"
+        className="css-1bc1l1u"
       >
         React
       </div>
@@ -82,109 +82,107 @@ exports[`sandbox 1`] = `
       onMouseEnter={[Function]}
     >
       <div
-        className="css-ntdppl"
+        className="css-1bc1l1u"
       >
         React Hooks
       </div>
     </a>
   </div>
-  <div>
-    <div
-      className="css-33wgpk"
+  <div
+    className="css-33wgpk"
+  >
+    <small
+      className="css-648gsp"
     >
-      <small
-        className="css-648gsp"
-      >
-        posted: 
-        2019/10/10 10:10:10
-      </small>
-      <h1
-        className="css-1vm4d2o"
-      >
-        Blogのタイトル
+      posted: 
+      2019/10/10 10:10:10
+    </small>
+    <h1
+      className="css-1vm4d2o"
+    >
+      Blogのタイトル
+    </h1>
+    <div
+      className="css-8il8ga"
+    >
+      <span>
+        <a
+          href="/tags/javascript/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="css-1bc1l1u"
+          >
+            javascript
+          </div>
+        </a>
+        <a
+          href="/tags/netlify/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="css-1bc1l1u"
+          >
+            netlify
+          </div>
+        </a>
+        <a
+          href="/tags/parcel/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="css-1bc1l1u"
+          >
+            parcel
+          </div>
+        </a>
+        <a
+          href="/tags/react/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="css-1bc1l1u"
+          >
+            react
+          </div>
+        </a>
+      </span>
+    </div>
+    <div
+      className="css-1p0swtd"
+    >
+      <h1>
+        foo
       </h1>
-      <div
-        className="css-8il8ga"
-      >
-        <span>
-          <a
-            href="/tags/javascript/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-          >
-            <div
-              className="css-ntdppl"
-            >
-              javascript
-            </div>
-          </a>
-          <a
-            href="/tags/netlify/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-          >
-            <div
-              className="css-ntdppl"
-            >
-              netlify
-            </div>
-          </a>
-          <a
-            href="/tags/parcel/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-          >
-            <div
-              className="css-ntdppl"
-            >
-              parcel
-            </div>
-          </a>
-          <a
-            href="/tags/react/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-          >
-            <div
-              className="css-ntdppl"
-            >
-              react
-            </div>
-          </a>
-        </span>
-      </div>
-      <div
-        className="css-1p0swtd"
-      >
-        <h1>
-          foo
-        </h1>
-        <h2>
-          baz
-        </h2>
-        <h3>
-          bar
-        </h3>
-        <p>
-          Loreim ipsum
-          <br />
-          foobaz bar
-        </p>
-        <p>
-          zoo
-        </p>
-        <ul>
-          <li>
-            a
-          </li>
-          <li>
-            b
-          </li>
-          <li>
-            c
-          </li>
-        </ul>
-      </div>
+      <h2>
+        baz
+      </h2>
+      <h3>
+        bar
+      </h3>
+      <p>
+        Loreim ipsum
+        <br />
+        foobaz bar
+      </p>
+      <p>
+        zoo
+      </p>
+      <ul>
+        <li>
+          a
+        </li>
+        <li>
+          b
+        </li>
+        <li>
+          c
+        </li>
+      </ul>
     </div>
   </div>
 </article>
