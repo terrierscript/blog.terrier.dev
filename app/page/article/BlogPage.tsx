@@ -36,7 +36,6 @@ const BlogBody = styled.section`
   }
 `
 const ArticleBg = styled.div`
-  /* background: ${ARTICLE_BG_COLOR}; */
   padding: 2em 0;
   border-top: 1px solid ${ARTICLE_BORDER_COLOR};
   border-bottom: 1px solid ${ARTICLE_BORDER_COLOR};

@@ -5,9 +5,9 @@ import styled from "@emotion/styled"
 import { PrismCodeBlock } from "./CodeBlock"
 import {
   ARTICLE_COLOR,
-  TITLE_COLOR,
-  ARTICLE_TITLE_COLOR,
-  FEED_LINK_COLOR
+  // TITLE_COLOR,
+  ARTICLE_TITLE_COLOR
+  // FEED_LINK_COLOR
 } from "../../../layout/global/colors"
 
 export const CodeWrapper = styled.div`
@@ -28,7 +28,7 @@ const ArticleWrapper = styled.div`
   h5,
   h6 {
     margin: 1em 0;
-    color: ${FEED_LINK_COLOR};
+    color: ${ARTICLE_TITLE_COLOR};
   }
 `
 
