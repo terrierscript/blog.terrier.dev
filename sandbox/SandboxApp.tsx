@@ -53,8 +53,8 @@ export const SandboxApp = () => {
         <Fonts />
 
         <div>
-          {/* <Tag tag="React" />
-          <Tag tag="React Hooks" /> */}
+          <Tag tag="React" />
+          <Tag tag="React Hooks" />
         </div>
         {/* <LayoutInner> */}
         {/* <BlogItem post={mockPost} />

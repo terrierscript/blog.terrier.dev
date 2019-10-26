@@ -18,6 +18,29 @@ exports[`sandbox 1`] = `
     rel="stylesheet"
     type="text/css"
   />
-  <div />
+  <div>
+    <a
+      href="/tags/react/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      <div
+        className="css-ntdppl"
+      >
+        React
+      </div>
+    </a>
+    <a
+      href="/tags/react hooks/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      <div
+        className="css-ntdppl"
+      >
+        React Hooks
+      </div>
+    </a>
+  </div>
 </div>
 `;
