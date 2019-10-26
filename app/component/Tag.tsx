@@ -5,15 +5,19 @@ import { NavLink } from "./NavLink"
 
 export const TagItem = styled.div`
   display: inline-block;
-  background: #e08e79;
-  color: #000;
+  /* background: #e08e79; */
+  color: #b5b0ae;
   /* font-family: ${headerFont}; */
   /* font-weight: bold; */
-  text-decoration-line: solid #000 1px;
-  padding: 0.2em 1em;
-  padding-left: 0;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  text-decoration: underline;
+  /* border-bottom: 1px dotted #8f8a88; */
+  margin: 0.2em 0.5em;
+  margin-left: 0;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+  :hover{
+    color: #111;
+  }
   ::before {
     content: "#";
   }

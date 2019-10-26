@@ -15,14 +15,17 @@ exports[`sandbox 1`] = `
 
 .emotion-1 {
   display: inline-block;
-  background: #e08e79;
-  color: #000;
-  -webkit-text-decoration-line: solid #000 1px;
-  text-decoration-line: solid #000 1px;
-  padding: 0.2em 1em;
-  padding-left: 0;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  color: #b5b0ae;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 0.2em 0.5em;
+  margin-left: 0;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+
+.emotion-1:hover {
+  color: #111;
 }
 
 .emotion-1::before {
@@ -140,103 +143,101 @@ exports[`sandbox 1`] = `
       </div>
     </a>
   </div>
-  <div>
-    <div
-      className="emotion-14"
+  <div
+    className="emotion-14"
+  >
+    <small
+      className="emotion-6"
     >
-      <small
-        className="emotion-6"
-      >
-        posted: 
-        2019/10/10 10:10:10
-      </small>
-      <h1
-        className="emotion-7"
-      >
-        Blogのタイトル
+      posted: 
+      2019/10/10 10:10:10
+    </small>
+    <h1
+      className="emotion-7"
+    >
+      Blogのタイトル
+    </h1>
+    <div
+      className="emotion-12"
+    >
+      <span>
+        <a
+          href="/tags/javascript/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="emotion-1"
+          >
+            javascript
+          </div>
+        </a>
+        <a
+          href="/tags/netlify/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="emotion-1"
+          >
+            netlify
+          </div>
+        </a>
+        <a
+          href="/tags/parcel/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="emotion-1"
+          >
+            parcel
+          </div>
+        </a>
+        <a
+          href="/tags/react/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="emotion-1"
+          >
+            react
+          </div>
+        </a>
+      </span>
+    </div>
+    <div
+      className="emotion-13"
+    >
+      <h1>
+        foo
       </h1>
-      <div
-        className="emotion-12"
-      >
-        <span>
-          <a
-            href="/tags/javascript/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-          >
-            <div
-              className="emotion-1"
-            >
-              javascript
-            </div>
-          </a>
-          <a
-            href="/tags/netlify/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-          >
-            <div
-              className="emotion-1"
-            >
-              netlify
-            </div>
-          </a>
-          <a
-            href="/tags/parcel/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-          >
-            <div
-              className="emotion-1"
-            >
-              parcel
-            </div>
-          </a>
-          <a
-            href="/tags/react/"
-            onClick={[Function]}
-            onMouseEnter={[Function]}
-          >
-            <div
-              className="emotion-1"
-            >
-              react
-            </div>
-          </a>
-        </span>
-      </div>
-      <div
-        className="emotion-13"
-      >
-        <h1>
-          foo
-        </h1>
-        <h2>
-          baz
-        </h2>
-        <h3>
-          bar
-        </h3>
-        <p>
-          Loreim ipsum
-          <br />
-          foobaz bar
-        </p>
-        <p>
-          zoo
-        </p>
-        <ul>
-          <li>
-            a
-          </li>
-          <li>
-            b
-          </li>
-          <li>
-            c
-          </li>
-        </ul>
-      </div>
+      <h2>
+        baz
+      </h2>
+      <h3>
+        bar
+      </h3>
+      <p>
+        Loreim ipsum
+        <br />
+        foobaz bar
+      </p>
+      <p>
+        zoo
+      </p>
+      <ul>
+        <li>
+          a
+        </li>
+        <li>
+          b
+        </li>
+        <li>
+          c
+        </li>
+      </ul>
     </div>
   </div>
 </article>
