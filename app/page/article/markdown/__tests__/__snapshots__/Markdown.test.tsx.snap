@@ -37,44 +37,29 @@ Array [
     <br />
     ccc
   </p>,
-  <pre
-    style={
-      Object {
-        "MozHyphens": "none",
-        "MozTabSize": "4",
-        "OTabSize": "4",
-        "WebkitHyphens": "none",
-        "background": "#2d2d2d",
-        "color": "#ccc",
-        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-        "hyphens": "none",
-        "lineHeight": "1.5",
-        "margin": ".5em 0",
-        "msHyphens": "none",
-        "overflow": "auto",
-        "padding": "1em",
-        "tabSize": "4",
-        "textAlign": "left",
-        "whiteSpace": "pre",
-        "wordBreak": "normal",
-        "wordSpacing": "normal",
-        "wordWrap": "normal",
-      }
-    }
+  .emotion-0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="emotion-0"
   >
-    <code
+    <pre
       style={
         Object {
           "MozHyphens": "none",
           "MozTabSize": "4",
           "OTabSize": "4",
           "WebkitHyphens": "none",
-          "background": "none",
+          "background": "#2d2d2d",
           "color": "#ccc",
           "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
           "hyphens": "none",
           "lineHeight": "1.5",
+          "margin": ".5em 0",
           "msHyphens": "none",
+          "overflow": "auto",
+          "padding": "1em",
           "tabSize": "4",
           "textAlign": "left",
           "whiteSpace": "pre",
@@ -84,12 +69,35 @@ Array [
         }
       }
     >
-      a
+      <code
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "background": "none",
+            "color": "#ccc",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "msHyphens": "none",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        a
 b
 c
 “\`\`\`
-    </code>
-  </pre>,
+      </code>
+    </pre>
+  </div>,
 ]
 `;
 

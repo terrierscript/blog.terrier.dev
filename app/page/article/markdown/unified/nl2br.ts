@@ -63,14 +63,14 @@ const isValidRemarkNode = (node: Node, parent: Node) => node.type === "text"
 export const nl2brRemark = () =>
   nl2brTransformer(isValidRemarkNode, remarkLineTraverse)
 
-// rehype
-const rehypeLineTraverse = travarseLineGenerator(
-  v => ({ type: "text", value: v }),
-  v => ({ type: "element", tagName: "br" })
-)
+// // rehype
+// const rehypeLineTraverse = travarseLineGenerator(
+//   v => ({ type: "text", value: v }),
+//   v => ({ type: "element", tagName: "br" })
+// )
 
-const isValidRehypeNode = (node: Node, parent: Node) =>
-  node.type === "text" && parent.tagName === "p"
+// const isValidRehypeNode = (node: Node, parent: Node) =>
+//   node.type === "text" && parent.tagName === "p"
 
-export const nl2brRehype = () =>
-  nl2brTransformer(isValidRehypeNode, rehypeLineTraverse)
+// export const nl2brRehype = () =>
+//   nl2brTransformer(isValidRehypeNode, rehypeLineTraverse)

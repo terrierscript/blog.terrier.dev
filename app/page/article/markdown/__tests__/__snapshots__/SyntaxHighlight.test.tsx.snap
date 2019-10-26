@@ -409,44 +409,29 @@ Array [
   <p>
     This is code
   </p>,
-  <pre
-    style={
-      Object {
-        "MozHyphens": "none",
-        "MozTabSize": "4",
-        "OTabSize": "4",
-        "WebkitHyphens": "none",
-        "background": "#2d2d2d",
-        "color": "#ccc",
-        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-        "hyphens": "none",
-        "lineHeight": "1.5",
-        "margin": ".5em 0",
-        "msHyphens": "none",
-        "overflow": "auto",
-        "padding": "1em",
-        "tabSize": "4",
-        "textAlign": "left",
-        "whiteSpace": "pre",
-        "wordBreak": "normal",
-        "wordSpacing": "normal",
-        "wordWrap": "normal",
-      }
-    }
+  .emotion-0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="emotion-0"
   >
-    <code
+    <pre
       style={
         Object {
           "MozHyphens": "none",
           "MozTabSize": "4",
           "OTabSize": "4",
           "WebkitHyphens": "none",
-          "background": "none",
+          "background": "#2d2d2d",
           "color": "#ccc",
           "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
           "hyphens": "none",
           "lineHeight": "1.5",
+          "margin": ".5em 0",
           "msHyphens": "none",
+          "overflow": "auto",
+          "padding": "1em",
           "tabSize": "4",
           "textAlign": "left",
           "whiteSpace": "pre",
@@ -456,203 +441,217 @@ Array [
         }
       }
     >
-      <span
-        className="token"
+      <code
         style={
           Object {
-            "color": "#cc99cd",
-          }
-        }
-      >
-        const
-      </span>
-       foo 
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#67cdcc",
-          }
-        }
-      >
-        =
-      </span>
-       hoge
-
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#cc99cd",
-          }
-        }
-      >
-        const
-      </span>
-       
-      <span
-        className="token function-variable"
-        style={
-          Object {
-            "color": "#f08d49",
-          }
-        }
-      >
-        onClick
-      </span>
-       
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#67cdcc",
-          }
-        }
-      >
-        =
-      </span>
-       
-      <span
-        className="token"
-        style={
-          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "background": "none",
             "color": "#ccc",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "msHyphens": "none",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
           }
         }
       >
-        (
-      </span>
-      <span
-        className="token parameter"
-        style={Object {}}
-      >
-        e
         <span
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#cc99cd",
             }
           }
         >
-          :
+          const
+        </span>
+         foo 
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#67cdcc",
+            }
+          }
+        >
+          =
+        </span>
+         hoge
+
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#cc99cd",
+            }
+          }
+        >
+          const
         </span>
          
         <span
-          className="token maybe-class-name"
+          className="token function-variable"
+          style={
+            Object {
+              "color": "#f08d49",
+            }
+          }
+        >
+          onClick
+        </span>
+         
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#67cdcc",
+            }
+          }
+        >
+          =
+        </span>
+         
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token parameter"
           style={Object {}}
         >
-          Event
+          e
+          <span
+            className="token"
+            style={
+              Object {
+                "color": "#ccc",
+              }
+            }
+          >
+            :
+          </span>
+           
+          <span
+            className="token maybe-class-name"
+            style={Object {}}
+          >
+            Event
+          </span>
         </span>
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
           }
-        }
-      >
-        )
-      </span>
-       
-      <span
-        className="token arrow"
-        style={
-          Object {
-            "color": "#67cdcc",
+        >
+          )
+        </span>
+         
+        <span
+          className="token arrow"
+          style={
+            Object {
+              "color": "#67cdcc",
+            }
           }
-        }
-      >
-        =&gt;
-      </span>
-       
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
+        >
+          =&gt;
+        </span>
+         
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
           }
-        }
-      >
-        {
-      </span>
-      
+        >
+          {
+        </span>
+        
 
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#f08d49",
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#f08d49",
+            }
           }
-        }
-      >
-        dispatch
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
+        >
+          dispatch
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
           }
-        }
-      >
-        (
-      </span>
-      e 
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#67cdcc",
+        >
+          (
+        </span>
+        e 
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#67cdcc",
+            }
           }
-        }
-      >
-        **
-      </span>
-       
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#f08d49",
+        >
+          **
+        </span>
+         
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#f08d49",
+            }
           }
-        }
-      >
-        2
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
+        >
+          2
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
           }
-        }
-      >
-        )
-      </span>
-      
+        >
+          )
+        </span>
+        
 
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
           }
-        }
-      >
-        }
-      </span>
-      
+        >
+          }
+        </span>
+        
 
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#e2777a",
-          }
-        }
-      >
         <span
           className="token"
           style={
@@ -665,77 +664,77 @@ Array [
             className="token"
             style={
               Object {
-                "color": "#ccc",
+                "color": "#e2777a",
               }
             }
           >
-            &lt;
+            <span
+              className="token"
+              style={
+                Object {
+                  "color": "#ccc",
+                }
+              }
+            >
+              &lt;
+            </span>
+            <span
+              className="token"
+              style={
+                Object {
+                  "color": "#f8c555",
+                }
+              }
+            >
+              SomeComponent
+            </span>
           </span>
           <span
             className="token"
             style={
               Object {
-                "color": "#f8c555",
+                "color": "#ccc",
               }
             }
           >
-            SomeComponent
+            &gt;
           </span>
         </span>
         <span
-          className="token"
-          style={
-            Object {
-              "color": "#ccc",
-            }
-          }
+          className="token plain-text"
+          style={Object {}}
         >
-          &gt;
-        </span>
-      </span>
-      <span
-        className="token plain-text"
-        style={Object {}}
-      >
-        
+          
 hello 
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
           }
-        }
-      >
-        {
-      </span>
-      foo
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
+        >
+          {
+        </span>
+        foo
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
           }
-        }
-      >
-        }
-      </span>
-      <span
-        className="token plain-text"
-        style={Object {}}
-      >
-        
+        >
+          }
+        </span>
+        <span
+          className="token plain-text"
+          style={Object {}}
+        >
+          
 
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#e2777a",
-          }
-        }
-      >
+        </span>
         <span
           className="token"
           style={
@@ -748,64 +747,73 @@ hello
             className="token"
             style={
               Object {
-                "color": "#ccc",
+                "color": "#e2777a",
               }
             }
           >
-            &lt;/
+            <span
+              className="token"
+              style={
+                Object {
+                  "color": "#ccc",
+                }
+              }
+            >
+              &lt;/
+            </span>
+            <span
+              className="token"
+              style={
+                Object {
+                  "color": "#f8c555",
+                }
+              }
+            >
+              SomeComponent
+            </span>
           </span>
           <span
             className="token"
             style={
               Object {
-                "color": "#f8c555",
+                "color": "#ccc",
               }
             }
           >
-            SomeComponent
+            &gt;
           </span>
         </span>
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#ccc",
-            }
-          }
-        >
-          &gt;
-        </span>
-      </span>
-      
+        
 “
-      <span
-        className="token template-string"
-        style={Object {}}
-      >
         <span
-          className="token template-punctuation"
-          style={
-            Object {
-              "color": "#7ec699",
-            }
-          }
+          className="token template-string"
+          style={Object {}}
         >
-          \`
-        </span>
-        <span
-          className="token template-punctuation"
-          style={
-            Object {
-              "color": "#7ec699",
+          <span
+            className="token template-punctuation"
+            style={
+              Object {
+                "color": "#7ec699",
+              }
             }
-          }
-        >
-          \`
+          >
+            \`
+          </span>
+          <span
+            className="token template-punctuation"
+            style={
+              Object {
+                "color": "#7ec699",
+              }
+            }
+          >
+            \`
+          </span>
         </span>
-      </span>
-      \`
-    </code>
-  </pre>,
+        \`
+      </code>
+    </pre>
+  </div>,
 ]
 `;
 
@@ -818,44 +826,29 @@ Array [
     <br />
     ccc
   </p>,
-  <pre
-    style={
-      Object {
-        "MozHyphens": "none",
-        "MozTabSize": "4",
-        "OTabSize": "4",
-        "WebkitHyphens": "none",
-        "background": "#2d2d2d",
-        "color": "#ccc",
-        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-        "hyphens": "none",
-        "lineHeight": "1.5",
-        "margin": ".5em 0",
-        "msHyphens": "none",
-        "overflow": "auto",
-        "padding": "1em",
-        "tabSize": "4",
-        "textAlign": "left",
-        "whiteSpace": "pre",
-        "wordBreak": "normal",
-        "wordSpacing": "normal",
-        "wordWrap": "normal",
-      }
-    }
+  .emotion-0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="emotion-0"
   >
-    <code
+    <pre
       style={
         Object {
           "MozHyphens": "none",
           "MozTabSize": "4",
           "OTabSize": "4",
           "WebkitHyphens": "none",
-          "background": "none",
+          "background": "#2d2d2d",
           "color": "#ccc",
           "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
           "hyphens": "none",
           "lineHeight": "1.5",
+          "margin": ".5em 0",
           "msHyphens": "none",
+          "overflow": "auto",
+          "padding": "1em",
           "tabSize": "4",
           "textAlign": "left",
           "whiteSpace": "pre",
@@ -865,12 +858,35 @@ Array [
         }
       }
     >
-      a
+      <code
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "background": "none",
+            "color": "#ccc",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "msHyphens": "none",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        a
 b
 c
 “\`\`\`
-    </code>
-  </pre>,
+      </code>
+    </pre>
+  </div>,
 ]
 `;
 
