@@ -22,7 +22,7 @@ const globalCss = css`
 const anchor = css`
   a {
     color: ${TITLE_COLOR};
-    transition: 0.5s;
+    transition: 0.2s;
     text-decoration-color: transparent;
   }
   a:hover {

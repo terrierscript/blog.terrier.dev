@@ -18,6 +18,8 @@ Gatsbyでmarkdownを利用するなら`gatsby-transformer-remark`を利用する
 * rehypeで独自拡張してた部分の問題
   * rehype-reactバージョンアップで死んだケースがあった
   * この部分がテスト出来てなくてごちゃつきがち
+* Markdown内部のマークアップ
+  * 例えば[inlineCodeのマークアップがCSS魔術になってしまう](https://github.com/terrierscript/terrier.dev/blob/783252ca1c92fc73bd96a1bc03c8abb271cfcfa4/app/meta/Meta.tsx#L21-L28)など
 
 今回は[`react-markdown`](https://github.com/rexxars/react-markdown#parsing-html)と[`react-sytnax-highlight`](https://github.com/conorhastings/react-syntax-highlighter)を使って置き換えた。
 
@@ -166,3 +168,41 @@ test("Sample block", () => {
 ```
 
 上記のnl2brやweb-componentもテストしてsnapshotを見れるので嬉しい
+
+### Styleの調整
+
+こんなふうにRenderとして割り当てることで細々調整可能。
+
+
+```tsx
+const List = styled.ul`
+  margin-bottom: 0.25em;
+`
+const ListItem = styled.li`
+  margin-top: 0.25em;
+`
+const Paragraph = styled.p`
+  margin-bottom: 0.8em;
+  line-height: 1.7em;
+`
+
+const InlineCode = styled.span`
+  border: 1px solid #ccc;
+  background: #eee;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  margin: 0.1em;
+`
+<ReactMarkdown
+  source={markdown}
+  escapeHtml={false} 
+  renderers={{
+    paragraph: Paragraph,
+    code: CodeBlock,
+    list: List,
+    listItem: ListItem,
+    inlineCode: InlineCode
+  }}
+  plugins={[nl2brRemark]}
+/>
+```
