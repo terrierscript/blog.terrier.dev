@@ -85,7 +85,7 @@
   "main": "n/a",
   "scripts": {
     "start": "now dev",
-    "dev": "gatsby develop -p $PORT",
+    "dev": "gatsby develop -p ${PORT:-3000}",
     "build": " gatsby build",
     "serve": "gatsby serve",
     "serve-function": "yarn dotenv netlify-lambda serve functions",

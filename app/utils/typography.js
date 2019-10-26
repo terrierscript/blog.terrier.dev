@@ -41,7 +41,8 @@ const theme = {
 
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => {
     const linkColor = "#555"
-    return { a: { color: linkColor } }
+    const hover = "#000"
+    return { a: { color: linkColor, hover } }
   }
 }
 

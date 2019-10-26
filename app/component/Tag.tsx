@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { headerFont } from "../utils/typography"
 import { NavLink } from "./NavLink"
 
-export const TagItem = styled.div`
+export const TagItem = styled(NavLink)`
   display: inline-block;
   /* background: #e08e79; */
   color: #b5b0ae;
@@ -15,8 +15,8 @@ export const TagItem = styled.div`
   margin-left: 0;
   font-size: 0.9rem;
   text-transform: lowercase;
-  :hover{
-    color: #111;
+  &:hover{
+    color: #555;
   }
   ::before {
     content: "#";
@@ -24,9 +24,5 @@ export const TagItem = styled.div`
 `
 
 export const Tag: SFC<{ tag: string }> = ({ tag }) => {
-  return (
-    <NavLink to={`/tags/${tag.toLowerCase()}/`}>
-      <TagItem>{tag}</TagItem>
-    </NavLink>
-  )
+  return <TagItem to={`/tags/${tag.toLowerCase()}/`}>{tag}</TagItem>
 }
