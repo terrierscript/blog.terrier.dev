@@ -1,7 +1,7 @@
 import React from "react"
 import { usePageContext } from "../../src/provider/GatsbyGlobalContext"
 import { BlogList } from "../list/Item"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { headerFont } from "../utils/typography"
 import { Link } from "gatsby"
 import { Layout } from "../layout/Layout"

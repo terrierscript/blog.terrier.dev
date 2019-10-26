@@ -1,7 +1,7 @@
 import React from "react"
 import { Avater } from "../../component/Avater"
 import { SideBox, Title } from "./Basics"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { headerFont } from "../../utils/typography"
 import { TwitterWidgetScript } from "../../page/article/ArticleFooter"
 

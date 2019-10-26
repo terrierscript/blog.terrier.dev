@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { defaultFont } from "./font"
 import { Terrier } from "./header/Terrier"
 
