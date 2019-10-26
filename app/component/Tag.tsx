@@ -7,15 +7,15 @@ export const TagItem = styled.div`
   display: inline-block;
   background: #e08e79;
   color: #000;
-  font-family: ${headerFont};
-  font-weight: bold;
-  padding: 0.2em 0.5em 0.3em;
-  margin: 0.2em;
-  border-radius: 20px;
-  font-size: 0.8em;
-  text-transform: lowercase;
+  /* font-family: ${headerFont}; */
+  /* font-weight: bold; */
+  text-decoration-line: solid #000 1px;
+  padding: 0.2em 1em;
+  padding-left: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
   ::before {
-    content: "# ";
+    content: "#";
   }
 `
 

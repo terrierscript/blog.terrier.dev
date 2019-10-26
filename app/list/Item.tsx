@@ -22,12 +22,12 @@ export const BlogItem = ({ post }) => {
         <small>{post.frontmatter.date}</small>
         <Title>
           <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-          <div>
-            {post.frontmatter.tags.map((tag: string) => {
-              return <Tag tag={tag} key={tag} />
-            })}
-          </div>
         </Title>
+        <div>
+          {post.frontmatter.tags.map((tag: string) => {
+            return <Tag tag={tag} key={tag} />
+          })}
+        </div>
       </Item>
     </section>
   )
