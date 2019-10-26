@@ -1,15 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { defaultFont } from "./font"
 import { Terrier } from "./header/Terrier"
+import { NavLink } from "../component/NavLink"
 
 const Nav = styled.nav`
   height: 64px;
   line-height: 64px;
 `
 
-const Logo = styled(Link)`
+const Logo = styled(NavLink)`
   text-decoration: none;
   font-weight: bold;
   font-family: ${defaultFont};

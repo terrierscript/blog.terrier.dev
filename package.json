@@ -11,6 +11,7 @@
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.22",
     "@mapbox/rehype-prism": "^0.3.1",
+    "@reach/router": "^1.2.1",
     "@types/google.analytics": "^0.0.40",
     "@types/jest": "^24.0.9",
     "@types/react-helmet": "^5.0.5",
@@ -21,6 +22,7 @@
     "dotenv-cli": "^2.0.0",
     "gatsby": "^2.1.17",
     "gatsby-awesome-pagination": "^0.3.3",
+    "gatsby-link": "^2.2.22",
     "gatsby-plugin-canonical-urls": "^2.0.10",
     "gatsby-plugin-client-side-redirect": "^0.0.2",
     "gatsby-plugin-emotion": "^4.1.12",
@@ -37,6 +39,7 @@
     "gatsby-transformer-remark": "^2.3.0",
     "gatsby-transformer-sharp": "^2.0.0",
     "gray-matter": "^4.0.2",
+    "identity-obj-proxy": "^3.0.0",
     "immutable": "^3.8.2",
     "inquirer": "^6.2.2",
     "jest": "^24.1.0",
@@ -60,6 +63,7 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-test-renderer": "^16.11.0",
     "react-typography": "^0.16.18",
+    "refractor": "^2.10.0",
     "request": "^2.88.0",
     "rss-parser": "^3.6.3",
     "rxjs": "^6.4.0",
@@ -85,7 +89,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "gatsby build",
     "blog": "node ./bin/create.js",
-    "sandbox": "parcel sandbox/index.html"
+    "sandbox": "NODE_ENV=test parcel serve sandbox/index.html"
   },
   "devDependencies": {
     "prettier": "1.18.2"
