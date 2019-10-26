@@ -2,6 +2,9 @@ import React from "react"
 import { TagsProvider } from "../app/context/SiteContext"
 import { Fonts } from "../app/meta/Fonts"
 import { Tag } from "../app/component/Tag"
+// import { Layout, LayoutInner } from "../app/layout/Layout"
+import { BlogItem } from "../app/list/Item"
+import { BlogArticle } from "../app/page/article/Blog"
 const mockPost = {
   fields: {
     slug: "foo-baz"
@@ -53,6 +56,15 @@ export const SandboxApp = () => {
           {/* <Tag tag="React" />
           <Tag tag="React Hooks" /> */}
         </div>
+        {/* <LayoutInner> */}
+        {/* <BlogItem post={mockPost} />
+        <BlogArticle
+          date="2019/10/10 10:10:10"
+          title={"Blogのタイトル"}
+          markdown={testMarkdown}
+          tags={["javascript", "netlify", "parcel", "react"]}
+        /> */}
+        {/* </LayoutInner> */}
       </TagsProvider>
     </div>
   )

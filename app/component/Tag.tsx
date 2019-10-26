@@ -1,6 +1,6 @@
 import React, { SFC } from "react"
 import styled from "@emotion/styled"
-import Link from "gatsby"
+import { Link } from "gatsby"
 import { headerFont } from "../utils/typography"
 
 export const TagItem = styled.div`
