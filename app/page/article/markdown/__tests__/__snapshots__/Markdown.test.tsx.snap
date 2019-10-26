@@ -1,28 +1,116 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sample block 1`] = `
-Array [
-  <h1 />,
-  <h2 />,
-  <h3 />,
-  <p />,
-  <ul>
-    <li />
-    <li />
-    <li />
-  </ul>,
-]
-`;
+.emotion-5 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
 
-exports[`nl2br 1`] = `
-Array [
-  <p />,
-  .emotion-0 {
-  margin-bottom: 2rem;
+.emotion-5 h1,
+.emotion-5 h2,
+.emotion-5 h3,
+.emotion-5 h4,
+.emotion-5 h5,
+.emotion-5 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-0 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-4 {
+  margin-bottom: 0.25em;
+}
+
+.emotion-1 {
+  margin-top: 0.25em;
 }
 
 <div
+  className="emotion-5"
+>
+  <h1>
+    Foo
+  </h1>
+  <h2>
+    Baz
+  </h2>
+  <h3>
+    bar
+  </h3>
+  <p
     className="emotion-0"
+  >
+    foo baz bar
+  </p>
+  <ul
+    className="emotion-4"
+    start={null}
+  >
+    <li
+      checked={null}
+      className="emotion-1"
+    >
+      a
+    </li>
+    <li
+      checked={null}
+      className="emotion-1"
+    >
+      b
+    </li>
+    <li
+      checked={null}
+      className="emotion-1"
+    >
+      c
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`nl2br 1`] = `
+.emotion-2 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
+
+.emotion-2 h1,
+.emotion-2 h2,
+.emotion-2 h3,
+.emotion-2 h4,
+.emotion-2 h5,
+.emotion-2 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-0 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-1 {
+  margin-bottom: 1.8em;
+}
+
+<div
+  className="emotion-2"
+>
+  <p
+    className="emotion-0"
+  >
+    aaa
+    <br />
+    bbb
+    <br />
+    ccc
+  </p>
+  <div
+    className="emotion-1"
   >
     <pre
       style={
@@ -77,45 +165,58 @@ c
 “\`\`\`
       </code>
     </pre>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`nl2br-link 1`] = `
+.emotion-2 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
+
+.emotion-2 h1,
+.emotion-2 h2,
+.emotion-2 h3,
+.emotion-2 h4,
+.emotion-2 h5,
+.emotion-2 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
 .emotion-1 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-0 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0 {
-  font-size: 0.9em;
-}
-
-<p>
-  <a
+<div
+  className="emotion-2"
+>
+  <p
     className="emotion-1"
-    href="http://example.com"
   >
-    <p
+    <a
       className="emotion-0"
-      value="http://example.com"
+      href="http://example.com"
     >
       http://example.com
-    </p>
-  </a>
-  <br />
-  <p
-    className="emotion-0"
-    value="bbb"
-  >
+    </a>
+    <br />
     bbb
   </p>
-</p>
+</div>
 `;
 
 exports[`nl2br-link-not-break 1`] = `
 .emotion-3 {
   font-size: 0.9em;
+  color: #595959;
   line-height: 1.3em;
 }
 
@@ -126,6 +227,7 @@ exports[`nl2br-link-not-break 1`] = `
 .emotion-3 h5,
 .emotion-3 h6 {
   margin: 1em 0;
+  color: #555;
 }
 
 .emotion-2 {
@@ -166,7 +268,38 @@ exports[`nl2br-link-not-break 1`] = `
 `;
 
 exports[`web-component 1`] = `
-<p>
-  <x-some-item />
-</p>
+.emotion-1 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
+
+.emotion-1 h1,
+.emotion-1 h2,
+.emotion-1 h3,
+.emotion-1 h4,
+.emotion-1 h5,
+.emotion-1 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-0 {
+  margin-bottom: 0.8em;
+}
+
+<div
+  className="emotion-1"
+>
+  <p
+    className="emotion-0"
+  >
+    aaa
+    <br />
+    <x-some-item />
+    foo
+    <br />
+    ccc
+  </p>
+</div>
 `;

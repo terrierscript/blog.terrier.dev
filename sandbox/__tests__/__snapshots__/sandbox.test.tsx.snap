@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sandbox 1`] = `
-.emotion-16 {
+.emotion-23 {
   word-break: break-all;
   min-height: 90vh;
   background: white;
@@ -40,7 +40,7 @@ exports[`sandbox 1`] = `
   content: "#";
 }
 
-.emotion-15 {
+.emotion-22 {
   padding-bottom: 3em;
   word-break: break-all;
 }
@@ -53,18 +53,47 @@ exports[`sandbox 1`] = `
   -moz-letter-spacing: 0.02em;
   -ms-letter-spacing: 0.02em;
   letter-spacing: 0.02em;
+  margin-bottom: 0.2em;
 }
 
 .emotion-13 {
-  margin-bottom: 1.2em;
+  margin-bottom: 2.5em;
 }
 
-.emotion-14 {
+.emotion-21 {
   background: white;
 }
 
+.emotion-20 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
+
+.emotion-20 h1,
+.emotion-20 h2,
+.emotion-20 h3,
+.emotion-20 h4,
+.emotion-20 h5,
+.emotion-20 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-14 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-19 {
+  margin-bottom: 0.25em;
+}
+
+.emotion-16 {
+  margin-top: 0.25em;
+}
+
 <article
-  className="emotion-16"
+  className="emotion-23"
 >
   <div>
     a
@@ -138,7 +167,7 @@ exports[`sandbox 1`] = `
     </a>
   </div>
   <div
-    className="emotion-15"
+    className="emotion-22"
   >
     <small
       className="emotion-0"
@@ -190,18 +219,56 @@ exports[`sandbox 1`] = `
       </span>
     </div>
     <div
-      className="emotion-14"
+      className="emotion-21"
     >
-      <h1 />
-      <h2 />
-      <h3 />
-      <p />
-      <p />
-      <ul>
-        <li />
-        <li />
-        <li />
-      </ul>
+      <div
+        className="emotion-20"
+      >
+        <h1>
+          foo
+        </h1>
+        <h2>
+          baz
+        </h2>
+        <h3>
+          bar
+        </h3>
+        <p
+          className="emotion-14"
+        >
+          Loreim ipsum
+          <br />
+          foobaz bar
+        </p>
+        <p
+          className="emotion-14"
+        >
+          zoo
+        </p>
+        <ul
+          className="emotion-19"
+          start={null}
+        >
+          <li
+            checked={null}
+            className="emotion-16"
+          >
+            a
+          </li>
+          <li
+            checked={null}
+            className="emotion-16"
+          >
+            b
+          </li>
+          <li
+            checked={null}
+            className="emotion-16"
+          >
+            c
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </article>

@@ -6,6 +6,9 @@ import styled from "@emotion/styled"
 const anchor = css`
   a {
     color: ${TITLE_COLOR};
+  }
+  a,
+  a:visited {
     transition: 0.5s;
     text-decoration-color: transparent;
   }
