@@ -38,7 +38,7 @@ module.exports = [
     media: "note",
     production: "/feed/note",
     origin: "https://note.mu/terrierscript/rss",
-    dev: "https://note.mu/terrierscript/rss",
+    dev: null,
     // dev: null,
     bgColor: "#2cb696",
     color: "#fff"

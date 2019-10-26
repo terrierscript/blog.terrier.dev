@@ -33,14 +33,18 @@ const TwiContainer = styled.div`
   overflow: hidden;
 `
 
+const EmulatedTwiButton = styled.div``
+
 const TwitterFollowButton = () => (
-  <a
-    href="https://twitter.com/terrierscript?ref_src=twsrc%5Etfw"
-    className="twitter-follow-button"
-    data-show-count="false"
-  >
-    {/* Follow @terrierscript */}
-  </a>
+  <EmulatedTwiButton>
+    <a
+      href="https://twitter.com/terrierscript?ref_src=twsrc%5Etfw"
+      className="twitter-follow-button"
+      data-show-count="false"
+    >
+      {/*  @terrierscript */}
+    </a>
+  </EmulatedTwiButton>
 )
 
 const TwitterFollowBox = () => {

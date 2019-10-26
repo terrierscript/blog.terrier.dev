@@ -22,7 +22,8 @@ export const useExternalFeeds = () => {
     }
   })
 
-  useEffect(() => {
+  const updateFeeds = () => {
+    // @ts-ignore
     loadFeed().subscribe(feeds => {
       setFeeds(({ map: baseMap }) => {
         feeds.map(feed => {
@@ -36,9 +37,13 @@ export const useExternalFeeds = () => {
         }
       })
     })
-  }, [])
-  return Array.from(feeds.map.values()).sort(
+  }
+  const sortedFeed = Array.from(feeds.map.values()).sort(
     // @ts-ignore
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   )
+  return {
+    feeds: sortedFeed,
+    updateFeeds
+  }
 }

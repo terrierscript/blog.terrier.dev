@@ -3,6 +3,7 @@ import { TagsContext } from "../../context/SiteContext"
 import { SideBox, Title } from "./Basics"
 import styled from "@emotion/styled"
 import { TagItem } from "../../component/Tag"
+import { Link } from "gatsby"
 
 const WhiteBox = styled(SideBox)`
   /* background: transparent; */
@@ -13,7 +14,7 @@ const WhiteBox = styled(SideBox)`
   }
 `
 export const TagCloud = () => {
-  const { tags, Link } = useContext(TagsContext)
+  const { tags } = useContext(TagsContext)
   if (tags.length < 1) {
     return null
   }

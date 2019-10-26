@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "@emotion/styled"
 import { useExternalFeeds } from "../../../lib/feed/useExternalFeeds"
 import { DateTime } from "luxon"
@@ -41,9 +41,7 @@ const Link = styled.a`
 const Feed = ({ title, link, date, media, bgColor, color }) => {
   return (
     <FeedItem>
-      <div>
-        <Time>{DateTime.fromISO(date.toLocaleString()).toISODate()}</Time>
-      </div>
+      <Time>{DateTime.fromISO(date.toLocaleString()).toISODate()}</Time>
       <Link href={link}>
         <Mark backgroundColor={bgColor} color={color}>
           {media}
@@ -60,8 +58,19 @@ const Items = styled.div`
 `
 
 export const Feeds = () => {
-  const feeds = useExternalFeeds()
-
+  const { updateFeeds, feeds } = useExternalFeeds()
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return
+    }
+    const polyfill = cb => setTimeout(cb, 5000)
+    // @ts-ignore
+    const raf = window.requestIdleCallback || polyfill
+    // const raf = polyfill
+    raf(() => {
+      updateFeeds()
+    })
+  }, [])
   if (feeds.length === 0) {
     return <Items>Loading...</Items>
   }

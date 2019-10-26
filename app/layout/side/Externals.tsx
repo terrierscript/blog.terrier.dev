@@ -6,9 +6,9 @@ import styled from "@emotion/styled"
 const Scroll = styled.div`
   max-height: 10em;
   overflow: scroll;
-  @media screen and (max-width: 65em) {
+  /* @media screen and (max-width: 65em) {
     overflow: hidden;
-  }
+  } */
 `
 export const Externals = () => {
   return (

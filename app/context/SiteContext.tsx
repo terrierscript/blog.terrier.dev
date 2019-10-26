@@ -14,12 +14,12 @@ type Tag = {
 }
 
 const defaultTagContext = {
-  tags: [],
-  Link: DefaultLink
+  tags: []
+  // Link: DefaultLink
 }
 export const TagsContext = createContext<{
   tags: Tag[]
-  Link?: any // TODO: react item
+  // Link?: any // TODO: react item
 }>(defaultTagContext)
 
 export const TagsProvider = ({ children, ...props }) => {
