@@ -28,9 +28,7 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-transformer-remark"
-    },
+    "gatsby-transformer-remark",
     "gatsby-plugin-twitter",
     "gatsby-plugin-styled-components",
     // "gatsby-plugin-react-css-modules",
