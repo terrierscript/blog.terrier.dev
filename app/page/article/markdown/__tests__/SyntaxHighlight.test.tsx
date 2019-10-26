@@ -1,6 +1,6 @@
 import React from "react"
-import renderer from "./node_modules/react-test-renderer"
-import { RawMarkdown } from "../../Markdown"
+import renderer from "react-test-renderer"
+import { RawMarkdown } from "../Markdown"
 import { PrismCodeBlock } from "../CodeBlock"
 import { removeIndent, wrapCode } from "./Markdown.test"
 
