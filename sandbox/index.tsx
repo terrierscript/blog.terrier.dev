@@ -1,7 +1,7 @@
 import "./gatsby-polyfill"
 import React from "react"
 import { render } from "react-dom"
-import { Layout } from "../app/layout/Layout"
+import { LayoutInner } from "../app/layout/Layout"
 import { BlogItem } from "../app/list/Item"
 import { HeaderBar } from "../app/layout/HeaderBar"
 import {
@@ -57,17 +57,18 @@ export const App = () => {
   ]
   return (
     <div>
+      <div>a</div>
       <TagsProvider tags={tagsValue}>
         <Fonts />
-        <Layout>
-          <BlogItem post={mockPost} />
-          <BlogArticle
-            title={"Blogのタイトル"}
-            date={"2019-10-10 10:10:10"}
-            markdown={testMarkdown}
-            tags={["javascript", "netlify", "parcel", "react"]}
-          />
-        </Layout>
+        {/* <LayoutInner> */}
+        <BlogItem post={mockPost} />
+        {/* <BlogArticle
+          title={"Blogのタイトル"}
+          date={"2019-10-10 10:10:10"}
+          markdown={testMarkdown}
+          tags={["javascript", "netlify", "parcel", "react"]}
+        /> */}
+        {/* </LayoutInner> */}
       </TagsProvider>
     </div>
   )
