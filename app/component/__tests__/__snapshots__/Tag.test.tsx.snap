@@ -3,7 +3,7 @@
 exports[`<Tag> 1`] = `
 .emotion-0 {
   display: inline-block;
-  color: #b5b0ae;
+  color: #918b89;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   margin: 0.2em 0.5em;
@@ -13,7 +13,7 @@ exports[`<Tag> 1`] = `
 }
 
 .emotion-0:hover {
-  color: #111;
+  color: #555;
 }
 
 .emotion-0::before {
@@ -21,14 +21,11 @@ exports[`<Tag> 1`] = `
 }
 
 <a
+  className="emotion-0"
   href="/tags/foo/"
   onClick={[Function]}
   onMouseEnter={[Function]}
 >
-  <div
-    className="emotion-0"
-  >
-    foo
-  </div>
+  foo
 </a>
 `;

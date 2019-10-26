@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { BG_COLOR } from "./global/colors"
 
 export const Container = styled.article`
   /* max-width: 900px; */
@@ -8,6 +9,6 @@ export const Container = styled.article`
   /* width: 100%; */
   word-break: break-all;
   min-height: 90vh;
-  background: #fff;
+  background: ${BG_COLOR};
   padding: 1em;
 `

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { BG_COLOR } from "../layout/global/colors"
 
 type Props = {
   size: number
@@ -14,7 +15,7 @@ export const RadiusImg = styled(SizeImg)`
 
 const Img = styled(RadiusImg)`
   /* border: 1px solid #ccc; */
-  background: white;
+  background: ${BG_COLOR};
   vertical-align: middle;
   margin-bottom: 4px;
 `

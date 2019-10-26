@@ -1,80 +1,133 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sample block 1`] = `
-Array [
+.emotion-5 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
+
+.emotion-5 h1,
+.emotion-5 h2,
+.emotion-5 h3,
+.emotion-5 h4,
+.emotion-5 h5,
+.emotion-5 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-0 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-4 {
+  margin-bottom: 0.25em;
+}
+
+.emotion-1 {
+  margin-top: 0.25em;
+}
+
+<div
+  className="emotion-5"
+>
   <h1>
     Foo
-  </h1>,
+  </h1>
   <h2>
     Baz
-  </h2>,
+  </h2>
   <h3>
     bar
-  </h3>,
-  <p>
+  </h3>
+  <p
+    className="emotion-0"
+  >
     foo baz bar
-  </p>,
-  <ul>
-    <li>
+  </p>
+  <ul
+    className="emotion-4"
+    start={null}
+  >
+    <li
+      checked={null}
+      className="emotion-1"
+    >
       a
     </li>
-    <li>
+    <li
+      checked={null}
+      className="emotion-1"
+    >
       b
     </li>
-    <li>
+    <li
+      checked={null}
+      className="emotion-1"
+    >
       c
     </li>
-  </ul>,
-]
+  </ul>
+</div>
 `;
 
 exports[`nl2br 1`] = `
-Array [
-  <p>
+.emotion-2 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
+
+.emotion-2 h1,
+.emotion-2 h2,
+.emotion-2 h3,
+.emotion-2 h4,
+.emotion-2 h5,
+.emotion-2 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-0 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-1 {
+  margin-bottom: 1.8em;
+}
+
+<div
+  className="emotion-2"
+>
+  <p
+    className="emotion-0"
+  >
     aaa
     <br />
     bbb
     <br />
     ccc
-  </p>,
-  <pre
-    style={
-      Object {
-        "MozHyphens": "none",
-        "MozTabSize": "4",
-        "OTabSize": "4",
-        "WebkitHyphens": "none",
-        "background": "#2d2d2d",
-        "color": "#ccc",
-        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-        "hyphens": "none",
-        "lineHeight": "1.5",
-        "margin": ".5em 0",
-        "msHyphens": "none",
-        "overflow": "auto",
-        "padding": "1em",
-        "tabSize": "4",
-        "textAlign": "left",
-        "whiteSpace": "pre",
-        "wordBreak": "normal",
-        "wordSpacing": "normal",
-        "wordWrap": "normal",
-      }
-    }
+  </p>
+  <div
+    className="emotion-1"
   >
-    <code
+    <pre
       style={
         Object {
           "MozHyphens": "none",
           "MozTabSize": "4",
           "OTabSize": "4",
           "WebkitHyphens": "none",
-          "background": "none",
+          "background": "#2d2d2d",
           "color": "#ccc",
           "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
           "hyphens": "none",
           "lineHeight": "1.5",
+          "margin": ".5em 0",
           "msHyphens": "none",
+          "overflow": "auto",
+          "padding": "1em",
           "tabSize": "4",
           "textAlign": "left",
           "whiteSpace": "pre",
@@ -84,22 +137,169 @@ Array [
         }
       }
     >
-      a
+      <code
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "background": "none",
+            "color": "#ccc",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "msHyphens": "none",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        a
 b
 c
 “\`\`\`
-    </code>
-  </pre>,
-]
+      </code>
+    </pre>
+  </div>
+</div>
+`;
+
+exports[`nl2br-link 1`] = `
+.emotion-2 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
+
+.emotion-2 h1,
+.emotion-2 h2,
+.emotion-2 h3,
+.emotion-2 h4,
+.emotion-2 h5,
+.emotion-2 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-1 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-0 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div
+  className="emotion-2"
+>
+  <p
+    className="emotion-1"
+  >
+    <a
+      className="emotion-0"
+      href="http://example.com"
+    >
+      http://example.com
+    </a>
+    <br />
+    bbb
+  </p>
+</div>
+`;
+
+exports[`nl2br-link-not-break 1`] = `
+.emotion-3 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
+
+.emotion-3 h1,
+.emotion-3 h2,
+.emotion-3 h3,
+.emotion-3 h4,
+.emotion-3 h5,
+.emotion-3 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-2 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-0 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div
+  className="emotion-3"
+>
+  <p
+    className="emotion-2"
+  >
+    今回は
+    <a
+      className="emotion-0"
+      href="https://github.com/rexxars/react-markdown#parsing-html"
+    >
+      <code>
+        react-markdown
+      </code>
+    </a>
+    と
+    <a
+      className="emotion-0"
+      href="https://github.com/conorhastings/react-syntax-highlighter"
+    >
+      <code>
+        react-sytnax-highlight
+      </code>
+    </a>
+  </p>
+</div>
 `;
 
 exports[`web-component 1`] = `
-<p>
-  aaa
+.emotion-1 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
 
-  <x-some-item />
-  foo
-  
-ccc
-</p>
+.emotion-1 h1,
+.emotion-1 h2,
+.emotion-1 h3,
+.emotion-1 h4,
+.emotion-1 h5,
+.emotion-1 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-0 {
+  margin-bottom: 0.8em;
+}
+
+<div
+  className="emotion-1"
+>
+  <p
+    className="emotion-0"
+  >
+    aaa
+    <br />
+    <x-some-item />
+    foo
+    <br />
+    ccc
+  </p>
+</div>
 `;

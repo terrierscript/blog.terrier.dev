@@ -11,6 +11,7 @@
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.22",
     "@mapbox/rehype-prism": "^0.3.1",
+    "@now/static-build": "^0.11.0",
     "@reach/router": "^1.2.1",
     "@types/google.analytics": "^0.0.40",
     "@types/jest": "^24.0.9",
@@ -85,7 +86,7 @@
   "main": "n/a",
   "scripts": {
     "start": "now dev",
-    "dev": "gatsby develop -p $PORT",
+    "dev": "gatsby develop -p ${PORT:-3000}",
     "build": " gatsby build",
     "serve": "gatsby serve",
     "serve-function": "yarn dotenv netlify-lambda serve functions",

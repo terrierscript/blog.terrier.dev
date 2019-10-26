@@ -1,5 +1,5 @@
 import React from "react"
-import { BlogPostTemplate } from "../../app/page/article/Blog"
+import { BlogPostTemplate } from "../../app/page/article/BlogPage"
 import { graphql } from "gatsby"
 import { BlogLayout } from "../provider/BlogLayout"
 // import { renderHtmlAST } from "../../app/page/article/toHtmlAst"

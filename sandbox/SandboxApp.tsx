@@ -4,7 +4,7 @@ import { Fonts } from "../app/meta/Fonts"
 import { Tag } from "../app/component/Tag"
 // import { Layout, LayoutInner } from "../app/layout/Layout"
 import { BlogItem } from "../app/list/Item"
-import { BlogArticle } from "../app/page/article/Blog"
+import { BlogArticle } from "../app/page/article/BlogPage"
 import { Container } from "../app/layout/Container"
 const mockPost = {
   fields: {

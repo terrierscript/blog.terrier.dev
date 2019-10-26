@@ -9,6 +9,8 @@ import { Layout } from "../../layout/Layout"
 import AdSense from "react-adsense"
 import { ArticleFooter } from "./ArticleFooter"
 import { RawMarkdown } from "./markdown/Markdown"
+import { ARTICLE_BORDER_COLOR } from "../../layout/global/colors"
+import { Date } from "../../component/Date"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -33,20 +35,23 @@ const BlogBody = styled.section`
     border: 1px solid gray;
   }
 `
-const ArticleWrapper = styled.div`
-  background: #fff;
-  /* padding: 1em; */
+const ArticleBg = styled.div`
+  padding: 2em 0;
+  border-top: 1px solid ${ARTICLE_BORDER_COLOR};
+  border-bottom: 1px solid ${ARTICLE_BORDER_COLOR};
 `
 
-const Title = styled.h1`
+const ArticleTitle = styled.h1`
   line-height: 1.2em;
   word-break: break-word;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.2em;
   /* font-family: ${defaultFont}; */
 `
 
 const TagListWrapper = styled.div`
-  margin-bottom: 1.2em;
+  margin-bottom: 2.5em;
 `
 
 const BlogArticleWrapper = styled.div`
@@ -54,10 +59,6 @@ const BlogArticleWrapper = styled.div`
   word-break: break-all;
 `
 
-const Date = styled.small`
-  color: gray;
-  font-size: 12px;
-`
 export const BlogArticle = ({
   // content,
   title,
@@ -67,20 +68,20 @@ export const BlogArticle = ({
 }) => (
   <BlogArticleWrapper>
     <Date>posted: {date}</Date>
-    <Title>{title}</Title>
+    <ArticleTitle>{title}</ArticleTitle>
     <TagListWrapper>
       <TagList tags={tags} />
     </TagListWrapper>
-    <ArticleWrapper>
+    <ArticleBg>
       {/* <HTMLContent content={content} /> */}
       <RawMarkdown markdown={markdown} />
-    </ArticleWrapper>
+    </ArticleBg>
   </BlogArticleWrapper>
 )
 
 export const BlogArticleCompact = ({ content, title }) => (
   <BlogArticleWrapper>
-    <Title>{title}</Title>
+    <ArticleTitle>{title}</ArticleTitle>
     <HTMLContent content={content} />
   </BlogArticleWrapper>
 )

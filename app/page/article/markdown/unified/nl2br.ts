@@ -26,6 +26,9 @@ const travarseLineGenerator = (
         return i == 0 ? [valueToNode(v)] : [valueToBreakNode(v), valueToNode(v)]
       })
       .reduce((a, b) => [...a, ...b], []) // TODO: .flat()
+      .filter((n: Node) => {
+        return !(n.type === "text" && n.value === "")
+      })
 }
 
 const nl2brTransformer = (
@@ -36,11 +39,12 @@ const nl2brTransformer = (
     if (!isTargetNode(node, parent)) return
     if (!isParent(parent)) return
     if (typeof node.value !== "string") return
-    const lines = node.value.trim().split("\n")
+    const lines = node.value.split("\n")
     if (lines.length < 2) {
       return
     }
     const children = lineTravarse(lines)
+    console.log(lines, children)
     const newChildren = injectChild(parent, children, index)
     parent.children = newChildren
   }
