@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import { RawMarkdown } from "../Markdown"
+import { RawMarkdown, CodeBlock } from "../Markdown"
 
 const removeIndent = str => str.replace(/\n\s+/gm, "\n")
 
@@ -19,7 +19,8 @@ test("Sample block", () => {
     .toJSON()
   expect(tree).toMatchSnapshot()
 })
-test("Sample block", () => {
+
+describe("Syntax Highlight", () => {
   const codeSample = `
     const foo = hoge
     const onClick = (e: Event) => {
@@ -29,13 +30,21 @@ test("Sample block", () => {
       hello {foo}
     </SomeComponent>
   `
-  const code = ["```tsx", codeSample, "“```"]
+  const code = ["```tsx", codeSample, "“```"].join("\n")
   const sampleMarkdown = removeIndent(`
     This is code
     ${code}
   `)
-  const tree = renderer
-    .create(<RawMarkdown markdown={sampleMarkdown} />)
-    .toJSON()
-  expect(tree).toMatchSnapshot()
+  it("as Markdown", () => {
+    const tree = renderer
+      .create(<RawMarkdown markdown={sampleMarkdown} />)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+  it("as CodeBlock", () => {
+    const tree = renderer
+      .create(<CodeBlock value={codeSample} language={"tsx"} />)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })
