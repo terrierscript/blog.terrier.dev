@@ -96,6 +96,7 @@ c
 exports[`web-component 1`] = `
 <p>
   aaa
+
   <span
     dangerouslySetInnerHTML={
       Object {
@@ -111,6 +112,7 @@ exports[`web-component 1`] = `
       }
     }
   />
-  ccc
+  
+ccc
 </p>
 `;

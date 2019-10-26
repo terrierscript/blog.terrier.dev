@@ -1,4 +1,4 @@
-import { Visitor } from "unist-util-visit"
+import visit, { Visitor } from "unist-util-visit"
 import { Node, Parent } from "unist"
 
 // core
