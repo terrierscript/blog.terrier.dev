@@ -878,21 +878,9 @@ exports[`web-component 1`] = `
 <p>
   aaa
 
-  <span
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<x-some-item>",
-      }
-    }
-  />
+  &lt;x-some-item&gt;
   foo
-  <span
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "</x-some-item>",
-      }
-    }
-  />
+  &lt;/x-some-item&gt;
   
 ccc
 </p>
