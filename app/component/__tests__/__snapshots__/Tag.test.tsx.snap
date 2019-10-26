@@ -3,14 +3,17 @@
 exports[`<Tag> 1`] = `
 .emotion-0 {
   display: inline-block;
-  background: #e08e79;
-  color: #000;
-  -webkit-text-decoration-line: solid #000 1px;
-  text-decoration-line: solid #000 1px;
-  padding: 0.2em 1em;
-  padding-left: 0;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  color: #b5b0ae;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 0.2em 0.5em;
+  margin-left: 0;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+
+.emotion-0:hover {
+  color: #111;
 }
 
 .emotion-0::before {

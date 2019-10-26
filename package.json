@@ -52,6 +52,7 @@
     "now": "^16.4.3",
     "parcel": "^1.11.0",
     "popmotion": "^8.6.2",
+    "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.5.2",
     "react-adsense": "^0.1.0",
@@ -91,7 +92,8 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "gatsby build",
     "blog": "node ./bin/create.js",
-    "sandbox": "NODE_ENV=test parcel serve sandbox/index.html"
+    "sandbox": "parcel serve sandbox/index.html",
+    "sandbox:build": "parcel build sandbox/index.html"
   },
   "devDependencies": {
     "prettier": "1.18.2"

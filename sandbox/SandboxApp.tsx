@@ -58,14 +58,15 @@ export const SandboxApp = () => {
           <Tag tag="React" />
           <Tag tag="React Hooks" />
         </div>
-        <div>
-          <BlogArticle
-            date="2019/10/10 10:10:10"
-            title={"Blogのタイトル"}
-            markdown={testMarkdown}
-            tags={["javascript", "netlify", "parcel", "react"]}
-          />
-        </div>
+        {/* https://github.com/parcel-bundler/parcel/issues/3176 */}
+        <BlogArticle
+          date="2019/10/10 10:10:10"
+          title={"Blogのタイトル"}
+          markdown={testMarkdown}
+          tags={["javascript", "netlify", "parcel", "react"]}
+        />
+        {/* <div>
+        </div> */}
       </TagsProvider>
     </Container>
   )

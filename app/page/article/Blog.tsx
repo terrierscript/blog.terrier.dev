@@ -8,7 +8,7 @@ import { Tag } from "../../component/Tag"
 import { Layout } from "../../layout/Layout"
 import AdSense from "react-adsense"
 import { ArticleFooter } from "./ArticleFooter"
-import { RawMarkdown } from "./Markdown"
+import { RawMarkdown } from "./markdown/Markdown"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
