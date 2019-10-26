@@ -108,7 +108,7 @@ exports.createPages = async ({ actions, graphql }) => {
     paginate({
       createPage,
       items: posts,
-      itemsPerPage: 10,
+      itemsPerPage: 20,
       pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? "/" : "/page"),
       component: getTemplate("index"),
       context: {

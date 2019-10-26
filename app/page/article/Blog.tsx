@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 
 import { HTMLContent } from "./Content"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { defaultFont } from "../../layout/font"
 import { Tag } from "../../component/Tag"
 import { Layout } from "../../layout/Layout"

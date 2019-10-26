@@ -25,6 +25,7 @@ Gatsbyでmarkdownを利用するなら`gatsby-transformer-remark`を利用する
 
 * devのビルドは100ページのlimitの場合20s -> 4s程度に縮んだ。うれしい
 * snapshotによるテストが可能になった。うれしい
+* Markdown中のコンポーネントを差し替えたり装飾するのにCSS in JSが使えるようになった。うれしい
 * 全体のビルドは10秒程度伸びた。かなしい
 * gatsby-transformer-remarkはfrontmatterのために残す必要があるが、それ以外のremark関連プラグインは捨てた
   * gatsby-transformer-frontmatterみたいなのがほしい

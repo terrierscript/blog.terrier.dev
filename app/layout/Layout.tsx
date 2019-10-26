@@ -4,7 +4,7 @@ import { Meta } from "../meta/Meta"
 import { Container } from "./Container"
 // import { Article } from "../article/Content"
 import { Footer } from "./Footer"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { Side } from "./side/Side"
 require("../web-component/index")
 
