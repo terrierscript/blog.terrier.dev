@@ -34,6 +34,7 @@
     "markdown-it": "^10.0.0",
     "markdown-it-prism": "^2.0.3",
     "next": "^9.1.1",
+    "next-compose-plugins": "^2.2.0",
     "next-images": "^1.2.0",
     "node-fetch": "^2.3.0",
     "now": "^16.4.3",

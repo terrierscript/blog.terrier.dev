@@ -1,8 +1,9 @@
 // @ts-nocheck
+const withPlugins = require("next-compose-plugins")
 const withImages = require("next-images")
 const { getMarkdownFiles } = require("./src/markdown/files")
 
-module.exports = withImages({
+module.exports = withPlugins([withImages], {
   // publicRuntimeConfig: {
   //   conf: "ping"
   //   // files: getMarkdownFiles()
