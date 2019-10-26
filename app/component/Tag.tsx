@@ -6,12 +6,13 @@ import { NavLink } from "./NavLink"
 export const TagItem = styled.div`
   display: inline-block;
   /* background: #e08e79; */
-  color: #4f4d4c;
+  color: #b5b0ae;
   /* font-family: ${headerFont}; */
   /* font-weight: bold; */
   text-decoration: underline;
-  padding: 0.2em 0.5em;
-  padding-left: 0;
+  /* border-bottom: 1px dotted #8f8a88; */
+  margin: 0.2em 0.5em;
+  margin-left: 0;
   font-size: 0.9rem;
   text-transform: lowercase;
   :hover{
