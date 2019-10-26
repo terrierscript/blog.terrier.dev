@@ -1,5 +1,5 @@
-import { Link } from "gatsby"
 import React from "react"
+import Link from "gatsby"
 import styled from "@emotion/styled"
 // import { BlogArticleCompact } from "../article/Blog"
 import { headerFont } from "../utils/typography"

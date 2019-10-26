@@ -1,7 +1,10 @@
 {
   "presets": [
-     "@babel/preset-env",
-     "@babel/preset-typescript",
-     "babel-preset-gatsby"
-  ]
+    "@babel/preset-env",
+    "@babel/preset-typescript",
+  ],
+  "env" : {
+    "production": {"presets": [ "babel-preset-gatsby"]},
+    "development": {"presets": [ "babel-preset-gatsby"]}
+  }
 }

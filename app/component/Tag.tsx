@@ -1,7 +1,11 @@
 import React, { SFC } from "react"
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import { headerFont } from "../utils/typography"
+
+const Link = ({ children }) => {
+  children
+}
 
 export const TagItem = styled.div`
   display: inline-block;
