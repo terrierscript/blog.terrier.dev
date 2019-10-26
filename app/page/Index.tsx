@@ -5,7 +5,6 @@ import styled from "@emotion/styled"
 import { headerFont } from "../utils/typography"
 import { Layout } from "../layout/Layout"
 import { NavLink } from "../component/NavLink"
-import { IfieContainer } from "../layout/Ifie"
 
 const PaginateContainer = styled.div`
   padding: 1em;
@@ -30,7 +29,6 @@ export const Index = ({ posts }) => {
   const pageContext = usePageContext()
   return (
     <>
-      <IfieContainer />
       <Layout>
         <BlogList posts={posts} />
         <Paginate {...pageContext} />
