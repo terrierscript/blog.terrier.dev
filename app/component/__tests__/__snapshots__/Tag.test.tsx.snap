@@ -1,13 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tag> 1`] = `
+.emotion-0 {
+  display: inline-block;
+  background: #e08e79;
+  color: #000;
+  -webkit-text-decoration-line: solid #000 1px;
+  text-decoration-line: solid #000 1px;
+  padding: 0.2em 1em;
+  padding-left: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.emotion-0::before {
+  content: "#";
+}
+
 <a
   href="/tags/foo/"
   onClick={[Function]}
   onMouseEnter={[Function]}
 >
   <div
-    className="css-emcna"
+    className="emotion-0"
   >
     foo
   </div>

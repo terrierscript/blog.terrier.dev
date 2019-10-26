@@ -1,9 +1,9 @@
-import { Link } from "gatsby"
 import React from "react"
 import styled from "@emotion/styled"
 // import { BlogArticleCompact } from "../article/Blog"
 import { headerFont } from "../utils/typography"
 import { Tag } from "../component/Tag"
+import { NavLink } from "../component/NavLink"
 
 const Title = styled.div`
   font-weight: bold;
@@ -21,13 +21,13 @@ export const BlogItem = ({ post }) => {
       <Item>
         <small>{post.frontmatter.date}</small>
         <Title>
-          <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-          <div>
-            {post.frontmatter.tags.map((tag: string) => {
-              return <Tag tag={tag} key={tag} />
-            })}
-          </div>
+          <NavLink to={post.fields.slug}>{post.frontmatter.title}</NavLink>
         </Title>
+        <div>
+          {post.frontmatter.tags.map((tag: string) => {
+            return <Tag tag={tag} key={tag} />
+          })}
+        </div>
       </Item>
     </section>
   )
