@@ -16,8 +16,7 @@
   },
   "include": [
     "src/**/*",
-    "app/**/*",
-    "sandbox/**/*"
+    "app/**/*", "sandbox/**/*",
   ],
   "exclude": [
     "node_modules",
