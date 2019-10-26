@@ -1,6 +1,6 @@
 import React from "react"
 import { TagsProvider } from "../app/context/SiteContext"
-import { Fonts } from "../app/meta/Fonts"
+import { Fonts } from "../app/layout/global/Fonts"
 import { Tag } from "../app/component/Tag"
 // import { Layout, LayoutInner } from "../app/layout/Layout"
 import { BlogItem } from "../app/list/Item"

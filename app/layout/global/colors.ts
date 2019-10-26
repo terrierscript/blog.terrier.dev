@@ -8,5 +8,5 @@ export const BG_COLOR = "white"
 export const DATE_COLOR = "gray"
 
 // export const ARTICLE_BG_COLOR = "#fffcfa"
-export const ARTICLE_COLOR = "#595959"
+export const ARTICLE_TEXT_COLOR = "#4a4646"
 export const ARTICLE_BORDER_COLOR = "#d6d2d0"
