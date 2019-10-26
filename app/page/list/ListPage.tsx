@@ -1,10 +1,10 @@
 import React from "react"
-import { usePageContext } from "../../src/provider/GatsbyGlobalContext"
-import { BlogList } from "../list/Item"
+import { usePageContext } from "../../../src/provider/GatsbyGlobalContext"
+import { BlogList } from "../../list/Item"
 import styled from "@emotion/styled"
-import { headerFont } from "../utils/typography"
-import { Layout } from "../layout/Layout"
-import { NavLink } from "../component/NavLink"
+import { headerFont } from "../../utils/typography"
+import { Layout } from "../../layout/Layout"
+import { NavLink } from "../../component/NavLink"
 
 const PaginateContainer = styled.div`
   padding: 1em;

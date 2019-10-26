@@ -9,7 +9,7 @@ import { Layout } from "../../layout/Layout"
 import AdSense from "react-adsense"
 import { ArticleFooter } from "./ArticleFooter"
 import { RawMarkdown } from "./markdown/Markdown"
-import { BG_COLOR } from "../../layout/global/colors"
+import { ARTICLE_BORDER_COLOR } from "../../layout/global/colors"
 import { Date } from "../../component/Date"
 
 const TagList = ({ tags = [] }) => {
@@ -36,8 +36,10 @@ const BlogBody = styled.section`
   }
 `
 const ArticleBg = styled.div`
-  background: ${BG_COLOR};
-  /* padding: 1em; */
+  /* background: ${ARTICLE_BG_COLOR}; */
+  padding: 2em 0;
+  border-top: 1px solid ${ARTICLE_BORDER_COLOR};
+  border-bottom: 1px solid ${ARTICLE_BORDER_COLOR};
 `
 
 const ArticleTitle = styled.h1`

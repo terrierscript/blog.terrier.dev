@@ -48,6 +48,14 @@ const Paragraph = styled.p`
   margin-bottom: 0.8em;
 `
 
+const InlineCode = styled.span`
+  border: 1px solid #ccc;
+  background: #eee;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  margin: 0.1em;
+`
+
 export const RawMarkdown: FC<{ markdown: string }> = ({ markdown }) => {
   return (
     <ArticleWrapper>
@@ -59,7 +67,8 @@ export const RawMarkdown: FC<{ markdown: string }> = ({ markdown }) => {
           code: CodeBlock,
           link: Link,
           list: List,
-          listItem: ListItem
+          listItem: ListItem,
+          inlineCode: InlineCode
         }}
         plugins={[nl2brRemark]}
       />

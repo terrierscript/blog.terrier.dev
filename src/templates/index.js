@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { generatePostFragment } from "../query/query"
 import { BlogLayout } from "../provider/BlogLayout"
-import { Index } from "../../app/page/Index"
+import { Index } from "../../app/page/list/ListPage"
 
 export default class IndexPage extends React.Component {
   render() {
