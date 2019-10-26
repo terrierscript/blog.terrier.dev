@@ -2,6 +2,7 @@ import React, { FC } from "react"
 import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/tomorrow"
+import { nl2br } from "./unified/nl2br"
 
 export const CodeBlock = ({ value, language }) => {
   return (
@@ -17,6 +18,7 @@ export const RawMarkdown: FC<{ markdown: string }> = ({ markdown }) => {
       source={markdown}
       escapeHtml={false} // for web components
       renderers={{ code: CodeBlock }}
+      // plugins={[nl2br]}
     />
   )
 }

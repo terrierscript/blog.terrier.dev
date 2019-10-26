@@ -2,7 +2,7 @@ import React from "react"
 import renderer from "react-test-renderer"
 import { RawMarkdown } from "../Markdown"
 
-export const removeIndent = str => str.replace(/\n\s+/gm, "\n")
+export const removeIndent = str => str.trim().replace(/\n\s+/gm, "\n")
 
 test("Sample block", () => {
   const sampleMarkdown = removeIndent(`
@@ -13,6 +13,18 @@ test("Sample block", () => {
     - a
     - b
     - c
+  `)
+  const tree = renderer
+    .create(<RawMarkdown markdown={sampleMarkdown} />)
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+test("nl2br", () => {
+  const sampleMarkdown = removeIndent(`
+  aaa
+  bbb
+  ccc
   `)
   const tree = renderer
     .create(<RawMarkdown markdown={sampleMarkdown} />)

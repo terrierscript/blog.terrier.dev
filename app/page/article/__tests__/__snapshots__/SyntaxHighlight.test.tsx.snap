@@ -808,3 +808,11 @@ hello
   </pre>,
 ]
 `;
+
+exports[`nl2br 1`] = `
+<p>
+  aaa
+bbb
+ccc
+</p>
+`;
