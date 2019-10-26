@@ -4,7 +4,7 @@ import { nl2brRemark } from "./unified/nl2br"
 import styled from "@emotion/styled"
 import { PrismCodeBlock } from "./CodeBlock"
 import {
-  ARTICLE_COLOR,
+  ARTICLE_TEXT_COLOR,
   // TITLE_COLOR,
   ARTICLE_TITLE_COLOR
   // FEED_LINK_COLOR
@@ -19,7 +19,7 @@ const Link = styled.a`
 `
 const ArticleWrapper = styled.div`
   font-size: 0.9em;
-  color: ${ARTICLE_COLOR};
+  color: ${ARTICLE_TEXT_COLOR};
   line-height: 1.3em;
   h1,
   h2,
