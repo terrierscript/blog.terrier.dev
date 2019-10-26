@@ -124,4 +124,39 @@ with-htmlでなくても動きはするが、`dangerouseHtml`を利用される�
 
 * https://github.com/terrierscript/terrier.dev/blob/c01c5da4f12255efe8e4aaf5831abb2103e62666/app/page/article/unified/nl2br.ts
 
-###
+あとはこれをpluginsに入れる
+
+```tsx
+import { nl2brRemark } from "./unified/nl2br"
+
+export const RawMarkdown: FC<{ markdown: string }> = ({ markdown }) => {
+  return (
+    <ReactMarkdown
+      source={markdown}
+      escapeHtml={false} // 追加
+      renderers={{ code: CodeBlock }}
+      plugins={[nl2brRemark]}
+    />
+```
+
+### jestでsnapshot
+
+特に他と変わらないが、Reactのコンポーネントになったので、snapshotテストが簡易に出来る
+
+```tsx
+test("Sample block", () => {
+  const sampleMarkdown = removeIndent(`
+    # Foo
+    ## Baz
+    ### bar
+    foo baz bar
+    - a
+    - b
+    - c
+  `)
+  const tree = renderer
+    .create(<RawMarkdown markdown={sampleMarkdown} />)
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})
+```
