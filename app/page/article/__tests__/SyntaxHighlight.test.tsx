@@ -1,7 +1,8 @@
 import React from "react"
 import renderer from "react-test-renderer"
 import { RawMarkdown, CodeBlock } from "../Markdown"
-import { removeIndent } from "./Markdown.test"
+import { removeIndent, wrapCode } from "./Markdown.test"
+
 describe("Syntax Highlight", () => {
   const codeSample = `
     const foo = hoge
@@ -12,7 +13,7 @@ describe("Syntax Highlight", () => {
       hello {foo}
     </SomeComponent>
   `
-  const code = ["```tsx", codeSample, "“```"].join("\n")
+  const code = wrapCode(codeSample, "tsx")
   const sampleMarkdown = removeIndent(`
     This is code
     ${code}

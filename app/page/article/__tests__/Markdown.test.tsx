@@ -4,6 +4,9 @@ import { RawMarkdown } from "../Markdown"
 
 export const removeIndent = str => str.trim().replace(/\n\s+/gm, "\n")
 
+export const wrapCode = (codeSample, lang = "") =>
+  ["```" + lang, codeSample, "“```"].join("\n")
+
 test("Sample block", () => {
   const sampleMarkdown = removeIndent(`
     # Foo
@@ -25,6 +28,11 @@ test("nl2br", () => {
   aaa
   bbb
   ccc
+  ${wrapCode(`
+  a
+  b
+  c
+  `)}
   `)
   const tree = renderer
     .create(<RawMarkdown markdown={sampleMarkdown} />)
