@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sandbox 1`] = `
+.emotion-23 {
+  word-break: break-all;
+  min-height: 90vh;
+  background: white;
+  padding: 1em;
+}
+
+.emotion-0 {
+  color: gray;
+  font-size: 12px;
+}
+
+.emotion-1 {
+  font-weight: bold;
+  font-size: 1.2em;
+  display: block;
+  line-height: 1.5em;
+  font-family: Quicksand;
+}
+
+.emotion-2 {
+  display: inline-block;
+  color: #918b89;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 0.2em 0.5em;
+  margin-left: 0;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+
+.emotion-2:hover {
+  color: #555;
+}
+
+.emotion-2::before {
+  content: "#";
+}
+
+.emotion-22 {
+  padding-bottom: 3em;
+  word-break: break-all;
+}
+
+.emotion-8 {
+  line-height: 1.2em;
+  word-break: break-word;
+  font-size: 1.6rem;
+  -webkit-letter-spacing: 0.02em;
+  -moz-letter-spacing: 0.02em;
+  -ms-letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.2em;
+}
+
+.emotion-13 {
+  margin-bottom: 2.5em;
+}
+
+.emotion-21 {
+  background: white;
+}
+
+.emotion-20 {
+  font-size: 0.9em;
+  color: #595959;
+  line-height: 1.3em;
+}
+
+.emotion-20 h1,
+.emotion-20 h2,
+.emotion-20 h3,
+.emotion-20 h4,
+.emotion-20 h5,
+.emotion-20 h6 {
+  margin: 1em 0;
+  color: #555;
+}
+
+.emotion-14 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-19 {
+  margin-bottom: 0.25em;
+}
+
+.emotion-16 {
+  margin-top: 0.25em;
+}
+
+<article
+  className="emotion-23"
+>
+  <div>
+    a
+  </div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.45 'Hiragino Kaku Gothic','-apple-system,BlinkMacSystemFont','Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Hiragino Kaku Gothic','-apple-system,BlinkMacSystemFont','Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:\\"kern\\", \\"liga\\", \\"clig\\", \\"calt\\";-ms-font-feature-settings:\\"kern\\", \\"liga\\", \\"clig\\", \\"calt\\";-webkit-font-feature-settings:\\"kern\\", \\"liga\\", \\"clig\\", \\"calt\\";font-feature-settings:\\"kern\\", \\"liga\\", \\"clig\\", \\"calt\\";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Quicksand','Helvetica';font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Quicksand','Helvetica';font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Quicksand','Helvetica';font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Quicksand','Helvetica';font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Quicksand','Helvetica';font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Quicksand','Helvetica';font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}blockquote{margin-left:1.45rem;margin-right:1.45rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.45rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.45rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.45rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:\\"tnum\\";-moz-font-feature-settings:\\"tnum\\";-ms-font-feature-settings:\\"tnum\\";-webkit-font-feature-settings:\\"tnum\\";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}",
+      }
+    }
+    id="typography.js"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Quicksand:400,500,700|Nunito:400,600,700,800,900|Roboto+Condensed:700&display=optional"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <section>
+    <div
+      className="emotion-4"
+    >
+      <small
+        className="emotion-0"
+      >
+        2019-02-24T07:57:10.697Z
+      </small>
+      <a
+        className="emotion-1"
+        href="/foo-baz"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Type 'Element' is not assignable to type 'StatelessComponent&lt;Props&gt;'. が出た時のメモ
+      </a>
+      <div>
+        <a
+          className="emotion-2"
+          href="/tags/javascript/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          JavaScript
+        </a>
+        <a
+          className="emotion-2"
+          href="/tags/react/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          React
+        </a>
+      </div>
+    </div>
+  </section>
+  <div>
+    <a
+      className="emotion-2"
+      href="/tags/react/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      React
+    </a>
+    <a
+      className="emotion-2"
+      href="/tags/react hooks/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      React Hooks
+    </a>
+  </div>
+  <div
+    className="emotion-22"
+  >
+    <small
+      className="emotion-0"
+    >
+      posted: 
+      2019/10/10 10:10:10
+    </small>
+    <h1
+      className="emotion-8"
+    >
+      Blogのタイトル
+    </h1>
+    <div
+      className="emotion-13"
+    >
+      <span>
+        <a
+          className="emotion-2"
+          href="/tags/javascript/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          javascript
+        </a>
+        <a
+          className="emotion-2"
+          href="/tags/netlify/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          netlify
+        </a>
+        <a
+          className="emotion-2"
+          href="/tags/parcel/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          parcel
+        </a>
+        <a
+          className="emotion-2"
+          href="/tags/react/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          react
+        </a>
+      </span>
+    </div>
+    <div
+      className="emotion-21"
+    >
+      <div
+        className="emotion-20"
+      >
+        <h1>
+          foo
+        </h1>
+        <h2>
+          baz
+        </h2>
+        <h3>
+          bar
+        </h3>
+        <p
+          className="emotion-14"
+        >
+          Loreim ipsum
+          <br />
+          foobaz bar
+        </p>
+        <p
+          className="emotion-14"
+        >
+          zoo
+        </p>
+        <ul
+          className="emotion-19"
+          start={null}
+        >
+          <li
+            checked={null}
+            className="emotion-16"
+          >
+            a
+          </li>
+          <li
+            checked={null}
+            className="emotion-16"
+          >
+            b
+          </li>
+          <li
+            checked={null}
+            className="emotion-16"
+          >
+            c
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+`;

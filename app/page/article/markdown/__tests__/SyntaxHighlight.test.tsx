@@ -1,6 +1,7 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import { RawMarkdown, CodeBlock } from "../Markdown"
+import { RawMarkdown } from "../Markdown"
+import { PrismCodeBlock } from "../CodeBlock"
 import { removeIndent, wrapCode } from "./Markdown.test"
 
 describe("Syntax Highlight", () => {
@@ -26,7 +27,7 @@ describe("Syntax Highlight", () => {
   })
   it("as CodeBlock", () => {
     const tree = renderer
-      .create(<CodeBlock value={codeSample} language={"tsx"} />)
+      .create(<PrismCodeBlock value={codeSample} language={"tsx"} />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })

@@ -1,10 +1,9 @@
 import React, { FC } from "react"
-import { usePageContext } from "../../src/provider/GatsbyGlobalContext"
-import { BlogList, PostWrap } from "../list/Item"
+import { usePageContext } from "../../../src/provider/GatsbyGlobalContext"
 import styled from "@emotion/styled"
-import { headerFont } from "../utils/typography"
-import { Layout } from "../layout/Layout"
-import Link from "next/link"
+import { NavLink } from "../../component/NavLink"
+import { headerFont } from "../../utils/typography"
+import { PostWrap, BlogList } from "../../list/Item"
 
 const PaginateContainer = styled.div`
   padding: 1em;
@@ -19,8 +18,8 @@ const PaginateContainer = styled.div`
 const Paginate = ({ previousPagePath, nextPagePath }) => {
   return (
     <PaginateContainer>
-      {previousPagePath && <Link href={previousPagePath}>≪Prev</Link>}
-      {nextPagePath && <Link href={nextPagePath}>Next≫</Link>}
+      {previousPagePath && <NavLink to={previousPagePath}>≪Prev</NavLink>}
+      {nextPagePath && <NavLink to={nextPagePath}>Next≫</NavLink>}
     </PaginateContainer>
   )
 }

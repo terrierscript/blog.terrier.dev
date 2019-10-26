@@ -1,20 +1,21 @@
 import React from "react"
-import Link from "next/link"
 import styled from "@emotion/styled"
 import { defaultFont } from "./font"
 import { Terrier } from "./header/Terrier"
+import { NavLink } from "../component/NavLink"
+import { TITLE_BOLD_COLOR } from "./global/colors"
 
 const Nav = styled.nav`
   height: 64px;
   line-height: 64px;
 `
 
-const Logo = styled.span`
+const Logo = styled(NavLink)`
   text-decoration: none;
   font-weight: bold;
   font-family: ${defaultFont};
   font-size: 1.5em;
-  color: #000;
+  color: ${TITLE_BOLD_COLOR};
 `
 
 const NavContainer = styled.div`

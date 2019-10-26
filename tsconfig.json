@@ -27,7 +27,7 @@
     "src/**/*",
     "app/**/*",
     "pages/**/*",
-    "*.js", "next.config.js", "src/markdown", "next.config.mjs"
+    "sandbox/**/*",
   ],
   "exclude": [
     "node_modules",

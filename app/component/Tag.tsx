@@ -1,28 +1,25 @@
 import React, { SFC } from "react"
 import styled from "@emotion/styled"
 import { headerFont } from "../utils/typography"
-import Link from "next/link"
+import { NavLink } from "./NavLink"
+import { TITLE_COLOR, TAG_TEXT_COLOR } from "../layout/global/colors"
 
-export const TagItem = styled.div`
+export const TagItem = styled(NavLink)`
   display: inline-block;
-  background: #e08e79;
-  color: #000;
-  font-family: ${headerFont};
-  font-weight: bold;
-  padding: 0.2em 0.5em 0.3em;
-  margin: 0.2em;
-  border-radius: 20px;
-  font-size: 0.8em;
+  color: ${TAG_TEXT_COLOR};
+  text-decoration: underline;
+  margin: 0.2em 0.5em;
+  margin-left: 0;
+  font-size: 0.9rem;
   text-transform: lowercase;
+  :hover {
+    color: ${TITLE_COLOR};
+  }
   ::before {
-    content: "# ";
+    content: "#";
   }
 `
 
 export const Tag: SFC<{ tag: string }> = ({ tag }) => {
-  return (
-    <Link href={`/tags/${tag.toLowerCase()}/`}>
-      <TagItem>{tag}</TagItem>
-    </Link>
-  )
+  return <TagItem to={`/tags/${tag.toLowerCase()}/`}>{tag}</TagItem>
 }

@@ -1,11 +1,23 @@
 import React from "react"
-import { SideBox, Li, Ul, Title, Anchor } from "./Basics"
+import { SideBox, Title } from "./Basics"
+import styled from "@emotion/styled"
 
+const Li = styled.li`
+  margin-bottom: 0;
+  line-height: 1em;
+`
+const Ul = styled.ul`
+  margin-bottom: 0;
+`
+
+const ListLink = styled.a`
+  font-size: 0.8rem;
+`
 const List = ({ href, children }) => (
   <Li>
-    <Anchor key="new" href={href}>
+    <ListLink key="new" href={href}>
       {children}
-    </Anchor>
+    </ListLink>
   </Li>
 )
 

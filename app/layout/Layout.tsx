@@ -6,6 +6,7 @@ import { Container } from "./Container"
 import { Footer } from "./Footer"
 import styled from "@emotion/styled"
 import { Side } from "./side/Side"
+import { GlobalStyle } from "./global/Style"
 require("../web-component/index")
 
 // defineComponents()
@@ -74,9 +75,12 @@ export const LayoutInner = ({ children }) => {
 
 export const Layout: SFC<{ children: any }> = ({ children }) => {
   return (
-    <div>
-      <Meta />
-      <LayoutInner>{children}</LayoutInner>
-    </div>
+    <>
+      <GlobalStyle />
+      <div>
+        <Meta />
+        <LayoutInner>{children}</LayoutInner>
+      </div>
+    </>
   )
 }

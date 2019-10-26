@@ -11,6 +11,8 @@
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.22",
     "@mapbox/rehype-prism": "^0.3.1",
+    "@now/static-build": "^0.11.0",
+    "@reach/router": "^1.2.1",
     "@types/google.analytics": "^0.0.40",
     "@types/jest": "^24.0.9",
     "@types/react": "^16.9.9",
@@ -23,11 +25,13 @@
     "dotenv": "^8.0.0",
     "dotenv-cli": "^2.0.0",
     "gray-matter": "^4.0.2",
+    "identity-obj-proxy": "^3.0.0",
     "immutable": "^3.8.2",
     "inquirer": "^6.2.2",
     "isomorphic-unfetch": "^3.0.0",
     "jest": "^24.1.0",
     "klaw-sync": "^6.0.0",
+    "jest-emotion": "^10.0.17",
     "lodash": "^4.17.5",
     "lodash.debounce": "^4.0.8",
     "luxon": "^1.11.3",
@@ -40,6 +44,7 @@
     "now": "^16.4.3",
     "parcel": "^1.11.0",
     "popmotion": "^8.6.2",
+    "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.5.2",
     "react-adsense": "^0.1.0",
@@ -53,6 +58,7 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-test-renderer": "^16.11.0",
     "react-typography": "^0.16.18",
+    "refractor": "^2.10.0",
     "request": "^2.88.0",
     "rss-parser": "^3.6.3",
     "rxjs": "^6.4.0",
@@ -79,15 +85,10 @@
     "test": "next build",
     "tsc": "tsc --isolatedModules false",
     "blog": "node ./bin/create.js",
-    "sandbox": "parcel sandbox/index.html"
+    "sandbox": "parcel serve sandbox/index.html",
+    "sandbox:build": "parcel build sandbox/index.html"
   },
   "devDependencies": {
     "prettier": "1.18.2"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      ".cache",
-      "node_modules"
-    ]
   }
 }

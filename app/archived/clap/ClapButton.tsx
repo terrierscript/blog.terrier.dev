@@ -10,6 +10,7 @@ import {
   FadeAnimation,
   useAnimationContext
 } from "./Animate"
+import { BG_COLOR } from "../../layout/global/colors"
 
 const PositionFixed = styled.div`
   position: fixed;
@@ -29,7 +30,7 @@ const Clap = styled.div`
 const Button = styled(Clap)`
   border: #e2468a 2px solid;
   border-radius: 50%;
-  background: white;
+  background: ${BG_COLOR};
   cursor: pointer;
 `
 

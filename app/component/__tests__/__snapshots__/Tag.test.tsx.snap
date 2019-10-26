@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag> 1`] = `
+.emotion-0 {
+  display: inline-block;
+  color: #918b89;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 0.2em 0.5em;
+  margin-left: 0;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+
+.emotion-0:hover {
+  color: #555;
+}
+
+.emotion-0::before {
+  content: "#";
+}
+
+<a
+  className="emotion-0"
+  href="/tags/foo/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  foo
+</a>
+`;

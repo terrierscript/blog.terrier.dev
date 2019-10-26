@@ -1,11 +1,11 @@
 // @ts-nocheck
 import React from "react"
 import Helmet from "react-helmet"
-import { Link } from "gatsby"
 import { BlogItem } from "../../app/list/Item"
 import { graphql } from "gatsby"
 import { MainLayoutWithGatsby } from "../provider/MainLayout"
 import { generatePostFragment } from "../query/query"
+import { NavLink } from "../../app/component/NavLink"
 
 // const PostLinks = ({ posts }) =>
 //   posts.map(post => (
@@ -38,7 +38,7 @@ class TagRoute extends React.Component {
               <BlogItem post={post} key={post.id} />
             ))}
             <p>
-              <Link to="/tags/">全てのタグを見る</Link>
+              <NavLink to="/tags/">全てのタグを見る</NavLink>
             </p>
           </div>
         </section>

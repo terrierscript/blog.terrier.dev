@@ -21,11 +21,9 @@ export const TagCloud = () => {
     <WhiteBox>
       <Title>Tags</Title>
       {tags.map(({ fieldValue, totalCount }) => (
-        <Link key={fieldValue}>
-          <TagItem>
-            {fieldValue} ({totalCount})
-          </TagItem>
-        </Link>
+        <TagItem to={`/tags/${fieldValue}/`} key={fieldValue}>
+          {fieldValue} ({totalCount})
+        </TagItem>
       ))}
     </WhiteBox>
   )

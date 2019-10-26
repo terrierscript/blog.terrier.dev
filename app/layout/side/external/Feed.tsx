@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useExternalFeeds } from "../../../lib/feed/useExternalFeeds"
 import { DateTime } from "luxon"
+import { BG_COLOR, FEED_LINK_COLOR } from "../../global/colors"
 
 const FeedItem = styled.div`
   /* width: 100%; */
@@ -17,7 +18,7 @@ const Mark = styled.div<any>`
   border-radius: 4px;
   min-width: 4em;
   background-color: ${({ backgroundColor }) => backgroundColor};
-  color: ${props => props.color || "#fff"};
+  color: ${props => props.color || BG_COLOR};
   margin: 0 0.5em;
   text-decoration: none;
   white-space: nowrap;
@@ -32,9 +33,9 @@ const Time = styled.div`
 `
 const Link = styled.a`
   display: block;
-  color: #333;
+  color: ${FEED_LINK_COLOR};
   :visited: {
-    color: #333:
+    color: ${FEED_LINK_COLOR};
   }
 `
 
