@@ -65,6 +65,7 @@
     "react-pose": "^4.0.7",
     "react-spring": "^8.0.7",
     "react-syntax-highlighter": "^11.0.2",
+    "react-test-renderer": "^16.11.0",
     "react-typography": "^0.16.18",
     "rehype": "^9.0.0",
     "rehype-highlight": "^3.0.0",

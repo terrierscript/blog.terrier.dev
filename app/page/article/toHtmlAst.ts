@@ -1,37 +1,7 @@
 import rehypeReact from "rehype-react"
 import React from "react"
-import visit from "unist-util-visit"
 import unified from "unified"
-
-const nl2br = () => {
-  const transformer = tree => {
-    visit(tree, (node: any, index, parent: any) => {
-      if (node.type !== "text") return node
-      if (parent.tagName !== "p") return node
-      const values = node.value.trim().split("\n")
-      if (values.length < 1) {
-        return
-      }
-      const children = values
-        .map((v, i) => {
-          return i == 0
-            ? [{ type: "text", value: v }]
-            : [{ type: "element", tagName: "br" }, { type: "text", value: v }]
-        })
-        // .flat()
-        .reduce((a, b) => [...a, ...b], []) // TODO: Array.prototype.flat
-
-      const newChildren = [
-        ...parent.children.slice(0, index),
-        ...children,
-        ...parent.children.slice(index + 1)
-      ]
-      parent.children = newChildren
-    })
-    return tree
-  }
-  return transformer
-}
+import { nl2br } from "./unified/nl2br"
 
 const renderAst = new rehypeReact({
   createElement: React.createElement
