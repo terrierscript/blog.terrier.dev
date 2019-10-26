@@ -24,10 +24,12 @@ Gatsbyでmarkdownを利用するなら`gatsby-transformer-remark`を利用する
 効果だけ先に書いておくと下記のような形になった
 
 * devのビルドは100ページのlimitの場合20s -> 4s程度に縮んだ。うれしい
-* gatsby-transformer-remarkはfrontmatterのために残す必要があるが、それ以外のremark関連プラグインは捨てた
-  * gatsby-transformer-frontmatterみたいなのがほしい・・・
 * snapshotによるテストが可能になった。うれしい
 * 全体のビルドは10秒程度伸びた。かなしい
+* gatsby-transformer-remarkはfrontmatterのために残す必要があるが、それ以外のremark関連プラグインは捨てた
+  * gatsby-transformer-frontmatterみたいなのがほしい
+* このブログは画像を別なところとかに置いているので問題ないが、よく考えたら普通に`gatsby-remark-image`とか使えなくなって詰みそう
+* どっかバグってる可能性ありそう
 
 ## 基礎部分
 
