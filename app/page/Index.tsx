@@ -28,11 +28,9 @@ const Paginate = ({ previousPagePath, nextPagePath }) => {
 export const Index = ({ posts }) => {
   const pageContext = usePageContext()
   return (
-    <>
-      <Layout>
-        <BlogList posts={posts} />
-        <Paginate {...pageContext} />
-      </Layout>
-    </>
+    <Layout>
+      <BlogList posts={posts} />
+      <Paginate {...pageContext} />
+    </Layout>
   )
 }
