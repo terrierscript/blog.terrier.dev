@@ -1,5 +1,5 @@
 import React, { useRef, useState, useCallback } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import posed from "react-pose"
 import { useEventCallback } from "rxjs-hooks"
 import { bufferTime, tap, filter } from "rxjs/operators"

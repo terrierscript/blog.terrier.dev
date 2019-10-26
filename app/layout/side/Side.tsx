@@ -3,7 +3,7 @@ import { SideProfile } from "./profile/Profile"
 import { TagCloud } from "./TagCloud"
 import { Externals } from "./Externals"
 import { SideLinks } from "./Link"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const SideGrid = styled.aside`
   display: grid;

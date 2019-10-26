@@ -7,11 +7,9 @@ import { generatePostFragment } from "../query/query"
 
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
-  // const content = renderHtmlAST(post.htmlAst)
   return (
     <BlogLayout pageContext={pageContext}>
       <BlogPostTemplate
-        // content={content}
         tags={
           post.frontmatter.tags // description={post.frontmatter.description}
         }

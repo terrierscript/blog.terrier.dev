@@ -25,7 +25,7 @@ const normalizedTagGroup = tags => {
 }
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
-  const limit = process.env.NODE_ENV === "production" ? 10000 : 100
+  const limit = process.env.NODE_ENV === "production" ? 10000 : 50
   const ql = `
     {
       allMarkdownRemark(
@@ -108,7 +108,7 @@ exports.createPages = async ({ actions, graphql }) => {
     paginate({
       createPage,
       items: posts,
-      itemsPerPage: 10,
+      itemsPerPage: 20,
       pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? "/" : "/page"),
       component: getTemplate("index"),
       context: {
