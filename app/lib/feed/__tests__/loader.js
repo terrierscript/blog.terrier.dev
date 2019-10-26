@@ -1,3 +1,5 @@
 import { loadFeed } from "../loader"
 
-it("loadFeed", done => {})
+it("loadFeed", done => {
+  done()
+})
