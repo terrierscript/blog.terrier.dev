@@ -1,7 +1,8 @@
 import React from "react"
 // @ts-ignore
 import pretty from "./pretty.jpg"
-import styled, { keyframes } from "styled-components"
+import { keyframes } from "@emotion/core"
+import styled from "@emotion/styled"
 import { RadiusImg } from "../../component/Avater"
 
 const rotate360 = keyframes`
@@ -23,9 +24,7 @@ const Img = styled(RadiusImg)`
   }
 `
 
-const Dog = ({ size }) => (
-  <Img src={pretty} size={size} alt="rotate pretty my dog" />
-)
+const Dog = ({ size }) => <Img src={pretty} size={size} alt="🐶" />
 
 const Container = styled.div`
   display: inline-block;

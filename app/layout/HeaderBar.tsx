@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { defaultFont } from "./font"
 import { Terrier } from "./header/Terrier"
 
@@ -38,7 +38,6 @@ export const HeaderBar = () => {
             <Logo>
               <Grid>
                 <Terrier size={40} />
-                {/* <Avater /> */}
                 <span>terrier.dev</span>
               </Grid>
             </Logo>

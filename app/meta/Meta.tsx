@@ -1,7 +1,8 @@
 import React from "react"
 import Helmet from "react-helmet"
 
-import { createGlobalStyle, css } from "styled-components"
+import { Global, css } from "@emotion/core"
+
 import { Fonts } from "./Fonts"
 
 const globalCss = css`
@@ -23,16 +24,13 @@ const globalCss = css`
     }
   }
 `
-const GlobalStyle = createGlobalStyle`
-  ${globalCss}
-`
 
 export const Meta = () => {
   // baseStyles();
 
   return (
     <React.Fragment>
-      <GlobalStyle />
+      <Global styles={globalCss} />
       <Helmet title="terrier.dev 🐶 ">
         <meta name="description" content={"Author: terrierscript"} />
         <meta name="twitter:card" content="summary" />

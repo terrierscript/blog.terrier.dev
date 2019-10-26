@@ -1,5 +1,5 @@
 import React, { SFC } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { headerFont } from "../utils/typography"
 import Link from "next/link"
 

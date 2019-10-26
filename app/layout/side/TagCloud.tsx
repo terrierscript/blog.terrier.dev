@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { TagsContext } from "../../context/SiteContext"
 import { SideBox, Title } from "./Basics"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { TagItem } from "../../component/Tag"
 
 const WhiteBox = styled(SideBox)`

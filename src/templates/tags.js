@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react"
 import Helmet from "react-helmet"
-import Link from "gatsby-link"
+import { Link } from "gatsby"
 import { BlogItem } from "../../app/list/Item"
 import { graphql } from "gatsby"
 import { MainLayoutWithGatsby } from "../provider/MainLayout"

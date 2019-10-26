@@ -6,7 +6,7 @@ import React, {
   useContext
 } from "react"
 import { useTransition, animated } from "react-spring"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const Anim = styled(animated.div)`
   position: absolute;
