@@ -10,24 +10,35 @@ const injectChild = (parent: Parent, children: Node[], index) => {
 }
 
 const nodeLines = node => node.value.trim().split("\n")
-
-// export const nl2brRemark = () => {
-//   const transformer = tree => {
-//     visit(tree, (node: any, index, parent: any) => {
-//       if (node.type !== "text") return node
-//       const lines = nodeLines(node)
-//       if (lines < 1) {
-//         return node
-//       }
-
-//       return tree
-//     })
-//   }
-//   return transformer
-// }
-
 const isParent = (node: Node): node is Parent =>
   typeof node.children !== "undefined" && Array.isArray(node.children)
+
+export const nl2brRemark = () => {
+  const visitor: Visitor<Node> = (node: Node, index, parent: Node) => {
+    if (node.type !== "text") return
+    if (!isParent(parent)) return
+
+    const lines = nodeLines(node)
+    if (lines < 2) {
+      return
+    }
+
+    const children = lines
+      .map((v, i) => {
+        return i == 0
+          ? [{ type: "text", value: v }]
+          : [{ type: "break" }, { type: "text", value: v }]
+      })
+      .reduce((a, b) => [...a, ...b], [])
+    const newChildren = injectChild(parent, children, index)
+    parent.children = newChildren
+  }
+  const transformer = tree => {
+    visit(tree, visitor)
+    return tree
+  }
+  return transformer
+}
 
 export const nl2brRehype = () => {
   const visitor: Visitor<Node> = (node: Node, index, parent: Node) => {
@@ -36,7 +47,7 @@ export const nl2brRehype = () => {
     if (!isParent(parent)) return
 
     const lines = nodeLines(node)
-    if (lines < 1) {
+    if (lines < 2) {
       return
     }
     const children = lines

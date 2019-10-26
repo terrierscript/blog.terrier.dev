@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/tomorrow"
 import htmlParser from "react-markdown/plugins/html-parser"
+import { nl2brRemark } from "./unified/nl2br"
 
 const parseHtml = htmlParser({
   isValidNode: () => {
@@ -37,15 +38,7 @@ export const RawMarkdown: FC<{ markdown: string }> = ({ markdown }) => {
       source={markdown}
       escapeHtml={false} // for web components
       renderers={{ code: CodeBlock }}
-      astPlugins={
-        [
-          // e => {
-          //   console.log("astsat", e)
-          //   throw "XXX"
-          // },
-          // parseHtml
-        ]
-      }
+      plugins={[nl2brRemark]}
     />
   )
 }

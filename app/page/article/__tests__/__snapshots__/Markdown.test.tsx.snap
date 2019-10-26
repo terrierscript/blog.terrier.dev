@@ -32,8 +32,10 @@ exports[`nl2br 1`] = `
 Array [
   <p>
     aaa
-bbb
-ccc
+    <br />
+    bbb
+    <br />
+    ccc
   </p>,
   <pre
     style={
