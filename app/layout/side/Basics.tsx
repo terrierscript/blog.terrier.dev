@@ -7,14 +7,6 @@ export const SideBox = styled.div`
   padding: 1em;
 `
 
-export const Li = styled.li`
-  margin-bottom: 0;
-  line-height: 1em;
-`
-export const Ul = styled.ul`
-  margin-bottom: 0;
-`
-
 export const Title = styled.h3`
   margin-bottom: 0.5em;
 `

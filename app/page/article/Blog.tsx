@@ -35,7 +35,7 @@ const BlogBody = styled.section`
     border: 1px solid gray;
   }
 `
-const ArticleWrapper = styled.div`
+const ArticleBg = styled.div`
   background: ${BG_COLOR};
   /* padding: 1em; */
 `
@@ -45,11 +45,12 @@ const ArticleTitle = styled.h1`
   word-break: break-word;
   font-size: 1.6rem;
   letter-spacing: 0.02em;
+  margin-bottom: 0.2em;
   /* font-family: ${defaultFont}; */
 `
 
 const TagListWrapper = styled.div`
-  margin-bottom: 1.2em;
+  margin-bottom: 2.5em;
 `
 
 const BlogArticleWrapper = styled.div`
@@ -70,10 +71,10 @@ export const BlogArticle = ({
     <TagListWrapper>
       <TagList tags={tags} />
     </TagListWrapper>
-    <ArticleWrapper>
+    <ArticleBg>
       {/* <HTMLContent content={content} /> */}
       <RawMarkdown markdown={markdown} />
-    </ArticleWrapper>
+    </ArticleBg>
   </BlogArticleWrapper>
 )
 

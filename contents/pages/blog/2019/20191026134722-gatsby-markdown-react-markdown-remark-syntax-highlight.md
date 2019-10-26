@@ -21,6 +21,9 @@ Gatsbyでmarkdownを利用するなら`gatsby-transformer-remark`を利用する
 
 今回は[`react-markdown`](https://github.com/rexxars/react-markdown#parsing-html)と[`react-sytnax-highlight`](https://github.com/conorhastings/react-syntax-highlighter)を使って置き換えた。
 
+
+#### どうなったか
+
 効果だけ先に書いておくと下記のような形になった
 
 * devのビルドは100ページのlimitの場合20s -> 4s程度に縮んだ。うれしい

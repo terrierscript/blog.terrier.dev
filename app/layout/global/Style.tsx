@@ -1,25 +1,25 @@
 import { Global, css } from "@emotion/core"
 import React from "react"
-import { MAIN_COLOR, MAIN_BOLD_COLOR } from "./colors"
+import { TITLE_COLOR, MAIN_BOLD_COLOR } from "./colors"
+import styled from "@emotion/styled"
+
+const anchor = css`
+  a {
+    color: ${TITLE_COLOR};
+    transition: 0.5s;
+    text-decoration-color: transparent;
+  }
+  a:hover {
+    color: ${MAIN_BOLD_COLOR};
+    text-decoration-color: ${MAIN_BOLD_COLOR};
+    /* text-decoration: underline; */
+  }
+`
+
+export const Anchor = styled.a`
+  ${anchor}
+`
 
 export const GlobalStyle = () => {
-  return (
-    <Global
-      styles={css`
-        a,
-        a:active,
-        a:visited {
-          color: ${MAIN_COLOR};
-          transition: 0.5s;
-          text-decoration-color: transparent;
-          line-height: 1em;
-        }
-        a:hover {
-          color: ${MAIN_BOLD_COLOR};
-          text-decoration-color: ${MAIN_BOLD_COLOR};
-          /* text-decoration: underline; */
-        }
-      `}
-    />
-  )
+  return <Global styles={anchor} />
 }

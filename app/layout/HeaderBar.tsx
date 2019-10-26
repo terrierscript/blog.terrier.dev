@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { defaultFont } from "./font"
 import { Terrier } from "./header/Terrier"
 import { NavLink } from "../component/NavLink"
+import { MAIN_BOLD_COLOR } from "./global/colors"
 
 const Nav = styled.nav`
   height: 64px;
@@ -14,7 +15,7 @@ const Logo = styled(NavLink)`
   font-weight: bold;
   font-family: ${defaultFont};
   font-size: 1.5em;
-  color: #000;
+  color: ${MAIN_BOLD_COLOR};
 `
 
 const NavContainer = styled.div`

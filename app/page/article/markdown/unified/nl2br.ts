@@ -44,6 +44,7 @@ const nl2brTransformer = (
       return
     }
     const children = lineTravarse(lines)
+    console.log(lines, children)
     const newChildren = injectChild(parent, children, index)
     parent.children = newChildren
   }

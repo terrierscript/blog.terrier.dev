@@ -2,7 +2,7 @@ import React, { SFC } from "react"
 import styled from "@emotion/styled"
 import { headerFont } from "../utils/typography"
 import { NavLink } from "./NavLink"
-import { MAIN_COLOR, TAG_COLOR } from "../layout/global/colors"
+import { TITLE_COLOR, TAG_COLOR } from "../layout/global/colors"
 
 export const TagItem = styled(NavLink)`
   display: inline-block;
@@ -17,7 +17,7 @@ export const TagItem = styled(NavLink)`
   font-size: 0.9rem;
   text-transform: lowercase;
   &:hover{
-    color: ${MAIN_COLOR};
+    color: ${TITLE_COLOR};
   }
   ::before {
     content: "#";

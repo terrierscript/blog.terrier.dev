@@ -901,45 +901,55 @@ exports[`nl2br-link 1`] = `
 `;
 
 exports[`nl2br-link-not-break 1`] = `
-.emotion-1 {
+.emotion-3 {
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+
+.emotion-3 h1,
+.emotion-3 h2,
+.emotion-3 h3,
+.emotion-3 h4,
+.emotion-3 h5,
+.emotion-3 h6 {
+  margin: 1em 0;
+}
+
+.emotion-2 {
+  margin-bottom: 0.8em;
+}
+
+.emotion-0 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0 {
-  font-size: 0.9em;
-}
-
-<p>
+<div
+  className="emotion-3"
+>
   <p
-    className="emotion-0"
-    value="今回は"
+    className="emotion-2"
   >
     今回は
-  </p>
-  <a
-    className="emotion-1"
-    href="https://github.com/rexxars/react-markdown#parsing-html"
-  >
-    <code>
-      react-markdown
-    </code>
-  </a>
-  <p
-    className="emotion-0"
-    value="と"
-  >
+    <a
+      className="emotion-0"
+      href="https://github.com/rexxars/react-markdown#parsing-html"
+    >
+      <code>
+        react-markdown
+      </code>
+    </a>
     と
+    <a
+      className="emotion-0"
+      href="https://github.com/conorhastings/react-syntax-highlighter"
+    >
+      <code>
+        react-sytnax-highlight
+      </code>
+    </a>
   </p>
-  <a
-    className="emotion-1"
-    href="https://github.com/conorhastings/react-syntax-highlighter"
-  >
-    <code>
-      react-sytnax-highlight
-    </code>
-  </a>
-</p>
+</div>
 `;
 
 exports[`web-component 1`] = `
