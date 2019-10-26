@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sample block 1`] = `
+Array [
+  <h1>
+    Foo
+  </h1>,
+  <h2>
+    Baz
+  </h2>,
+  <h3>
+    bar
+  </h3>,
+  <p>
+    foo baz bar
+  </p>,
+  <ul>
+    <li>
+      a
+    </li>
+    <li>
+      b
+    </li>
+    <li>
+      c
+    </li>
+  </ul>,
+]
+`;
+
+exports[`nl2br 1`] = `
+Array [
+  <p>
+    aaa
+    <br />
+    bbb
+    <br />
+    ccc
+  </p>,
+  <pre
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "#2d2d2d",
+        "color": "#ccc",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "margin": ".5em 0",
+        "msHyphens": "none",
+        "overflow": "auto",
+        "padding": "1em",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    <code
+      style={
+        Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "background": "none",
+          "color": "#ccc",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "msHyphens": "none",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        }
+      }
+    >
+      a
+b
+c
+“\`\`\`
+    </code>
+  </pre>,
+]
+`;
+
+exports[`web-component 1`] = `
+<p>
+  aaa
+
+  &lt;x-some-item&gt;
+  foo
+  &lt;/x-some-item&gt;
+  
+ccc
+</p>
+`;

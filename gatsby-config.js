@@ -28,20 +28,7 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          "gatsby-remark-component",
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              noInlineHighlight: true
-            }
-          }
-        ]
-      }
-    },
+    "gatsby-transformer-remark",
     "gatsby-plugin-twitter",
     "gatsby-plugin-emotion",
     // "gatsby-plugin-styled-components",
