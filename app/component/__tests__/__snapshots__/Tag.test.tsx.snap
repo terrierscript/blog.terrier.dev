@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag> 1`] = `
+<a
+  href="/tags/foo/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  <div
+    className="css-emcna"
+  >
+    foo
+  </div>
+</a>
+`;
