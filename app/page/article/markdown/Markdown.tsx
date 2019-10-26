@@ -7,7 +7,9 @@ import { PrismCodeBlock } from "./CodeBlock"
 export const CodeWrapper = styled.div`
   margin-bottom: 2rem;
 `
-
+const Link = styled.a`
+  text-decoration: underline;
+`
 const CodeBlock = props => (
   <CodeWrapper>
     <PrismCodeBlock {...props} />
@@ -19,7 +21,7 @@ export const RawMarkdown: FC<{ markdown: string }> = ({ markdown }) => {
     <ReactMarkdown
       source={markdown}
       escapeHtml={false} // for web components
-      renderers={{ code: CodeBlock }}
+      renderers={{ code: CodeBlock, link: Link }}
       plugins={[nl2brRemark]}
     />
   )

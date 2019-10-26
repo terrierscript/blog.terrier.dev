@@ -26,6 +26,9 @@ const travarseLineGenerator = (
         return i == 0 ? [valueToNode(v)] : [valueToBreakNode(v), valueToNode(v)]
       })
       .reduce((a, b) => [...a, ...b], []) // TODO: .flat()
+      .filter((n: Node) => {
+        return !(n.type === "text" && n.value === "")
+      })
 }
 
 const nl2brTransformer = (
@@ -36,8 +39,8 @@ const nl2brTransformer = (
     if (!isTargetNode(node, parent)) return
     if (!isParent(parent)) return
     if (typeof node.value !== "string") return
-    const lines = node.value.trim().split("\n")
-    if (lines.length < 2) {
+    const lines = node.value.split("\n")
+    if (lines.length < 1) {
       return
     }
     const children = lineTravarse(lines)
@@ -63,14 +66,14 @@ const isValidRemarkNode = (node: Node, parent: Node) => node.type === "text"
 export const nl2brRemark = () =>
   nl2brTransformer(isValidRemarkNode, remarkLineTraverse)
 
-// // rehype
-// const rehypeLineTraverse = travarseLineGenerator(
-//   v => ({ type: "text", value: v }),
-//   v => ({ type: "element", tagName: "br" })
-// )
+// rehype
+const rehypeLineTraverse = travarseLineGenerator(
+  v => ({ type: "text", value: v }),
+  v => ({ type: "element", tagName: "br" })
+)
 
-// const isValidRehypeNode = (node: Node, parent: Node) =>
-//   node.type === "text" && parent.tagName === "p"
+const isValidRehypeNode = (node: Node, parent: Node) =>
+  node.type === "text" && parent.tagName === "p"
 
-// export const nl2brRehype = () =>
-//   nl2brTransformer(isValidRehypeNode, rehypeLineTraverse)
+export const nl2brRehype = () =>
+  nl2brTransformer(isValidRehypeNode, rehypeLineTraverse)

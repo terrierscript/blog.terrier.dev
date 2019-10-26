@@ -192,33 +192,15 @@ exports[`sandbox 1`] = `
     <div
       className="emotion-14"
     >
-      <h1>
-        foo
-      </h1>
-      <h2>
-        baz
-      </h2>
-      <h3>
-        bar
-      </h3>
-      <p>
-        Loreim ipsum
-        <br />
-        foobaz bar
-      </p>
-      <p>
-        zoo
-      </p>
+      <h1 />
+      <h2 />
+      <h3 />
+      <p />
+      <p />
       <ul>
-        <li>
-          a
-        </li>
-        <li>
-          b
-        </li>
-        <li>
-          c
-        </li>
+        <li />
+        <li />
+        <li />
       </ul>
     </div>
   </div>

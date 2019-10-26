@@ -2,41 +2,21 @@
 
 exports[`Sample block 1`] = `
 Array [
-  <h1>
-    Foo
-  </h1>,
-  <h2>
-    Baz
-  </h2>,
-  <h3>
-    bar
-  </h3>,
-  <p>
-    foo baz bar
-  </p>,
+  <h1 />,
+  <h2 />,
+  <h3 />,
+  <p />,
   <ul>
-    <li>
-      a
-    </li>
-    <li>
-      b
-    </li>
-    <li>
-      c
-    </li>
+    <li />
+    <li />
+    <li />
   </ul>,
 ]
 `;
 
 exports[`nl2br 1`] = `
 Array [
-  <p>
-    aaa
-    <br />
-    bbb
-    <br />
-    ccc
-  </p>,
+  <p />,
   .emotion-0 {
   margin-bottom: 2rem;
 }
@@ -105,21 +85,12 @@ exports[`nl2br-link 1`] = `
 <p>
   <a
     href="http://example.com"
-  >
-    http://example.com
-  </a>
-  
-bbb
+  />
 </p>
 `;
 
 exports[`web-component 1`] = `
 <p>
-  aaa
-
   <x-some-item />
-  foo
-  
-ccc
 </p>
 `;

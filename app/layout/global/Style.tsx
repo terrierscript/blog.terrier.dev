@@ -13,7 +13,6 @@ export const GlobalStyle = () => {
           transition: 0.5s;
           text-decoration-color: transparent;
           line-height: 1em;
-          font-size: 0.8rem;
         }
         a:hover {
           color: ${MAIN_BOLD_COLOR};

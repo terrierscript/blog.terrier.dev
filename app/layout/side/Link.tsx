@@ -1,6 +1,10 @@
 import React from "react"
 import { SideBox, Li, Ul, Title } from "./Basics"
+import styled from "@emotion/styled"
 
+const ListLink = styled.a`
+  font-size: 0.8rem;
+`
 const List = ({ href, children }) => (
   <Li>
     <a key="new" href={href}>
