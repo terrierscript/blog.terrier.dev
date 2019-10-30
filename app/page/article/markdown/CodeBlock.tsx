@@ -1,6 +1,6 @@
 import React from "react"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import prismStyle from "react-syntax-highlighter/dist/cjs/styles/prism/tomorrow"
+import prismStyle from "react-syntax-highlighter/dist/cjs/styles/prism/darcula"
 import HljsSyntaxHighlighter from "react-syntax-highlighter"
 import hljsStyle from "react-syntax-highlighter/dist/cjs/styles/hljs/darcula"
 
