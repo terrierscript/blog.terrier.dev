@@ -1,13 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
-
-import { Global, css } from "@emotion/core"
-
-import { Fonts } from "../layout/global/Fonts"
-
-export const Meta = () => {
-  // baseStyles();
-
+export const HelmetItem = () => {
   return (
     <React.Fragment>
       <Helmet title="terrier.dev 🐶 ">

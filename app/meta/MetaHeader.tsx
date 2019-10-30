@@ -1,5 +1,7 @@
 import React, { useEffect } from "react"
 import { getVersion, logVersion } from "../../src/version"
+import { TwitterTracking } from "./TwitterTracking"
+import { HelmetItem } from "./HelmetItem"
 
 let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
@@ -40,6 +42,7 @@ export const MetaHeader = props => {
       {props.headComponents}
       <link rel="shortcut icon" />
       {css}
+      <HelmetItem />
     </head>
   )
 }
