@@ -58,7 +58,7 @@ const Paragraph = styled.p`
   line-height: 1.7em;
 `
 
-const InlineCode = styled.span`
+const InlineCode = styled.code`
   border: 1px solid #ccc;
   background: #eee;
   border-radius: 4px;

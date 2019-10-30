@@ -1398,24 +1398,24 @@ exports[`nl2br-link-not-break 1`] = `
       className="emotion-1"
       href="https://github.com/rexxars/react-markdown#parsing-html"
     >
-      <span
+      <code
         className="emotion-0"
         value="react-markdown"
       >
         react-markdown
-      </span>
+      </code>
     </a>
     と
     <a
       className="emotion-1"
       href="https://github.com/conorhastings/react-syntax-highlighter"
     >
-      <span
+      <code
         className="emotion-0"
         value="react-sytnax-highlight"
       >
         react-sytnax-highlight
-      </span>
+      </code>
     </a>
   </p>
 </div>
