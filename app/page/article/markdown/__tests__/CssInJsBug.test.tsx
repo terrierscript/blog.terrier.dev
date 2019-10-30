@@ -1,7 +1,7 @@
 import React from "react"
 import renderer from "react-test-renderer"
 import { RawMarkdown } from "../Markdown"
-import { PrismCodeBlock } from "../CodeBlock"
+import { CodeBlock } from "../CodeBlock"
 import { removeIndent, wrapCode } from "./Markdown.test"
 import { render } from "@testing-library/react"
 
@@ -15,7 +15,7 @@ xdescribe("css-in-js bug", () => {
   \``
   xit("snapshot", () => {
     const tree = renderer
-      .create(<PrismCodeBlock value={code} language={"tsx"} />)
+      .create(<CodeBlock value={code} language={"tsx"} />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
