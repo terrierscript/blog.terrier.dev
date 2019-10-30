@@ -117,36 +117,51 @@ exports[`nl2br 1`] = `
     <pre
       style={
         Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
           "background": "#2b2b2b",
-          "color": "#bababa",
-          "display": "block",
-          "overflowX": "auto",
-          "padding": "0.5em",
+          "color": "#a9b7c6",
+          "direction": "ltr",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "margin": ".5em 0",
+          "msHyphens": "none",
+          "overflow": "auto",
+          "padding": "1em",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
         }
       }
     >
-      <code>
-        <span
-          style={
-            Object {
-              "color": "#cb7832",
-            }
+      <code
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "color": "#a9b7c6",
+            "direction": "ltr",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "msHyphens": "none",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
           }
-        >
-          a
-        </span>
-        
-
-        <span
-          style={
-            Object {
-              "color": "#cb7832",
-            }
-          }
-        >
-          b
-        </span>
-        
+        }
+      >
+        a
+b
 c
 “\`\`\`
       </code>
