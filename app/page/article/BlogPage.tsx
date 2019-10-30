@@ -114,7 +114,10 @@ export const BlogPostTemplate = ({
           markdown={rawMarkdown}
         />
         {/* TODO fileAbsolutePathなんとかしたい */}
-        <ArticleFooter fileAbsolutePath={fileAbsolutePath}></ArticleFooter>
+        <ArticleFooter
+          title={title}
+          fileAbsolutePath={fileAbsolutePath}
+        ></ArticleFooter>
         <AdSense.Google
           layout="in-article"
           format="fluid"

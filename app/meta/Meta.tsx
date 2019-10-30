@@ -11,6 +11,7 @@ export const Meta = () => {
   return (
     <React.Fragment>
       <Helmet title="terrier.dev 🐶 ">
+        <link rel="me" href="https://twitter.com/terrierscript"></link>
         <meta name="description" content={"Author: terrierscript"} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@terrierscript" />
