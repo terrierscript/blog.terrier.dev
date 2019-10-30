@@ -23,7 +23,6 @@ const Link = ({ href, ...props }) => {
   if (isStackblitzUrl(href)) {
     return <StackblitzEmbed href={href}></StackblitzEmbed>
   }
-  console.log(href)
   return <Anchor href={href} {...props} />
 }
 

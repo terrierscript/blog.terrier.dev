@@ -31,4 +31,16 @@ describe("Syntax Highlight", () => {
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it("css-in-js bug", () => {
+    const code = `
+    const Item = styled.div\`
+    grid-row: ${({ row }) => row};
+    grid-columns: ${({ col }) => col};
+    \``
+    const tree = renderer
+      .create(<PrismCodeBlock value={code} language={"tsx"} />)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })

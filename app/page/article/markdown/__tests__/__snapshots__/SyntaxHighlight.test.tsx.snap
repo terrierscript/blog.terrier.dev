@@ -3,7 +3,7 @@
 exports[`Sample block 1`] = `
 .emotion-5 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
@@ -14,11 +14,12 @@ exports[`Sample block 1`] = `
 .emotion-5 h5,
 .emotion-5 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
 .emotion-0 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
 .emotion-4 {
@@ -451,7 +452,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
 exports[`Syntax Highlight as Markdown 1`] = `
 .emotion-2 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
@@ -462,11 +463,12 @@ exports[`Syntax Highlight as Markdown 1`] = `
 .emotion-2 h5,
 .emotion-2 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
 .emotion-0 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
 .emotion-1 {
@@ -885,10 +887,332 @@ hello
 </div>
 `;
 
+exports[`Syntax Highlight css-in-js bug 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#2d2d2d",
+      "color": "#ccc",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "#ccc",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    
+    
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#cc99cd",
+        }
+      }
+    >
+      const
+    </span>
+     
+    <span
+      className="token maybe-class-name"
+      style={Object {}}
+    >
+      Item
+    </span>
+     
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#67cdcc",
+        }
+      }
+    >
+      =
+    </span>
+     styled
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#ccc",
+        }
+      }
+    >
+      .
+    </span>
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      div
+    </span>
+    <span
+      className="token template-string"
+      style={Object {}}
+    >
+      <span
+        className="token template-punctuation"
+        style={
+          Object {
+            "color": "#7ec699",
+          }
+        }
+      >
+        \`
+      </span>
+      <span
+        className="token css language-css"
+        style={Object {}}
+      >
+        
+    
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#cc99cd",
+            }
+          }
+        >
+          grid-row: function 
+          <span
+            className="token"
+            style={
+              Object {
+                "color": "#ccc",
+              }
+            }
+          >
+            (
+          </span>
+          _ref
+          <span
+            className="token"
+            style={
+              Object {
+                "color": "#ccc",
+              }
+            }
+          >
+            )
+          </span>
+        </span>
+         
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          {
+        </span>
+        
+      var row = _ref
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#f08d49",
+            }
+          }
+        >
+          .
+        </span>
+        row
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+      return row
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+    
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#cc99cd",
+            }
+          }
+        >
+          ;
+    grid-columns: function 
+          <span
+            className="token"
+            style={
+              Object {
+                "color": "#ccc",
+              }
+            }
+          >
+            (
+          </span>
+          _ref2
+          <span
+            className="token"
+            style={
+              Object {
+                "color": "#ccc",
+              }
+            }
+          >
+            )
+          </span>
+        </span>
+         
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          {
+        </span>
+        
+      var col = _ref
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#f08d49",
+            }
+          }
+        >
+          2.
+        </span>
+        col
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+      return col
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+    
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+    
+      </span>
+      <span
+        className="token template-punctuation"
+        style={
+          Object {
+            "color": "#7ec699",
+          }
+        }
+      >
+        \`
+      </span>
+    </span>
+  </code>
+</pre>
+`;
+
 exports[`nl2br 1`] = `
 .emotion-2 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
@@ -899,11 +1223,12 @@ exports[`nl2br 1`] = `
 .emotion-2 h5,
 .emotion-2 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
 .emotion-0 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
 .emotion-1 {
@@ -985,7 +1310,7 @@ c
 exports[`nl2br-link 1`] = `
 .emotion-2 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
@@ -996,11 +1321,12 @@ exports[`nl2br-link 1`] = `
 .emotion-2 h5,
 .emotion-2 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
 .emotion-1 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
 .emotion-0 {
@@ -1027,54 +1353,69 @@ exports[`nl2br-link 1`] = `
 `;
 
 exports[`nl2br-link-not-break 1`] = `
-.emotion-3 {
+.emotion-5 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
-.emotion-3 h1,
-.emotion-3 h2,
-.emotion-3 h3,
-.emotion-3 h4,
-.emotion-3 h5,
-.emotion-3 h6 {
+.emotion-5 h1,
+.emotion-5 h2,
+.emotion-5 h3,
+.emotion-5 h4,
+.emotion-5 h5,
+.emotion-5 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
-.emotion-2 {
+.emotion-4 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
-.emotion-0 {
+.emotion-1 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
+.emotion-0 {
+  border: 1px solid #ccc;
+  background: #eee;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  margin: 0.1em;
+}
+
 <div
-  className="emotion-3"
+  className="emotion-5"
 >
   <p
-    className="emotion-2"
+    className="emotion-4"
   >
     今回は
     <a
-      className="emotion-0"
+      className="emotion-1"
       href="https://github.com/rexxars/react-markdown#parsing-html"
     >
-      <code>
+      <span
+        className="emotion-0"
+        value="react-markdown"
+      >
         react-markdown
-      </code>
+      </span>
     </a>
     と
     <a
-      className="emotion-0"
+      className="emotion-1"
       href="https://github.com/conorhastings/react-syntax-highlighter"
     >
-      <code>
+      <span
+        className="emotion-0"
+        value="react-sytnax-highlight"
+      >
         react-sytnax-highlight
-      </code>
+      </span>
     </a>
   </p>
 </div>
@@ -1083,7 +1424,7 @@ exports[`nl2br-link-not-break 1`] = `
 exports[`web-component 1`] = `
 .emotion-1 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
@@ -1094,11 +1435,12 @@ exports[`web-component 1`] = `
 .emotion-1 h5,
 .emotion-1 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
 .emotion-0 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
 <div
