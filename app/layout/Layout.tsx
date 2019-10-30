@@ -1,6 +1,6 @@
 import React, { SFC } from "react"
 import { HeaderBar } from "./HeaderBar"
-import { Meta } from "../meta/Meta"
+import { HelmetItem } from "../meta/Meta"
 import { Container } from "./Container"
 // import { Article } from "../article/Content"
 import { Footer } from "./Footer"
@@ -78,7 +78,6 @@ export const Layout: SFC<{ children: any }> = ({ children }) => {
     <>
       <GlobalStyle />
       <div>
-        <Meta />
         <LayoutInner>{children}</LayoutInner>
       </div>
     </>

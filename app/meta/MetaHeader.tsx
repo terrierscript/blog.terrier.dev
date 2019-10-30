@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { getVersion, logVersion } from "../../src/version"
 import { TwitterTracking } from "./TwitterTracking"
+import Helmet from "react-helmet"
 
 let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
@@ -14,6 +15,23 @@ if (process.env.NODE_ENV === "production") {
   } catch (e) {
     // console.log("inline", e)
   }
+}
+const HelmetItem = () => {
+  // baseStyles();
+
+  return (
+    <React.Fragment>
+      <Helmet title="terrier.dev 🐶 ">
+        <meta name="description" content={"Author: terrierscript"} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@terrierscript" />
+        <meta
+          name="og:image"
+          content="https://ja.gravatar.com/userimage/90616865/8a8d3f96f2d0be4c04607273030e1e17.png"
+        />
+      </Helmet>
+    </React.Fragment>
+  )
 }
 
 export const MetaHeader = props => {
@@ -41,7 +59,7 @@ export const MetaHeader = props => {
       {props.headComponents}
       <link rel="shortcut icon" />
       {css}
-      <TwitterTracking />
+      <HelmetItem />
     </head>
   )
 }

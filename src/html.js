@@ -2,6 +2,7 @@
 import React from "react"
 import { MetaHeader } from "../app/meta/MetaHeader"
 import { logVersion } from "./version"
+import { TwitterTracking } from "../app/meta/TwitterTracking"
 
 logVersion()
 export default class HTML extends React.Component {
@@ -10,6 +11,7 @@ export default class HTML extends React.Component {
       <html lang="ja">
         <MetaHeader {...this.props} />
         <body>
+          <TwitterTracking />
           <div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
