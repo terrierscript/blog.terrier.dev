@@ -1,6 +1,5 @@
 import React, { SFC } from "react"
 import { HeaderBar } from "./HeaderBar"
-import { HelmetItem } from "../meta/Meta"
 import { Container } from "./Container"
 // import { Article } from "../article/Content"
 import { Footer } from "./Footer"
