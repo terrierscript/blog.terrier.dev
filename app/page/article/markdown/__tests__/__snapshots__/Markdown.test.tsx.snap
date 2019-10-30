@@ -3,7 +3,7 @@
 exports[`Sample block 1`] = `
 .emotion-5 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
@@ -14,11 +14,12 @@ exports[`Sample block 1`] = `
 .emotion-5 h5,
 .emotion-5 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
 .emotion-0 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
 .emotion-4 {
@@ -75,7 +76,7 @@ exports[`Sample block 1`] = `
 exports[`nl2br 1`] = `
 .emotion-2 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
@@ -86,11 +87,12 @@ exports[`nl2br 1`] = `
 .emotion-2 h5,
 .emotion-2 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
 .emotion-0 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
 .emotion-1 {
@@ -172,7 +174,7 @@ c
 exports[`nl2br-link 1`] = `
 .emotion-2 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
@@ -183,11 +185,12 @@ exports[`nl2br-link 1`] = `
 .emotion-2 h5,
 .emotion-2 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
 .emotion-1 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
 .emotion-0 {
@@ -214,52 +217,67 @@ exports[`nl2br-link 1`] = `
 `;
 
 exports[`nl2br-link-not-break 1`] = `
-.emotion-3 {
+.emotion-5 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
-.emotion-3 h1,
-.emotion-3 h2,
-.emotion-3 h3,
-.emotion-3 h4,
-.emotion-3 h5,
-.emotion-3 h6 {
+.emotion-5 h1,
+.emotion-5 h2,
+.emotion-5 h3,
+.emotion-5 h4,
+.emotion-5 h5,
+.emotion-5 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
-.emotion-2 {
+.emotion-4 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
-.emotion-0 {
+.emotion-1 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
+.emotion-0 {
+  border: 1px solid #ccc;
+  background: #eee;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  margin: 0.1em;
+}
+
 <div
-  className="emotion-3"
+  className="emotion-5"
 >
   <p
-    className="emotion-2"
+    className="emotion-4"
   >
     今回は
     <a
-      className="emotion-0"
+      className="emotion-1"
       href="https://github.com/rexxars/react-markdown#parsing-html"
     >
-      <code>
+      <code
+        className="emotion-0"
+        value="react-markdown"
+      >
         react-markdown
       </code>
     </a>
     と
     <a
-      className="emotion-0"
+      className="emotion-1"
       href="https://github.com/conorhastings/react-syntax-highlighter"
     >
-      <code>
+      <code
+        className="emotion-0"
+        value="react-sytnax-highlight"
+      >
         react-sytnax-highlight
       </code>
     </a>
@@ -270,7 +288,7 @@ exports[`nl2br-link-not-break 1`] = `
 exports[`web-component 1`] = `
 .emotion-1 {
   font-size: 0.9em;
-  color: #595959;
+  color: #4a4646;
   line-height: 1.3em;
 }
 
@@ -281,11 +299,12 @@ exports[`web-component 1`] = `
 .emotion-1 h5,
 .emotion-1 h6 {
   margin: 1em 0;
-  color: #555;
+  color: #222;
 }
 
 .emotion-0 {
   margin-bottom: 0.8em;
+  line-height: 1.7em;
 }
 
 <div

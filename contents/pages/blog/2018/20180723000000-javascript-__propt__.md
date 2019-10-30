@@ -6,7 +6,9 @@ tags:
   - javascript
 ---
 オブジェクトに入ってるメソッドを取得するのに`getOwnPropertyNames`を使うことはよく紹介されている。
+
 https://stackoverflow.com/questions/2257993/how-to-display-all-methods-of-an-object
+
 が、これだとprototype拡張されてインスタンスとして出来上がってる場合に出てこない。
 
 ということで`__proto__`を使う
