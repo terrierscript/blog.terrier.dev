@@ -7,10 +7,10 @@ tags:
   - css
   - css-in-js
 ---
-
+<!-- react-syntax-highglighterがjs + template functionで死んでいる -->
 styled-componentsで、複数のpropsを扱いたいことがちょいちょいある。
 
-```js
+```
 const Item = styled.div`
   grid-row: ${({ row }) => row};
   grid-columns: ${ ({ col }) => col};
@@ -26,7 +26,7 @@ const Item = styled.div`
 
 実は下記のような書き方も可能だったりする。これならだいぶ楽なハズだ。
 
-```js
+```
 const Item = styled.div`
   ${({ row, col }) => `
     grid-row: ${row};
@@ -43,9 +43,9 @@ const Item = styled.div`
 
 元来はmixinを処理するものだが、これを利用してみる
 
-```js
+```
 const Item = styled.div`
-  ${({ row, col }) => css\`
+  ${({ row, col }) => css`
     grid-row: ${row};
     grid-columns: ${col};
   `}
