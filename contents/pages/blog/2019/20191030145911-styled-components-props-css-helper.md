@@ -10,10 +10,10 @@ tags:
 
 styled-componentsで、複数のpropsを扱いたいことがちょいちょいある。
 
-```js
+```ts
 const Item = styled.div`
-  grid-row: \${({ row }) => row};
-  grid-columns: \${({ col }) => col};
+  grid-row: ${({ row }) => row};
+  grid-columns: ${ ({ col }) => col};
 `
 ```
 
@@ -28,7 +28,7 @@ const Item = styled.div`
 
 ```js
 const Item = styled.div`
-  \${({ row, col }) => `
+  ${({ row, col }) => `
     grid-row: ${row};
     grid-columns: ${col};
   `}
