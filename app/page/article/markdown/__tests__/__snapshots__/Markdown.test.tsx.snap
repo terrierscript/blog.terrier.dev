@@ -121,9 +121,10 @@ exports[`nl2br 1`] = `
           "MozTabSize": "4",
           "OTabSize": "4",
           "WebkitHyphens": "none",
-          "background": "#2d2d2d",
-          "color": "#ccc",
-          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "background": "#2b2b2b",
+          "color": "#a9b7c6",
+          "direction": "ltr",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
           "hyphens": "none",
           "lineHeight": "1.5",
           "margin": ".5em 0",
@@ -135,7 +136,6 @@ exports[`nl2br 1`] = `
           "whiteSpace": "pre",
           "wordBreak": "normal",
           "wordSpacing": "normal",
-          "wordWrap": "normal",
         }
       }
     >
@@ -146,9 +146,9 @@ exports[`nl2br 1`] = `
             "MozTabSize": "4",
             "OTabSize": "4",
             "WebkitHyphens": "none",
-            "background": "none",
-            "color": "#ccc",
-            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "color": "#a9b7c6",
+            "direction": "ltr",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
             "hyphens": "none",
             "lineHeight": "1.5",
             "msHyphens": "none",
@@ -157,7 +157,6 @@ exports[`nl2br 1`] = `
             "whiteSpace": "pre",
             "wordBreak": "normal",
             "wordSpacing": "normal",
-            "wordWrap": "normal",
           }
         }
       >

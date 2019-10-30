@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StackBlitz iframe sample 1`] = `
+.emotion-5 {
+  font-size: 0.9em;
+  color: #4a4646;
+  line-height: 1.3em;
+}
+
+.emotion-5 h1,
+.emotion-5 h2,
+.emotion-5 h3,
+.emotion-5 h4,
+.emotion-5 h5,
+.emotion-5 h6 {
+  margin: 1em 0;
+  color: #222;
+}
+
+.emotion-4 {
+  margin-bottom: 0.8em;
+  line-height: 1.7em;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+.emotion-1 {
+  display: block;
+  color: #918b89;
+  background: #d6d2d0;
+  padding: 0.1em 1em;
+  font-size: 0.8em;
+  width: 100%;
+}
+
+.emotion-0 {
+  color: #918b89;
+}
+
+.emotion-2 {
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #d6d2d0;
+}
+
+<div
+  className="emotion-5"
+>
+  <p
+    className="emotion-4"
+  >
+    <div
+      className="emotion-3"
+    >
+      <div
+        className="emotion-1"
+      >
+        <a
+          className="emotion-0"
+          href="https://stackblitz.com/edit/react-ts-egg6dg"
+        >
+          https:stackblitz.com/edit/react-ts-egg6dg
+        </a>
+      </div>
+      <iframe
+        className="emotion-2"
+        src="https://stackblitz.com/edit/react-ts-egg6dg"
+      />
+    </div>
+  </p>
+</div>
+`;
+
+exports[`StackBlitz iframe sample with params 1`] = `
+.emotion-5 {
+  font-size: 0.9em;
+  color: #4a4646;
+  line-height: 1.3em;
+}
+
+.emotion-5 h1,
+.emotion-5 h2,
+.emotion-5 h3,
+.emotion-5 h4,
+.emotion-5 h5,
+.emotion-5 h6 {
+  margin: 1em 0;
+  color: #222;
+}
+
+.emotion-4 {
+  margin-bottom: 0.8em;
+  line-height: 1.7em;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+.emotion-1 {
+  display: block;
+  color: #918b89;
+  background: #d6d2d0;
+  padding: 0.1em 1em;
+  font-size: 0.8em;
+  width: 100%;
+}
+
+.emotion-0 {
+  color: #918b89;
+}
+
+.emotion-2 {
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #d6d2d0;
+}
+
+<div
+  className="emotion-5"
+>
+  <p
+    className="emotion-4"
+  >
+    <div
+      className="emotion-3"
+    >
+      <div
+        className="emotion-1"
+      >
+        <a
+          className="emotion-0"
+          href="https://stackblitz.com/edit/react-ts-egg6dg?embed=1&file=index.tsx&hideExplorer=1&view=preview&ctl=1"
+        >
+          https:stackblitz.com/edit/react-ts-egg6dg
+        </a>
+      </div>
+      <iframe
+        className="emotion-2"
+        src="https://stackblitz.com/edit/react-ts-egg6dg?embed=1&file=index.tsx&hideExplorer=1&view=preview&ctl=1"
+      />
+    </div>
+  </p>
+</div>
+`;

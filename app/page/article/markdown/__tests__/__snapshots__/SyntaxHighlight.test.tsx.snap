@@ -81,9 +81,10 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       "MozTabSize": "4",
       "OTabSize": "4",
       "WebkitHyphens": "none",
-      "background": "#2d2d2d",
-      "color": "#ccc",
-      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "background": "#2b2b2b",
+      "color": "#a9b7c6",
+      "direction": "ltr",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
       "hyphens": "none",
       "lineHeight": "1.5",
       "margin": ".5em 0",
@@ -95,7 +96,6 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       "whiteSpace": "pre",
       "wordBreak": "normal",
       "wordSpacing": "normal",
-      "wordWrap": "normal",
     }
   }
 >
@@ -106,9 +106,9 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
         "MozTabSize": "4",
         "OTabSize": "4",
         "WebkitHyphens": "none",
-        "background": "none",
-        "color": "#ccc",
-        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "color": "#a9b7c6",
+        "direction": "ltr",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
         "hyphens": "none",
         "lineHeight": "1.5",
         "msHyphens": "none",
@@ -117,7 +117,6 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
         "whiteSpace": "pre",
         "wordBreak": "normal",
         "wordSpacing": "normal",
-        "wordWrap": "normal",
       }
     }
   >
@@ -127,7 +126,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#cc99cd",
+          "color": "#cc7832",
         }
       }
     >
@@ -138,7 +137,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#67cdcc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -150,7 +149,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#cc99cd",
+          "color": "#cc7832",
         }
       }
     >
@@ -161,7 +160,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token function-variable"
       style={
         Object {
-          "color": "#f08d49",
+          "color": "#ffc66d",
         }
       }
     >
@@ -172,7 +171,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#67cdcc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -183,7 +182,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#ccc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -198,7 +197,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
         className="token"
         style={
           Object {
-            "color": "#ccc",
+            "color": "#a9b7c6",
           }
         }
       >
@@ -216,7 +215,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#ccc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -227,7 +226,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token arrow"
       style={
         Object {
-          "color": "#67cdcc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -238,7 +237,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#ccc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -250,7 +249,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#f08d49",
+          "color": "#ffc66d",
         }
       }
     >
@@ -260,7 +259,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#ccc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -271,7 +270,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#67cdcc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -282,7 +281,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#f08d49",
+          "color": "#6897bb",
         }
       }
     >
@@ -292,7 +291,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#ccc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -304,7 +303,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#ccc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -316,7 +315,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#e2777a",
+          "color": "#e8bf6a",
         }
       }
     >
@@ -324,7 +323,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
         className="token"
         style={
           Object {
-            "color": "#e2777a",
+            "color": "#e8bf6a",
           }
         }
       >
@@ -332,19 +331,15 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
           &lt;
         </span>
         <span
-          className="token"
-          style={
-            Object {
-              "color": "#f8c555",
-            }
-          }
+          className="token class-name"
+          style={Object {}}
         >
           SomeComponent
         </span>
@@ -353,7 +348,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
         className="token"
         style={
           Object {
-            "color": "#ccc",
+            "color": "#a9b7c6",
           }
         }
       >
@@ -371,7 +366,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#ccc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -382,7 +377,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#ccc",
+          "color": "#a9b7c6",
         }
       }
     >
@@ -399,7 +394,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
       className="token"
       style={
         Object {
-          "color": "#e2777a",
+          "color": "#e8bf6a",
         }
       }
     >
@@ -407,7 +402,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
         className="token"
         style={
           Object {
-            "color": "#e2777a",
+            "color": "#e8bf6a",
           }
         }
       >
@@ -415,19 +410,15 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
           &lt;/
         </span>
         <span
-          className="token"
-          style={
-            Object {
-              "color": "#f8c555",
-            }
-          }
+          className="token class-name"
+          style={Object {}}
         >
           SomeComponent
         </span>
@@ -436,7 +427,7 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
         className="token"
         style={
           Object {
-            "color": "#ccc",
+            "color": "#a9b7c6",
           }
         }
       >
@@ -493,9 +484,10 @@ exports[`Syntax Highlight as Markdown 1`] = `
           "MozTabSize": "4",
           "OTabSize": "4",
           "WebkitHyphens": "none",
-          "background": "#2d2d2d",
-          "color": "#ccc",
-          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "background": "#2b2b2b",
+          "color": "#a9b7c6",
+          "direction": "ltr",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
           "hyphens": "none",
           "lineHeight": "1.5",
           "margin": ".5em 0",
@@ -507,7 +499,6 @@ exports[`Syntax Highlight as Markdown 1`] = `
           "whiteSpace": "pre",
           "wordBreak": "normal",
           "wordSpacing": "normal",
-          "wordWrap": "normal",
         }
       }
     >
@@ -518,9 +509,9 @@ exports[`Syntax Highlight as Markdown 1`] = `
             "MozTabSize": "4",
             "OTabSize": "4",
             "WebkitHyphens": "none",
-            "background": "none",
-            "color": "#ccc",
-            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "color": "#a9b7c6",
+            "direction": "ltr",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
             "hyphens": "none",
             "lineHeight": "1.5",
             "msHyphens": "none",
@@ -529,7 +520,6 @@ exports[`Syntax Highlight as Markdown 1`] = `
             "whiteSpace": "pre",
             "wordBreak": "normal",
             "wordSpacing": "normal",
-            "wordWrap": "normal",
           }
         }
       >
@@ -537,7 +527,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#cc99cd",
+              "color": "#cc7832",
             }
           }
         >
@@ -548,7 +538,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#67cdcc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -560,7 +550,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#cc99cd",
+              "color": "#cc7832",
             }
           }
         >
@@ -571,7 +561,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token function-variable"
           style={
             Object {
-              "color": "#f08d49",
+              "color": "#ffc66d",
             }
           }
         >
@@ -582,7 +572,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#67cdcc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -593,7 +583,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -608,7 +598,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
             className="token"
             style={
               Object {
-                "color": "#ccc",
+                "color": "#a9b7c6",
               }
             }
           >
@@ -626,7 +616,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -637,7 +627,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token arrow"
           style={
             Object {
-              "color": "#67cdcc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -648,7 +638,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -660,7 +650,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#f08d49",
+              "color": "#ffc66d",
             }
           }
         >
@@ -670,7 +660,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -681,7 +671,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#67cdcc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -692,7 +682,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#f08d49",
+              "color": "#6897bb",
             }
           }
         >
@@ -702,7 +692,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -714,7 +704,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -726,7 +716,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
           className="token"
           style={
             Object {
-              "color": "#e2777a",
+              "color": "#e8bf6a",
             }
           }
         >
@@ -734,7 +724,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
             className="token"
             style={
               Object {
-                "color": "#e2777a",
+                "color": "#e8bf6a",
               }
             }
           >
@@ -742,19 +732,15 @@ exports[`Syntax Highlight as Markdown 1`] = `
               className="token"
               style={
                 Object {
-                  "color": "#ccc",
+                  "color": "#a9b7c6",
                 }
               }
             >
               &lt;
             </span>
             <span
-              className="token"
-              style={
-                Object {
-                  "color": "#f8c555",
-                }
-              }
+              className="token class-name"
+              style={Object {}}
             >
               SomeComponent
             </span>
@@ -763,7 +749,7 @@ exports[`Syntax Highlight as Markdown 1`] = `
             className="token"
             style={
               Object {
-                "color": "#ccc",
+                "color": "#a9b7c6",
               }
             }
           >
@@ -781,7 +767,7 @@ hello
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -792,7 +778,7 @@ hello
           className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#a9b7c6",
             }
           }
         >
@@ -809,7 +795,7 @@ hello
           className="token"
           style={
             Object {
-              "color": "#e2777a",
+              "color": "#e8bf6a",
             }
           }
         >
@@ -817,7 +803,7 @@ hello
             className="token"
             style={
               Object {
-                "color": "#e2777a",
+                "color": "#e8bf6a",
               }
             }
           >
@@ -825,19 +811,15 @@ hello
               className="token"
               style={
                 Object {
-                  "color": "#ccc",
+                  "color": "#a9b7c6",
                 }
               }
             >
               &lt;/
             </span>
             <span
-              className="token"
-              style={
-                Object {
-                  "color": "#f8c555",
-                }
-              }
+              className="token class-name"
+              style={Object {}}
             >
               SomeComponent
             </span>
@@ -846,7 +828,7 @@ hello
             className="token"
             style={
               Object {
-                "color": "#ccc",
+                "color": "#a9b7c6",
               }
             }
           >
@@ -863,7 +845,7 @@ hello
             className="token template-punctuation"
             style={
               Object {
-                "color": "#7ec699",
+                "color": "#6a8759",
               }
             }
           >
@@ -873,7 +855,7 @@ hello
             className="token template-punctuation"
             style={
               Object {
-                "color": "#7ec699",
+                "color": "#6a8759",
               }
             }
           >
@@ -935,9 +917,10 @@ exports[`nl2br 1`] = `
           "MozTabSize": "4",
           "OTabSize": "4",
           "WebkitHyphens": "none",
-          "background": "#2d2d2d",
-          "color": "#ccc",
-          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "background": "#2b2b2b",
+          "color": "#a9b7c6",
+          "direction": "ltr",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
           "hyphens": "none",
           "lineHeight": "1.5",
           "margin": ".5em 0",
@@ -949,7 +932,6 @@ exports[`nl2br 1`] = `
           "whiteSpace": "pre",
           "wordBreak": "normal",
           "wordSpacing": "normal",
-          "wordWrap": "normal",
         }
       }
     >
@@ -960,9 +942,9 @@ exports[`nl2br 1`] = `
             "MozTabSize": "4",
             "OTabSize": "4",
             "WebkitHyphens": "none",
-            "background": "none",
-            "color": "#ccc",
-            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "color": "#a9b7c6",
+            "direction": "ltr",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', monospace",
             "hyphens": "none",
             "lineHeight": "1.5",
             "msHyphens": "none",
@@ -971,7 +953,6 @@ exports[`nl2br 1`] = `
             "whiteSpace": "pre",
             "wordBreak": "normal",
             "wordSpacing": "normal",
-            "wordWrap": "normal",
           }
         }
       >
