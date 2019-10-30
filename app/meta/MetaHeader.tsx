@@ -41,8 +41,9 @@ export const MetaHeader = props => {
       ))}
       {props.headComponents}
       <link rel="shortcut icon" />
+      <link rel="me" href="https://twitter.com/terrierscript"></link>
+
       {css}
-      <HelmetItem />
     </head>
   )
 }
