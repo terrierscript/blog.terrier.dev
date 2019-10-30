@@ -10,7 +10,7 @@ tags:
 <!-- react-syntax-highglighterがjs + template functionで死んでいる -->
 styled-componentsで、複数のpropsを扱いたいことがちょいちょいある。
 
-```
+```js
 const Item = styled.div`
   grid-row: ${({ row }) => row};
   grid-columns: ${ ({ col }) => col};
@@ -26,7 +26,7 @@ const Item = styled.div`
 
 実は下記のような書き方も可能だったりする。これならだいぶ楽なハズだ。
 
-```
+```js
 const Item = styled.div`
   ${({ row, col }) => `
     grid-row: ${row};
@@ -43,7 +43,7 @@ const Item = styled.div`
 
 元来はmixinを処理するものだが、これを利用してみる
 
-```
+```js
 const Item = styled.div`
   ${({ row, col }) => css`
     grid-row: ${row};
@@ -55,8 +55,7 @@ const Item = styled.div`
 分かりづらいがこんな具合でハイライトされる。
 
 before
-![before](https://user-images.githubusercontent.com/13282103/67833274-8bd81000-fb27-11e9-8f71-f54f73e04b0a.png)
+<img width="305" alt="before" src="https://user-images.githubusercontent.com/13282103/67833274-8bd81000-fb27-11e9-8f71-f54f73e04b0a.png">
 
 after
-![after](https://user-images.githubusercontent.com/13282103/67833275-8bd81000-fb27-11e9-8171-a57feda3243c.png)
-
+<img width="305" alt="after" src="https://user-images.githubusercontent.com/13282103/67833275-8bd81000-fb27-11e9-8171-a57feda3243c.png">
