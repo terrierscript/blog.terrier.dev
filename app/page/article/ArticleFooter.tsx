@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
+import { THIN_TEXT_COLOR } from "../../layout/global/colors"
 
 const Container = styled.div`
   display: flex;
@@ -49,6 +50,11 @@ const getFilename = fileAbsolutePath => {
   return `${year}/${filename}`
 }
 
+const ModifyLink = styled.a`
+  font-size: 0.8em;
+  color: ${THIN_TEXT_COLOR};
+`
+
 const Modify = ({ fileAbsolutePath }) => {
   if (!fileAbsolutePath) {
     return null
@@ -59,7 +65,7 @@ const Modify = ({ fileAbsolutePath }) => {
   const filename = getFilename(fileAbsolutePath)
   const url = `https://github.com/${repo}/edit/master/${directory}/${filename}`
 
-  return <a href={url}>この記事の修正をする</a>
+  return <ModifyLink href={url}>Edit on Github</ModifyLink>
 }
 
 export const ArticleFooter = ({ title, fileAbsolutePath }) => {
