@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Syntax Highlight css-in-js bug 1`] = `
+<pre
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "background": "#2d2d2d",
+      "color": "#ccc",
+      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": ".5em 0",
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "background": "none",
+        "color": "#ccc",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    
+    
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#cc99cd",
+        }
+      }
+    >
+      const
+    </span>
+     
+    <span
+      className="token maybe-class-name"
+      style={Object {}}
+    >
+      Item
+    </span>
+     
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#67cdcc",
+        }
+      }
+    >
+      =
+    </span>
+     styled
+    <span
+      className="token"
+      style={
+        Object {
+          "color": "#ccc",
+        }
+      }
+    >
+      .
+    </span>
+    <span
+      className="token property-access"
+      style={Object {}}
+    >
+      div
+    </span>
+    <span
+      className="token template-string"
+      style={Object {}}
+    >
+      <span
+        className="token template-punctuation"
+        style={
+          Object {
+            "color": "#7ec699",
+          }
+        }
+      >
+        \`
+      </span>
+      <span
+        className="token css language-css"
+        style={Object {}}
+      >
+        
+      
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#cc99cd",
+            }
+          }
+        >
+          grid-row: function 
+          <span
+            className="token"
+            style={
+              Object {
+                "color": "#ccc",
+              }
+            }
+          >
+            (
+          </span>
+          _ref
+          <span
+            className="token"
+            style={
+              Object {
+                "color": "#ccc",
+              }
+            }
+          >
+            )
+          </span>
+        </span>
+         
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          {
+        </span>
+        
+      var row = _ref
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#f08d49",
+            }
+          }
+        >
+          .
+        </span>
+        row
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+      return row
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+    
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#cc99cd",
+            }
+          }
+        >
+          ;
+      grid-columns: function 
+          <span
+            className="token"
+            style={
+              Object {
+                "color": "#ccc",
+              }
+            }
+          >
+            (
+          </span>
+          _ref2
+          <span
+            className="token"
+            style={
+              Object {
+                "color": "#ccc",
+              }
+            }
+          >
+            )
+          </span>
+        </span>
+         
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          {
+        </span>
+        
+      var col = _ref
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#f08d49",
+            }
+          }
+        >
+          2.
+        </span>
+        col
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+      return col
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+    
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token"
+          style={
+            Object {
+              "color": "#ccc",
+            }
+          }
+        >
+          ;
+        </span>
+        
+    
+      </span>
+      <span
+        className="token template-punctuation"
+        style={
+          Object {
+            "color": "#7ec699",
+          }
+        }
+      >
+        \`
+      </span>
+    </span>
+  </code>
+</pre>
+`;

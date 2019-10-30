@@ -1001,7 +1001,7 @@ exports[`Syntax Highlight css-in-js bug 1`] = `
         style={Object {}}
       >
         
-    
+      
         <span
           className="token"
           style={
@@ -1100,7 +1100,7 @@ exports[`Syntax Highlight css-in-js bug 1`] = `
           }
         >
           ;
-    grid-columns: function 
+      grid-columns: function 
           <span
             className="token"
             style={
