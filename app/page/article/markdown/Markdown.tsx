@@ -9,14 +9,24 @@ import {
   ARTICLE_TITLE_COLOR
   // FEED_LINK_COLOR
 } from "../../../layout/global/colors"
+import { isStackblitzUrl, StackblitzEmbed } from "./EmbedStackBlitz"
 
 export const CodeWrapper = styled.div`
   margin-bottom: 1.8em;
 `
 
-const Link = styled.a`
+const Anchor = styled.a`
   text-decoration: underline;
 `
+
+const Link = ({ href, ...props }) => {
+  if (isStackblitzUrl(href)) {
+    return <StackblitzEmbed href={href}></StackblitzEmbed>
+  }
+  console.log(href)
+  return <Anchor href={href} {...props} />
+}
+
 const ArticleWrapper = styled.div`
   font-size: 0.9em;
   color: ${ARTICLE_TEXT_COLOR};

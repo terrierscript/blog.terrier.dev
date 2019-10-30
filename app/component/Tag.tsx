@@ -1,11 +1,11 @@
 import React, { SFC } from "react"
 import styled from "@emotion/styled"
 import { NavLink } from "./NavLink"
-import { TITLE_COLOR, TAG_TEXT_COLOR } from "../layout/global/colors"
+import { TITLE_COLOR, THIN_TEXT_COLOR } from "../layout/global/colors"
 
 export const TagItem = styled(NavLink)`
   display: inline-block;
-  color: ${TAG_TEXT_COLOR};
+  color: ${THIN_TEXT_COLOR};
   text-decoration: underline;
   margin: 0.2em 0.5em;
   margin-left: 0;
