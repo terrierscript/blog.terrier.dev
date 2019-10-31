@@ -15,7 +15,6 @@ export default class HTML extends React.Component {
         <body>
           <HelmetItem />
           <TwitterTracking />
-          　revert
           <div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
