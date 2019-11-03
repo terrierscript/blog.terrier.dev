@@ -8,7 +8,8 @@ tags:
   - javascript
 ---
 
-久々にpinchを抑制しようとしたら`<meta>`タグの`user-scroll=no`ではダメになってたので覚え書き。
+あまり推奨されるものではないのだが、どうしてもpinchによるzoomを抑制したいケースはまれにある。
+しかし久々にこれをやろうとしたら`<meta>`タグの`user-scroll=no`ではダメになってたので覚え書き。
 
 * https://developer.mozilla.org/ja/docs/Web/API/EventTarget/addEventListener
 * https://qiita.com/yukiTTT/items/773356c2483b96c9d4e0
