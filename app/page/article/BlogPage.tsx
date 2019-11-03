@@ -93,7 +93,7 @@ export const BlogPostTemplate = ({
   title,
   date,
   rawMarkdown = null,
-  fileAbsolutePath = null
+  fileAbsolutePath = ""
 }) => {
   return (
     <>

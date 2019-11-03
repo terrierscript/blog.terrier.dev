@@ -6,7 +6,7 @@ type Params = {
   blogPost: BlogItem
 }
 const Post = params => {
-  console.log(params)
+  // console.log(params)
   const { blogPost } = params
   const { content, data } = blogPost
   // const ast = remark().parse(content)
@@ -28,9 +28,9 @@ const Post = params => {
 Post.getInitialProps = async ({ query }) => {
   const { year, name } = query
   const slug = `${year}/${name}`
-  console.log("sll", slug)
+  // console.log("sll", slug)
   const blogPost = await getBlogItem({ slug })
-  console.log(blogPost)
+  // console.log(blogPost)
   return {
     slug,
     blogPost

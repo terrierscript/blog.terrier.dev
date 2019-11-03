@@ -3,6 +3,10 @@
 // import { default as GatsbyLink } from "gatsby-link"
 import Link from "next/link"
 
-export const NavLink = ({ to, ...props }) => (
-  <Link href={to} {...props}></Link>
+export const NavLink = ({ to, children , ...props }) => (
+  <Link href={to} >
+    <a {...props}>
+      {children }
+    </a>
+  </Link>
 )

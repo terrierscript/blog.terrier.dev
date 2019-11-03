@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, FC } from "react"
 import styled from "@emotion/styled"
 import { THIN_TEXT_COLOR } from "../../layout/global/colors"
 
@@ -55,20 +55,24 @@ const ModifyLink = styled.a`
   color: ${THIN_TEXT_COLOR};
 `
 
-const Modify = ({ fileAbsolutePath }) => {
+const Modify: FC<{ fileAbsolutePath: string }> = ({ fileAbsolutePath }) => {
   if (!fileAbsolutePath) {
     return null
   }
   const repo = "terrierscript/terrier.dev"
 
   const directory = "contents/pages/blog/"
+
   const filename = getFilename(fileAbsolutePath)
   const url = `https://github.com/${repo}/edit/master/${directory}/${filename}`
 
   return <ModifyLink href={url}>Edit on Github</ModifyLink>
 }
 
-export const ArticleFooter = ({ title, fileAbsolutePath }) => {
+export const ArticleFooter: FC<{ title: string; fileAbsolutePath: string }> = ({
+  title,
+  fileAbsolutePath
+}) => {
   return (
     <>
       <TwitterWidgetScript />
