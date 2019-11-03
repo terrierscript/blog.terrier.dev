@@ -2,21 +2,30 @@ import React, { FC } from "react"
 import ReactMarkdown from "react-markdown/with-html" // for web components
 import { nl2brRemark } from "./unified/nl2br"
 import styled from "@emotion/styled"
-import { PrismCodeBlock } from "./CodeBlock"
+import { CodeBlock } from "./CodeBlock"
 import {
   ARTICLE_TEXT_COLOR,
   // TITLE_COLOR,
   ARTICLE_TITLE_COLOR
   // FEED_LINK_COLOR
 } from "../../../layout/global/colors"
+import { isStackblitzUrl, StackblitzEmbed } from "./EmbedStackBlitz"
 
 export const CodeWrapper = styled.div`
   margin-bottom: 1.8em;
 `
 
-const Link = styled.a`
+const Anchor = styled.a`
   text-decoration: underline;
 `
+
+const Link = ({ href, ...props }) => {
+  if (isStackblitzUrl(href)) {
+    return <StackblitzEmbed href={href}></StackblitzEmbed>
+  }
+  return <Anchor href={href} {...props} />
+}
+
 const ArticleWrapper = styled.div`
   font-size: 0.9em;
   color: ${ARTICLE_TEXT_COLOR};
@@ -32,9 +41,9 @@ const ArticleWrapper = styled.div`
   }
 `
 
-const CodeBlock = props => (
+const Code = props => (
   <CodeWrapper>
-    <PrismCodeBlock {...props} />
+    <CodeBlock {...props} />
   </CodeWrapper>
 )
 
@@ -49,7 +58,7 @@ const Paragraph = styled.p`
   line-height: 1.7em;
 `
 
-const InlineCode = styled.span`
+const InlineCode = styled.code`
   border: 1px solid #ccc;
   background: #eee;
   border-radius: 4px;
@@ -65,7 +74,7 @@ export const RawMarkdown: FC<{ markdown: string }> = ({ markdown }) => {
         escapeHtml={false} // for web components
         renderers={{
           paragraph: Paragraph,
-          code: CodeBlock,
+          code: Code,
           link: Link,
           list: List,
           listItem: ListItem,

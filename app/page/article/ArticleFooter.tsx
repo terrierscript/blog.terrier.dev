@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
+import { THIN_TEXT_COLOR } from "../../layout/global/colors"
 
 const Container = styled.div`
   display: flex;
@@ -11,15 +12,23 @@ const Item = styled.div`
   font-size: 1em;
 `
 
+const getShareUrl = fileAbsolutePath => {
+  if (typeof location === "undefined") {
+    const filename = getFilename(fileAbsolutePath).replace(/.md/, "")
+    return `https://terrier.dev/blog/${filename}`
+  }
+  return location.origin + location.pathname
+}
 // TODO: SSR
-// const TweetButtons = () => (
-//   <a
-//     className="twitter-share-button"
-//     href={location.origin + location.pathname}
-//   >
-//     {/* Tweet */}
-//   </a>
-// )
+const TweetButtons = ({ title, fileAbsolutePath }) => {
+  const url = getShareUrl(fileAbsolutePath)
+  console.log(url)
+  return (
+    <a data-text={title} className="twitter-share-button" href={url}>
+      Tweet
+    </a>
+  )
+}
 
 export const TwitterWidgetScript = children => {
   // const [loaded, setLoaded] = useState() // TODO
@@ -35,6 +44,17 @@ export const TwitterWidgetScript = children => {
   )
 }
 
+const getFilename = fileAbsolutePath => {
+  const filename = fileAbsolutePath.split("/").pop()
+  const year = filename.substr(0, 4) // TODO: ちょっと無理やりになってる
+  return `${year}/${filename}`
+}
+
+const ModifyLink = styled.a`
+  font-size: 0.8em;
+  color: ${THIN_TEXT_COLOR};
+`
+
 const Modify = ({ fileAbsolutePath }) => {
   if (!fileAbsolutePath) {
     return null
@@ -42,14 +62,13 @@ const Modify = ({ fileAbsolutePath }) => {
   const repo = "terrierscript/terrier.dev"
 
   const directory = "contents/pages/blog/"
-  const filename = fileAbsolutePath.split("/").pop()
-  const year = filename.substr(0, 4) // TODO: ちょっと無理やりになってる
-  const url = `https://github.com/${repo}/edit/master/${directory}/${year}/${filename}`
+  const filename = getFilename(fileAbsolutePath)
+  const url = `https://github.com/${repo}/edit/master/${directory}/${filename}`
 
-  return <a href={url}>この記事の修正をする</a>
+  return <ModifyLink href={url}>Edit on Github</ModifyLink>
 }
 
-export const ArticleFooter = ({ fileAbsolutePath }) => {
+export const ArticleFooter = ({ title, fileAbsolutePath }) => {
   return (
     <>
       <TwitterWidgetScript />
@@ -58,9 +77,9 @@ export const ArticleFooter = ({ fileAbsolutePath }) => {
           <Modify fileAbsolutePath={fileAbsolutePath} />
         </Item>
         <Item>|</Item>
-        {/* <Item>
-          <TweetButtons />
-        </Item> */}
+        <Item>
+          <TweetButtons title={title} fileAbsolutePath={fileAbsolutePath} />
+        </Item>
         {/* <Item>
           <TwitterFollowButton />
         </Item> */}
