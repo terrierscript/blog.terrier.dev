@@ -1,8 +1,6 @@
 if (typeof window !== `undefined`) {
-  const { StackbritzIframe } = require("./Stackblitz")
   const { SampleTimer } = require("./SampleTimer")
 
-  // customElements.define("stackblitz-iframe", StackbritzIframe)
-  customElements.define("sb-iframe", StackbritzIframe)
+  //　for:　https://www.terrier.dev/blog/2019/20191014184131-web-components-gatsby-mdx/
   customElements.define("sample-timer", SampleTimer)
 }
