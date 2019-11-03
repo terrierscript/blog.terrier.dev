@@ -79,7 +79,7 @@
   "scripts": {
     "start": "now dev",
     "dev": "next",
-    "build": "next build",
+    "build": "__next build",
     "export": "next export",
     "serve-function": "yarn dotenv netlify-lambda serve functions",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
