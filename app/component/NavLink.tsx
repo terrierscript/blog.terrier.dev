@@ -1,8 +1,8 @@
 // see: https://github.com/gatsbyjs/gatsby/issues/10668
 // import { Link } from "gatsby"
 // import { default as GatsbyLink } from "gatsby-link"
-import { Link as NextLink } from "next"
+import Link from "next/link"
 
 export const NavLink = ({ to, ...props }) => (
-  <NextLink href={to} {...props}></NextLink>
+  <Link href={to} {...props}></Link>
 )

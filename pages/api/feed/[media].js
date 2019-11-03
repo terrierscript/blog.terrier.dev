@@ -5,6 +5,7 @@ module.exports = (req, res) => {
     query: { media }
   } = req
   const url = getUrlByMedia(media, true)
+  // @ts-ignore
   axios(url).then(({ data, headers }) => {
     const copyHeaders = ["content-type", "etag", "cache-control"]
     // console.log(headers)
