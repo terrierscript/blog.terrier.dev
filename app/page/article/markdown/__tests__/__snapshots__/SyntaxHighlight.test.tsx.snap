@@ -77,374 +77,93 @@ exports[`Syntax Highlight as CodeBlock 1`] = `
 <pre
   style={
     Object {
-      "MozHyphens": "none",
-      "MozTabSize": "4",
-      "OTabSize": "4",
-      "WebkitHyphens": "none",
-      "background": "#2d2d2d",
-      "color": "#ccc",
-      "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-      "hyphens": "none",
-      "lineHeight": "1.5",
-      "margin": ".5em 0",
-      "msHyphens": "none",
-      "overflow": "auto",
-      "padding": "1em",
-      "tabSize": "4",
-      "textAlign": "left",
-      "whiteSpace": "pre",
-      "wordBreak": "normal",
-      "wordSpacing": "normal",
-      "wordWrap": "normal",
+      "background": "#2b2b2b",
+      "color": "#bababa",
+      "display": "block",
+      "overflowX": "auto",
+      "padding": "0.5em",
     }
   }
 >
-  <code
-    style={
-      Object {
-        "MozHyphens": "none",
-        "MozTabSize": "4",
-        "OTabSize": "4",
-        "WebkitHyphens": "none",
-        "background": "none",
-        "color": "#ccc",
-        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-        "hyphens": "none",
-        "lineHeight": "1.5",
-        "msHyphens": "none",
-        "tabSize": "4",
-        "textAlign": "left",
-        "whiteSpace": "pre",
-        "wordBreak": "normal",
-        "wordSpacing": "normal",
-        "wordWrap": "normal",
-      }
-    }
-  >
-    
-    
+  <code>
     <span
-      className="token"
-      style={
-        Object {
-          "color": "#cc99cd",
-        }
-      }
-    >
-      const
-    </span>
-     foo 
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#67cdcc",
-        }
-      }
-    >
-      =
-    </span>
-     hoge
-    
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#cc99cd",
-        }
-      }
-    >
-      const
-    </span>
-     
-    <span
-      className="token function-variable"
-      style={
-        Object {
-          "color": "#f08d49",
-        }
-      }
-    >
-      onClick
-    </span>
-     
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#67cdcc",
-        }
-      }
-    >
-      =
-    </span>
-     
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#ccc",
-        }
-      }
-    >
-      (
-    </span>
-    <span
-      className="token parameter"
+      className="xml"
       style={Object {}}
     >
-      e
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
-          }
-        }
-      >
-        :
-      </span>
-       
-      <span
-        className="token maybe-class-name"
-        style={Object {}}
-      >
-        Event
-      </span>
+      
+    const foo = hoge
+    const onClick = (e: Event) =&gt; 
     </span>
     <span
-      className="token"
       style={
         Object {
-          "color": "#ccc",
-        }
-      }
-    >
-      )
-    </span>
-     
-    <span
-      className="token arrow"
-      style={
-        Object {
-          "color": "#67cdcc",
-        }
-      }
-    >
-      =&gt;
-    </span>
-     
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#ccc",
+          "color": "#e0c46c",
         }
       }
     >
       {
+      dispatch(e ** 2)
+    }
     </span>
-    
+    <span
+      className="xml"
+      style={Object {}}
+    >
       
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#f08d49",
-        }
-      }
-    >
-      dispatch
-    </span>
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#ccc",
-        }
-      }
-    >
-      (
-    </span>
-    e 
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#67cdcc",
-        }
-      }
-    >
-      **
-    </span>
-     
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#f08d49",
-        }
-      }
-    >
-      2
-    </span>
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#ccc",
-        }
-      }
-    >
-      )
-    </span>
     
-    
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#ccc",
-        }
-      }
-    >
-      }
-    </span>
-    
-    
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#e2777a",
-        }
-      }
-    >
       <span
-        className="token"
-        style={
-          Object {
-            "color": "#e2777a",
-          }
-        }
+        className="hljs-tag"
+        style={Object {}}
       >
+        &lt;
         <span
-          className="token"
           style={
             Object {
-              "color": "#ccc",
-            }
-          }
-        >
-          &lt;
-        </span>
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#f8c555",
+              "color": "#cb7832",
             }
           }
         >
           SomeComponent
         </span>
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
-          }
-        }
-      >
         &gt;
       </span>
-    </span>
-    <span
-      className="token plain-text"
-      style={Object {}}
-    >
       
       hello 
     </span>
     <span
-      className="token"
       style={
         Object {
-          "color": "#ccc",
+          "color": "#e0c46c",
         }
       }
     >
-      {
-    </span>
-    foo
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#ccc",
-        }
-      }
-    >
-      }
+      {foo}
     </span>
     <span
-      className="token plain-text"
+      className="xml"
       style={Object {}}
     >
       
     
-    </span>
-    <span
-      className="token"
-      style={
-        Object {
-          "color": "#e2777a",
-        }
-      }
-    >
       <span
-        className="token"
-        style={
-          Object {
-            "color": "#e2777a",
-          }
-        }
+        className="hljs-tag"
+        style={Object {}}
       >
+        &lt;/
         <span
-          className="token"
           style={
             Object {
-              "color": "#ccc",
-            }
-          }
-        >
-          &lt;/
-        </span>
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#f8c555",
+              "color": "#cb7832",
             }
           }
         >
           SomeComponent
         </span>
-      </span>
-      <span
-        className="token"
-        style={
-          Object {
-            "color": "#ccc",
-          }
-        }
-      >
         &gt;
       </span>
-    </span>
-    
+      
   
+    </span>
   </code>
 </pre>
 `;
@@ -489,398 +208,92 @@ exports[`Syntax Highlight as Markdown 1`] = `
     <pre
       style={
         Object {
-          "MozHyphens": "none",
-          "MozTabSize": "4",
-          "OTabSize": "4",
-          "WebkitHyphens": "none",
-          "background": "#2d2d2d",
-          "color": "#ccc",
-          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-          "hyphens": "none",
-          "lineHeight": "1.5",
-          "margin": ".5em 0",
-          "msHyphens": "none",
-          "overflow": "auto",
-          "padding": "1em",
-          "tabSize": "4",
-          "textAlign": "left",
-          "whiteSpace": "pre",
-          "wordBreak": "normal",
-          "wordSpacing": "normal",
-          "wordWrap": "normal",
+          "background": "#2b2b2b",
+          "color": "#bababa",
+          "display": "block",
+          "overflowX": "auto",
+          "padding": "0.5em",
         }
       }
     >
-      <code
-        style={
-          Object {
-            "MozHyphens": "none",
-            "MozTabSize": "4",
-            "OTabSize": "4",
-            "WebkitHyphens": "none",
-            "background": "none",
-            "color": "#ccc",
-            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-            "hyphens": "none",
-            "lineHeight": "1.5",
-            "msHyphens": "none",
-            "tabSize": "4",
-            "textAlign": "left",
-            "whiteSpace": "pre",
-            "wordBreak": "normal",
-            "wordSpacing": "normal",
-            "wordWrap": "normal",
-          }
-        }
-      >
+      <code>
         <span
-          className="token"
-          style={
-            Object {
-              "color": "#cc99cd",
-            }
-          }
-        >
-          const
-        </span>
-         foo 
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#67cdcc",
-            }
-          }
-        >
-          =
-        </span>
-         hoge
-
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#cc99cd",
-            }
-          }
-        >
-          const
-        </span>
-         
-        <span
-          className="token function-variable"
-          style={
-            Object {
-              "color": "#f08d49",
-            }
-          }
-        >
-          onClick
-        </span>
-         
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#67cdcc",
-            }
-          }
-        >
-          =
-        </span>
-         
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#ccc",
-            }
-          }
-        >
-          (
-        </span>
-        <span
-          className="token parameter"
+          className="xml"
           style={Object {}}
         >
-          e
-          <span
-            className="token"
-            style={
-              Object {
-                "color": "#ccc",
-              }
-            }
-          >
-            :
-          </span>
-           
-          <span
-            className="token maybe-class-name"
-            style={Object {}}
-          >
-            Event
-          </span>
+          const foo = hoge
+const onClick = (e: Event) =&gt; 
         </span>
         <span
-          className="token"
           style={
             Object {
-              "color": "#ccc",
-            }
-          }
-        >
-          )
-        </span>
-         
-        <span
-          className="token arrow"
-          style={
-            Object {
-              "color": "#67cdcc",
-            }
-          }
-        >
-          =&gt;
-        </span>
-         
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#ccc",
+              "color": "#e0c46c",
             }
           }
         >
           {
+dispatch(e ** 2)
+}
         </span>
-        
+        <span
+          className="xml"
+          style={Object {}}
+        >
+          
 
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#f08d49",
-            }
-          }
-        >
-          dispatch
-        </span>
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#ccc",
-            }
-          }
-        >
-          (
-        </span>
-        e 
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#67cdcc",
-            }
-          }
-        >
-          **
-        </span>
-         
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#f08d49",
-            }
-          }
-        >
-          2
-        </span>
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#ccc",
-            }
-          }
-        >
-          )
-        </span>
-        
-
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#ccc",
-            }
-          }
-        >
-          }
-        </span>
-        
-
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#e2777a",
-            }
-          }
-        >
           <span
-            className="token"
-            style={
-              Object {
-                "color": "#e2777a",
-              }
-            }
+            className="hljs-tag"
+            style={Object {}}
           >
+            &lt;
             <span
-              className="token"
               style={
                 Object {
-                  "color": "#ccc",
-                }
-              }
-            >
-              &lt;
-            </span>
-            <span
-              className="token"
-              style={
-                Object {
-                  "color": "#f8c555",
+                  "color": "#cb7832",
                 }
               }
             >
               SomeComponent
             </span>
-          </span>
-          <span
-            className="token"
-            style={
-              Object {
-                "color": "#ccc",
-              }
-            }
-          >
             &gt;
           </span>
-        </span>
-        <span
-          className="token plain-text"
-          style={Object {}}
-        >
           
 hello 
         </span>
         <span
-          className="token"
           style={
             Object {
-              "color": "#ccc",
+              "color": "#e0c46c",
             }
           }
         >
-          {
-        </span>
-        foo
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#ccc",
-            }
-          }
-        >
-          }
+          {foo}
         </span>
         <span
-          className="token plain-text"
+          className="xml"
           style={Object {}}
         >
           
 
-        </span>
-        <span
-          className="token"
-          style={
-            Object {
-              "color": "#e2777a",
-            }
-          }
-        >
           <span
-            className="token"
-            style={
-              Object {
-                "color": "#e2777a",
-              }
-            }
+            className="hljs-tag"
+            style={Object {}}
           >
+            &lt;/
             <span
-              className="token"
               style={
                 Object {
-                  "color": "#ccc",
-                }
-              }
-            >
-              &lt;/
-            </span>
-            <span
-              className="token"
-              style={
-                Object {
-                  "color": "#f8c555",
+                  "color": "#cb7832",
                 }
               }
             >
               SomeComponent
             </span>
-          </span>
-          <span
-            className="token"
-            style={
-              Object {
-                "color": "#ccc",
-              }
-            }
-          >
             &gt;
           </span>
+          
+“\`\`\`
         </span>
-        
-“
-        <span
-          className="token template-string"
-          style={Object {}}
-        >
-          <span
-            className="token template-punctuation"
-            style={
-              Object {
-                "color": "#7ec699",
-              }
-            }
-          >
-            \`
-          </span>
-          <span
-            className="token template-punctuation"
-            style={
-              Object {
-                "color": "#7ec699",
-              }
-            }
-          >
-            \`
-          </span>
-        </span>
-        \`
       </code>
     </pre>
   </div>
@@ -931,52 +344,36 @@ exports[`nl2br 1`] = `
     <pre
       style={
         Object {
-          "MozHyphens": "none",
-          "MozTabSize": "4",
-          "OTabSize": "4",
-          "WebkitHyphens": "none",
-          "background": "#2d2d2d",
-          "color": "#ccc",
-          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-          "hyphens": "none",
-          "lineHeight": "1.5",
-          "margin": ".5em 0",
-          "msHyphens": "none",
-          "overflow": "auto",
-          "padding": "1em",
-          "tabSize": "4",
-          "textAlign": "left",
-          "whiteSpace": "pre",
-          "wordBreak": "normal",
-          "wordSpacing": "normal",
-          "wordWrap": "normal",
+          "background": "#2b2b2b",
+          "color": "#bababa",
+          "display": "block",
+          "overflowX": "auto",
+          "padding": "0.5em",
         }
       }
     >
-      <code
-        style={
-          Object {
-            "MozHyphens": "none",
-            "MozTabSize": "4",
-            "OTabSize": "4",
-            "WebkitHyphens": "none",
-            "background": "none",
-            "color": "#ccc",
-            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
-            "hyphens": "none",
-            "lineHeight": "1.5",
-            "msHyphens": "none",
-            "tabSize": "4",
-            "textAlign": "left",
-            "whiteSpace": "pre",
-            "wordBreak": "normal",
-            "wordSpacing": "normal",
-            "wordWrap": "normal",
+      <code>
+        <span
+          style={
+            Object {
+              "color": "#cb7832",
+            }
           }
-        }
-      >
-        a
-b
+        >
+          a
+        </span>
+        
+
+        <span
+          style={
+            Object {
+              "color": "#cb7832",
+            }
+          }
+        >
+          b
+        </span>
+        
 c
 “\`\`\`
       </code>
