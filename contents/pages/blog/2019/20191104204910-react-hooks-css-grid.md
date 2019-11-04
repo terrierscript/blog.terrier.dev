@@ -246,4 +246,9 @@ https://stackblitz.com/edit/react-ts-animation-grid-final?ctl=1&embed=1&file=ind
 
 
 ## まとめ
-CSS Gridのアニメーションについて考察してみた。やはりどうしてもhooksに多くの部分を頼ってしまうことにはなるが、Flexなどでやるよりは等間隔であることを保ちやすかったり、素のjavascriptですべて計算するよりはメリットが大きそうな感覚がある
+CSS Gridのアニメーションについて考察してみた。やはりどうしてもhooksに多くの部分を頼ってしまうことにはなるが、Flexなどでやるよりは等間隔であることを保ちやすかったり、素のjavascriptですべて計算するよりはメリットが大きそうな感覚がある。
+
+ちょっと他にも3x3のロックマンっぽいおパターンなども作ってみた。
+https://amination-grid-menu.netlify.com/
+
+色々応用も効いて楽しいのでおすすめしたい。
