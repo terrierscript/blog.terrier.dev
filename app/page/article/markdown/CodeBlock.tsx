@@ -20,9 +20,9 @@ const PrismCodeBlock = ({ children, language }) => {
 }
 
 export const CodeBlock = ({ value, language }) => {
-  if (language === "jsx") {
-    return <PrismCodeBlock language={language}>{value}</PrismCodeBlock>
-  } else {
-    return <HljsCodeBlock language={language}>{value}</HljsCodeBlock>
-  }
+  // if (language === "jsx" || language === "tsx") {
+  //   return <PrismCodeBlock language={language}>{value}</PrismCodeBlock>
+  // } else {
+  return <HljsCodeBlock language={language}>{value}</HljsCodeBlock>
+  // }
 }
