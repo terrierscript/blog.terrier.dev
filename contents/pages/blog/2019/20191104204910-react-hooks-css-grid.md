@@ -6,7 +6,6 @@ tags:
   - reacthooks
   - css-grid
   - react
-published: false
 ---
 
 CSS Gridは本来`grid-row`や`grid-columns`はアニメーション対象ではなく、Grid上を移動するようなものをそのまま作るのは難しい。
@@ -20,13 +19,15 @@ CSS Gridは本来`grid-row`や`grid-columns`はアニメーション対象では
 ## 作り方
 ### 1. まずは基礎部分用意
 
+最初は素の感じでGridを作る。Iconの利用だけ配列を使っているところだけ若干トリッキーかもしれない
+
 <img width="585"  src="https://user-images.githubusercontent.com/13282103/68120744-7c066480-ff49-11e9-8c00-f32af06fc19e.png">
 
 https://stackblitz.com/edit/react-ts-animation-grid-1?ctl=1&embed=1&file=index.tsx
 
-最初は素の感じでGridを作る。Iconの利用だけ配列を使っているところだけ若干トリッキーかもしれない
+主要なコードとしてはこんな感じ。今回は[`react-icons`](https://react-icons.netlify.com/#/)を利用した。いろんなアイコン盛り合わせでとても良かった
 
-```jsx
+```tsx
 import { FiUser, FiHome, FiInbox } from "react-icons/fi"
 
 export const Menu1 = () => {
@@ -49,6 +50,8 @@ export const Menu1 = () => {
 
 ### 2. 計算用のCellを追加
 
+次に計算用のCellを追加する。動くとこんな感じになる。
+
 ![2](https://user-images.githubusercontent.com/13282103/68121380-f97ea480-ff4a-11e9-9e4c-f1516468eea2.gif)
 
 https://stackblitz.com/edit/react-ts-animation-grid-2?ctl=1&embed=1&file=index.tsx
@@ -57,7 +60,7 @@ https://stackblitz.com/edit/react-ts-animation-grid-2?ctl=1&embed=1&file=index.t
 
 まず先程のiconをGridのCellとして配置するように書き換える。
 
-```tsx
+```jsx
 
 const Item = styled.div`
   ${({ x }) => css`
@@ -110,11 +113,13 @@ export const Menu2 = () => {
 
 ### 3. カーソル部分を追加
 
+計算用のセルにカーソルのセルを追加してこれをアニメーションさせる。
+
 ![3](https://user-images.githubusercontent.com/13282103/68121379-f97ea480-ff4a-11e9-894d-24bb18e308c1.gif)
 
 https://stackblitz.com/edit/react-ts-animation-grid-3?ctl=1&embed=1&file=index.tsx
 
-2で計算用のrefを配置した。今度は`useEffect`で計算用のcellの矩形を取得する。
+2で配置した計算用refsから今度は`useEffect`で計算用のcellの矩形を取得する。
 この結果は`cursorRect`と名付けた`state`へ格納する。
 また、effectの`dependency`として`gridPosition`を利用している（が、もしかしたらこれは`eslint-plugin-react-hooks`に怒られるかもしれない）
 
@@ -166,11 +171,11 @@ export const Menu3 = () => {
 ```
 ### 4. アイコンに文字を出す
 
+ほぼこれで完成に近いが、あとは本家に習って文字を出すのも追加してみる。
+
 ![4](https://user-images.githubusercontent.com/13282103/68121378-f97ea480-ff4a-11e9-9339-792b24d367d5.gif)
 
 https://stackblitz.com/edit/react-ts-animation-grid-4?ctl=1&embed=1&file=index.tsx
-
-ほぼこれで完成に近いが、あとは本家に習って文字を出すのも追加してみる。
 
 こんな具合でanimationさせる要素を追加するだけになる。
 hoverの疑似クラスだけだとカーソルと合わなくなるため、`active`というpropsを利用することにした。
@@ -233,9 +238,9 @@ const AnimateIcon = ({ x, onMouseOver, active, children, text }) => {
 
 ### 5. 諸々調整する
 
-![5](https://user-images.githubusercontent.com/13282103/68121377-f8e60e00-ff4a-11e9-966f-2f8985f6a0d8.gif)
-
 あとは色々とパラメータを調整したバージョンが下記になる。
+
+![5](https://user-images.githubusercontent.com/13282103/68121377-f8e60e00-ff4a-11e9-966f-2f8985f6a0d8.gif)
 
 https://stackblitz.com/edit/react-ts-animation-grid-final?ctl=1&embed=1&file=index.tsx
 
