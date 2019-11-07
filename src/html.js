@@ -4,6 +4,7 @@ import { MetaHeader } from "../app/meta/MetaHeader"
 import { logVersion } from "./version"
 import { TwitterTracking } from "../app/meta/TwitterTracking"
 import { HelmetItem } from "../app/meta/HelmetItem"
+import { GaTracking } from "../app/meta/GaTracking"
 
 logVersion()
 export default class HTML extends React.Component {
