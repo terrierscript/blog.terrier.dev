@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { getVersion, logVersion } from "../../src/version"
 import { HelmetItem } from "./HelmetItem"
 import { GaTracking } from "./injection/GaTracking"
+import { AdsenseTracking } from "./injection/AdsenseTracking"
 
 let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
