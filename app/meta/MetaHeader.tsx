@@ -1,7 +1,8 @@
 import React, { useEffect } from "react"
 import { getVersion, logVersion } from "../../src/version"
 import { HelmetItem } from "./HelmetItem"
-import { GaTracking } from "./GaTracking"
+import { GaTracking } from "./injection/GaTracking"
+import { AdsenseTracking } from "./injection/AdsenseTracking"
 
 let inlinedStyles = ""
 if (process.env.NODE_ENV === "production") {
@@ -35,6 +36,7 @@ export const MetaHeader = props => {
   return (
     <head>
       <GaTracking />
+      <AdsenseTracking />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {Object.entries(version).map(([k, v]) => (
