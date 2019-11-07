@@ -23,7 +23,7 @@ const theme = {
       styles: ["700&display=optional"]
     }
   ],
-  headerFontFamily: [headerFont, "Helvetica"],
+  headerFontFamily: ["Helvetica"],
   bodyFontFamily: [
     "Hiragino Kaku Gothic",
     "-apple-system,BlinkMacSystemFont",
