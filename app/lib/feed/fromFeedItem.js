@@ -4,6 +4,7 @@ const { fromDummy } = require("./fromDummy")
 
 module.exports = (items, config) =>
   from(items).pipe(
+    // @ts-ignore
     mergeMap(r => from(r)),
     // map(parseRssItem),
     map(item => ({ ...item, ...config })),
