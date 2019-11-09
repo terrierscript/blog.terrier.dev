@@ -1,40 +1,10 @@
-const { empty, merge, from, of, forkJoin } = require("rxjs")
-const { map, mergeMap, scan, catchError } = require("rxjs/operators")
+const { fromRss } = require("./fromRss")
+
+const { getUrl } = require("./getUrl")
+
+const { empty, merge, forkJoin } = require("rxjs")
+const { map, scan } = require("rxjs/operators")
 const rssConfig = require("./rssConfig")
-const Parser = require("rss-parser")
-const parser = new Parser()
-const axios = require("axios")
-
-const parseRssItem = item => {
-  const { title, link, pubDate } = item
-  return {
-    title,
-    link,
-    date: new Date(pubDate)
-  }
-}
-
-module.exports.parseScrapboxApi = url => {
-  return axios(url).then(items => {})
-}
-
-const parseRss = url => {
-  return parser
-    .parseURL(url)
-    .then(({ items }) => items.map(item => parseRssItem(item)))
-}
-const fromRss = (url, config) =>
-  from(parseRss(url)).pipe(
-    mergeMap(r => from(r)),
-    // map(parseRssItem),
-    map(item => ({ ...item, ...config })),
-    catchError(err => {
-      if (process.env.NODE_ENV === "development") {
-        return fromDummy(config)
-      }
-      return of([])
-    })
-  )
 
 const generateMock = () => ({
   title: "Mock",
@@ -42,38 +12,7 @@ const generateMock = () => ({
   dummy: true,
   date: new Date()
 })
-
-const getUrl = (config, useOrigin) => {
-  const { proxy, origin } = config
-  if (useOrigin) {
-    return origin
-  }
-  return proxy
-}
-
-const getConfigByMedia = media => {
-  return rssConfig.find(r => {
-    return r.media === media || r.id === media
-  })
-}
-
-module.exports.getUrlByMedia = (media, useOrigin) => {
-  const config = getConfigByMedia(media)
-  if (!config) {
-    console.warn(`Invalid name: ${media}`)
-    return null
-  }
-  return getUrl(config, useOrigin)
-}
-
-const fromDummy = config => {
-  return from(Array(2).fill(null)).pipe(
-    map(_ => ({
-      ...generateMock(),
-      ...config
-    }))
-  )
-}
+exports.generateMock = generateMock
 
 const createRssStreams = (rssConfig, useOrigin) =>
   rssConfig.map(config => {
