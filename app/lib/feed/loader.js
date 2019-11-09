@@ -12,14 +12,6 @@ const rssConfig = require("./rssConfig")
 const fromRss = (url, config) => fromFeedItem(parseRss(url), config)
 const fromApi = (url, config) => fromFeedItem(parseScrapboxApi(url), config)
 
-const generateMock = () => ({
-  title: "Mock",
-  link: `mock${Math.random()}`,
-  dummy: true,
-  date: new Date()
-})
-exports.generateMock = generateMock
-
 const createRssStreams = (rssConfig, useOrigin) =>
   rssConfig.map(config => {
     switch (config.id) {

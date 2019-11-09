@@ -1,4 +1,4 @@
-const fromFeedItem = require("./fromFeedItem")
+// const fromFeedItem = require("./fromFeedItem")
 
 const Parser = require("rss-parser")
 const parser = new Parser()

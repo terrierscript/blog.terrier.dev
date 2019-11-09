@@ -1,8 +1,9 @@
-const fromFeedItem = require("./fromFeedItem")
+// const fromFeedItem = require("./fromFeedItem")
 
 const axios = require("axios")
 
 const parseFromScrapbox = url => {
+  // @ts-ignore
   return axios.get(url).then(({ data }) => {
     return data.pages.map(({ title, created, ...p }) => {
       return {
