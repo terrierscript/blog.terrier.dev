@@ -98,6 +98,6 @@
     "sandbox:build": "parcel build sandbox/index.html"
   },
   "devDependencies": {
-    "prettier": "1.18.2"
+    "prettier": "1.19.0"
   }
 }
