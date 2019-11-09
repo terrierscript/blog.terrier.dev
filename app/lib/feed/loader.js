@@ -19,7 +19,7 @@ const createRssStreams = (rssConfig, useOrigin) =>
         const url = getUrl(config, "api")
         return fromApi(url, config)
       default: {
-        const url = getUrl(config, useOrigin)
+        const url = getUrl(config, "origin")
         if (url !== null) {
           return fromRss(url, config)
         } else {
