@@ -1,10 +1,16 @@
-const { fromRss } = require("./fromRss")
+const parseRss = require("./parseRss")
+const parseScrapboxApi = require("./parseScrapboxApi")
+
+const fromFeedItem = require("./fromFeedItem")
 
 const { getUrl } = require("./getUrl")
 
 const { empty, merge, forkJoin } = require("rxjs")
 const { map, scan } = require("rxjs/operators")
 const rssConfig = require("./rssConfig")
+
+const fromRss = (url, config) => fromFeedItem(parseRss(url), config)
+const fromApi = (url, config) => fromFeedItem(parseScrapboxApi(url), config)
 
 const generateMock = () => ({
   title: "Mock",
@@ -16,11 +22,18 @@ exports.generateMock = generateMock
 
 const createRssStreams = (rssConfig, useOrigin) =>
   rssConfig.map(config => {
-    const url = getUrl(config, useOrigin)
-    if (url !== null) {
-      return fromRss(url, config)
-    } else {
-      return empty()
+    switch (config.id) {
+      case "scrapbox":
+        const url = getUrl(config, "api")
+        return fromApi(url, config)
+      default: {
+        const url = getUrl(config, useOrigin)
+        if (url !== null) {
+          return fromRss(url, config)
+        } else {
+          return empty()
+        }
+      }
     }
   })
 

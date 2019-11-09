@@ -1,6 +1,8 @@
+const fromFeedItem = require("./fromFeedItem")
+
 const axios = require("axios")
 
-module.exports = url => {
+const parseFromScrapbox = url => {
   return axios.get(url).then(({ data }) => {
     return data.pages.map(({ title, created, ...p }) => {
       return {
@@ -11,3 +13,5 @@ module.exports = url => {
     })
   })
 }
+module.exports = parseFromScrapbox
+// exports.default = (url, config) => fromFeedItem(parseFromScrapbox(url), config)

@@ -1,22 +1,29 @@
 const rssConfig = require("./rssConfig")
-const getUrl = (config, useOrigin) => {
-  const { proxy, origin } = config
-  if (useOrigin) {
-    return origin
+
+const getUrl = (config, mode = "proxy") => {
+  const { proxy, origin, api } = config
+  switch (mode) {
+    case "api":
+      return api
+    case "origin":
+      return origin
+    case "proxy":
+    default:
+      return proxy
   }
-  return proxy
 }
+
 exports.getUrl = getUrl
 const getConfigByMedia = media => {
   return rssConfig.find(r => {
     return r.media === media || r.id === media
   })
 }
-module.exports.getUrlByMedia = (media, useOrigin) => {
+module.exports.getUrlByMedia = (media, mode) => {
   const config = getConfigByMedia(media)
   if (!config) {
     console.warn(`Invalid name: ${media}`)
     return null
   }
-  return getUrl(config, useOrigin)
+  return getUrl(config, mode)
 }

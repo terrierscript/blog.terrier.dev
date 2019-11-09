@@ -1,6 +1,5 @@
 import { loadFeedForSSR } from "../loader"
 import parseScrapboxApi from "../parseScrapboxApi"
-
 it("loadFeed", done => {
   loadFeedForSSR().then(r => {
     expect(r).toMatchSnapshot()
