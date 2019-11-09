@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react"
-import { loadFeed } from "./loader"
+import { loadFeedStream } from "./loader"
 
 const ExternalFeedContext = createContext([])
 
@@ -23,7 +23,7 @@ export const useExternalFeeds = () => {
   })
 
   useEffect(() => {
-    loadFeed().subscribe(feeds => {
+    loadFeedStream().subscribe(feeds => {
       setFeeds(({ map: baseMap }) => {
         feeds.map(feed => {
           if (baseMap.has(feed.link)) {

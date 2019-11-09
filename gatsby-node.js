@@ -57,6 +57,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const result = await graphql(ql)
   // console.log(result)
   const feeds = await loadFeedForSSR()
+  // console.log(feeds.map(f => f.media))
   const globals = {
     feeds
   }
