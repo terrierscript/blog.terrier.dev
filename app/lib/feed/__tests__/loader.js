@@ -1,5 +1,8 @@
-import { loadFeed } from "../loader"
+import { loadFeedForSSR } from "../loader"
 
 it("loadFeed", done => {
-  done()
+  loadFeedForSSR().then(r => {
+    expect(r).toMatchSnapshot()
+    done()
+  })
 })

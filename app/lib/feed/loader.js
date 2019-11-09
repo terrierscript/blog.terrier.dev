@@ -1,8 +1,9 @@
-const { merge, from, of, forkJoin } = require("rxjs")
+const { empty, merge, from, of, forkJoin } = require("rxjs")
 const { map, mergeMap, scan, catchError } = require("rxjs/operators")
 const rssConfig = require("./rssConfig")
 const Parser = require("rss-parser")
 const parser = new Parser()
+const axios = require("axios")
 
 const parseRssItem = item => {
   const { title, link, pubDate } = item
@@ -13,12 +14,24 @@ const parseRssItem = item => {
   }
 }
 
+module.exports.parseScrapboxApi = url => {
+  return axios(url).then(items => {})
+}
+
+const parseRss = url => {
+  return parser
+    .parseURL(url)
+    .then(({ items }) => items.map(item => parseRssItem(item)))
+}
 const fromRss = (url, config) =>
-  from(parser.parseURL(url)).pipe(
-    mergeMap(r => from(r.items)),
-    map(parseRssItem),
+  from(parseRss(url)).pipe(
+    mergeMap(r => from(r)),
+    // map(parseRssItem),
     map(item => ({ ...item, ...config })),
     catchError(err => {
+      if (process.env.NODE_ENV === "development") {
+        return fromDummy(config)
+      }
       return of([])
     })
   )
@@ -26,16 +39,16 @@ const fromRss = (url, config) =>
 const generateMock = () => ({
   title: "Mock",
   link: `mock${Math.random()}`,
+  dummy: true,
   date: new Date()
 })
 
 const getUrl = (config, useOrigin) => {
-  const { dev, production, origin } = config
+  const { proxy, origin } = config
   if (useOrigin) {
     return origin
   }
-  // if (process.env.)
-  return process.env.NODE_ENV === "production" ? production : dev
+  return proxy
 }
 
 const getConfigByMedia = media => {
@@ -43,6 +56,7 @@ const getConfigByMedia = media => {
     return r.media === media || r.id === media
   })
 }
+
 module.exports.getUrlByMedia = (media, useOrigin) => {
   const config = getConfigByMedia(media)
   if (!config) {
@@ -66,8 +80,9 @@ const createRssStreams = (rssConfig, useOrigin) =>
     const url = getUrl(config, useOrigin)
     if (url !== null) {
       return fromRss(url, config)
+    } else {
+      return empty()
     }
-    return fromDummy(config)
   })
 
 const load = ({ useOrigin }) => {
@@ -81,7 +96,8 @@ const load = ({ useOrigin }) => {
     })
   )
 }
-module.exports.loadFeed = () => load({ useOrigin: false })
+
+module.exports.loadFeedStream = () => load({ useOrigin: false })
 
 module.exports.loadFeedForSSR = () => {
   return new Promise((resolve, reject) => {
