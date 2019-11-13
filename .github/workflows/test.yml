@@ -29,8 +29,8 @@ jobs:
     - run: yarn build
     - name: Audit URLs using Lighthouse
       uses: treosh/lighthouse-ci-action@v2
-      with:
-        staticDistDir: "./dist"
+        with:
+          staticDistDir: "./dist"
     - name: Save results
       uses: actions/upload-artifact@v1
       with:
