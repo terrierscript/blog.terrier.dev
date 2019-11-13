@@ -36,5 +36,5 @@ jobs:
       with:
         name: lighthouse-results
         path: '.lighthouseci'
-addons:
-  chrome: stable
+        addons:
+          chrome: stable
