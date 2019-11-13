@@ -18,6 +18,7 @@ const buildPayload = body => {
 
 const handler = function(body, _, callback) {
   console.log(webhookUrl)
+  console.log(process.env)
   // console.log(event)
   // if (event.httpMethod === "OPTIONS") {
   //   callback(null, { statusCode: 200, body: "" })
