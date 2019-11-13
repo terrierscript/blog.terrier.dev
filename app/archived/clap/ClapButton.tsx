@@ -93,7 +93,6 @@ const ClapButtonInternal = ({ title, onTap, fadeItem, children }) => {
 }
 
 export const ClapButton = (props: any) => {
-  console.log(props)
   return (
     <FadeAnimationProvider>
       <ClapButtonInternal {...props} />
