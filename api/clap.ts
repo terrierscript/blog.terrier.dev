@@ -4,7 +4,8 @@ const { promisify } = require("util")
 const request = require("request")
 const axios = require("axios")
 // const fetch = require("node-fetch")
-const webhookUrl = process.env["SLACK_WEBHOOK_URL"]
+const webhookUrl =
+  process.env["SLACK_WEBHOOK_URL"] || process.env["slack_webhook_url"]
 
 const buildPayload = body => {
   const { title, count } = JSON.parse(body)
