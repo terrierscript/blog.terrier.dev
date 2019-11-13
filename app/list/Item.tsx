@@ -10,7 +10,7 @@ const Title = styled(NavLink)`
   font-size: 1.2em;
   display: block;
   line-height: 1.5em;
-  font-family: ${headerFont};
+  /* font-family: ${headerFont}; */
 `
 
 const Item = styled.div`

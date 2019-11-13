@@ -14,3 +14,4 @@ lambda
 dist/
 .next
 out/
+.lighthouseci

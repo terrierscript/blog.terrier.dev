@@ -2,8 +2,9 @@
 import React from "react"
 import { MetaHeaderGatsby } from "../app/meta/MetaHeader"
 import { logVersion } from "./version"
-import { TwitterTracking } from "../app/meta/TwitterTracking"
+import { TwitterTracking } from "../app/meta/injection/TwitterTracking"
 import { HelmetItem } from "../app/meta/HelmetItem"
+import { GaTracking } from "../app/meta/injection/GaTracking"
 
 export default class HTML extends React.Component {
   render() {
