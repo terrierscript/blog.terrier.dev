@@ -235,18 +235,18 @@ exports[`sandbox 1`] = `
         <h3>
           bar
         </h3>
-        <p
+        <div
           className="emotion-14"
         >
           Loreim ipsum
           <br />
           foobaz bar
-        </p>
-        <p
+        </div>
+        <div
           className="emotion-14"
         >
           zoo
-        </p>
+        </div>
         <ul
           className="emotion-19"
           start={null}

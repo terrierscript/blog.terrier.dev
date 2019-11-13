@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
 import { THIN_TEXT_COLOR } from "../../layout/global/colors"
-
+import { ClapButton, HeartButton } from "../../archived/clap/ClapButton"
+import { FaRegHeart } from "react-icons/fa"
 const Container = styled.div`
   display: flex;
 `
@@ -22,7 +23,6 @@ const getShareUrl = fileAbsolutePath => {
 // TODO: SSR
 const TweetButtons = ({ title, fileAbsolutePath }) => {
   const url = getShareUrl(fileAbsolutePath)
-  console.log(url)
   return (
     <a data-text={title} className="twitter-share-button" href={url}>
       Tweet
@@ -71,6 +71,7 @@ const Modify = ({ fileAbsolutePath }) => {
 export const ArticleFooter = ({ title, fileAbsolutePath }) => {
   return (
     <>
+      <HeartButton title={title} />
       <TwitterWidgetScript />
       <Container>
         <Item>

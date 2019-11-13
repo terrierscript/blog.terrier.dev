@@ -43,6 +43,9 @@
       "status": 200
     }
   ],
+  "env": {
+    "SLACK_WEBHOOK_URL": "@slack_webhook_url"
+  },
   "regions": [
     "hnd1"
   ]

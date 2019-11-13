@@ -44,7 +44,22 @@ export const FadeAnimation = ({ children }) => {
   const [_, set] = useState(false)
   const transitions = useTransition(animations, i => i, {
     from: { opacity: 0, transform: "translateY(-50px) scale(1)" },
-    enter: { opacity: 1, transform: "translateY(-180px) scale(1.2)" },
+    // update: [{ opacity: 1, transform: "translateX(-20px)" }],
+    enter: [
+      {
+        opacity: 1,
+        transform: "translateY(-180px) scale(1)"
+      }
+      // {
+      //   opacity: 0,
+      //   transform: "translateY(-200px) scale(0)"
+      // }
+    ],
+    trail: 10,
+    config: {
+      // tension: 500
+      // duration: 100
+    },
     leave: { opacity: 0, transform: "translateY(-200px) scale(0.5)" },
     // 完了処理
     // @ts-ignore
@@ -54,7 +69,6 @@ export const FadeAnimation = ({ children }) => {
     }
   })
   useEffect(() => {
-    console.log("SET")
     set(true)
   }, [])
   return transitions.map(({ item, key, props }) => {

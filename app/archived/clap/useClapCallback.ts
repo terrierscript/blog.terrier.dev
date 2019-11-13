@@ -1,12 +1,8 @@
-import { useCallback } from "react";
+import { useCallback } from "react"
 
-const url =
-  process.env.NODE_ENV === "production"
-    ? "https://snippet.terrierscript.com/.netlify/functions/clap"
-    : "http://localhost:9000/clap"
+const url = "/api/clap"
 
-const useGoogleAnalyticsEvent = (title, id) => {
-  // @ts-ignore
+const useGoogleAnalyticsEvent = title => {
   return useCallback(
     count => {
       if (typeof ga === "function") {
@@ -18,16 +14,16 @@ const useGoogleAnalyticsEvent = (title, id) => {
         })
       }
     },
-    [title, id]
+    [title]
   )
 }
 
-const useFetchClap = (title, id) => {
+const useFetchClap = title => {
   return useCallback(
     count => {
-      if (process.env.NODE_ENV !== "production") {
-        return
-      }
+      // if (process.env.NODE_ENV !== "production") {
+      //   return
+      // }
       return fetch(url, {
         method: "POST",
         mode: "no-cors",
@@ -35,19 +31,22 @@ const useFetchClap = (title, id) => {
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ id, title, count })
+        body: JSON.stringify({ title, count })
       })
     },
-    [title, id]
+    [title]
   )
 }
 
-export const useClapCallback = (title, id) => {
-  const clapCallback = useFetchClap(title, id)
-  const gaEvent = useGoogleAnalyticsEvent(title, id)
-  
-  return useCallback( (count) => {
-    clapCallback(count)
-    gaEvent(count)
-  }, [title, id])
+export const useClapCallback = title => {
+  const clapCallback = useFetchClap(title)
+  const gaEvent = useGoogleAnalyticsEvent(title)
+
+  return useCallback(
+    count => {
+      clapCallback(count)
+      gaEvent(count)
+    },
+    [title]
+  )
 }

@@ -42,11 +42,11 @@ exports[`Sample block 1`] = `
   <h3>
     bar
   </h3>
-  <p
+  <div
     className="emotion-0"
   >
     foo baz bar
-  </p>
+  </div>
   <ul
     className="emotion-4"
     start={null}
@@ -102,7 +102,7 @@ exports[`nl2br 1`] = `
 <div
   className="emotion-2"
 >
-  <p
+  <div
     className="emotion-0"
   >
     aaa
@@ -110,7 +110,7 @@ exports[`nl2br 1`] = `
     bbb
     <br />
     ccc
-  </p>
+  </div>
   <div
     className="emotion-1"
   >
@@ -185,7 +185,7 @@ exports[`nl2br-link 1`] = `
 <div
   className="emotion-2"
 >
-  <p
+  <div
     className="emotion-1"
   >
     <a
@@ -196,7 +196,7 @@ exports[`nl2br-link 1`] = `
     </a>
     <br />
     bbb
-  </p>
+  </div>
 </div>
 `;
 
@@ -238,7 +238,7 @@ exports[`nl2br-link-not-break 1`] = `
 <div
   className="emotion-5"
 >
-  <p
+  <div
     className="emotion-4"
   >
     今回は
@@ -265,7 +265,7 @@ exports[`nl2br-link-not-break 1`] = `
         react-sytnax-highlight
       </code>
     </a>
-  </p>
+  </div>
 </div>
 `;
 
@@ -294,7 +294,7 @@ exports[`web-component 1`] = `
 <div
   className="emotion-1"
 >
-  <p
+  <div
     className="emotion-0"
   >
     aaa
@@ -303,6 +303,6 @@ exports[`web-component 1`] = `
     foo
     <br />
     ccc
-  </p>
+  </div>
 </div>
 `;
