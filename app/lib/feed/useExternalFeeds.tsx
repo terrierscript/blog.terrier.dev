@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react"
-import { loadFeedStream } from "./loader"
+// import { loadFeedStream } from "./loader"
 
 const ExternalFeedContext = createContext([])
 
@@ -23,19 +23,19 @@ export const useExternalFeeds = () => {
   })
 
   useEffect(() => {
-    loadFeedStream().subscribe(feeds => {
-      setFeeds(({ map: baseMap }) => {
-        feeds.map(feed => {
-          if (baseMap.has(feed.link)) {
-            return
-          }
-          baseMap.set(feed.link, feed)
-        })
-        return {
-          map: baseMap
-        }
-      })
-    })
+    // loadFeedStream().subscribe(feeds => {
+    //   setFeeds(({ map: baseMap }) => {
+    //     feeds.map(feed => {
+    //       if (baseMap.has(feed.link)) {
+    //         return
+    //       }
+    //       baseMap.set(feed.link, feed)
+    //     })
+    //     return {
+    //       map: baseMap
+    //     }
+    //   })
+    // })
   }, [])
   return Array.from(feeds.map.values()).sort(
     // @ts-ignore
