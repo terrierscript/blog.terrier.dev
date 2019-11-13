@@ -1,7 +1,6 @@
 import React, { SFC } from "react"
 import styled from "@emotion/styled"
-import FaGithub from "react-icons/lib/fa/github"
-import FaTwitter from "react-icons/lib/fa/twitter"
+import { FaGithub, FaTwitter } from "react-icons/fa"
 
 const FooterContainer = styled.footer`
   /* background: #f0f0f0; */
