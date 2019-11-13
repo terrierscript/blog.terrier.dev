@@ -48,7 +48,7 @@ exports[`StackBlitz iframe sample 1`] = `
 <div
   className="emotion-5"
 >
-  <p
+  <div
     className="emotion-4"
   >
     <div
@@ -69,7 +69,7 @@ exports[`StackBlitz iframe sample 1`] = `
         src="https://stackblitz.com/edit/react-ts-egg6dg"
       />
     </div>
-  </p>
+  </div>
 </div>
 `;
 
@@ -121,7 +121,7 @@ exports[`StackBlitz iframe sample with params 1`] = `
 <div
   className="emotion-5"
 >
-  <p
+  <div
     className="emotion-4"
   >
     <div
@@ -142,6 +142,6 @@ exports[`StackBlitz iframe sample with params 1`] = `
         src="https://stackblitz.com/edit/react-ts-egg6dg?embed=1&file=index.tsx&hideExplorer=1&view=preview&ctl=1"
       />
     </div>
-  </p>
+  </div>
 </div>
 `;
