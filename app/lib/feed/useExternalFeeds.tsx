@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react"
-import { loadFeedStream } from "./loader"
+// import { loadFeedStream } from "./loader"
 
 const ExternalFeedContext = createContext([])
 
