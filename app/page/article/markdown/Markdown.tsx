@@ -53,7 +53,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   margin-top: 0.25em;
 `
-const Paragraph = styled.p`
+const Paragraph = styled.div`
   margin-bottom: 0.8em;
   line-height: 1.7em;
 `
