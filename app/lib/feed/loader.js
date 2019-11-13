@@ -41,7 +41,7 @@ const load = ({ useOrigin }) => {
   )
 }
 
-module.exports.loadFeedStream = () => load({ useOrigin: false })
+// module.exports.loadFeedStream = () => load({ useOrigin: false })
 
 module.exports.loadFeedForSSR = () => {
   return new Promise((resolve, reject) => {
