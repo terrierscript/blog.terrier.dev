@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
 import { THIN_TEXT_COLOR } from "../../layout/global/colors"
+import { ClapButton } from "../../archived/clap/ClapButton"
 
 const Container = styled.div`
   display: flex;
@@ -71,6 +72,7 @@ const Modify = ({ fileAbsolutePath }) => {
 export const ArticleFooter = ({ title, fileAbsolutePath }) => {
   return (
     <>
+      <ClapButton title={title}>👈</ClapButton>
       <TwitterWidgetScript />
       <Container>
         <Item>

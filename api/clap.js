@@ -4,14 +4,18 @@ const request = require("request")
 const webhookUrl = process.env["SLACK_WEBHOOK_URL"]
 
 const buildPayload = body => {
-  const { title, id, count } = JSON.parse(body)
+  const { title, count } = JSON.parse(body)
   // console.log(title, id)
   return {
     text: `${title} が ${count} 回clapされました👏`
   }
 }
 // TODO: to now.sh api
-exports.handler = function(event, context, callback) {
+module.exports = (req, res) => {
+  console.log(req)
+}
+
+exports.handler = function(event, _, callback) {
   console.log(event)
   // if (event.httpMethod === "OPTIONS") {
   //   callback(null, { statusCode: 200, body: "" })
@@ -22,7 +26,7 @@ exports.handler = function(event, context, callback) {
       statusCode: 4001
     })
   }
-  console.log(event)
+  // console.log(event)
   const post = promisify(request.post)
   post(
     {
