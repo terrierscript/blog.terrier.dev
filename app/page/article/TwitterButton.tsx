@@ -11,9 +11,7 @@ const getShareUrl = fileAbsolutePath => {
 }
 
 export const TweetButtons = ({ title, fileAbsolutePath }) => {
-  const url = `https://twiter.com/intent/tweet?url=${getShareUrl(
-    fileAbsolutePath
-  )}&via=terrierscript`
+  const url = getShareUrl(fileAbsolutePath)
   return (
     <TwitterShareButton
       title={title}
