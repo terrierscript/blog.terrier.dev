@@ -58,7 +58,7 @@ const StickyBottom = styled.div`
   bottom: 0;
   background: white;
   margin-top: 1em;
-  border-top: 1px solid rgba(0%, 0%, 0%, 20%);
+  border-top: 2px solid rgba(0%, 0%, 0%, 20%);
 `
 
 export const ArticleFooter = ({ title, fileAbsolutePath }) => {
