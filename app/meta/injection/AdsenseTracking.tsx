@@ -2,7 +2,7 @@ import React from "react"
 
 export const AdsenseTracking = () => {
   if (process.env.NODE_ENV === "development") {
-    return
+    return null
   }
   return (
     <>

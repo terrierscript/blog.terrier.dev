@@ -6,6 +6,7 @@ import { Footer } from "./Footer"
 import styled from "@emotion/styled"
 import { Side } from "./side/Side"
 import { GlobalStyle } from "./global/Style"
+import { Chakra } from "./ChakraProvider"
 require("../web-component/index")
 
 // defineComponents()
@@ -74,11 +75,11 @@ export const LayoutInner = ({ children }) => {
 
 export const Layout: SFC<{ children: any }> = ({ children }) => {
   return (
-    <>
+    <Chakra>
       <GlobalStyle />
       <div>
         <LayoutInner>{children}</LayoutInner>
       </div>
-    </>
+    </Chakra>
   )
 }

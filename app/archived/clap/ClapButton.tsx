@@ -13,21 +13,20 @@ import {
 import { BG_COLOR } from "../../layout/global/colors"
 import { FaRegHeart, FaHeart } from "react-icons/fa"
 
-const PositionFixed = styled.div`
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-`
+// const PositionFixed = styled.div`
+//   position: fixed;
+//   left: 20px;
+//   bottom: 20px;
+// `
 
 const Clap = styled.div`
-  padding: 0;
-  margin: 0;
-  width: 2em;
-  height: 2em;
-  line-height: 1.5em;
-  font-size: 2em;
-  text-align: center;
-  vertical-align: middle;
+  /* padding: 0;
+  margin: 0; */
+  font-size: 1.5em;
+  /* width: 2em;
+  height: 2em; */
+  /* text-align: center; */
+  /* vertical-align: middle; */
   user-select: none;
 `
 
@@ -44,7 +43,7 @@ const Button = styled(Clap)`
 
 const Animation = posed.div({
   pressable: true,
-  hoverable: true,
+  // hoverable: true,
   init: {
     scale: 1
   },
@@ -81,14 +80,16 @@ const ClapButtonInternal = ({ title, onTap, fadeItem, children }) => {
     )
   )
   return (
-    <PositionFixed>
+    <>
+      {/* <PositionFixed> */}
       <Animation>
         <Button onClick={onClick}>{children}</Button>
       </Animation>
       <FadeAnimation>
         <Clap>{fadeItem || children}</Clap>
       </FadeAnimation>
-    </PositionFixed>
+      {/* </PositionFixed> */}
+    </>
   )
 }
 
