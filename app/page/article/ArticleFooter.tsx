@@ -73,7 +73,10 @@ export const ArticleFooter = ({ title, fileAbsolutePath }) => {
           templateColumns="min-content min-content 1fr"
         >
           <Box>
-            <Tooltip aria-label="Like" label="参考になったら押して下さい">
+            <Tooltip
+              aria-label="Like"
+              label="役になったら押して下さい。今後の参考になります"
+            >
               <Box>
                 <HeartButton title={title} />
               </Box>
