@@ -79,7 +79,6 @@
     "rss-parser": "^3.6.3",
     "rxjs": "^6.4.0",
     "rxjs-hooks": "^0.5.0",
-    "slate": "^0.57.0",
     "typescript": "^3.7",
     "typography": "^0.16.6",
     "typography-theme-fairy-gates": "^0.16.0",
