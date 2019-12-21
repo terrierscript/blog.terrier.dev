@@ -75,7 +75,7 @@ export const ArticleFooter = ({ title, fileAbsolutePath }) => {
           <Box>
             <Tooltip
               aria-label="Like"
-              label="役になったら押して下さい。今後の参考になります"
+              label="役に立ったら押して下さい。今後の参考になります"
             >
               <Box>
                 <HeartButton title={title} />
