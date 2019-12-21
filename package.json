@@ -13,7 +13,7 @@
     "@emotion/styled": "^10.0.23",
     "@mapbox/rehype-prism": "^0.3.1",
     "@now/node": "^1.1.2",
-    "@now/static-build": "^0.13.0",
+    "@now/static-build": "^0.14.0",
     "@reach/router": "^1.2.1",
     "@testing-library/react": "^9.3.0",
     "@types/google.analytics": "^0.0.40",
