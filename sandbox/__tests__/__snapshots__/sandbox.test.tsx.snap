@@ -40,7 +40,6 @@ exports[`sandbox 1`] = `
 }
 
 .emotion-22 {
-  padding-bottom: 3em;
   word-break: break-all;
 }
 
@@ -60,9 +59,8 @@ exports[`sandbox 1`] = `
 }
 
 .emotion-21 {
-  padding: 2em 0;
+  padding: 2em 0 0;
   border-top: 1px solid #d6d2d0;
-  border-bottom: 1px solid #d6d2d0;
 }
 
 .emotion-20 {
