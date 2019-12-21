@@ -2,6 +2,12 @@
 
 exports[`<Tag> 1`] = `
 .emotion-0 {
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
   display: inline-block;
   color: #918b89;
   -webkit-text-decoration: underline;
@@ -10,6 +16,27 @@ exports[`<Tag> 1`] = `
   margin-left: 0;
   font-size: 0.9rem;
   text-transform: lowercase;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:focus {
+  box-shadow: outline;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:focus,
+.emotion-0:disabled:hover,
+.emotion-0[aria-disabled=true],
+.emotion-0[aria-disabled=true]:focus,
+.emotion-0[aria-disabled=true]:hover {
+  opacity: 0.4;
+  cursor: not-allowed;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-0:hover {
