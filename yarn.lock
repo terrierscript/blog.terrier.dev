@@ -13940,10 +13940,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-slate@^0.50.0:
-  version "0.50.8"
-  resolved "https://registry.yarnpkg.com/slate/-/slate-0.50.8.tgz#e2fbf69ffa234082e5c538c1dade059076eb1745"
-  integrity sha512-z4YZrHa+a3G0JUf4wbln2Klvd/15uHO2oHbTkDwTjdm1qH5IjumQmKOSw3vOFYy9KYI6FUh2QxHgu5Vl651R7Q==
+slate@^0.57.0:
+  version "0.57.1"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.57.1.tgz#dc99d9a77840894c9e3d3bc1185b67ee36c17686"
+  integrity sha512-av95C0zbsi0+khfOuyQlpZy0Q3Pqqh0loCusGGi0Wlb/J8OUBAyK/a5EgTfE0zK4pmjtEBnPksfBuVilg5jrNg==
   dependencies:
     "@types/esrever" "^0.2.0"
     esrever "^0.2.0"
