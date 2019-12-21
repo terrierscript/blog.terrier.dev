@@ -36,9 +36,9 @@ const BlogBody = styled.section`
   }
 `
 const ArticleBg = styled.div`
-  padding: 2em 0;
+  padding: 2em 0 0;
   border-top: 1px solid ${ARTICLE_BORDER_COLOR};
-  border-bottom: 1px solid ${ARTICLE_BORDER_COLOR};
+  /* border-bottom: 1px solid ${ARTICLE_BORDER_COLOR}; */
 `
 
 const ArticleTitle = styled.h1`
@@ -55,7 +55,7 @@ const TagListWrapper = styled.div`
 `
 
 const BlogArticleWrapper = styled.div`
-  padding-bottom: 3em;
+  /* padding-bottom: 3em; */
   word-break: break-all;
 `
 

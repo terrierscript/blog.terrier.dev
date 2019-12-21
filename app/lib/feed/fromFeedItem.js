@@ -7,6 +7,7 @@ module.exports = (items, config) =>
     // @ts-ignore
     mergeMap(r => from(r)),
     // map(parseRssItem),
+    // @ts-ignore
     map(item => ({ ...item, ...config })),
     catchError(err => {
       if (process.env.NODE_ENV === "development") {

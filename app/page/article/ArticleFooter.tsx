@@ -3,6 +3,8 @@ import styled from "@emotion/styled"
 import { THIN_TEXT_COLOR } from "../../layout/global/colors"
 import { ClapButton, HeartButton } from "../../archived/clap/ClapButton"
 import { FaRegHeart } from "react-icons/fa"
+import { Text, SimpleGrid, Box, Flex, Grid, Tooltip } from "@chakra-ui/core"
+import { TweetButtons } from "./TwitterButton"
 const Container = styled.div`
   display: flex;
 `
@@ -12,23 +14,6 @@ const Item = styled.div`
   line-height: 1em;
   font-size: 1em;
 `
-
-const getShareUrl = fileAbsolutePath => {
-  if (typeof location === "undefined") {
-    const filename = getFilename(fileAbsolutePath).replace(/.md/, "")
-    return `https://terrier.dev/blog/${filename}`
-  }
-  return location.origin + location.pathname
-}
-// TODO: SSR
-const TweetButtons = ({ title, fileAbsolutePath }) => {
-  const url = getShareUrl(fileAbsolutePath)
-  return (
-    <a data-text={title} className="twitter-share-button" href={url}>
-      Tweet
-    </a>
-  )
-}
 
 export const TwitterWidgetScript = children => {
   // const [loaded, setLoaded] = useState() // TODO
@@ -44,7 +29,7 @@ export const TwitterWidgetScript = children => {
   )
 }
 
-const getFilename = fileAbsolutePath => {
+export const getFilename = fileAbsolutePath => {
   const filename = fileAbsolutePath.split("/").pop()
   const year = filename.substr(0, 4) // TODO: ちょっと無理やりになってる
   return `${year}/${filename}`
@@ -69,22 +54,53 @@ const Modify: FC<{ fileAbsolutePath: string }> = ({ fileAbsolutePath }) => {
   return <ModifyLink href={url}>Edit on Github</ModifyLink>
 }
 
-export const ArticleFooter: FC<{ title: string; fileAbsolutePath: string }> = ({
-  title,
-  fileAbsolutePath
-}) => {
+const StickyBottom = styled.div`
+  position: sticky;
+  bottom: 0;
+  background: white;
+  margin-top: 1em;
+  border-top: 2px solid rgba(0%, 0%, 0%, 20%);
+`
+
+export const ArticleFooter = ({ title, fileAbsolutePath }) => {
   return (
     <>
-      <HeartButton title={title} />
-      <TwitterWidgetScript />
+      {/* <TwitterWidgetScript /> */}
+      <StickyBottom>
+        <Grid
+          autoFlow="column"
+          gridGap="3em"
+          padding="1em"
+          templateColumns="min-content min-content 1fr"
+        >
+          <Box>
+            <Tooltip
+              aria-label="Like"
+              label="役に立ったら押して下さい。今後の参考になります"
+            >
+              <Box>
+                <HeartButton title={title} />
+              </Box>
+            </Tooltip>
+          </Box>
+          <Box cursor="pointer" paddingTop="1px">
+            <Tooltip aria-label="Tweet" label="Share on Twitter">
+              <Box>
+                <TweetButtons
+                  title={title}
+                  fileAbsolutePath={fileAbsolutePath}
+                />
+              </Box>
+            </Tooltip>
+          </Box>
+          <Box justifySelf="end">
+            <Modify fileAbsolutePath={fileAbsolutePath} />
+          </Box>
+        </Grid>
+      </StickyBottom>
+
       <Container>
-        <Item>
-          <Modify fileAbsolutePath={fileAbsolutePath} />
-        </Item>
-        <Item>|</Item>
-        <Item>
-          <TweetButtons title={title} fileAbsolutePath={fileAbsolutePath} />
-        </Item>
+        <Item></Item>
         {/* <Item>
           <TwitterFollowButton />
         </Item> */}

@@ -7,10 +7,17 @@ import { Fonts } from "./Fonts"
 const globalCss = css`
   :root {
     --border: 1px solid #f0f0f0;
+    /* --webkit-focus-ring-color: transparent; */
   }
+
   * {
     box-sizing: border-box;
   }
+
+  *:focus {
+    outline: none;
+  }
+
   /* TODO */
   body {
     img {
