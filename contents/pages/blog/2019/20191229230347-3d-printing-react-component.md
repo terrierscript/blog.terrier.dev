@@ -42,8 +42,7 @@ function Thing() {
 
 ## Demo
 
-https://codesandbox.io/embed/hungry-shockley-ey0wt?fontsize=14&hidenavigation=1&module=%2Fsrc%2FModel.tsx&theme=dark
-
+https://codesandbox.io/s/react-three-fiber-to-stl-or-gltf-ey0wt?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fmodel%2FModel.tsx&theme=dark
 <!-- {% codesandbox ey0wt %} -->
 
 Model.tsxを編集するとSTLやglTFが出力される（ちょっと重いので注意）
