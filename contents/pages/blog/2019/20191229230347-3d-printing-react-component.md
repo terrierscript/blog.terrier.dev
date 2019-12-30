@@ -8,7 +8,7 @@ tags:
   - three.js
   - stl
   - 3d-print
-published: false
+published: true
 ---
 
 [react-three-fiber](https://github.com/react-spring/react-three-fiber)と[three.jsのExporter](https://github.com/mrdoob/three.js/blob/dev/examples/jsm/exporters/)を使ってJSXを3Dプリントする事に成功した
