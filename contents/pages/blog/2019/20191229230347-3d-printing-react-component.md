@@ -11,7 +11,12 @@ tags:
 published: false
 ---
 
-[react-three-fiber](https://github.com/react-spring/react-three-fiber)と[three.jsのExporter](https://github.com/mrdoob/three.js/blob/dev/examples/jsm/exporters/)を使ってJSXを3Dプリントする事に成功したのでそのPoCについて記述する
+[react-three-fiber](https://github.com/react-spring/react-three-fiber)と[three.jsのExporter](https://github.com/mrdoob/three.js/blob/dev/examples/jsm/exporters/)を使ってJSXを3Dプリントする事に成功した
+
+![cover](https://user-images.githubusercontent.com/13282103/71576905-7ede9980-2b35-11ea-94a6-e9e5bbd4e929.png)
+
+
+今回はそのPoCについて記述する
 
 ## どういう事か？
 
@@ -136,6 +141,13 @@ export const toRenderble = (scene: Scene): Scene => {
     if (!appendGeom) {
       return null
     }
+
+    // 親のmeshを考慮する
+    if (mesh.parent) {
+      mesh.parent.updateMatrixWorld()
+      mesh.applyMatrix(mesh.parent.matrixWorld)
+    }
+
     mesh.geometry = appendGeom
     // meshをマージしていく
     tmpGeometry.mergeMesh(mesh)
@@ -268,11 +280,18 @@ export const World = () => {
 
 ```
 
-## プリントしてみる
+## プリントまでの流れ
 
 流石にSTLデータ以降はReactでは出来ないので、[Ultimaker cura](https://ultimaker.com/software)などでgcodeに変換した。
 
+<img width="500" src="https://user-images.githubusercontent.com/13282103/71564664-bb83a400-2ae7-11ea-88b7-1926ac9b06d5.png">
 
-そしてこれを3Dプリント
+そしてこれを3Dプリントすれば完了だ
+（あまりきれいにプリント出来てないのはご容赦いただきたい）
 
-出来た！
+![img](https://user-images.githubusercontent.com/13282103/71566577-132c0a80-2afc-11ea-89b7-ce669e952855.png)
+
+
+## まとめ
+
+パフォーマンスの難点やまだ考慮されてないパターンなどはあるが、ひとまず目的は達成できた。JSXでの構築は[ロゴに使ったReactのロゴ](https://github.com/terrierscript/poc-react-three-stl-exporter/blob/master/src/model/ModelReactLogoCoin.tsx#L6-L101)のような規則性があるようなものは非常に作りやすい。これらをパーツとして使えるとだいぶ有益な可能性を感じている
