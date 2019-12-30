@@ -96,6 +96,20 @@ const Model2 = () => {
 }
 ```
 
+あとはこんな感じにすればモデルを描画できる
+
+```tsx
+const App = () => {
+  const ref = useRef()
+  const { gl } = useThree()
+  gl.setClearColor("#ff99cc")
+
+  return <Canvas>
+    <Model />
+  </Canvas>
+}
+```
+
 ### sceneをtraverseして、exporterに対応できるようにする
 
 STLへの変換自体は、先に言った通り`STLExporter`を使えば一応できる。
@@ -114,6 +128,20 @@ export const ExportStl = () => {
   return <mesh></mesh>
 }
 ```
+
+これを先程と同じくCanvas下に配置すれば良い
+
+```tsx
+const App = () => {
+　// ...
+  return <Canvas>
+    <Model />
+    <ExportStl />
+  </Canvas>
+}
+```
+
+
 
 ただ、利用するgeometryなどでエラーが起きやすかったり、geometry同士をmergeしないことでバラバラなオブジェクトとして吐き出されるのが印刷データを作るのに都合が悪かったため、事前に下記のように変換することにした。
 
@@ -293,4 +321,4 @@ export const World = () => {
 
 ## まとめ
 
-パフォーマンスの難点やまだ考慮されてないパターンなどはあるが、ひとまず目的は達成できた。JSXでの構築は[ロゴに使ったReactのロゴ](https://github.com/terrierscript/poc-react-three-stl-exporter/blob/master/src/model/ModelReactLogoCoin.tsx#L6-L101)のような規則性があるようなものは非常に作りやすい。これらをパーツとして使えるとだいぶ有益な可能性を感じている
+パフォーマンスの難点やまだ考慮されてないパターンなどはあるが、ひとまず目的は達成できた。JSXでの構築は[この記事のカバー画像に使ったReactのロゴ](https://github.com/terrierscript/poc-react-three-stl-exporter/blob/master/src/model/ModelReactLogoCoin.tsx#L6-L101)のような規則性があるようなものは非常に作りやすい。これらをパーツとして使えるとだいぶ有益な可能性を感じている
