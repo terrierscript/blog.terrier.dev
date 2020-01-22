@@ -50,7 +50,7 @@
     "identity-obj-proxy": "^3.0.0",
     "immutable": "^3.8.2",
     "inquirer": "^6.2.2",
-    "jest": "^24.1.0",
+    "jest": "^25.0.0",
     "jest-emotion": "^10.0.17",
     "lodash": "^4.17.5",
     "lodash.debounce": "^4.0.8",
