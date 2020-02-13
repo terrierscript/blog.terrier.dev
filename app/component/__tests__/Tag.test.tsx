@@ -1,8 +1,15 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import { AutoLinkTag } from "../Tag"
+import { AutoLinkTags } from "../Tag"
+import { ThemeProvider } from "@chakra-ui/core"
 
-test("<Tag>", () => {
-  const tree = renderer.create(<AutoLinkTag tag={"foo"} />).toJSON()
+test("<AutoLinkTags>", () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider>
+        <AutoLinkTags tags={["foo", "baz"]} />
+      </ThemeProvider>
+    )
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })

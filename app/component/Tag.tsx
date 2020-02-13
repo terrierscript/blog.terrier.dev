@@ -34,10 +34,12 @@ export const AutoLinkTags: FC<{ tags: string[] }> = ({ tags }) => {
 
 const AutoLinkTag: FC<{ tag: string }> = ({ tag }) => {
   return (
-    <Tag rounded={"full"} size={"sm"}>
-      <NavLink to={`/tags/${tag.toLowerCase()}/`}>
-        <TagLabel size={"sm"}>{tag}</TagLabel>
-      </NavLink>
-    </Tag>
+    <>
+      <Tag rounded={"full"} size={"sm"}>
+        <NavLink to={`/tags/${tag.toLowerCase()}/`}>
+          <TagLabel size={"sm"}>{tag}</TagLabel>
+        </NavLink>
+      </Tag>
+    </>
   )
 }

@@ -6,6 +6,7 @@ import { AutoLinkTags } from "../app/component/Tag"
 import { BlogItem } from "../app/list/Item"
 import { BlogArticle } from "../app/page/article/BlogPage"
 import { Container } from "../app/layout/Container"
+import { ThemeProvider } from "@chakra-ui/core"
 const mockPost = {
   fields: {
     slug: "foo-baz"
@@ -48,25 +49,27 @@ export const SandboxApp = () => {
     }
   ]
   return (
-    <Container>
-      <div>a</div>
-      <TagsProvider tags={tagsValue}>
-        <Fonts />
+    <ThemeProvider>
+      <Container>
+        <div>a</div>
+        <TagsProvider tags={tagsValue}>
+          <Fonts />
 
-        <BlogItem post={mockPost} />
-        <div>
-          <AutoLinkTags tags={["React", "React Hooks"]} />
-        </div>
-        {/* https://github.com/parcel-bundler/parcel/issues/3176 */}
-        <BlogArticle
-          date="2019/10/10 10:10:10"
-          title={"Blogのタイトル"}
-          markdown={testMarkdown}
-          tags={["javascript", "netlify", "parcel", "react"]}
-        />
-        {/* <div>
+          <BlogItem post={mockPost} />
+          <div>
+            <AutoLinkTags tags={["React", "React Hooks"]} />
+          </div>
+          {/* https://github.com/parcel-bundler/parcel/issues/3176 */}
+          <BlogArticle
+            date="2019/10/10 10:10:10"
+            title={"Blogのタイトル"}
+            markdown={testMarkdown}
+            tags={["javascript", "netlify", "parcel", "react"]}
+          />
+          {/* <div>
         </div> */}
-      </TagsProvider>
-    </Container>
+        </TagsProvider>
+      </Container>
+    </ThemeProvider>
   )
 }
