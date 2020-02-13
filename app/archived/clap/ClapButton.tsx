@@ -1,6 +1,6 @@
 import React, { useRef, useState, useCallback } from "react"
 import styled from "@emotion/styled"
-import posed from "react-pose"
+import { motion } from "framer-motion"
 import { useEventCallback } from "rxjs-hooks"
 import { bufferTime, tap, filter } from "rxjs/operators"
 import { merge } from "rxjs"
@@ -12,12 +12,6 @@ import {
 } from "./Animate"
 import { BG_COLOR } from "../../layout/global/colors"
 import { FaRegHeart, FaHeart } from "react-icons/fa"
-
-// const PositionFixed = styled.div`
-//   position: fixed;
-//   left: 20px;
-//   bottom: 20px;
-// `
 
 const Clap = styled.div`
   /* padding: 0;
@@ -41,19 +35,17 @@ const Button = styled(Clap)`
   cursor: pointer;
 `
 
-const Animation = posed.div({
-  pressable: true,
-  // hoverable: true,
-  init: {
-    scale: 1
-  },
-  press: {
-    scale: 0.8
-  },
-  hover: {
-    scale: 1.2
-  }
-})
+const Animation = ({ children }) => {
+  return (
+    <motion.div
+      initial={{ scale: 1 }}
+      whileTap={{ scale: 0.8 }}
+      whileHover={{ scale: 1.2 }}
+    >
+      {children}
+    </motion.div>
+  )
+}
 
 const ClapButtonInternal = ({ title, onTap, fadeItem, children }) => {
   const onClap = useClapCallback(title)
