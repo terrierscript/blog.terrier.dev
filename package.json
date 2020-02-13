@@ -69,7 +69,7 @@
     "react-immutable-proptypes": "^2.1.0",
     "react-markdown": "^4.2.2",
     "react-pose": "^4.0.7",
-    "react-share": "^3.0.1",
+    "react-share": "^4.0.0",
     "react-spring": "^8.0.7",
     "react-syntax-highlighter": "^12.0.0",
     "react-test-renderer": "^16.11.0",
