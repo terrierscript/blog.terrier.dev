@@ -321,4 +321,4 @@ export const World = () => {
 
 ## まとめ
 
-パフォーマンスの難点やまだ考慮されてないパターンなどはあるが、ひとまず目的は達成できた。JSXでの構築は[この記事のカバー画像に使ったReactのロゴ](https://github.com/terrierscript/poc-react-three-stl-exporter/blob/master/src/model/ModelReactLogoCoin.tsx#L6-L101)のような規則性があるようなものは非常に作りやすい。これらをパーツとして使えるとだいぶ有益な可能性を感じている
+パフォーマンスの難点やまだ考慮されてないパターンなどはあるが、ひとまず目的は達成できた。JSXでの構築は[この記事のカバー画像に使ったReactのロゴ](https://github.com/terrierscript/poc-react-three-stl-exporter/blob/master/src/model/ModelReactLogoCoin.tsx#L6-L101)のような規則性があるようなものは非常に作りやすい。これらをパーツとして、他のツールで全体を組み立てることを考えれば有益な可能性を感じている
