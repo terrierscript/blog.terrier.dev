@@ -7,7 +7,7 @@ tags:
   - react native
   - firebase
   - javascript
-published: false
+published: true
 ---
 
 React NativeでfirebaseのSDKを使った場合など、`Setting a timer for a long period of time,...`のようなsetTimeoutに関するwarningが発生する。
