@@ -56,7 +56,7 @@
     "lodash.debounce": "^4.0.8",
     "luxon": "^1.11.3",
     "node-fetch": "^2.3.0",
-    "now": "^16.7.0",
+    "now": "^17.0.0",
     "parcel": "^1.11.0",
     "popmotion": "^8.6.2",
     "prismjs": "^1.17.1",
