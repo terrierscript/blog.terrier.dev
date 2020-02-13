@@ -1,7 +1,7 @@
 import React from "react"
 import { TagsProvider } from "../app/context/SiteContext"
 import { Fonts } from "../app/layout/global/Fonts"
-import { Tag } from "../app/component/Tag"
+import { AutoLinkTags } from "../app/component/Tag"
 // import { Layout, LayoutInner } from "../app/layout/Layout"
 import { BlogItem } from "../app/list/Item"
 import { BlogArticle } from "../app/page/article/BlogPage"
@@ -55,8 +55,7 @@ export const SandboxApp = () => {
 
         <BlogItem post={mockPost} />
         <div>
-          <Tag tag="React" />
-          <Tag tag="React Hooks" />
+          <AutoLinkTags tags={["React", "React Hooks"]} />
         </div>
         {/* https://github.com/parcel-bundler/parcel/issues/3176 */}
         <BlogArticle

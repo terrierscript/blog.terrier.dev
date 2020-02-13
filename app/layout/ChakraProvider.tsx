@@ -4,7 +4,7 @@ import React from "react"
 export const Chakra = ({ children }) => {
   return (
     <ThemeProvider>
-      {/* <CSSReset /> */}
+      <CSSReset />
       {children}
     </ThemeProvider>
   )

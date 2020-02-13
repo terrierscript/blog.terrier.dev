@@ -3,14 +3,15 @@ import Helmet from "react-helmet"
 
 import { HTMLContent } from "./Content"
 import styled from "@emotion/styled"
-import { defaultFont } from "../../layout/font"
-import { Tag } from "../../component/Tag"
+import { impactFont } from "../../layout/font"
+import { AutoLinkTag, AutoLinkTags } from "../../component/Tag"
 import { Layout } from "../../layout/Layout"
 import AdSense from "react-adsense"
 import { ArticleFooter } from "./ArticleFooter"
 import { RawMarkdown } from "./markdown/Markdown"
 import { ARTICLE_BORDER_COLOR } from "../../layout/global/colors"
 import { Date } from "../../component/Date"
+import { Divider } from "@chakra-ui/core"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -18,9 +19,7 @@ const TagList = ({ tags = [] }) => {
   }
   return (
     <span>
-      {tags.map(tag => (
-        <Tag tag={tag} key={tag + `tag`} />
-      ))}
+      <AutoLinkTags tags={tags} />
     </span>
   )
 }
@@ -37,7 +36,7 @@ const BlogBody = styled.section`
 `
 const ArticleBg = styled.div`
   padding: 2em 0 0;
-  border-top: 1px solid ${ARTICLE_BORDER_COLOR};
+  /* border-top: 1px solid ${ARTICLE_BORDER_COLOR}; */
   /* border-bottom: 1px solid ${ARTICLE_BORDER_COLOR}; */
 `
 
@@ -47,7 +46,7 @@ const ArticleTitle = styled.h1`
   font-size: 1.6rem;
   letter-spacing: 0.02em;
   margin-bottom: 0.2em;
-  /* font-family: ${defaultFont}; */
+  /* font-family: ${impactFont}; */
 `
 
 const TagListWrapper = styled.div`
@@ -72,6 +71,7 @@ export const BlogArticle = ({
     <TagListWrapper>
       <TagList tags={tags} />
     </TagListWrapper>
+    <Divider />
     <ArticleBg>
       {/* <HTMLContent content={content} /> */}
       <RawMarkdown markdown={markdown} />
