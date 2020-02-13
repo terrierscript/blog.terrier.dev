@@ -4,10 +4,11 @@
     "target": "esnext",
     "module":
       "commonjs",
-    "lib": ["esnext", "dom"],                             "allowJs": true,
+    "lib": ["esnext", "dom"],
+    "allowJs": true,
     "checkJs": true,
     "jsx":"react",
-    "sourceMap": true,        
+    "sourceMap": true,
     "skipLibCheck": true,
     "noEmit": true,
     "noImplicitAny": false,
@@ -16,7 +17,8 @@
   },
   "include": [
     "src/**/*",
-    "app/**/*", "sandbox/**/*",
+    "app/**/*", 
+    "sandbox/**/*",
   ],
   "exclude": [
     "node_modules",
