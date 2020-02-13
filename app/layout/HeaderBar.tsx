@@ -1,19 +1,15 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { defaultFont } from "./font"
+import { impactFont } from "./font"
 import { Terrier } from "./header/Terrier"
 import { NavLink } from "../component/NavLink"
 import { TITLE_BOLD_COLOR } from "./global/colors"
-
-const Nav = styled.nav`
-  height: 64px;
-  line-height: 64px;
-`
+import { Text } from "@chakra-ui/core"
 
 const Logo = styled(NavLink)`
   text-decoration: none;
   font-weight: bold;
-  font-family: ${defaultFont};
+  font-family: ${impactFont};
   font-size: 1.5em;
   color: ${TITLE_BOLD_COLOR};
 `
@@ -33,17 +29,13 @@ const Grid = styled.div`
 
 export const HeaderBar = () => {
   return (
-    <div>
-      <Nav>
-        <NavContainer>
-          <Logo to="/">
-            <Grid>
-              <Terrier size={40} />
-              <span>terrier.dev</span>
-            </Grid>
-          </Logo>
-        </NavContainer>
-      </Nav>
-    </div>
+    <NavContainer>
+      <Logo to="/">
+        <Grid>
+          <Terrier size={40} />
+          <span>terrier.dev</span>
+        </Grid>
+      </Logo>
+    </NavContainer>
   )
 }

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sandbox 1`] = `
-.emotion-23 {
+.emotion-51 {
   word-break: break-all;
   min-height: 90vh;
   background: white;
@@ -32,7 +32,7 @@ exports[`sandbox 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: outline;
+  box-shadow: 0 0 0 3px rgba(66,153,225,0.6);
 }
 
 .emotion-1:disabled,
@@ -47,57 +47,85 @@ exports[`sandbox 1`] = `
   text-decoration: none;
 }
 
-.emotion-2 {
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-5 {
+  margin-right: 0.5rem;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.5rem;
+  max-width: 100%;
+  border-radius: 9999px;
+  font-weight: 500;
+  min-width: 1.5rem;
+  font-size: 0.875rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #EDF2F7;
+  color: #1A202C;
+}
+
+.emotion-3 {
   -webkit-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  display: inline-block;
-  color: #918b89;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  margin: 0.2em 0.5em;
-  margin-left: 0;
-  font-size: 0.9rem;
-  text-transform: lowercase;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-2:focus {
-  box-shadow: outline;
+.emotion-3:focus {
+  box-shadow: 0 0 0 3px rgba(66,153,225,0.6);
 }
 
-.emotion-2:disabled,
-.emotion-2:disabled:focus,
-.emotion-2:disabled:hover,
-.emotion-2[aria-disabled=true],
-.emotion-2[aria-disabled=true]:focus,
-.emotion-2[aria-disabled=true]:hover {
+.emotion-3:disabled,
+.emotion-3:disabled:focus,
+.emotion-3:disabled:hover,
+.emotion-3[aria-disabled=true],
+.emotion-3[aria-disabled=true]:focus,
+.emotion-3[aria-disabled=true]:hover {
   opacity: 0.4;
   cursor: not-allowed;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-2:hover {
-  color: #555;
+.emotion-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+  width: 24rem;
+  height: 24rem;
 }
 
-.emotion-2::before {
-  content: "#";
-}
-
-.emotion-22 {
+.emotion-50 {
   word-break: break-all;
 }
 
-.emotion-8 {
+.emotion-22 {
   line-height: 1.2em;
   word-break: break-word;
   font-size: 1.6rem;
@@ -108,46 +136,55 @@ exports[`sandbox 1`] = `
   margin-bottom: 0.2em;
 }
 
-.emotion-13 {
+.emotion-40 {
   margin-bottom: 2.5em;
 }
 
-.emotion-21 {
-  padding: 2em 0 0;
-  border-top: 1px solid #d6d2d0;
+.emotion-41 {
+  border: 0;
+  opacity: 0.6;
+  border-bottom: 0.0625rem solid;
+  width: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-color: inherit;
 }
 
-.emotion-20 {
+.emotion-49 {
+  padding: 2em 0 0;
+}
+
+.emotion-48 {
   font-size: 0.9em;
   color: #4a4646;
   line-height: 1.3em;
 }
 
-.emotion-20 h1,
-.emotion-20 h2,
-.emotion-20 h3,
-.emotion-20 h4,
-.emotion-20 h5,
-.emotion-20 h6 {
+.emotion-48 h1,
+.emotion-48 h2,
+.emotion-48 h3,
+.emotion-48 h4,
+.emotion-48 h5,
+.emotion-48 h6 {
   margin: 1em 0;
   color: #222;
 }
 
-.emotion-14 {
+.emotion-42 {
   margin-bottom: 0.8em;
   line-height: 1.7em;
 }
 
-.emotion-19 {
+.emotion-47 {
   margin-bottom: 0.25em;
 }
 
-.emotion-16 {
+.emotion-44 {
   margin-top: 0.25em;
 }
 
 <article
-  className="emotion-23"
+  className="emotion-51"
 >
   <div>
     a
@@ -167,7 +204,7 @@ exports[`sandbox 1`] = `
   />
   <section>
     <div
-      className="emotion-4"
+      className="emotion-11"
     >
       <small
         className="emotion-0"
@@ -183,45 +220,101 @@ exports[`sandbox 1`] = `
         Type 'Element' is not assignable to type 'StatelessComponent&lt;Props&gt;'. が出た時のメモ
       </a>
       <div>
-        <a
-          className="emotion-2"
-          href="/tags/javascript/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
+        <div
+          className="emotion-10"
         >
-          JavaScript
-        </a>
-        <a
-          className="emotion-2"
-          href="/tags/react/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          React
-        </a>
+          <div
+            className="emotion-5"
+          >
+            <div
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                href="/tags/javascript/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <span
+                  className="emotion-2"
+                >
+                  JavaScript
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            className="emotion-9"
+          >
+            <div
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                href="/tags/react/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <span
+                  className="emotion-2"
+                >
+                  React
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <div>
-    <a
-      className="emotion-2"
-      href="/tags/react/"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
+    <div
+      className="emotion-10"
     >
-      React
-    </a>
-    <a
-      className="emotion-2"
-      href="/tags/react hooks/"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-    >
-      React Hooks
-    </a>
+      <div
+        className="emotion-5"
+      >
+        <div
+          className="emotion-4"
+        >
+          <a
+            className="emotion-3"
+            href="/tags/react/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            <span
+              className="emotion-2"
+            >
+              React
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="emotion-9"
+      >
+        <div
+          className="emotion-4"
+        >
+          <a
+            className="emotion-3"
+            href="/tags/react hooks/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            <span
+              className="emotion-2"
+            >
+              React Hooks
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   <div
-    className="emotion-22"
+    className="emotion-50"
   >
     <small
       className="emotion-0"
@@ -230,53 +323,108 @@ exports[`sandbox 1`] = `
       2019/10/10 10:10:10
     </small>
     <h1
-      className="emotion-8"
+      className="emotion-22"
     >
       Blogのタイトル
     </h1>
     <div
-      className="emotion-13"
+      className="emotion-40"
     >
       <span>
-        <a
-          className="emotion-2"
-          href="/tags/javascript/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
+        <div
+          className="emotion-10"
         >
-          javascript
-        </a>
-        <a
-          className="emotion-2"
-          href="/tags/netlify/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          netlify
-        </a>
-        <a
-          className="emotion-2"
-          href="/tags/parcel/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          parcel
-        </a>
-        <a
-          className="emotion-2"
-          href="/tags/react/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          react
-        </a>
+          <div
+            className="emotion-5"
+          >
+            <div
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                href="/tags/javascript/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <span
+                  className="emotion-2"
+                >
+                  javascript
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            className="emotion-5"
+          >
+            <div
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                href="/tags/netlify/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <span
+                  className="emotion-2"
+                >
+                  netlify
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            className="emotion-5"
+          >
+            <div
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                href="/tags/parcel/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <span
+                  className="emotion-2"
+                >
+                  parcel
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            className="emotion-9"
+          >
+            <div
+              className="emotion-4"
+            >
+              <a
+                className="emotion-3"
+                href="/tags/react/"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <span
+                  className="emotion-2"
+                >
+                  react
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
       </span>
     </div>
+    <hr
+      className="emotion-41"
+    />
     <div
-      className="emotion-21"
+      className="emotion-49"
     >
       <div
-        className="emotion-20"
+        className="emotion-48"
       >
         <h1>
           foo
@@ -288,36 +436,36 @@ exports[`sandbox 1`] = `
           bar
         </h3>
         <div
-          className="emotion-14"
+          className="emotion-42"
         >
           Loreim ipsum
           <br />
           foobaz bar
         </div>
         <div
-          className="emotion-14"
+          className="emotion-42"
         >
           zoo
         </div>
         <ul
-          className="emotion-19"
+          className="emotion-47"
           start={null}
         >
           <li
             checked={null}
-            className="emotion-16"
+            className="emotion-44"
           >
             a
           </li>
           <li
             checked={null}
-            className="emotion-16"
+            className="emotion-44"
           >
             b
           </li>
           <li
             checked={null}
-            className="emotion-16"
+            className="emotion-44"
           >
             c
           </li>

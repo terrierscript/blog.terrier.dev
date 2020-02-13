@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 // import { BlogArticleCompact } from "../article/Blog"
 import { headerFont } from "../utils/typography"
-import { Tag } from "../component/Tag"
+import { AutoLinkTag, AutoLinkTags } from "../component/Tag"
 import { NavLink } from "../component/NavLink"
 import { Date } from "../component/Date"
 const Title = styled(NavLink)`
@@ -25,9 +25,7 @@ export const BlogItem = ({ post }) => {
         <Date>{post.frontmatter.date}</Date>
         <Title to={post.fields.slug}>{post.frontmatter.title}</Title>
         <div>
-          {post.frontmatter.tags.map((tag: string) => {
-            return <Tag tag={tag} key={tag} />
-          })}
+          <AutoLinkTags tags={post.frontmatter.tags} />
         </div>
       </Item>
     </section>

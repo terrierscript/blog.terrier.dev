@@ -6,6 +6,7 @@ import {
   GatsbyPageContextProvider,
   usePageContext
 } from "./GatsbyGlobalContext"
+import { ChakraProvider } from "../../app/layout/ChakraProvider"
 
 const FeedProvider = ({ children }) => {
   const { feeds } = usePageContext()
@@ -17,9 +18,11 @@ const FeedProvider = ({ children }) => {
 export const BlogLayout = ({ children, pageContext = {} }) => {
   return (
     <GatsbyPageContextProvider pageContext={pageContext}>
-      <FeedProvider>
-        <TagProvider>{children}</TagProvider>
-      </FeedProvider>
+      <ChakraProvider>
+        <FeedProvider>
+          <TagProvider>{children}</TagProvider>
+        </FeedProvider>
+      </ChakraProvider>
     </GatsbyPageContextProvider>
   )
 }

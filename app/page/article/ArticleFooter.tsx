@@ -3,7 +3,15 @@ import styled from "@emotion/styled"
 import { THIN_TEXT_COLOR } from "../../layout/global/colors"
 import { ClapButton, HeartButton } from "../../archived/clap/ClapButton"
 import { FaRegHeart } from "react-icons/fa"
-import { Text, SimpleGrid, Box, Flex, Grid, Tooltip } from "@chakra-ui/core"
+import {
+  Text,
+  SimpleGrid,
+  Box,
+  Flex,
+  Grid,
+  Tooltip,
+  Divider
+} from "@chakra-ui/core"
 import { TweetButtons } from "./TwitterButton"
 
 export const TwitterWidgetScript = children => {
@@ -49,13 +57,14 @@ const StickyBottom = styled(Box)`
   bottom: 0;
   background: white;
   /* margin-top: 1em; */
-  border-top: 2px solid rgba(0%, 0%, 0%, 20%);
+  /* border-top: 2px solid rgba(0%, 0%, 0%, 20%); */
 `
 
 export const ArticleFooter = ({ title, fileAbsolutePath }) => {
   return (
     <>
       {/* <TwitterWidgetScript /> */}
+      <Divider />
       <StickyBottom>
         <Grid
           autoFlow="column"
