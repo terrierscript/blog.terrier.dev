@@ -6,7 +6,7 @@ import { Footer } from "./Footer"
 import styled from "@emotion/styled"
 import { Side } from "./side/Side"
 import { GlobalStyle } from "./global/Style"
-import { Chakra } from "./ChakraProvider"
+import { ChakraProvider } from "./ChakraProvider"
 require("../web-component/index")
 
 // defineComponents()
@@ -80,11 +80,11 @@ export const Layout: FC<{ showSide: boolean }> = ({
   showSide = true
 }) => {
   return (
-    <Chakra>
+    <>
       <GlobalStyle />
       <div>
         <LayoutInner showSide={showSide}>{children}</LayoutInner>
       </div>
-    </Chakra>
+    </>
   )
 }
