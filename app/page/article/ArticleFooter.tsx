@@ -5,15 +5,6 @@ import { ClapButton, HeartButton } from "../../archived/clap/ClapButton"
 import { FaRegHeart } from "react-icons/fa"
 import { Text, SimpleGrid, Box, Flex, Grid, Tooltip } from "@chakra-ui/core"
 import { TweetButtons } from "./TwitterButton"
-const Container = styled.div`
-  display: flex;
-`
-
-const Item = styled.div`
-  padding-left: 0.5em;
-  line-height: 1em;
-  font-size: 1em;
-`
 
 export const TwitterWidgetScript = children => {
   // const [loaded, setLoaded] = useState() // TODO
@@ -54,11 +45,11 @@ const Modify: FC<{ fileAbsolutePath: string }> = ({ fileAbsolutePath }) => {
   return <ModifyLink href={url}>Edit on Github</ModifyLink>
 }
 
-const StickyBottom = styled.div`
+const StickyBottom = styled(Box)`
   position: sticky;
   bottom: 0;
   background: white;
-  margin-top: 1em;
+  /* margin-top: 1em; */
   border-top: 2px solid rgba(0%, 0%, 0%, 20%);
 `
 
@@ -98,13 +89,6 @@ export const ArticleFooter = ({ title, fileAbsolutePath }) => {
           </Box>
         </Grid>
       </StickyBottom>
-
-      <Container>
-        <Item></Item>
-        {/* <Item>
-          <TwitterFollowButton />
-        </Item> */}
-      </Container>
     </>
   )
 }
