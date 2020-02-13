@@ -13,7 +13,7 @@ import { List, ListItem, Link } from "@chakra-ui/core"
 
 const ListLink = props => {
   return (
-    <ListItem fontSize={"sm"}>
+    <ListItem fontSize={"sm"} marginBottom={0}>
       <Link {...props} />
     </ListItem>
   )
