@@ -18,11 +18,6 @@
       "continue": false
     },
     {
-      "src": "/feed/qiita",
-      "dest": "/api/feed/qiita",
-      "status": 200
-    },
-    {
       "src": "/feed/devto",
       "dest": "https://dev.to/feed/terrierscript",
       "status": 200

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FC } from "react"
 import styled from "@emotion/styled"
 // import { BlogArticleCompact } from "../article/Blog"
 import { headerFont } from "../utils/typography"
@@ -18,7 +18,19 @@ const Item = styled.div`
   /* border-bottom: 1px solid #e3e3e3; */
 `
 
-export const BlogItem = ({ post }) => {
+export type PostListItem = {
+  id: string
+  frontmatter: {
+    date?: string
+    title?: string
+    tags?: string[]
+  }
+  fields: {
+    slug: string
+  }
+}
+
+export const BlogItem: FC<{ post: PostListItem }> = ({ post }) => {
   return (
     <section>
       <Item>
@@ -38,7 +50,11 @@ const BlogListGrid = styled.div`
   display: grid;
   grid-gap: 2em;
 `
-export const BlogList = ({ posts }) => {
+
+export type PostWrap = {
+  node: PostListItem
+}
+export const BlogList: FC<{ posts: PostWrap[] }> = ({ posts }) => {
   return (
     <BlogListGrid>
       {posts.map(({ node: post }) => (

@@ -15,7 +15,8 @@ const mockPost = {
       "Type 'Element' is not assignable to type 'StatelessComponent<Props>'. が出た時のメモ",
     tags: ["JavaScript", "React"],
     date: "2019-02-24T07:57:10.697Z"
-  }
+  },
+  id: "xx"
 }
 const testMarkdown = `
 # foo

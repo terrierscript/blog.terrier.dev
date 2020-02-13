@@ -1,5 +1,6 @@
 import React, { SFC } from "react"
 import styled from "@emotion/styled"
+import { headerFont } from "../utils/typography"
 import { NavLink } from "./NavLink"
 import { TITLE_COLOR, THIN_TEXT_COLOR } from "../layout/global/colors"
 

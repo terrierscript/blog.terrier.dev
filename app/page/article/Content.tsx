@@ -6,6 +6,7 @@ export const Article = styled.div`
 `
 
 export const HTMLContent = ({ content, ...rest }) => {
+  // console.log("HTMLContent", content, React.isValidElement(content))
   if (React.isValidElement(content)) {
     return <Article>{content}</Article>
   }

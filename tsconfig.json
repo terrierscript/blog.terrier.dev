@@ -1,22 +1,33 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "target": "esnext",
-    "module":
-      "commonjs",
-    "lib": ["esnext", "dom"],                             "allowJs": true,
+    "target": "es5",
+    "module": "esnext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "jsx": "preserve",
+    "allowJs": true,
     "checkJs": true,
-    "jsx":"react",
-    "sourceMap": true,        
-    "skipLibCheck": true,
-    "noEmit": true,
+    "sourceMap": true,
     "noImplicitAny": false,
     "noUnusedLocals": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipDefaultLibCheck": true,
+    "moduleResolution": "node"
   },
   "include": [
-    "src/**/*",
-    "app/**/*", "sandbox/**/*",
+    // "src/**/*",
+    "app/**/*",
+    "pages/**/*",
+    "sandbox/**/*",
   ],
   "exclude": [
     "node_modules",

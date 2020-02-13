@@ -1,17 +1,17 @@
-import React, { useEffect } from "react"
-import { getVersion, logVersion } from "../../src/version"
-import { HelmetItem } from "./HelmetItem"
-import { GaTracking } from "./injection/GaTracking"
-import { AdsenseTracking } from "./injection/AdsenseTracking"
+import React, { useEffect } from "react";
+import { getVersion, logVersion } from "../../src/version";
+// import { HelmetItem } from "./HelmetItem"
+import { GaTracking } from "./injection/GaTracking";
+import { AdsenseTracking } from "./injection/AdsenseTracking";
 
-let inlinedStyles = ""
+let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
   try {
     // @ts-ignore
     inlinedStyles = [
       // require("!raw-loader!../public/styles.css")
       // require("!raw-loader!prism-themes/themes/prism-atom-dark.css")
-    ].join("")
+    ].join("");
     // console.log("inline", inlinedStyles)
   } catch (e) {
     // console.log("inline", e)
@@ -19,11 +19,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 export const MetaHeader = props => {
-  const version = getVersion()
-  let css
+  const version = getVersion();
+  let css;
   useEffect(() => {
-    logVersion()
-  }, [])
+    logVersion();
+  }, []);
 
   if (process.env.NODE_ENV === "production") {
     css = (
@@ -31,10 +31,10 @@ export const MetaHeader = props => {
         id="gatsby-inlined-css"
         dangerouslySetInnerHTML={{ __html: inlinedStyles }}
       />
-    )
+    );
   }
   return (
-    <head>
+    <>
       <GaTracking />
       <AdsenseTracking />
       <meta charSet="utf-8" />
@@ -47,6 +47,14 @@ export const MetaHeader = props => {
       <link rel="me" href="https://twitter.com/terrierscript"></link>
 
       {css}
+    </>
+  );
+};
+
+export const MetaHeaderGatsby = props => {
+  return (
+    <head>
+      <MetaHeader {...props}></MetaHeader>
     </head>
-  )
-}
+  );
+};

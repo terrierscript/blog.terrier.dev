@@ -13,3 +13,5 @@ lambda
 .vscode
 dist/
 .next
+out/
+.lighthouseci
