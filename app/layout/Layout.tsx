@@ -1,4 +1,4 @@
-import React, { SFC } from "react"
+import React, { SFC, FC } from "react"
 import { HeaderBar } from "./HeaderBar"
 import { Container } from "./Container"
 // import { Article } from "../article/Content"
@@ -13,7 +13,7 @@ require("../web-component/index")
 
 const gridTemplate = `
   ". header  header ."
-  ". body      side   ."
+  ". body    side   ."
   ". footer  footer ."
 `
 const gridTemplate2 = `
@@ -54,15 +54,17 @@ const Area = styled.div<{ area: string }>`
   grid-area: ${props => props.area};
 `
 
-export const LayoutInner = ({ children }) => {
+const LayoutInner = ({ children, showSide }) => {
   return (
     <GridTwoCol>
       <Area area="header">
         <HeaderBar />
       </Area>
+      {/* {showSide && ( */}
       <Area area="side">
         <Side />
       </Area>
+      {/* )} */}
       <Area area="body">
         <Container>{children}</Container>
       </Area>
@@ -73,12 +75,15 @@ export const LayoutInner = ({ children }) => {
   )
 }
 
-export const Layout: SFC<{ children: any }> = ({ children }) => {
+export const Layout: FC<{ showSide: boolean }> = ({
+  children,
+  showSide = true
+}) => {
   return (
     <Chakra>
       <GlobalStyle />
       <div>
-        <LayoutInner>{children}</LayoutInner>
+        <LayoutInner showSide={showSide}>{children}</LayoutInner>
       </div>
     </Chakra>
   )

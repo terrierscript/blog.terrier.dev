@@ -96,7 +96,7 @@ export const BlogPostTemplate = ({
   fileAbsolutePath = null
 }) => {
   return (
-    <Layout>
+    <Layout showSide={false}>
       <Helmet title={`${title} | terrier.dev 🐶`}>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />

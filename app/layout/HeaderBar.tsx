@@ -21,7 +21,7 @@ const Logo = styled(NavLink)`
 const NavContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1em;
 `
 
@@ -30,6 +30,7 @@ const Grid = styled.div`
   grid-gap: 0.5em;
   grid-auto-flow: column;
 `
+
 export const HeaderBar = () => {
   return (
     <div>
