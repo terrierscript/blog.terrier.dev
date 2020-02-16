@@ -6835,10 +6835,10 @@ gatsby-plugin-canonical-urls@^2.0.10:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-plugin-client-side-redirect@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-client-side-redirect/-/gatsby-plugin-client-side-redirect-0.0.2.tgz#a1282138dd8e525903e86b9c86a4f9b2e14e26f7"
-  integrity sha512-SIWZnkP3ANvVK0fKPhdRlcvM1uzz8GtvPRlvjpuuVk6M1pAQ12MomI8dD5FddMdFROEBsbEyEIdtc/kW5vrIFg==
+gatsby-plugin-client-side-redirect@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-client-side-redirect/-/gatsby-plugin-client-side-redirect-1.0.0.tgz#fc58a90e9869278e95aca461a4a5a724967e55b9"
+  integrity sha512-ci6PBeZeF5B3Z5G59gYTC3/YY9QNG1xJor7cEVt8Yo743/cRoPLtCxEw9mEYOhGJ+qscKGBn/2FA3M6deOWgFg==
   dependencies:
     fs-extra "^7.0.0"
 
