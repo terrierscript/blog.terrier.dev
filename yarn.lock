@@ -1665,10 +1665,10 @@
   dependencies:
     "@types/node" "*"
 
-"@now/static-build@^0.14.0":
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/@now/static-build/-/static-build-0.14.0.tgz#ad21cf2511fe62cff7ab7721dfdd61cd7344fbad"
-  integrity sha512-NMBaRmvzYO5nct4jgNcLm4KIR6mAmF2Pw9L6p4bKXJmMkyBG8CAVxm2TKepzxdnX14OginTOShPolqpfmL22/A==
+"@now/static-build@^0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@now/static-build/-/static-build-0.16.0.tgz#a031c0fdebac993d00f9152a22c441f69c85028b"
+  integrity sha512-2xcKUXjx3kLU6je/I6M050n3JS6XGvc+ItRDwiVdZ0gEbwiTJi9f3jZgyOVKtXWnacOSievqwnrHj64ULeju0w==
 
 "@parcel/fs@^1.11.0":
   version "1.11.0"
