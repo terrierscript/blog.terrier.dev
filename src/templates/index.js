@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { generatePostFragment } from "../query/query"
-import { BlogLayout } from "../provider/BlogLayout"
+import { BlogLayoutProvider } from "../provider/BlogLayout"
 import { Index } from "../../app/page/list/ListPage"
 
 export default class IndexPage extends React.Component {
@@ -10,9 +10,9 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     const { pageContext } = this.props
     return (
-      <BlogLayout pageContext={pageContext}>
+      <BlogLayoutProvider pageContext={pageContext}>
         <Index posts={posts} />
-      </BlogLayout>
+      </BlogLayoutProvider>
     )
   }
 }

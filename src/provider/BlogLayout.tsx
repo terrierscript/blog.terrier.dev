@@ -15,7 +15,7 @@ const FeedProvider = ({ children }) => {
   )
 }
 
-export const BlogLayout = ({ children, pageContext = {} }) => {
+export const BlogLayoutProvider = ({ children, pageContext = {} }) => {
   return (
     <Chakra>
       <GatsbyPageContextProvider pageContext={pageContext}>
