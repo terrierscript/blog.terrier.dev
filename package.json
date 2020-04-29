@@ -83,7 +83,7 @@
     "typography": "^0.16.6",
     "typography-theme-fairy-gates": "^0.16.0",
     "unist-util-visit": "^2.0.0",
-    "uuid": "^3.3.2"
+    "uuid": "^8.0.0"
   },
   "keywords": [
     "gatsby"
