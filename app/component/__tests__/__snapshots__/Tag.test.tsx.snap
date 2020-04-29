@@ -1,58 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tag> 1`] = `
-.emotion-0 {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.5rem;
+  max-width: 100%;
+  border-radius: 9999px;
+  font-weight: 500;
+  min-width: 1.5rem;
+  font-size: 0.875rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #EDF2F7;
+  color: #1A202C;
+}
+
+.emotion-1 {
   -webkit-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  display: inline-block;
-  color: #918b89;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  margin: 0.2em 0.5em;
-  margin-left: 0;
-  font-size: 0.9rem;
-  text-transform: lowercase;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0:focus {
-  box-shadow: outline;
+.emotion-1:focus {
+  box-shadow: 0 0 0 3px rgba(66,153,225,0.6);
 }
 
-.emotion-0:disabled,
-.emotion-0:disabled:focus,
-.emotion-0:disabled:hover,
-.emotion-0[aria-disabled=true],
-.emotion-0[aria-disabled=true]:focus,
-.emotion-0[aria-disabled=true]:hover {
+.emotion-1:disabled,
+.emotion-1:disabled:focus,
+.emotion-1:disabled:hover,
+.emotion-1[aria-disabled=true],
+.emotion-1[aria-disabled=true]:focus,
+.emotion-1[aria-disabled=true]:hover {
   opacity: 0.4;
   cursor: not-allowed;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-0:hover {
-  color: #555;
+.emotion-0 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+  width: 24rem;
+  height: 24rem;
 }
 
-.emotion-0::before {
-  content: "#";
-}
-
-<a
-  className="emotion-0"
-  href="/tags/foo/"
-  onClick={[Function]}
-  onMouseEnter={[Function]}
+<div
+  className="emotion-4"
 >
-  foo
-</a>
+  <div
+    className="emotion-3"
+  >
+    <div
+      className="emotion-2"
+    >
+      <a
+        className="emotion-1"
+        href="/tags/foo/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          foo
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
 `;
