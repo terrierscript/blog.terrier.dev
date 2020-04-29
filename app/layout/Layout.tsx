@@ -75,16 +75,16 @@ const LayoutInner = ({ children, showSide }) => {
   )
 }
 
-export const Layout: FC<{ showSide: boolean }> = ({
+export const Layout: FC<{ showSide?: boolean }> = ({
   children,
   showSide = true
 }) => {
   return (
-    <Chakra>
+    <>
       <GlobalStyle />
       <div>
         <LayoutInner showSide={showSide}>{children}</LayoutInner>
       </div>
-    </Chakra>
+    </>
   )
 }

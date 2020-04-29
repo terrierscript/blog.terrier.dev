@@ -5,6 +5,7 @@ import { logVersion } from "./version"
 import { TwitterTracking } from "../app/meta/injection/TwitterTracking"
 import { HelmetItem } from "../app/meta/HelmetItem"
 import { GaTracking } from "../app/meta/injection/GaTracking"
+import { Chakra } from "../app/layout/ChakraProvider"
 
 logVersion()
 export default class HTML extends React.Component {
@@ -20,6 +21,7 @@ export default class HTML extends React.Component {
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
+
           {this.props.postBodyComponents}
         </body>
       </html>

@@ -6,7 +6,6 @@ tags:
   - pusher
   - javascript
   - node
-published: false
 ---
 
 Pubsubサービスの[Pusher](https://pusher.com/)。

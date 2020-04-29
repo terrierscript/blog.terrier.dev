@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 // import { BlogArticleCompact } from "../article/Blog"
 import { headerFont } from "../utils/typography"
-import { AutoLinkTag, AutoLinkTags } from "../component/Tag"
+import { AutoLinkTags } from "../component/Tag"
 import { NavLink } from "../component/NavLink"
 import { Date } from "../component/Date"
 const Title = styled(NavLink)`
