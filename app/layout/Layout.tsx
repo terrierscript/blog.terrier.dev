@@ -80,11 +80,11 @@ export const Layout: FC<{ showSide?: boolean }> = ({
   showSide = true
 }) => {
   return (
-    <Chakra>
+    <>
       <GlobalStyle />
       <div>
         <LayoutInner showSide={showSide}>{children}</LayoutInner>
       </div>
-    </Chakra>
+    </>
   )
 }
