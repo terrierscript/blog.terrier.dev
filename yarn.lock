@@ -2522,10 +2522,10 @@
   dependencies:
     "@types/node" "*"
 
-"@now/static-build@^0.14.0":
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/@now/static-build/-/static-build-0.14.0.tgz#ad21cf2511fe62cff7ab7721dfdd61cd7344fbad"
-  integrity sha512-NMBaRmvzYO5nct4jgNcLm4KIR6mAmF2Pw9L6p4bKXJmMkyBG8CAVxm2TKepzxdnX14OginTOShPolqpfmL22/A==
+"@now/static-build@^0.17.0":
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/@now/static-build/-/static-build-0.17.1.tgz#0c2e19f2da213df8e58f5f93221ebc8c0f180d66"
+  integrity sha512-dMon756dXv/CH3kffx/Dk+E5fku+MrRFVa1EhgkHP0xby7FubgEfH0+7QVUeMflGA/oO64EbS7LJ0m8TssNDUA==
 
 "@parcel/fs@^1.11.0":
   version "1.11.0"
