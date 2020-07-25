@@ -27,9 +27,10 @@ stagingのときに別bundleIdentifierにしたりアイコンにstaging帯つ�
 ```jsx
 {
   "expo": {
-		"slug":"my-application-staging"
-    "ios": {
-			"bundleIdentifier": "com.foo.baz.staging"
+    "slug":"my-application-staging"
+      "ios": {
+	"bundleIdentifier": "com.foo.baz.staging"
+      }
     }
   }
 }
