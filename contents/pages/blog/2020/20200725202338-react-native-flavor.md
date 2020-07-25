@@ -8,7 +8,8 @@ tags:
   - expo
 ---
 
-stagingのときに別bundleIdentifierにしたりアイコンにstaging帯つけたいなーみたいな事がある。
+stagingのときに別bundleIdentifierにしたりアイコンにstaging帯つけたいなーみたいな事がある。(例えば[こういうこと](https://savvyapps.com/blog/using-testflight-to-distribute-multiple-versions-ios-app)がやりたいときとか）
+
 flavorとか言うのが近いやつ。ざっくりだけど簡易なスクリプトで解決した
 
 ### 方針
