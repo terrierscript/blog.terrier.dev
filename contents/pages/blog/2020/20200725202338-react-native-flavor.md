@@ -36,7 +36,7 @@ stagingのときに別bundleIdentifierにしたりアイコンにstaging帯つ�
 }
 ```
 
-`bin/generate-staging-app-json.js`
+`bin/generate-staging-app-json.js` はこんな具合にjsonをmergeしてstdoutするだけ。fileでセーブするとこまでやっても良いけど今回はパイプで処理することにした
 
 ```jsx
 const merge = require("deepmerge")
