@@ -1,15 +1,15 @@
 ---
 templateKey: blog-post
-title: react-nativeでflavorっぽいことをする
+title: Expoでflavorっぽいことをする
 date: '2020-07-25T11:23:38.586Z'
 tags:
   - react
   - react-native
+  - expo
 ---
 
-# Flavorっぽいことをする
-
-stagingのときに別bundleIdentifierにしたりアイコンにstaging帯つけたいなーってなったときにやったやつ
+stagingのときに別bundleIdentifierにしたりアイコンにstaging帯つけたいなーみたいな事がある。
+flavorとか言うのが近いやつ。ざっくりだけど簡易なスクリプトで解決した
 
 ### 方針
 
