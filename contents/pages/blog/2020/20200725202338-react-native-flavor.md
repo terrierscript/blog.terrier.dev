@@ -8,6 +8,14 @@ tags:
   - expo
 ---
 
+このドキュメントはすでに古くなっています。
+`app.config.js`によってdynamic conifgがすでに可能です
+https://docs.expo.io/workflow/configuration/#dynamic-configuration-with-appconfigjs
+
+
+---
+---
+---
 stagingのときに別bundleIdentifierにしたりアイコンにstaging帯つけたいなーみたいな事がある。(例えば[こういうこと](https://savvyapps.com/blog/using-testflight-to-distribute-multiple-versions-ios-app)がやりたいときとか）
 
 flavorとか言うのが近いやつ。ざっくりだけど簡易なスクリプトで解決した
