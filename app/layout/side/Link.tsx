@@ -36,10 +36,12 @@ const Links = () => {
       <ListLink href="https://twitter.com/terrierscript">Twitter</ListLink>
       <ListLink href="https://note.mu/terrierscript/">note</ListLink>
       <ListLink href="https://scrapbox.io/terrierscript/">Scrapbox</ListLink>
-      <ListLink href="https://www.npmjs.com/~inuscript">npm</ListLink>
-      <ListLink href="https://qiita.com/terrierscript">Qiita</ListLink>
-      <ListLink href="https://medium.com/inuscript/">Medium</ListLink>
       <ListLink href="https://dev.to/terrierscript">dev.to</ListLink>
+      <ListLink href="https://www.notion.so/terrierscript/d9d2f56606d14e6f91703201a21e5cde">notion</ListLink>
+
+      <ListLink href="https://www.npmjs.com/~inuscript">npm</ListLink>
+      <ListLink href="https://medium.com/inuscript/">Medium</ListLink>
+      <ListLink href="https://qiita.com/terrierscript">Qiita</ListLink>
     </List>
   )
 }
