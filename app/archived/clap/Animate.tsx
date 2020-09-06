@@ -39,7 +39,7 @@ export const useAnimationState = () => {
   return { animations, addAnimation, completeAnimation }
 }
 
-export const FadeAnimation = ({ children }) => {
+export const FadeAnimation : React.FC<{}> = ({ children }) => {
   const { animations, completeAnimation } = useAnimationContext()
   const [_, set] = useState(false)
   const transitions = useTransition(animations, i => i, {
@@ -71,7 +71,7 @@ export const FadeAnimation = ({ children }) => {
   useEffect(() => {
     set(true)
   }, [])
-  return transitions.map(({ item, key, props }) => {
+  return <>{transitions.map(({ item, key, props }) => {
     return (
       item && (
         <Anim style={props} key={key}>
@@ -79,7 +79,7 @@ export const FadeAnimation = ({ children }) => {
         </Anim>
       )
     )
-  })
+  })}</>
 }
 
 export const FadeAnimationProvider = ({ children }) => {
