@@ -10,7 +10,7 @@ tags:
 next.jsは大変便利だが、SSRがデフォルト挙動になっているので、ちょこちょこ`window`が無いとかで怒られがちになる。
 そういう場合は`dynamic`を利用すれば良い
 
-https://nextjs.org/docs/advanced-features/dynamic-import
+https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr
 
 もともとdynamic importのための機能ではあるが、SSR回避にも使える。
 だいたい上記公式ページにまとまっているが、ちょいちょい忘れるのでメモ
