@@ -51,7 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        whitelist: [
+        allowList: [
           "NOW_GITHUB_COMMIT_SHA",
           "COMMIT_REF",
           "NOW_BUILDER",
