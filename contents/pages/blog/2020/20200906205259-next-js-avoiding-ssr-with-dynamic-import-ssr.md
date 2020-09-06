@@ -39,7 +39,9 @@ ReferenceError: window is not defined
 
 import dynamic from "next/dynamic"
 const AvoidSSRComponent = dynamic(
-  () => import('../components/ClientOnlyComponent').then(modules =>  modules.ClientOnlyComponent), {ssr: false}
+  () => import('../components/ClientOnlyComponent')
+    .then(modules =>  modules.ClientOnlyComponent), 
+  {ssr: false}
 )
 
 export default function Home() {
