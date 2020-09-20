@@ -7,7 +7,7 @@ const axios = require("axios")
 const webhookUrl =
   process.env["SLACK_WEBHOOK_URL"] || process.env["slack_webhook_url"]
 
-const buildPayload = body => {
+const buildPayload = (body: any) => {
   const { title, count } = JSON.parse(body)
   // console.log(title, id)
   return {
@@ -16,7 +16,7 @@ const buildPayload = body => {
 }
 // TODO: to now.sh api
 
-const handler = function(body, _, callback) {
+const handler = function(body: any, _: any, callback: any) {
   console.log(webhookUrl)
   console.log(process.env)
   // console.log(event)
@@ -42,13 +42,13 @@ const handler = function(body, _, callback) {
     undefined
   )
     // .then(res => res.json())
-    .then(res => {
+    .then((res: any) => {
       callback(null, {
         statusCode: 200,
         body: "success"
       })
     })
-    .catch(e => {
+    .catch((e: any) => {
       console.error(e)
       callback(null, {
         statusCode: 200,
@@ -57,13 +57,13 @@ const handler = function(body, _, callback) {
     })
 }
 
-module.exports = (req, res: NowResponse) => {
+module.exports = (req: any, res: NowResponse) => {
   if (req.method !== "POST") {
     res.status(401)
     return
   }
   console.log(webhookUrl)
-  handler(req.body, undefined, (err, r) => {
+  handler(req.body, undefined, (err: any, r: any) => {
     res.status(r.statusCode)
     res.json({ result: r.body })
     res.end()

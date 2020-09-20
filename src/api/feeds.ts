@@ -1,5 +1,5 @@
 const { loadFeedForSSR } = require("../app/lib/feed/loader")
-module.exports = (req, res) => {
+module.exports = (req: any, res: any) => {
   console.log("xx")
   // loadFeedForSSR().then(r => {
   //   console.log(r)

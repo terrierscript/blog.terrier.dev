@@ -12,7 +12,10 @@ export const useTagQuery = () => {
     }
   `)
   const { group } = allMarkdownRemark
-  const countMap = group.reduce((curr, { fieldValue, totalCount }) => {
+  const countMap = group.reduce((curr: any, {
+    fieldValue,
+    totalCount
+  }: any) => {
     const lower = fieldValue.toLowerCase()
     curr[lower] = curr[lower] ? curr[lower] + totalCount : totalCount
     return curr

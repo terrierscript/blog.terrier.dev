@@ -1,5 +1,5 @@
 // api testing
-module.exports = (req, res) => {
+module.exports = (req: any, res: any) => {
   const {
     query: { name }
   } = req
