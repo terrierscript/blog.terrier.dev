@@ -34,6 +34,7 @@ module.exports = {
     // "gatsby-plugin-styled-components",
     // "gatsby-plugin-react-css-modules",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-feed",
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
