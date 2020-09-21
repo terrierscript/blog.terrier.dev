@@ -12,7 +12,7 @@ Gatsbyの [`<StaticQuery>`や`useStaticQuery`](https://www.gatsbyjs.org/docs/sta
 
 （ホントは全部これで置き換えたいのだが、Staticというだけあって変数を受け取ることが出来ないらしい。。。悲しい・・・）
 
-このBlogでも[useTagQuery](https://github.com/terrierscript/terrier.dev/blob/1f6bd77a994a87ea9b9d759cd3a3e82dc83c18a3/src/hooks/useTagQuery.ts#L3-L28)という形で使ってみた。
+このBlogでも[useTagQuery](https://github.com/terrierscript/blog.terrier.dev/blob/1f6bd77a994a87ea9b9d759cd3a3e82dc83c18a3/src/hooks/useTagQuery.ts#L3-L28)という形で使ってみた。
 
 しかしここで落とし穴がある。
 同一ファイルに複数のQueryを書くと下記のようなエラーが出るのだ

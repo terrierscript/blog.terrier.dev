@@ -1,7 +1,7 @@
-const siteUrl = "https://www.terrier.dev"
+const siteUrl = "https://blog.terrier.dev"
 module.exports = {
   siteMetadata: {
-    title: "terrier.dev",
+    title: "blog.terrier.dev",
     url: siteUrl,
     siteUrl,
     description: "Author: terrierscript",
@@ -44,7 +44,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "www.terrier.dev",
+        name: "blog.terrier.dev",
         start_url: "/",
         icon: "src/icon/icon.png"
       }

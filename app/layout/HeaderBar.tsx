@@ -33,7 +33,7 @@ export const HeaderBar = () => {
       <Logo to="/">
         <Grid>
           <Terrier size={40} />
-          <span>terrier.dev</span>
+          <span>blog.terrier.dev</span>
         </Grid>
       </Logo>
     </NavContainer>

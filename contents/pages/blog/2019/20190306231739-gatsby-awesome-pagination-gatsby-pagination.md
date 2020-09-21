@@ -9,7 +9,7 @@ tags:
 
 なんだかんだでこのblogの記事も増えてきたのでページネーションをつけた。
 
-https://github.com/terrierscript/terrier.dev/pull/62/files
+https://github.com/terrierscript/blog.terrier.dev/pull/62/files
 
 [Gatsby公式](https://www.gatsbyjs.org/docs/adding-pagination/#adding-pagination)の方法は自前でページネーションするという感じで気乗りしないタイプの面倒くささがあったので、pluginに頼った。
 

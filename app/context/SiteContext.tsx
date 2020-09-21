@@ -3,7 +3,7 @@ import React from "react"
 
 // @ts-ignore
 export const SiteContext = createContext({
-  title: "terrier.dev"
+  title: "blog.terrier.dev"
 })
 
 export const DefaultLink = props => <a {...props} />
