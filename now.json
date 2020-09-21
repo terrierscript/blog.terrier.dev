@@ -41,6 +41,10 @@
       "src": "/feed/note",
       "dest": "https://note.mu/terrierscript/rss",
       "status": 200
+    },
+    {
+      "src": "/blog/20200906205259-next-js-avoiding-ssr-with-dynamic-import-ssr",
+      "dest": "https://zenn.dev/terrierscript/articles/2020-09-06-next-js-ssr-dynamic-import"
     }
   ],
   "env": {
