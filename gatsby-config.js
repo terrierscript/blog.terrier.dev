@@ -26,8 +26,8 @@ module.exports = {
         name: "images"
       }
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    // "gatsby-plugin-sharp",
+    // "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
     "gatsby-plugin-twitter",
     "gatsby-plugin-emotion",
