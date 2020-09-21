@@ -5,7 +5,7 @@ import { TwitterShareButton } from "react-share"
 const getShareUrl = fileAbsolutePath => {
   if (typeof location === "undefined") {
     const filename = getFilename(fileAbsolutePath).replace(/.md/, "")
-    return `https://terrier.dev/blog/${filename}`
+    return `https://blog.terrier.dev/blog/${filename}`
   }
   return location.origin + location.pathname
 }

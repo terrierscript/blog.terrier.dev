@@ -43,7 +43,7 @@ const Modify = ({ fileAbsolutePath }) => {
   if (!fileAbsolutePath) {
     return null
   }
-  const repo = "terrierscript/terrier.dev"
+  const repo = "terrierscript/blog.terrier.dev"
 
   const directory = "contents/pages/blog/"
   const filename = getFilename(fileAbsolutePath)
