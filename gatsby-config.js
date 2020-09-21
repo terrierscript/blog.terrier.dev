@@ -1,4 +1,4 @@
-const siteUrl = "https://www.terrier.dev"
+const siteUrl = "https://blog.terrier.dev"
 module.exports = {
   siteMetadata: {
     title: "terrier.dev",
