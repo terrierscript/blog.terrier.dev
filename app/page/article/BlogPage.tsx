@@ -65,19 +65,19 @@ export const BlogArticle = ({
   date,
   markdown
 }) => (
-  <BlogArticleWrapper>
-    <Date>posted: {date}</Date>
-    <ArticleTitle>{title}</ArticleTitle>
-    <TagListWrapper>
-      <TagList tags={tags} />
-    </TagListWrapper>
-    <Divider />
-    <ArticleBg>
-      {/* <HTMLContent content={content} /> */}
-      <RawMarkdown markdown={markdown} />
-    </ArticleBg>
-  </BlogArticleWrapper>
-)
+    <BlogArticleWrapper>
+      <Date>posted: {date}</Date>
+      <ArticleTitle>{title}</ArticleTitle>
+      <TagListWrapper>
+        <TagList tags={tags} />
+      </TagListWrapper>
+      <Divider />
+      <ArticleBg>
+        {/* <HTMLContent content={content} /> */}
+        <RawMarkdown markdown={markdown} />
+      </ArticleBg>
+    </BlogArticleWrapper>
+  )
 
 export const BlogArticleCompact = ({ content, title }) => (
   <BlogArticleWrapper>
@@ -97,7 +97,7 @@ export const BlogPostTemplate = ({
 }) => {
   return (
     <Layout showSide={false}>
-      <Helmet title={`${title} | terrier.dev 🐶`}>
+      <Helmet title={`${title} | blog.terrier.dev 🐶`}>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

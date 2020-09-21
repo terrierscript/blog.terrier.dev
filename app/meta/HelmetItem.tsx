@@ -3,7 +3,7 @@ import Helmet from "react-helmet"
 export const HelmetItem = () => {
   return (
     <React.Fragment>
-      <Helmet title="terrier.dev 🐶 ">
+      <Helmet title="blog.terrier.dev 🐶 ">
         <meta name="description" content={"Author: terrierscript"} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@terrierscript" />

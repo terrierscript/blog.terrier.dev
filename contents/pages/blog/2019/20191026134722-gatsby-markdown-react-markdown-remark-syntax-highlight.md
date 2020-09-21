@@ -19,7 +19,7 @@ Gatsbyでmarkdownを利用するなら`gatsby-transformer-remark`を利用する
   * rehype-reactバージョンアップで死んだケースがあった
   * この部分がテスト出来てなくてごちゃつきがち
 * Markdown内部のマークアップ
-  * 例えば[inlineCodeのマークアップがCSS魔術になってしまう](https://github.com/terrierscript/terrier.dev/blob/783252ca1c92fc73bd96a1bc03c8abb271cfcfa4/app/meta/Meta.tsx#L21-L28)など
+  * 例えば[inlineCodeのマークアップがCSS魔術になってしまう](https://github.com/terrierscript/blog.terrier.dev/blob/783252ca1c92fc73bd96a1bc03c8abb271cfcfa4/app/meta/Meta.tsx#L21-L28)など
 
 今回は[`react-markdown`](https://github.com/rexxars/react-markdown#parsing-html)と[`react-sytnax-highlight`](https://github.com/conorhastings/react-syntax-highlighter)を使って置き換えた。
 
@@ -122,13 +122,13 @@ with-htmlでなくても動きはするが、`dangerouseHtml`を利用される�
 
 ### nl2br
 
-[以前作ったnl2br](https://www.terrier.dev/blog/2019/20190305210537-rehype-ast-nl2br/)の機能は残したかったので、復元した。
+[以前作ったnl2br](https://blog.terrier.dev/blog/2019/20190305210537-rehype-ast-nl2br/)の機能は残したかったので、復元した。
 
 以前はrehypeプラグインとして行っていたのだが、これをremarkプラグインに対応する必要があった。
 
 特に面白みがある部分では無いので、コードのリンクのみ配置しておく
 
-* https://github.com/terrierscript/terrier.dev/blob/c01c5da4f12255efe8e4aaf5831abb2103e62666/app/page/article/unified/nl2br.ts
+* https://github.com/terrierscript/blog.terrier.dev/blob/c01c5da4f12255efe8e4aaf5831abb2103e62666/app/page/article/unified/nl2br.ts
 
 あとはこれをpluginsに入れる
 
