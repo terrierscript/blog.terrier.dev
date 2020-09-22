@@ -91,6 +91,11 @@
       "src": "/blog/2019/20190626222241-dialogflow-fulfillment-unit-test",
       "dest": "https://zenn.dev/terrierscript/articles/2019-06-26-dialogflow-fulfillment-unit-test",
       "status": 301
+    },
+    {
+      "src": "/blog/2019/20191014170357-png-pong-draw-image",
+      "dest": "https://zenn.dev/terrierscript/articles/2019-10-14-png-pong-draw-image",
+      "status": 301
     }
   ],
   "env": {
