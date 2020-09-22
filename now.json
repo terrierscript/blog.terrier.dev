@@ -56,6 +56,11 @@
       "src": "/blog/2020/20200901232406-string-string/",
       "dest": "https://zenn.dev/terrierscript/articles/2020-09-01-string-string",
       "status": 301
+    },
+    {
+      "src": "/blog/2020/20200213224036-react-native-console-ignored-yellow-box-yellow-box-ignore-warnings/",
+      "dest": "https://zenn.dev/terrierscript/articles/2020-02-13-react-native-yellow-ignore-warnings",
+      "status": 301
     }
   ],
   "env": {
