@@ -5,7 +5,7 @@ date: '2020-09-06T11:52:59.180Z'
 tags:
   - next.js
   - javascript
-canonical: https://zenn.dev/terrierscript/articles/2020-09-06-next-js-ssr-dynamic-import
+redirect: https://zenn.dev/terrierscript/articles/2020-09-06-next-js-ssr-dynamic-import
 ---
 
 next.jsは大変便利だが、SSRがデフォルト挙動になっているので、ちょこちょこ`window`が無いとかで怒られがちになる。
