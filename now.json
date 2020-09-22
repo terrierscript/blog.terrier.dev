@@ -86,6 +86,11 @@
       "src": "/blog/2019/20190304233522-one-column-css-grid",
       "dest": "https://zenn.dev/terrierscript/articles/2019-03-04-one-column-css-grid",
       "status": 301
+    },
+    {
+      "src": "/blog/2019/20190626222241-dialogflow-fulfillment-unit-test",
+      "dest": "https://zenn.dev/terrierscript/articles/2019-06-26-dialogflow-fulfillment-unit-test",
+      "status": 301
     }
   ],
   "env": {
