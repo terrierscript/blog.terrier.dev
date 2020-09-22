@@ -61,6 +61,16 @@
       "src": "/blog/2020/20200213224036-react-native-console-ignored-yellow-box-yellow-box-ignore-warnings",
       "dest": "https://zenn.dev/terrierscript/articles/2020-02-13-react-native-yellow-ignore-warnings",
       "status": 301
+    },
+    {
+      "src": "/blog/2019/20191103224505-react-hooks-pinch-zoom",
+      "dest": "https://zenn.dev/terrierscript/articles/2019-11-03-react-hooks-pinch-zoom",
+      "status": 301
+    },
+    {
+      "src": "/blog/2019/20190921150648-cargo-watch-target",
+      "dest": "https://zenn.dev/terrierscript/articles/2019-09-21-cargo-watch-target",
+      "status": 301
     }
   ],
   "env": {
