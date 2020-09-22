@@ -71,6 +71,11 @@
       "src": "/blog/2019/20190921150648-cargo-watch-target",
       "dest": "https://zenn.dev/terrierscript/articles/2019-09-21-cargo-watch-target",
       "status": 301
+    },
+    {
+      "src": "/blog/2019/20191018221356-react-hooks-canvas-img",
+      "dest": "https://zenn.dev/terrierscript/articles/2019-10-18-react-hooks-canvas-img",
+      "status": 301
     }
   ],
   "env": {
