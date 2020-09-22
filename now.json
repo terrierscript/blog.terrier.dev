@@ -46,6 +46,16 @@
       "src": "/blog/2020/20200906205259-next-js-avoiding-ssr-with-dynamic-import-ssr/",
       "dest": "https://zenn.dev/terrierscript/articles/2020-09-06-next-js-ssr-dynamic-import",
       "status": 301
+    },
+    {
+      "src": "/blog/2020/20200429154810-pusher-authorize-on-server/",
+      "dest": "https://zenn.dev/terrierscript/articles/2020-04-29-pusher-authorize-on-server",
+      "status": 301
+    },
+    {
+      "src": "/blog/2020/20200901232406-string-string/",
+      "dest": "https://zenn.dev/terrierscript/articles/2020-09-01-string-string",
+      "status": 301
     }
   ],
   "env": {
