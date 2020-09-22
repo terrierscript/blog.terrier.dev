@@ -43,57 +43,57 @@
       "status": 200
     },
     {
-      "src": "/blog/2020/20200906205259-next-js-avoiding-ssr-with-dynamic-import-ssr",
+      "src": "/blog/2020/20200906205259-next-js-avoiding-ssr-with-dynamic-import-ssr/?",
       "dest": "https://zenn.dev/terrierscript/articles/2020-09-06-next-js-ssr-dynamic-import",
       "status": 301
     },
     {
-      "src": "/blog/2020/20200429154810-pusher-authorize-on-server",
+      "src": "/blog/2020/20200429154810-pusher-authorize-on-server/?",
       "dest": "https://zenn.dev/terrierscript/articles/2020-04-29-pusher-authorize-on-server",
       "status": 301
     },
     {
-      "src": "/blog/2020/20200901232406-string-string",
+      "src": "/blog/2020/20200901232406-string-string/?",
       "dest": "https://zenn.dev/terrierscript/articles/2020-09-01-string-string",
       "status": 301
     },
     {
-      "src": "/blog/2020/20200213224036-react-native-console-ignored-yellow-box-yellow-box-ignore-warnings",
+      "src": "/blog/2020/20200213224036-react-native-console-ignored-yellow-box-yellow-box-ignore-warnings/?",
       "dest": "https://zenn.dev/terrierscript/articles/2020-02-13-react-native-yellow-ignore-warnings",
       "status": 301
     },
     {
-      "src": "/blog/2019/20191103224505-react-hooks-pinch-zoom",
+      "src": "/blog/2019/20191103224505-react-hooks-pinch-zoom/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-11-03-react-hooks-pinch-zoom",
       "status": 301
     },
     {
-      "src": "/blog/2019/20190921150648-cargo-watch-target",
+      "src": "/blog/2019/20190921150648-cargo-watch-target/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-09-21-cargo-watch-target",
       "status": 301
     },
     {
-      "src": "/blog/2019/20191018221356-react-hooks-canvas-img",
+      "src": "/blog/2019/20191018221356-react-hooks-canvas-img/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-10-18-react-hooks-canvas-img",
       "status": 301
     },
     {
-      "src": "/blog/2019/20191013223328-auto-adjust-font-size-with-react-hook",
+      "src": "/blog/2019/20191013223328-auto-adjust-font-size-with-react-hook/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-10-13-auto-adjust-font-size-with-react-hook",
       "status": 301
     },
     {
-      "src": "/blog/2019/20190304233522-one-column-css-grid",
+      "src": "/blog/2019/20190304233522-one-column-css-grid/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-03-04-one-column-css-grid",
       "status": 301
     },
     {
-      "src": "/blog/2019/20190626222241-dialogflow-fulfillment-unit-test",
+      "src": "/blog/2019/20190626222241-dialogflow-fulfillment-unit-test/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-06-26-dialogflow-fulfillment-unit-test",
       "status": 301
     },
     {
-      "src": "/blog/2019/20191014170357-png-pong-draw-image",
+      "src": "/blog/2019/20191014170357-png-pong-draw-image/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-10-14-png-pong-draw-image",
       "status": 301
     }
