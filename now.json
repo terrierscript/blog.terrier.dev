@@ -76,6 +76,11 @@
       "src": "/blog/2019/20191018221356-react-hooks-canvas-img",
       "dest": "https://zenn.dev/terrierscript/articles/2019-10-18-react-hooks-canvas-img",
       "status": 301
+    },
+    {
+      "src": "/blog/2019/20191013223328-auto-adjust-font-size-with-react-hook",
+      "dest": "https://zenn.dev/terrierscript/articles/2019-10-13-auto-adjust-font-size-with-react-hook",
+      "status": 301
     }
   ],
   "env": {
