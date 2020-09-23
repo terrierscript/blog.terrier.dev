@@ -101,6 +101,11 @@
       "src": "/blog/2019/20190918211254-linear-gradient-qrcode/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-09-18-linear-gradient-qrcode",
       "status": 301
+    },
+    {
+      "src": "/blog/2019/20190506122620-java-script-to-sting/?",
+      "dest": "https://zenn.dev/terrierscript/articles/2019-05-06-java-script-to-sting",
+      "status": 301
     }
   ],
   "env": {
