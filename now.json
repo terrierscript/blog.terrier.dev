@@ -9,13 +9,6 @@
       "status": 301
     },
     {
-      "src": "/blog/(?<splat>.+)",
-      "headers": {
-        "Location": "/archive/$splat"
-      },
-      "status": 301
-    },
-    {
       "src": "/feed/qiita_org",
       "dest": "https://qiita.com/terrierscript/feed.atom",
       "status": 200,
@@ -117,6 +110,11 @@
     {
       "src": "/blog/2019/20191229230347-3d-printing-react-component/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-12-29-3d-printing-react-component",
+      "status": 301
+    },
+    {
+      "src": "/blog/2019/20190305210537-rehype-ast-nl2br/?",
+      "dest": "https://zenn.dev/terrierscript/articles/2019-03-05-rehype-ast-nl2br",
       "status": 301
     }
   ],
