@@ -2,9 +2,11 @@ import React, { useState } from "react"
 
 const NotFoundPage = () => {
   const [maybe, setMaybe] = useState()
+  console.log(window)
   if (typeof window !== 'undefined') {
     const href = window.location.href
     const replaced = href.replace("/blog/", "/archive/")
+    console.log(href, replaced)
     if (replaced !== href) {
       // @ts-ignore
       setMaybe(replaced)
