@@ -9,6 +9,13 @@
       "status": 301
     },
     {
+      "src": "/blog/(?<splat>.+)",
+      "headers": {
+        "Location": "/archive/$splat"
+      },
+      "status": 301
+    },
+    {
       "src": "/feed/qiita_org",
       "dest": "https://qiita.com/terrierscript/feed.atom",
       "status": 200,
