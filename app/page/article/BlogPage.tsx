@@ -12,6 +12,7 @@ import { RawMarkdown } from "./markdown/Markdown"
 import { ARTICLE_BORDER_COLOR } from "../../layout/global/colors"
 import { Date } from "../../component/Date"
 import { Divider } from "@chakra-ui/core"
+import { getRedirect } from "../../../src/lib/redirect"
 
 const TagList = ({ tags = [] }) => {
   if (tags.length === 0) {
@@ -85,6 +86,13 @@ export const BlogArticleCompact = ({ content, title }) => (
     <HTMLContent content={content} />
   </BlogArticleWrapper>
 )
+
+
+const RedirectAnnounce = ({ slug, children }) => {
+  const redirect = getRedirect(slug)
+
+  return <div>aa</div>
+}
 
 export const BlogPostTemplate = ({
   // content,

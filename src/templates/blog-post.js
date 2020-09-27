@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { BlogLayoutProvider } from "../provider/BlogLayout"
 // import { renderHtmlAST } from "../../app/page/article/toHtmlAst"
 import { generatePostFragment } from "../query/query"
+import { getRedirect } from "../lib/redirect"
 
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
@@ -18,7 +19,7 @@ const BlogPost = ({ data, pageContext }) => {
         title={post.frontmatter.title}
         fileAbsolutePath={post.fileAbsolutePath}
         description={post.excerpt}
-        // id={post.id}
+      // id={post.id}
       />
     </BlogLayoutProvider>
   )
