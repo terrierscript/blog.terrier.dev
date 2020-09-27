@@ -116,6 +116,21 @@
       "src": "/blog/2019/20190305210537-rehype-ast-nl2br/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-03-05-rehype-ast-nl2br",
       "status": 301
+    },
+    {
+      "src": "/blog/2018/20180404000000-administrate-gem-namespace-generate/?",
+      "dest": "https://zenn.dev/terrierscript/articles/2018-04-04-administrate",
+      "status": 301
+    },
+    {
+      "src": "/blog/2018/20180405000000-administrate-spec-example_app/?",
+      "dest": "https://zenn.dev/terrierscript/articles/2018-04-04-administrate",
+      "status": 301
+    },
+    {
+      "src": "/blog/2018/20180405000000-administrate-new_resource/?",
+      "dest": "https://zenn.dev/terrierscript/articles/2018-04-04-administrate",
+      "status": 301
     }
   ],
   "env": {
