@@ -59,24 +59,41 @@ const BlogArticleWrapper = styled.div`
   word-break: break-all;
 `
 
+
+const RedirectAnnounce = ({ slug, children }) => {
+  const redirect = getRedirect(slug)
+  console.log(slug)
+  if (!slug) {
+    return children
+  }
+  return <div>
+    <div>この記事は、下記へ移行されました</div>
+    <div><a href={redirect}>{redirect}</a></div>
+  </div>
+}
+
+
 export const BlogArticle = ({
   // content,
   title,
   tags,
   date,
-  markdown
+  markdown,
+  slug
 }) => (
     <BlogArticleWrapper>
       <Date>posted: {date}</Date>
       <ArticleTitle>{title}</ArticleTitle>
-      <TagListWrapper>
-        <TagList tags={tags} />
-      </TagListWrapper>
-      <Divider />
-      <ArticleBg>
-        {/* <HTMLContent content={content} /> */}
-        <RawMarkdown markdown={markdown} />
-      </ArticleBg>
+      <RedirectAnnounce slug={slug} >
+        <TagListWrapper>
+          <TagList tags={tags} />
+        </TagListWrapper>
+        <Divider />
+        <ArticleBg>
+          {/* <HTMLContent content={content} /> */}
+          <RawMarkdown markdown={markdown} />
+        </ArticleBg>
+      </RedirectAnnounce >
     </BlogArticleWrapper>
   )
 
@@ -88,18 +105,13 @@ export const BlogArticleCompact = ({ content, title }) => (
 )
 
 
-const RedirectAnnounce = ({ slug, children }) => {
-  const redirect = getRedirect(slug)
-
-  return <div>aa</div>
-}
-
 export const BlogPostTemplate = ({
   // content,
   description = "",
   tags,
   title,
   date,
+  slug,
   rawMarkdown = null,
   fileAbsolutePath = null
 }) => {
@@ -118,6 +130,7 @@ export const BlogPostTemplate = ({
         <BlogArticle
           title={title}
           tags={tags}
+          slug={slug}
           date={date}
           markdown={rawMarkdown}
         />
