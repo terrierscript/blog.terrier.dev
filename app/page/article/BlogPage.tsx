@@ -62,8 +62,7 @@ const BlogArticleWrapper = styled.div`
 
 const RedirectAnnounce = ({ slug, children }) => {
   const redirect = getRedirect(slug)
-  console.log(slug)
-  if (!slug) {
+  if (!redirect) {
     return children
   }
   return <div>

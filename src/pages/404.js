@@ -1,17 +1,19 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 const NotFoundPage = () => {
   const [maybe, setMaybe] = useState()
-  console.log(window)
-  if (typeof window !== 'undefined') {
-    const href = window.location.href
-    const replaced = href.replace("/blog/", "/archive/")
-    console.log(href, replaced)
-    if (replaced !== href) {
-      // @ts-ignore
-      setMaybe(replaced)
+  useEffect(() => {
+
+    if (typeof window !== 'undefined') {
+      const href = window.location.href
+      const replaced = href.replace("/blog/", "/archive/")
+      console.log(href, replaced)
+      if (replaced !== href) {
+        // @ts-ignore
+        setMaybe(replaced)
+      }
     }
-  }
+  }, [])
 
   return <div>
     <h1>404</h1>

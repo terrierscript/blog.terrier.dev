@@ -18,5 +18,5 @@ const mapping = now.routes.filter(x => {
 export const getRedirect = (fullSlug) => {
   const slug = getBlogSlug(fullSlug)
   // console.log(fullSlug, slug)
-  return mapping[slug].dest
+  return mapping[slug]?.dest
 }
