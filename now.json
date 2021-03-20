@@ -136,6 +136,11 @@
       "src": "/blog/2019/20190223000000-apropcalypse/?",
       "dest": "https://zenn.dev/terrierscript/articles/2019-02-23-apropcalypse",
       "status": 301
+    },
+    {
+      "src": "/blog/2019/20190503235953-java-script-math-max-math-min/?",
+      "dest": "https://zenn.dev/terrierscript/articles/2019-05-03-javascript-math-min-max",
+      "status": 301
     }
   ],
   "env": {
